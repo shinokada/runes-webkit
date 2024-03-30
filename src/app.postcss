@@ -1,0 +1,19 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl text-center dark:text-white py-4;
+  }
+  h2 {
+    @apply text-3xl text-center dark:text-white py-4;
+  }
+  p {
+    @apply dark:text-white text-xl py-2;
+  }
+  a {
+    @apply text-blue-500;
+  }
+}

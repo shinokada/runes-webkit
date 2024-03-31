@@ -1,4 +1,4 @@
-export function removeHyphensAndCapitalize(str) {
+export function removeHyphensAndCapitalize(str: string) {
   // Handle empty string or strings without letters
   if (!str || !/\w/.test(str)) {
     return str;
@@ -13,8 +13,8 @@ export function removeHyphensAndCapitalize(str) {
   return capitalized.replace(/-|\s{2,}/g, ' ');
 }
 
-export function filterIconsByKeyword(icons, keyword) {
-  const filteredIcons = {};
+export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
+  const filteredIcons: { [key: string]: any } = {};
   for (const key in icons) {
     if (key.includes(keyword)) {
       filteredIcons[key] = icons[key];
@@ -23,8 +23,8 @@ export function filterIconsByKeyword(icons, keyword) {
   return filteredIcons;
 }
 
-export function excludeItemsByKeywords(items, keywords) {
-  const filteredItems = {};
+export function excludeItemsByKeywords(items: { [key: string]: any }, keywords: string) {
+  const filteredItems: { [key: string]: any } = {};
   for (const key in items) {
     if (keywords.every((keyword) => !key.includes(keyword))) {
       filteredItems[key] = items[key];

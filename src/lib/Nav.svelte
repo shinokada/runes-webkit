@@ -1,32 +1,42 @@
 <script lang="ts">
+  import { twMerge } from 'tailwind-merge';
   import type { ComponentType } from 'svelte';
 	import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem } from 'svelte-5-ui-lib';
 	import { page } from '$app/stores';
   import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid } from '$lib'
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
+  
+  function isIncluded(url: string, allowedUrls: string[]): boolean {
+    return allowedUrls.some(allowedUrl => url.startsWith(allowedUrl));
+  }
+
   type LiType = {
     name: string;
     href: string;
     icon?: ComponentType;
   }
   interface Props{
-    
     lis: LiType[];
     siteName: string;
     twitterUrl?: string;
     githubUrl?: string;
+    headerClass?: string;
+    urlsToInclude?: string[];
   }
-  let {  lis, siteName, twitterUrl, githubUrl, ...restProps}: Props = $props();
+  let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToInclude = ['/guide'], ...restProps}: Props = $props();
 
   let currentUrl = $state($page.url.pathname);
 	let nav = uiHelpers();
+
+  let include = $derived(isIncluded(currentUrl, urlsToInclude));
 
 	let navStatus = $state(false);
 	let toggleNav = nav.toggle;
 	let closeNav = nav.close;
 	let divClass = 'ml-auto w-full';
 	let ulclass = 'dark:lg:bg-transparent lg:space-x-4';
-	let navclass = 'w-full divide-gray-200 border-gray-200 bg-gray-50 dark:bg-slate-950 text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
+	let navclass = 'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
+  let headerCls = twMerge('sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950', headerClass)
   let dropdown = uiHelpers();
 
   let isOpen = $state(false);
@@ -49,12 +59,12 @@
   {/each}
 {/snippet}
 
-<header class="sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950">
+<header class={headerCls}>
 	<Navbar {navclass} {toggleNav} {closeNav} {navStatus} breakPoint="lg" fluid div2class={divClass}>
 		{#snippet brand()}
 			<NavBrand {siteName} spanclass="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500" />
 			<div class="ml-auto flex items-center lg:order-1">
-        {#if !['/'].includes(currentUrl)}
+        {#if include}
 				<DynamicCodeBlockStyle />
         {/if}
         <DotsHorizontalOutline onclick={toggle} class="dark:text-white ml-4" size="lg" />

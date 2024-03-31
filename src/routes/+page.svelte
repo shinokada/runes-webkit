@@ -1,112 +1,103 @@
 <script lang="ts">
-  import {Card, List, Li, A, Badge } from 'svelte-5-ui-lib';
-  // import { MetaTags } from 'svelte-meta-tags';
-  import {convertToKebabCase} from './utils/helpers'
-  import iconDetails from './icons.json'
 
-  let totalDownloads = $state(0);
+  import { removeHyphensAndCapitalize, HomeCards,  MetaTag, SupportBanner, TechInfo, A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from '$lib';
+  
+  const pkgName: string = __NAME__;
+  const pkgVersion: string = __VERSION__;
+  const repoUrl: string = __GITHUBURL__;
 
-  $effect(()=>{
-    (async () => {
-    try {
-      const libs = [
-        'flowbite-svelte-icons',
-        'svelte-ant-design-icons',
-        'svelte-awesome-icons',
-        'svelte-bootstrap-svg-icons',
-        'svelte-boxicons',
-        'svelte-circle-flags',
-        'svelte-coreui-icons',
-        'svelte-cssgg-icons',
-        'svelte-cryptocurrency-icons',
-        'svelte-evil-icons',
-        'svelte-feathers',
-        'svelte-flag-icons',
-        'svelte-flags',
-        'svelte-file-icons',
-        'svelte-google-materialdesign-icons',
-        'svelte-heros',
-        'svelte-heros-v2',
-        'svelte-ionicons',
-        'svelte-lucide',
-        'svelte-materialdesign-icons',
-        'svelte-oct',
-        'svelte-radix',
-        'svelte-remix',
-        'svelte-simples',
-        'svelte-tabler',
-        'svelte-supertiny',
-        'svelte-teenyicons',
-        'svelte-twitter-emoji',
-        'svelte-weather'
-      ];
-
-      const today = new Date();
-      const todayString = today.toISOString().slice(0, 10);
-      
-      const totalPromises = libs.map((lib) => fetch(`https://api.npmjs.org/downloads/point/2020-01-01:${todayString}/${lib}`));
-
-      const totalResponses = await Promise.all(totalPromises);
-
-      for (const response of totalResponses) {
-        const data = await response.json();
-        // console.log('data', data.downloads)
-        totalDownloads += data.downloads;
-      }
-      
-    } catch (error) {
-      console.error(`Error: ${error}`);
-    }
-  })()
-  });
-
-  function formatNumber(number: number) {
-    if (number >= 1000000) {
-      return (number / 1000000).toFixed(1) + 'M';
-    } else if (number >= 1000) {
-      return (number / 1000).toFixed(1) + 'K';
-    } else {
-      return number.toString();
-    }
+  const pkg = {
+    pkgName ,
+    pkgVersion, 
+    repoUrl
   }
+  const cardTitle = `${removeHyphensAndCapitalize(pkgName)}: ${pkgVersion}`
+  const cards = [
+    {
+      title: 'Svelte 4/5/Runes',
+      description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
+      icon: BadgeCheckOutline,
+      iconClass: 'text-pink-500'
+    },
+    {
+      title: 'Brands, Regular, and Solid Icons',
+      description: '2000+ SVG Icons.',
+      icon: BellActiveAltOutline,
+      iconClass: 'text-green-500'
+    },
+    {
+      title: 'Accessible SVGs',
+      description: 'A11y props, `title`, `desc`, and `ariaLabel` for accessible SVG icons.',
+      icon: Accessibility,
+      iconClass: 'text-blue-400'
+    },
+    {
+      title:'Faster Compiling',
+      description: 'Import icons directly to optimize compilation speed and improve performance.',
+      icon: TruckFastSolid,
+      iconClass: 'text-yellow-500'
+    },
+    {
+      title:'IDE Support',
+      description: 'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
+      icon: Visualstudiocode,
+      iconClass: 'text-blue-500'
+    },
+    {
+      title:'Global Icons',
+      description: 'Use `IconSolid` and `IconOutline` to careat default icons.',
+      icon: GlobeOutline,
+      iconClass: 'text-purple-500'
+    },
+    {
+      title:'CSS Frameworks support',
+      description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
+      icon:Tailwindcss,
+      iconClass: 'text-blue-500'
+    },
+    {
+      title:'Seven Props',
+      description: 'Control the size, role, color, events, aria-label, title, and desc.',
+      icon:A7Solid,
+      iconClass: 'text-cyan-500'
+    },
+    {
+      title:'Dark mode',
+      description: 'Use `class` props to add your dark mode color.',
+      icon:MoonSolid,
+      iconClass: 'text-yellow-200'
+    }
+  ]
 
-  const h3Class = 'my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ';
+  const info = [
+    {
+      title: 'Svelte Icon Family',
+      description: 'Explore 29 Svelte SVG Icon Sets.',
+      icon: InfoCircleOutline,
+      href:'https://svelte-svg-icons.codewithshin.com/',
+      iconClass: 'text-amber-500'
+    },
+    {
+      title: 'License',
+      description: 'Released under the MIT License.',
+      icon: InfoCircleOutline,
+      href:'https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE',
+      iconClass: 'text-lime-500'
+    },
+    {
+      title: 'Original source',
+      description: 'FontAwesome/Font-Awesome v6.2.1.',
+      icon: InfoCircleOutline,
+      href:'https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs',
+      iconClass: 'text-orange-500'
+    }
+  ]
 </script>
 
+<SupportBanner>
+    To Keep It Going, Please Show Your Love.<a href='https://ko-fi.com/Z8Z2CHALG' target='_blank'><img height='40' style='border:0px;height:40px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
+</SupportBanner>
 
-<h1>Svelte SVG Icon Sets</h1>
-
-{#snippet card({iconName, badges, features, source})}
-{@const newName = convertToKebabCase(iconName)}
-<Card img={{src: `/images/resized/${newName}.webp`, alt: `${iconName}`}}>
-  <img src={`https://badgen.net/npm/dt/${newName}`} alt="total download number" class="inline" />
-  <img src={`https://badgen.net/npm/dw/${newName}`} alt="weekly download number" class="inline" />
-  {#each badges as badge}
-  <Badge color="purple" divclass="dark:text-white px-2 my-2 mr-1">{badge}</Badge>
-  {/each}
-  <h3 class={h3Class}>
-    <A href={`https://${newName}.codewithshin.com`} target="_blank">{iconName}</A>
-  </h3>
-  <List>
-    {#each features as feature}
-    <Li liclass="dark:text-white">{feature}</Li>
-    {/each}
-    <Li liclass="dark:text-white">Source: <A href="{source[1]}">{source[0]}</A></Li>
-    <Li liclass="dark:text-white"><A href={`https://${newName}.codewithshin.com/`}>Icons and Docs</A></Li>
-  </List>
-</Card>
-{/snippet}
-
-<div class="flex flex-wrap justify-center gap-4 pb-8">
-  <Badge color="pink">Svelte 4, 5, and 5:Runes</Badge>
-  <Badge color="blue">Support CSS frameworks</Badge>
-  <Badge color="purple">Faster compling</Badge>
-  <Badge color="yellow">IDE Support</Badge>
-  <Badge color="red" large>Total downloads: {formatNumber(totalDownloads)}</Badge>
-</div>
-
-<div class="flex flex-wrap justify-center gap-4">
-  {#each iconDetails as {iconName, badges, features, source}}
-    {@render card({iconName, badges, features, source})}
-  {/each}
-</div>
+<HomeCards {cards} {cardTitle}/>
+<HomeCards cards={info} cardTitle='Info'/>
+<TechInfo {...pkg}/>

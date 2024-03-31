@@ -1,8 +1,10 @@
 // import {removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers';
-export { removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers';
+export { removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers.ts';
 
+export { default as CodeWrapper } from './CodeWrapper.svelte';
 export { default as DynamicCodeBlockStyle } from './DynamicCodeBlockStyle.svelte';
 export { default as Footer } from './Footer.svelte';
+export { default as HighlightCompo } from './HighlightCompo.svelte';
 export { default as HomeCards } from './HomeCards.svelte';
 export { default as IconPage } from './IconPage.svelte';
 export { default as MetaTag } from './MetaTag.svelte';

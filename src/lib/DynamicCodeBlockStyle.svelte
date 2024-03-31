@@ -1,6 +1,10 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
+
   const stylesImport = import.meta.glob('./highlight/styles/*.css');
-  let selected = $state('gigavolt');
+  let selected: string = $state(
+    browser && (localStorage.getItem('CODE_BLOCK_STYLE') ?? 'gigavolt')
+  );
   const styles = Object.entries(stylesImport).map(([path, importFn]) => ({
     value: path.slice(path.lastIndexOf('/') + 1, -4),
     name: path.slice(path.lastIndexOf('/') + 1, -4)
@@ -15,7 +19,10 @@
       link.href = css.default;
       document.head.append(link);
     })();
-
+    if (browser) {
+      // get selected style from localStorage
+      localStorage.setItem('CODE_BLOCK_STYLE', selected);
+    }
     return () => {
       // clean up
       link.remove();

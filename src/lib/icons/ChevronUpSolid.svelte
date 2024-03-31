@@ -22,9 +22,9 @@
 
 <!--
 @component
-[Go to docs](https://svelte-awesome-icons.vercel.app)
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
 ## Props
-@props: size?: string;
+@props: size?:  string; = ctx.size || '24', role;
 @props:role?: string;
 @props:color?: string;
 @props:ariaLabel?: string;

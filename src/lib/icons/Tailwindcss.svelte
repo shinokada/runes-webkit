@@ -34,10 +34,11 @@
 
 <!--
 @component
-[Go to docs](https://svelte-simples.codewithshin.com/)
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
 ## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let ariaLabel = 'Tailwindcss';
+@props: size?:  string; = ctx.size || '24', role;
+@props:role?: string;
+@props:color?: string;
+@props:ariaLabel?: string;
+@props:class?: string;
 -->

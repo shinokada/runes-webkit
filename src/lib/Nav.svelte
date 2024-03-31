@@ -92,3 +92,15 @@
     </div>
 	</Navbar>
 </header>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: lis: LiType[];
+@props:siteName: string;
+@props:twitterUrl?: string;
+@props:githubUrl?: string;
+@props:headerClass?: string;
+@props:urlsToInclude?: string[];
+-->

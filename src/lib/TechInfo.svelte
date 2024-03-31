@@ -80,3 +80,20 @@
     </ul>
   </Card>
 </div>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: children?: Snippet;
+@props:pkgName?: string;
+@props:pkgVersion?: string;
+@props:repoUrl?: string;
+@props:h2class?: string;
+@props:title?: string;
+@props:divclass?: string;
+@props:ulclass?: string;
+@props:liclass?: string;
+@props:aclass?: string;
+@props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+-->

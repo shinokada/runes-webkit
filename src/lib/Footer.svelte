@@ -41,3 +41,12 @@
     </FooterUl>
   </div>
 </Footer>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: brand?: {
+@props:name: string;
+@props:href: string;
+-->

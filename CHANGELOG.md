@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.1
+
+### Patch Changes
+
+- feat: add localStorage to DynamicCodeBlockStyle
+
 ## 0.2.0
 
 ### Minor Changes

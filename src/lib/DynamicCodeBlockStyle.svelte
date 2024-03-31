@@ -2,6 +2,7 @@
   import { browser } from '$app/environment';
 
   const stylesImport = import.meta.glob('./highlight/styles/*.css');
+  // @ts-ignore
   let selected: string = $state(
     browser && (localStorage.getItem('CODE_BLOCK_STYLE') ?? 'gigavolt')
   );

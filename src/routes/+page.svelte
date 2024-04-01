@@ -5,11 +5,18 @@
   const pkgName: string = __NAME__;
   const pkgVersion: string = __VERSION__;
   const repoUrl: string = __GITHUBURL__;
+  const svelteVersion: string = __SVELTE_VERSION__;
+  const svelteKitVersion: string = __SVELTEKIT_VERSION__;
+  const svelte5uilib: string = __SVELTE_5_UI_LIB_VERSION__;
+  const svelteRuneHighlight: string = __SVELTE_RUNE_HIGHLIGHT_VERSION__;
+  const viteVersion: string = __VITE_VERSION__;
+  
 
   const pkg = {
     pkgName ,
     pkgVersion, 
-    repoUrl
+    repoUrl,
+    svelteVersion, svelteKitVersion, svelte5uilib, svelteRuneHighlight, viteVersion, 
   }
   const cardTitle = `${removeHyphensAndCapitalize(pkgName)}: ${pkgVersion}`
   const cards = [

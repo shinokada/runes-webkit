@@ -1,5 +1,7 @@
-// import {removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers';
 export { removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers.ts';
+
+export { default as cssNames } from './cssNames.json';
+export * from './highlight/styles';
 
 export { default as CodeWrapper } from './CodeWrapper.svelte';
 export { default as DynamicCodeBlockStyle } from './DynamicCodeBlockStyle.svelte';

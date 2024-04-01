@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.5
+
+### Patch Changes
+
+- fix: remove svelte 4 icons ([`6655283dec62d4d64dcd84286cee0f36a5038bca`](https://github.com/shinokada/svelte-icon-webkit/commit/6655283dec62d4d64dcd84286cee0f36a5038bca))
+
 ## 0.2.4
 
 ### Patch Changes

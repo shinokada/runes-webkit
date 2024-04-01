@@ -1,6 +1,6 @@
 <script lang="ts">
-
-  import { removeHyphensAndCapitalize, HomeCards,  MetaTag, SupportBanner, TechInfo, A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from '$lib';
+  
+  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from '$lib';
   
   const pkgName: string = __NAME__;
   const pkgVersion: string = __VERSION__;
@@ -92,6 +92,7 @@
       iconClass: 'text-orange-500'
     }
   ]
+
 </script>
 
 <SupportBanner>

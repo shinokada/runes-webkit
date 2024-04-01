@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: update Nav and DynamicCodeBlockStyle ([`d670da23b9c08225d143efd81bb2b38a4a055c77`](https://github.com/shinokada/svelte-icon-webkit/commit/d670da23b9c08225d143efd81bb2b38a4a055c77))
+
 ## 0.2.1
 
 ### Patch Changes

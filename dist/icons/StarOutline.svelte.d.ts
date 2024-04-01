@@ -1,7 +1,7 @@
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
-        size?: "md" | "xl" | "xs" | "sm" | "lg" | undefined;
+        size?: "md" | "lg" | "xl" | "xs" | "sm" | undefined;
         role?: string | undefined;
         class?: string | undefined;
         ariaLabel?: string | undefined;

@@ -1,3 +1,5 @@
+export { default as cssNames } from "./cssNames.json";
+export * from "./highlight/styles";
 export { default as CodeWrapper } from "./CodeWrapper.svelte";
 export { default as DynamicCodeBlockStyle } from "./DynamicCodeBlockStyle.svelte";
 export { default as Footer } from "./Footer.svelte";

@@ -1,10 +1,6 @@
 <script>import { browser } from "$app/environment";
-const stylesImport = import.meta.glob("./highlight/styles/*.css");
+import { cssNames } from "./";
 let selected = $state(browser && (localStorage.getItem("CODE_BLOCK_STYLE") ?? "gigavolt"));
-const styles = Object.entries(stylesImport).map(([path, importFn]) => ({
-    value: path.slice(path.lastIndexOf("/") + 1, -4),
-    name: path.slice(path.lastIndexOf("/") + 1, -4)
-}));
 $effect(() => {
     let link;
     (async () => {
@@ -17,9 +13,6 @@ $effect(() => {
     if (browser) {
         localStorage.setItem("CODE_BLOCK_STYLE", selected);
     }
-    return () => {
-        link.remove();
-    };
 });
 </script>
 
@@ -27,8 +20,8 @@ $effect(() => {
   class="w-32 border border-gray-200 p-1 text-gray-800 dark:text-gray-800 md:w-36"
   bind:value={selected}
 >
-  {#each styles as theme}
-    <option value={theme.value}>{theme.value}</option>
+  {#each cssNames as theme}
+    <option value={theme}>{theme}</option>
   {/each}
 </select>
 

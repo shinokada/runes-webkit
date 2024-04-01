@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.6
+
+### Patch Changes
+
+- fix: add props to TechInfo component ([`f195c0cba692f7b79c94ddc1e2554a5cba6560b3`](https://github.com/shinokada/svelte-icon-webkit/commit/f195c0cba692f7b79c94ddc1e2554a5cba6560b3))
+
 ## 0.2.5
 
 ### Patch Changes

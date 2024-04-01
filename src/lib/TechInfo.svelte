@@ -97,4 +97,10 @@
 @props:liclass?: string;
 @props:aclass?: string;
 @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+@props:svelteVersion?: string;
+@props:svelteKitVersion?: string;
+@props:svelte5uilib?: string;
+@props:svelteIconWebkit?: string;
+@props:svelteRuneHighlight?: string;
+@props:viteVersion?: string;
 -->

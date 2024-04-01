@@ -14,6 +14,12 @@ declare const __propDef: {
         liclass?: string | undefined;
         aclass?: string | undefined;
         cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+        svelteVersion?: string | undefined;
+        svelteKitVersion?: string | undefined;
+        svelte5uilib?: string | undefined;
+        svelteIconWebkit?: string | undefined;
+        svelteRuneHighlight?: string | undefined;
+        viteVersion?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
@@ -37,6 +43,12 @@ export type TechInfoSlots = typeof __propDef.slots;
  * @props:liclass?: string;
  * @props:aclass?: string;
  * @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+ * @props:svelteVersion?: string;
+ * @props:svelteKitVersion?: string;
+ * @props:svelte5uilib?: string;
+ * @props:svelteIconWebkit?: string;
+ * @props:svelteRuneHighlight?: string;
+ * @props:viteVersion?: string;
  */
 export default class TechInfo extends SvelteComponent<TechInfoProps, TechInfoEvents, TechInfoSlots> {
 }

@@ -2,6 +2,7 @@
 import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem } from "svelte-5-ui-lib";
 import { page } from "$app/stores";
 import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid } from "./";
+import { CodeBlockSwitcher } from "svelte-rune-highlight";
 import DynamicCodeBlockStyle from "./DynamicCodeBlockStyle.svelte";
 function isIncluded(url, allowedUrls) {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));

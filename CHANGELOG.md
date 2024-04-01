@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.3
+
+### Patch Changes
+
+- feat: MetaTag ([`ac1a1195d4605212d80ef18d96a89666ef0a24c0`](https://github.com/shinokada/svelte-icon-webkit/commit/ac1a1195d4605212d80ef18d96a89666ef0a24c0))
+
 ## 0.2.2
 
 ### Patch Changes

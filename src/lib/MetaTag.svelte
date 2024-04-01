@@ -50,3 +50,18 @@
   <meta property="og:image:height" content="{imageHeight}" />
   <meta property="og:site_name" content="{title}" />
 </svelte:head>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: title?: string;
+@props:description?: string;
+@props:keywords?: string;
+@props:url?: string;
+@props:image?: string;
+@props:imageAlt?: string;
+@props:imageWidth?: string;
+@props:imageHeight?: string;
+@props:creator?: string;
+-->

@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 0.2.4
+
+### Patch Changes
+
+- feat: OnThisPage, Toc components ([`6f6bdec2d3b6d8da2267e36c36f29ac4c72c7bf8`](https://github.com/shinokada/svelte-icon-webkit/commit/6f6bdec2d3b6d8da2267e36c36f29ac4c72c7bf8))
+  tests: add new tests
+  fix: helper.ts to helper in index
+
 ## 0.2.3
 
 ### Patch Changes

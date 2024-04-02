@@ -4,7 +4,6 @@
 	import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem } from 'svelte-5-ui-lib';
 	import { page } from '$app/stores';
   import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid } from '$lib'
-  import { CodeBlockSwitcher } from 'svelte-rune-highlight';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
@@ -70,17 +69,17 @@
         {/if}
         <DotsHorizontalOutline onclick={toggle} class="dark:text-white ml-4" size="lg" />
       <div class="relative">
-        <Dropdown {isOpen} divclass="absolute -left-[35px] w-14 p-1">
+        <Dropdown {isOpen} divclass="absolute -left-[33px] w-10">
           {#if twitterUrl}
-          <DropdownItem href={twitterUrl} target="_blank" aclass=' rounded-lg p-2'><XSolid  class='mx-auto' /></DropdownItem>
+          <DropdownItem href={twitterUrl} target="_blank" aclass=' rounded-lg'><XSolid  class='mx-auto' /></DropdownItem>
           {/if}
           {#if githubUrl}
-          <DropdownItem href="https://github.com/themesberg/flowbite-svelte-icons" target="_blank" aclass=' rounded-lg p-2'>
+          <DropdownItem href="{githubUrl}" target="_blank" aclass='rounded-lg'>
               <GithubSolid size="lg" class='mx-auto'/>
           </DropdownItem>
           {/if}
           <DropdownItem>
-            <Darkmode btnclass="p-2 ml-1" size='lg'/>
+            <Darkmode btnclass="" size='lg'/>
           </DropdownItem>
         </Dropdown>
       </div>

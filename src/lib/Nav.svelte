@@ -69,17 +69,17 @@
         {/if}
         <DotsHorizontalOutline onclick={toggle} class="dark:text-white ml-4" size="lg" />
       <div class="relative">
-        <Dropdown {isOpen} divclass="absolute -left-[33px] w-10">
+        <Dropdown {isOpen} divclass="absolute -left-[30px] w-9">
           {#if twitterUrl}
-          <DropdownItem href={twitterUrl} target="_blank" aclass=' rounded-lg'><XSolid  class='mx-auto' /></DropdownItem>
+          <DropdownItem href={twitterUrl} target="_blank" aclass='p-2 m-0'><XSolid /></DropdownItem>
           {/if}
           {#if githubUrl}
-          <DropdownItem href="{githubUrl}" target="_blank" aclass='rounded-lg'>
-              <GithubSolid size="lg" class='mx-auto'/>
+          <DropdownItem href="{githubUrl}" target="_blank" aclass='p-2 m-0'>
+              <GithubSolid />
           </DropdownItem>
           {/if}
           <DropdownItem>
-            <Darkmode btnclass="" size='lg'/>
+            <Darkmode btnclass="p-2 m-0"/>
           </DropdownItem>
         </Dropdown>
       </div>

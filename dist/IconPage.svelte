@@ -2,9 +2,11 @@
 import { random_hex_color_code, random_tailwind_color } from "./helpers";
 let { icons, title, sizeByTailwind, minSize = "16", defaultSize = "24", maxSize = "48", threeTabs = true, class: classname } = $props();
 let searchTerm = $state("");
-let filteredEntries = $derived(Object.entries(icons).filter(([name, component]) => {
+let filteredEntries = $derived(
+  Object.entries(icons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
-}));
+  })
+);
 let size = $state(defaultSize);
 const contentClass = " rounded-lg dark_bg_theme mt-4";
 </script>

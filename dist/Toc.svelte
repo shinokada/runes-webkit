@@ -1,25 +1,25 @@
 <script>const aClass = "inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-['#'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100";
 export const extract = (x) => ({
-    name: x.textContent ?? ""
+  name: x.textContent ?? ""
 });
 let { headingSelector } = $props();
 let headings = $state([]);
 function init(_) {
-    const observer = new MutationObserver(toc);
-    observer.observe(document.body, { childList: true, subtree: true });
-    return {
-        destroy() {
-            observer.disconnect();
-        }
-    };
+  const observer = new MutationObserver(toc);
+  observer.observe(document.body, { childList: true, subtree: true });
+  return {
+    destroy() {
+      observer.disconnect();
+    }
+  };
 }
 function indent(name) {
-    return name === "H2" ? "pl-2.5" : "pl-6";
+  return name === "H2" ? "pl-2.5" : "pl-6";
 }
 function toc() {
-    if (typeof document === `undefined`)
-        return;
-    headings = [...document.querySelectorAll(headingSelector)].map(extract).filter((x) => x.name);
+  if (typeof document === `undefined`)
+    return;
+  headings = [...document.querySelectorAll(headingSelector)].map(extract).filter((x) => x.name);
 }
 </script>
 

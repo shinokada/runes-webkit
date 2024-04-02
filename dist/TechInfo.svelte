@@ -1,6 +1,24 @@
 <script>import { twMerge } from "tailwind-merge";
 import { Card } from "svelte-5-ui-lib";
-let { children, pkgName, pkgVersion, svelteVersion, svelteKitVersion, svelte5uilib, svelteIconWebkit, svelteRuneHighlight, viteVersion, repoUrl, h2class, title = "Technical information about this website", divclass, ulclass, liclass, aclass, cardsize = "xl" } = $props();
+let {
+  children,
+  pkgName,
+  pkgVersion,
+  svelteVersion,
+  svelteKitVersion,
+  svelte5uilib,
+  svelteIconWebkit,
+  svelteRuneHighlight,
+  viteVersion,
+  repoUrl,
+  h2class,
+  title = "Technical information about this website",
+  divclass,
+  ulclass,
+  liclass,
+  aclass,
+  cardsize = "xl"
+} = $props();
 const h2Cls = twMerge("flex justify-center my-8", h2class);
 const divCls = twMerge("grid grid-cols-1", divclass);
 const ulCls = twMerge("m-4 list-disc p-4 text-left text-lg dark:text-gray-400", ulclass);

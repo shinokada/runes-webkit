@@ -1,5 +1,4 @@
-<script>"use strict";
-let { title, description, keywords, url, image, imageAlt, imageHeight = "630", imageWidth = "1200", creator } = $props();
+<script>let { title, description, keywords, url, image, imageAlt, imageHeight = "630", imageWidth = "1200", creator } = $props();
 </script>
 
 <svelte:head>

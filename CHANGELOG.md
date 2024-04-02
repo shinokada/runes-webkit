@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.2.7
+
+### Patch Changes
+
+- fix: remove CodeBlockSwitcher ([`55f3cfc07af8fb5f348abe093a2a5022c3fafcd5`](https://github.com/shinokada/svelte-icon-webkit/commit/55f3cfc07af8fb5f348abe093a2a5022c3fafcd5))
+  feat: add number icons
+
 ## 0.2.6
 
 ### Patch Changes

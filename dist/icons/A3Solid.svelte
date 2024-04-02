@@ -1,19 +1,6 @@
-<script lang="ts">
-  import { getContext } from 'svelte';
-  interface CtxType {
-    size?: string;
-    role?: string;
-    color?: string;
-  }
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props {
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
-    class?: string;
-  }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel = '3 solid', class: classname, ...restProps }: Props = $props();
+<script>import { getContext } from "svelte";
+const ctx = getContext("iconCtx") ?? {};
+let { size = ctx.size || "24", role = ctx.role || "img", color = ctx.color || "currentColor", ariaLabel = "3 solid", class: classname, ...restProps } = $props();
 </script>
 
 <svg xmlns="http://www.w3.org/2000/svg" {...restProps} {role} width={size} height={size} class={classname} fill={color} aria-label={ariaLabel} viewBox="0 0 320 512">

@@ -1,18 +1,20 @@
 <script>import { browser } from "$app/environment";
 import { cssNames } from "./";
-let selected = $state(browser && (localStorage.getItem("CODE_BLOCK_STYLE") ?? "gigavolt"));
+let selected = $state(
+  browser && (localStorage.getItem("CODE_BLOCK_STYLE") ?? "gigavolt")
+);
 $effect(() => {
-    let link;
-    (async () => {
-        const css = await import(`./highlight/styles/${selected}.css?url`);
-        link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = css.default;
-        document.head.append(link);
-    })();
-    if (browser) {
-        localStorage.setItem("CODE_BLOCK_STYLE", selected);
-    }
+  let link;
+  (async () => {
+    const css = await import(`./highlight/styles/${selected}.css?url`);
+    link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = css.default;
+    document.head.append(link);
+  })();
+  if (browser) {
+    localStorage.setItem("CODE_BLOCK_STYLE", selected);
+  }
 });
 </script>
 

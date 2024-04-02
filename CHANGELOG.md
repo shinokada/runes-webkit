@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.8
+
+### Patch Changes
+
+- fix: logos style update in Nav dropdown ([`92e4941a5e87e8562ff7d38c8fd016d7508bf7f7`](https://github.com/shinokada/svelte-icon-webkit/commit/92e4941a5e87e8562ff7d38c8fd016d7508bf7f7))
+
 ## 0.2.7
 
 ### Patch Changes

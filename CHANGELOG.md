@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.3.2
+
+### Patch Changes
+
+- fix: use dir to import all css in DynamicCodeBlockStyle ([`66a615534fbebba22470e85094bf88f7a58bc7b8`](https://github.com/shinokada/svelte-icon-webkit/commit/66a615534fbebba22470e85094bf88f7a58bc7b8))
+
 ## 0.3.1
 
 ### Patch Changes

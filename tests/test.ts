@@ -6,21 +6,21 @@ test('index page has expected h1', async ({ page }) => {
 });
 
 test('svelte-4/getting-started page has expected h1', async ({ page }) => {
-  await page.goto('/svelte-4/getting-started');
+  await page.goto('/guide/svelte-4/getting-started');
   await expect(page.getByRole('heading', { name: 'Svelte Awesome Icons: v1' })).toBeVisible();
 });
 
 test('three-tabs page has expected h1', async ({ page }) => {
   await page.goto('/three-tabs');
-  await expect(page.getByRole('heading', { name: 'Solid Icons' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Three Tabs' })).toBeVisible();
 });
 
 test('three-tabs-sizebytailwind page has expected h1', async ({ page }) => {
   await page.goto('/three-tabs-sizebytailwind');
-  await expect(page.getByRole('heading', { name: 'Outline Icons' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Three Tabs: Size by Tailwind' })).toBeVisible();
 });
 
 test('no-tabs page has expected h1', async ({ page }) => {
   await page.goto('/no-tabs');
-  await expect(page.getByRole('heading', { name: 'Super Tiny Icons' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'No Tabs' })).toBeVisible();
 });

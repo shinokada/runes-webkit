@@ -21,14 +21,14 @@
     twitterUrl?: string;
     githubUrl?: string;
     headerClass?: string;
-    urlsToInclude?: string[];
+    urlsToIncludeSwitcher?: string[];
   }
-  let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToInclude = ['/guide'], ...restProps}: Props = $props();
+  let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
 
   let currentUrl = $state($page.url.pathname);
 	let nav = uiHelpers();
 
-  let include = $derived(isIncluded(currentUrl, urlsToInclude));
+  let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
 
 	let navStatus = $state(false);
 	let toggleNav = nav.toggle;
@@ -85,11 +85,9 @@
       </div>
 			</div>
 		{/snippet}
-    <div class="max-w-md mx-auto md:block md:w-auto order-1 md:order-none">
-      <NavUl {ulclass}>
-        {@render navLi(lis)}
-      </NavUl>
-    </div>
+    <NavUl {ulclass}>
+      {@render navLi(lis)}
+    </NavUl>
 	</Navbar>
 </header>
 

@@ -72,8 +72,8 @@ devDependencies:
     specifier: 5.0.0-next.90
     version: 5.0.0-next.90
   svelte-5-ui-lib:
-    specifier: ^0.4.1
-    version: 0.4.1(@sveltejs/kit@2.5.5)(svelte@5.0.0-next.90)(tailwindcss@3.4.3)
+    specifier: ^0.4.3
+    version: 0.4.3(@sveltejs/kit@2.5.5)(svelte@5.0.0-next.90)(tailwindcss@3.4.3)
   svelte-check:
     specifier: ^3.6.9
     version: 3.6.9(postcss-load-config@5.0.3)(postcss@8.4.38)(svelte@5.0.0-next.90)
@@ -1420,7 +1420,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001605
-      electron-to-chromium: 1.4.723
+      electron-to-chromium: 1.4.724
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -1785,8 +1785,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.723:
-    resolution: {integrity: sha512-rxFVtrMGMFROr4qqU6n95rUi9IlfIm+lIAt+hOToy/9r6CDv0XiEcQdC3VP71y1pE5CFTzKV0RvxOGYCPWWHPw==}
+  /electron-to-chromium@1.4.724:
+    resolution: {integrity: sha512-RTRvkmRkGhNBPPpdrgtDKvmOEYTrPlXDfc0J/Nfq5s29tEahAwhiX4mmhNzj6febWMleulxVYPh7QwCSL/EldA==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -4129,8 +4129,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-5-ui-lib@0.4.1(@sveltejs/kit@2.5.5)(svelte@5.0.0-next.90)(tailwindcss@3.4.3):
-    resolution: {integrity: sha512-jZTYpbVUz5pgCr5JO0JA0j5zxer4XHkJeibWK/O7cFluNIX7CN6ZQFrtggQrawRZ+mDjvjTbYrx8gkkqQWZ0dA==}
+  /svelte-5-ui-lib@0.4.3(@sveltejs/kit@2.5.5)(svelte@5.0.0-next.90)(tailwindcss@3.4.3):
+    resolution: {integrity: sha512-r3Z5qQzhP+3Yw4894iAMGjEvqv05gHrGlFfb5pHDUNVSPSlMyp/bCEam/kVA74Wq4Fle+gh4SDEeqkc19XSqVA==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0

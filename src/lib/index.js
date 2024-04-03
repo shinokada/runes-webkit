@@ -1,17 +1,23 @@
-export { removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers';
+export { extract, removeHyphensAndCapitalize, filterIconsByKeyword, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers';
 
 export { default as cssNames } from './cssNames.json';
 export * from './highlight/styles';
 
+export { default as Anchor } from './Anchor.svelte';
+export { default as Code } from './Code.svelte';
 export { default as CodeWrapper } from './CodeWrapper.svelte';
+export { default as DocPage } from './DocPage.svelte';
 export { default as DynamicCodeBlockStyle } from './DynamicCodeBlockStyle.svelte';
 export { default as Footer } from './Footer.svelte';
+export { default as H2 } from './H2.svelte';
+export { default as H3 } from './H3.svelte';
 export { default as HighlightCompo } from './HighlightCompo.svelte';
 export { default as HomeCards } from './HomeCards.svelte';
 export { default as IconPage } from './IconPage.svelte';
 export { default as MetaTag } from './MetaTag.svelte';
 export { default as Nav } from './Nav.svelte';
 export { default as OnThisPage } from './OnThisPage.svelte';
+export { default as Sidebar } from './Sidebar.svelte';
 export { default as SupportBanner } from './SupportBanner.svelte';
 export { default as TechInfo } from './TechInfo.svelte';
 export { default as Toc } from './Toc.svelte';

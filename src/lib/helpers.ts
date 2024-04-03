@@ -1,3 +1,22 @@
+
+interface LinkType {
+  name: string;
+  href?: string;
+  rel?: string;
+  active?: boolean;
+}
+
+export function extract(x: HTMLElement): LinkType {
+  if (x.firstElementChild)
+    return {
+      rel: x.tagName,
+      href: '#' + x.firstElementChild?.id,
+      // name: x?.firstChild?.nodeValue ?? ''
+      name: x.textContent?.replace(/#+/g, '') ?? ''
+    };
+  return { name: '' };
+}
+
 export function removeHyphensAndCapitalize(str: string) {
   // Handle empty string or strings without letters
   if (!str || !/\w/.test(str)) {

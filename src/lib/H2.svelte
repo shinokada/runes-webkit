@@ -1,0 +1,14 @@
+<script lang="ts">
+  import Anchor from './Anchor.svelte';
+  import type { Snippet } from "svelte";
+  interface Props{
+    children: Snippet;
+  }
+  let { children }: Props = $props();
+</script>
+
+<Anchor tag="h2" class="text-gray-900 dark:text-white leading-tight text-2xl font-bold"
+  >
+  {@render children()}
+  </Anchor
+>

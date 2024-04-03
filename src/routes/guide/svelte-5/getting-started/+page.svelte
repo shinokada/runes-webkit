@@ -1,7 +1,6 @@
 
 <script lang="ts">
   import { HighlightCompo, CodeWrapper } from '$lib';
-  import { AddressBookOutline } from '../../flowbite-samples';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -9,7 +8,7 @@
   });
 </script>
 
-<h1>Svelte Awesome Icons: v1</h1>
+<h1>Svelte Awesome Icons: v2</h1>
 
 <div class="flex gap-2 my-8">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" ></a>
@@ -37,23 +36,6 @@
 <HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
 
 
-<h2>A11y friendly</h2>
-
-<p>Use `title`, `desc`, and `ariaLabel` props to make your icons accessible.</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/a11y-friendly.md'] as string} />
-
-
-<p>Check out this icon in the console:</p>
-
-<CodeWrapper>
-  <AddressBookOutline
-  title={{ id: 'my-title', title: 'Red bell' }}
-  desc={{ id: 'my-descrip', desc: 'The shape of a red bell' }}
-  ariaLabel="red bell"
-  color="red"
-  />
-</CodeWrapper>
 
 <h2>Faster compiling</h2>
 

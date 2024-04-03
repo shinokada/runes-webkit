@@ -25,8 +25,8 @@ function toc() {
 
 <div class="relative">
   <div
-    class="fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-8 xl:text-sm xl:block right-0"
     use:init
+    class="fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-8 xl:text-sm xl:block right-0"
   >
     {#if headings.length}
       <div
@@ -41,6 +41,7 @@ function toc() {
           <nav>
             <ul class="overflow-x-hidden font-medium text-gray-500 dark:text-gray-400 space-y-2.5">
               {#each headings as { rel, href, name }}
+              {console.log('rel', rel, 'href', href, 'name', name)}
                 <li>
                   <a {href} class="{indent(rel)} {aClass}">{name}</a>
                 </li>

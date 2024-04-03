@@ -6,4 +6,4 @@
   const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
 </script>
 
-<IconPage icons={keyIcons} title="Solid Icons" />
+<IconPage icons={keyIcons} title="Three Tabs" />

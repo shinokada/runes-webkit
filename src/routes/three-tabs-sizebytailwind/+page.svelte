@@ -7,4 +7,4 @@
   const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
 </script>
 
-<IconPage icons={keyIcons} sizeByTailwind title="Outline Icons" defaultSize='6' maxSize="10" minSize="4"/>
+<IconPage icons={keyIcons} sizeByTailwind title="Three Tabs: Size by Tailwind" defaultSize='6' maxSize="10" minSize="4"/>

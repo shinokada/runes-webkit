@@ -1,10 +1,15 @@
 <script>
   import '../app.postcss';
-  import { Nav, Footer, MetaTag } from '$lib'
+  import { page } from '$app/stores';
+  import { Nav, Footer, MetaTag, OnThisPage, extract, Sidebar } from '$lib'
+  
   let { children } = $props()
-
+  let currentUrl = $state($page.url.pathname);
+  $effect(() => {
+    currentUrl = $page.url.pathname;
+  })
   const lis =[
-    {name: 'Guide', href: '/svelte-4/getting-started'},
+    {name: 'Guide', href: '/guide/svelte-4/getting-started'},
     {name: '3-Tabs', href: '/three-tabs'},
     {name: '3-Tabs-tailwind', href: '/three-tabs-sizebytailwind'},
     {name: 'No-tabs', href: '/no-tabs'},
@@ -13,7 +18,7 @@
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToInclude =['/guide','/svelte-4']
+  const urlsToIncludeSwitcher =['/guide/']
   const siteName = 'Svelte Icon Webkit'
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = 'https://github.com/shinokada/svelte-awesome-icons'
@@ -27,9 +32,22 @@
     creator: '@shinokada'
   }
 </script>
+
+
 <MetaTag {...meta}/>
-<Nav {lis} {siteName} {twitterUrl} {githubUrl} {urlsToInclude}/>
-<main class="max-w-6xl mx-auto px-8 pt-4">
-  {@render children()}
-</main>
-<Footer {brand} {lis} ulClass='dark_bg_theme'/>
+<Nav {lis} {siteName} {twitterUrl} {githubUrl} {urlsToIncludeSwitcher}/>
+<div class="lg:flex">
+  
+  {#if ['/guide/'].some(path => currentUrl.startsWith(path))}
+    <Sidebar />
+    <div class="relative">
+      <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
+    </div>
+  {/if}
+    <div class="relative h-full w-full overflow-y-auto px-8">
+      {@render children()}
+      <Footer {brand} {lis} ulClass='dark_bg_theme'/>
+    </div>
+  
+</div>
+

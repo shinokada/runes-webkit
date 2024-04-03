@@ -1,4 +1,4 @@
-<script>import { Button, Dropdown, DropdownItem, DropdownDivider, uiHelpers } from "svelte-5-ui-lib";
+<script>import { Dropdown, DropdownItem, DropdownDivider, uiHelpers } from "svelte-5-ui-lib";
 import { ChevronDownSolid } from "./";
 let dropdown = uiHelpers();
 let isOpen = $state(false);
@@ -37,8 +37,8 @@ function toc() {
   On this page
   <ChevronDownSolid class="flex-inline w-5 h-5 ms-2 mt-1 text-white dark:text-white" />
 </button>
-<div class="relative">
-    <Dropdown {isOpen} divclass="absolute -left-[27px]">
+<div class="relative" use:init>
+    <Dropdown {isOpen} divclass="absolute right-[27px]">
       {#snippet children()}
       <DropdownItem href="#top" aclass="ml-2">Return to top</DropdownItem>
       <DropdownDivider />

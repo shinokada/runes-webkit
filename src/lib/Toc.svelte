@@ -9,11 +9,12 @@
   const aClass =
     "inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-['#'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100";
 
-  export const extract: (x: HTMLElement) => LinkType = (x: HTMLElement) => ({
-    name: x.textContent ?? ''
-  });
+  interface Props{
+    headingSelector: string;
+    extract: (x: HTMLElement) => LinkType;
+  }
 
-  let {headingSelector}:{headingSelector: string} = $props();
+  let {headingSelector, extract }: Props = $props();
 
   let headings: LinkType[] = $state([]);
 
@@ -39,12 +40,13 @@
       .map(extract)
       .filter((x) => x.name);
   }
+
 </script>
 
 <div class="relative">
   <div
-    class="fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-8 xl:text-sm xl:block right-0"
     use:init
+    class="fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-8 xl:text-sm xl:block right-0"
   >
     {#if headings.length}
       <div

@@ -1,3 +1,12 @@
+export function extract(x) {
+    if (x.firstElementChild)
+        return {
+            rel: x.tagName,
+            href: '#' + x.firstElementChild?.id,
+            name: x?.firstChild?.nodeValue ?? ''
+        };
+    return { name: '' };
+}
 export function removeHyphensAndCapitalize(str) {
     // Handle empty string or strings without letters
     if (!str || !/\w/.test(str)) {

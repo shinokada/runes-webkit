@@ -11,7 +11,7 @@ declare const __propDef: {
         twitterUrl?: string | undefined;
         githubUrl?: string | undefined;
         headerClass?: string | undefined;
-        urlsToInclude?: string[] | undefined;
+        urlsToIncludeSwitcher?: string[] | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

@@ -20,12 +20,12 @@
 		isOpen = dropdown.isOpen;
 	});
   
+  interface Props{
+    headingSelector: string;
+    extract: (x: HTMLElement) => LinkType;
+  }
 
-  export const extract: (x: HTMLElement) => LinkType = (x: HTMLElement) => ({
-    name: x.textContent ?? ''
-  });
-
-  let {headingSelector}:{headingSelector: string} = $props();
+  let {headingSelector, extract }: Props = $props();
 
   let headings: LinkType[] = $state([]);
 
@@ -41,7 +41,7 @@
   }
 
   function indent(name: string | undefined) {
-    return name === 'H2' ? 'pl-2.5' : 'pl-6';
+    return name === 'h2' ? 'pl-2.5' : 'pl-4';
   }
 
   function toc() {
@@ -53,26 +53,25 @@
   }
 </script>
 
-<button onclick={toggle}
-  class="xl:hidden z-20 fixed top-20 p-2 right-6 flex dark:bg-neutral-900 dark:text-white"
->
+<div class="xl:hidden z-20 fixed top-20 p-2 right-6 flex dark:bg-neutral-900 dark:text-white">
+<button onclick={toggle} class='flex'>
   On this page
-  <ChevronDownSolid class="flex-inline w-5 h-5 ms-2 mt-1 text-white dark:text-white" />
+  <ChevronDownSolid class="flex-inline w-4 h-4 ms-2 mt-1 text-white dark:text-white" />
 </button>
-<div class="relative" use:init>
-    <Dropdown {isOpen} divclass="absolute right-[27px]">
+<div use:init>
+    <Dropdown {isOpen} divclass="w-60 absolute right-[8px] top-[30px]">
       {#snippet children()}
-      <DropdownItem href="#top" aclass="ml-2">Return to top</DropdownItem>
+      <DropdownItem href="#top">Return to top</DropdownItem>
       <DropdownDivider />
       {#each headings as { rel, href, name }}
-        <DropdownItem>
-          <a {href} class={indent(rel)}>{name}</a>
+        <DropdownItem liclass='my-2 hover:text-primary-400'>
+          <a {href} class="{indent(rel)}">{name}</a>
         </DropdownItem>
       {/each}
       {/snippet}
     </Dropdown>
 </div>
-
+</div>
 <!--
 @component
 [Go to docs](https://svelte-icon-webkit.codewithshin.com/)

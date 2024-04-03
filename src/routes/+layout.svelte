@@ -18,7 +18,7 @@
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcher =['/guide/']
+  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/']
   const siteName = 'Svelte Icon Webkit'
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = 'https://github.com/shinokada/svelte-awesome-icons'
@@ -35,10 +35,10 @@
 
 
 <MetaTag {...meta}/>
-<Nav {lis} {siteName} {twitterUrl} {githubUrl} {urlsToIncludeSwitcher}/>
+<Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
 <div class="lg:flex">
   
-  {#if ['/guide/'].some(path => currentUrl.startsWith(path))}
+  {#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
     <Sidebar />
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />

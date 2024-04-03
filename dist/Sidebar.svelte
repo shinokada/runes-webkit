@@ -54,7 +54,7 @@ const list = [
 ];
 </script>
 
-<Sidebar {activeClass} {nonActiveClass} divclass='dark:bg-stone-900' asideclass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block hidden">
+<Sidebar {activeClass} {nonActiveClass} divclass='dark_bg_theme' asideclass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block hidden">
   <SidebarGroup>
     {#each list as { name, icon, children, href }}
       {#if children}

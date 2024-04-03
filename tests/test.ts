@@ -24,3 +24,8 @@ test('no-tabs page has expected h1', async ({ page }) => {
   await page.goto('/no-tabs');
   await expect(page.getByRole('heading', { name: 'No Tabs' })).toBeVisible();
 });
+
+test('docs page has expected h1', async ({ page }) => {
+  await page.goto('/docs');
+  await expect(page.getByRole('heading', { name: 'Documentation' })).toBeVisible();
+});

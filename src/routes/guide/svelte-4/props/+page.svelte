@@ -1,1 +1,1 @@
-svelte-4 props
+<h1>Props: v1</h1>

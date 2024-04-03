@@ -21,6 +21,20 @@ declare const __propDef: {
 export type DocPageProps = typeof __propDef.props;
 export type DocPageEvents = typeof __propDef.events;
 export type DocPageSlots = typeof __propDef.slots;
+/**
+ * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * ## Props
+ * @props: children: Snippet;
+ * @props:title?: string;
+ * @props:description?: string;
+ * @props:keywords?: string;
+ * @props:url?: string;
+ * @props:image?: string;
+ * @props:imageAlt?: string;
+ * @props:imageWidth?: string;
+ * @props:imageHeight?: string;
+ * @props:creator?: string;
+ */
 export default class DocPage extends SvelteComponent<DocPageProps, DocPageEvents, DocPageSlots> {
 }
 export {};

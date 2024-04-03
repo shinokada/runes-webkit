@@ -12,6 +12,11 @@ declare const __propDef: {
 export type H2Props = typeof __propDef.props;
 export type H2Events = typeof __propDef.events;
 export type H2Slots = typeof __propDef.slots;
+/**
+ * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * ## Props
+ * @props: children: Snippet;
+ */
 export default class H2 extends SvelteComponent<H2Props, H2Events, H2Slots> {
 }
 export {};

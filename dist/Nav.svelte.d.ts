@@ -29,7 +29,7 @@ export type NavSlots = typeof __propDef.slots;
  * @props:twitterUrl?: string;
  * @props:githubUrl?: string;
  * @props:headerClass?: string;
- * @props:urlsToInclude?: string[];
+ * @props:urlsToIncludeSwitcher?: string[];
  */
 export default class Nav extends SvelteComponent<NavProps, NavEvents, NavSlots> {
 }

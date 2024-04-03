@@ -3,7 +3,8 @@ export function extract(x) {
         return {
             rel: x.tagName,
             href: '#' + x.firstElementChild?.id,
-            name: x?.firstChild?.nodeValue ?? ''
+            // name: x?.firstChild?.nodeValue ?? ''
+            name: x.textContent?.replace(/#+/g, '') ?? ''
         };
     return { name: '' };
 }

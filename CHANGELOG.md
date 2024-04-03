@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.3.0
+
+### Minor Changes
+
+- feat: Sidebar, Anchor, H2, H3, Code, Toc are added ([`ddfb17f16e878b0b3a82676c567742872abd51a5`](https://github.com/shinokada/svelte-icon-webkit/commit/ddfb17f16e878b0b3a82676c567742872abd51a5))
+  docs: udpate guide/svelte-4/getting-started page
+
 ## 0.2.8
 
 ### Patch Changes

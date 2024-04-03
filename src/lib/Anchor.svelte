@@ -33,3 +33,12 @@
     #
   </a>
 </svelte:element>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: children: Snippet;
+@props:tag?: string;
+@props:class?: string;
+-->

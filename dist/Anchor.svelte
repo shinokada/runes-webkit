@@ -3,8 +3,8 @@ let { children, tag, class: className, ...restProps } = $props();
 let content = $state("");
 let slug = $state("");
 function init(node) {
-  content = node.firstChild?.nodeValue ?? "";
-  slug = content.replace(/\s/g, "_");
+  content = node.innerText ?? "";
+  slug = content.replace(/\s/g, "_").replace(/__#+/g, "");
 }
 let elemClass = $state(twMerge("relative group", className));
 </script>
@@ -20,3 +20,12 @@ let elemClass = $state(twMerge("relative group", className));
     #
   </a>
 </svelte:element>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: children: Snippet;
+@props:tag?: string;
+@props:class?: string;
+-->

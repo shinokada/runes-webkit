@@ -1,8 +1,5 @@
 <script>const aClass = "inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-['#'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100";
-export const extract = (x) => ({
-  name: x.textContent ?? ""
-});
-let { headingSelector } = $props();
+let { headingSelector, extract } = $props();
 let headings = $state([]);
 function init(_) {
   const observer = new MutationObserver(toc);
@@ -41,7 +38,6 @@ function toc() {
           <nav>
             <ul class="overflow-x-hidden font-medium text-gray-500 dark:text-gray-400 space-y-2.5">
               {#each headings as { rel, href, name }}
-              {console.log('rel', rel, 'href', href, 'name', name)}
                 <li>
                   <a {href} class="{indent(rel)} {aClass}">{name}</a>
                 </li>
@@ -58,5 +54,6 @@ function toc() {
 @component
 [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
 ## Props
-@props: 
+@props: headingSelector: string;
+@props:extract: (x
 -->

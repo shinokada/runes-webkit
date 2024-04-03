@@ -12,6 +12,11 @@ declare const __propDef: {
 export type CodeProps = typeof __propDef.props;
 export type CodeEvents = typeof __propDef.events;
 export type CodeSlots = typeof __propDef.slots;
+/**
+ * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * ## Props
+ * @props: children: Snippet;
+ */
 export default class Code extends SvelteComponent<CodeProps, CodeEvents, CodeSlots> {
 }
 export {};

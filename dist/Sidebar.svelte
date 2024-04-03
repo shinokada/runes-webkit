@@ -6,7 +6,8 @@ $effect(() => {
   currentUrl = $page.url.pathname;
 });
 const hasPath = (key) => currentUrl.includes(key);
-const activeClass = "flex items-center p-2 text-base font-normal text-white bg-primary-600 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-500 dark:hover:bg-primary-500";
+const activeClass = "flex items-center p-1 text-base font-normal text-white bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600";
+const nonActiveClass = "flex items-center p-1 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700";
 const list = [
   {
     name: "Svelte 4 & 5",
@@ -20,7 +21,7 @@ const list = [
       {
         name: "Props",
         icon: BadgeCheckOutline,
-        href: "/guide/svelte-4/getting-started"
+        href: "/guide/svelte-4/props"
       }
     ]
   },
@@ -36,7 +37,7 @@ const list = [
       {
         name: "Props",
         icon: BadgeCheckOutline,
-        href: "/guide/svelte-5/getting-started"
+        href: "/guide/svelte-5/props"
       }
     ]
   },
@@ -53,16 +54,16 @@ const list = [
 ];
 </script>
 
-<Sidebar {activeClass} divclass='dark:bg-stone-900' asideclass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block hidden">
+<Sidebar {activeClass} {nonActiveClass} divclass='dark:bg-stone-900' asideclass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block hidden">
   <SidebarGroup>
     {#each list as { name, icon, children, href }}
       {#if children}
-      <SidebarDropdownWrapper label="Svelte 4 & 5" isOpen={hasPath('components')} svgclass="me-4" btnclass="p-1">
+      <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass="me-4" btnclass="p-1">
         {#snippet iconSlot()}
           <svelte:component this={icon} class="h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
         {/snippet}
         {#each children as { name, icon, href }}
-        <SidebarItem label="{name}"  aclass='ml-4'>
+        <SidebarItem label="{name}" {href} aclass='ml-4'>
           {#snippet iconSlot()}
           <svelte:component this={icon} class="h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
         {/snippet}
@@ -70,7 +71,7 @@ const list = [
         {/each}
       </SidebarDropdownWrapper>
       {:else}
-      <SidebarItem label="{name}" >
+      <SidebarItem label="{name}" {href} >
         {#snippet iconSlot()}
           <svelte:component this={icon} class="h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
         {/snippet}
@@ -80,3 +81,10 @@ const list = [
     
   </SidebarGroup>
 </Sidebar>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: 
+-->

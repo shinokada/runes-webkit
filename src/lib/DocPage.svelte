@@ -33,3 +33,19 @@
     <Toc {extract} headingSelector="#mainContent > :where(h2, h3)" />
   </div>
 </main>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: children: Snippet;
+@props:title?: string;
+@props:description?: string;
+@props:keywords?: string;
+@props:url?: string;
+@props:image?: string;
+@props:imageAlt?: string;
+@props:imageWidth?: string;
+@props:imageHeight?: string;
+@props:creator?: string;
+-->

@@ -78,5 +78,5 @@ $effect(() => {
 @props:twitterUrl?: string;
 @props:githubUrl?: string;
 @props:headerClass?: string;
-@props:urlsToInclude?: string[];
+@props:urlsToIncludeSwitcher?: string[];
 -->

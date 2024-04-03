@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 0.3.1
+
+### Patch Changes
+
+- feat: update DocPage, Toc, OnThisPage components ([`40894f641e0d6f9ce56239a9ecdc7989d44fe3d4`](https://github.com/shinokada/svelte-icon-webkit/commit/40894f641e0d6f9ce56239a9ecdc7989d44fe3d4))
+  feat: add guide/+layout with DocPage
+  feat: add guide2/+layout without DocPage
+
 ## 0.3.0
 
 ### Minor Changes

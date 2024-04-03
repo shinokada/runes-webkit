@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.3.3
+
+### Patch Changes
+
+- docs: add docs page to explain how to use components ([`30455003502f26a69b09b92f01f42bb28384b057`](https://github.com/shinokada/svelte-icon-webkit/commit/30455003502f26a69b09b92f01f42bb28384b057))
+
 ## 0.3.2
 
 ### Patch Changes

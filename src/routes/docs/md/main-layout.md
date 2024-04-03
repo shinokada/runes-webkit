@@ -1,7 +1,8 @@
 <script>
-  import '../app.postcss';
+  import '../app.pcss';
   import { page } from '$app/stores';
-  import { Nav, Footer, MetaTag, OnThisPage, extract, Sidebar } from '$lib'
+  import { Footer, MetaTag, OnThisPage, extract, Sidebar } from 'svelte-icon-webkit';
+  import Nav from './utils/Nav.svelte';
   
   let { children } = $props()
   let currentUrl = $state($page.url.pathname);
@@ -10,32 +11,19 @@
   })
   const lis =[
     {name: 'Guide', href: '/guide/svelte-4/getting-started'},
-    {name: '3-Tabs', href: '/three-tabs'},
-    {name: '3-Tabs-tailwind', href: '/three-tabs-sizebytailwind'},
-    {name: 'No-tabs', href: '/no-tabs'},
-    {name: 'Docs', href: '/docs'},
+    {name: 'Icons', href: '/icons'},
+    {name: 'Icon sets', href: 'https://svelte-svg-icons.codewithshin.com/'},
   ]
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/docs']
-  const siteName = 'Svelte Icon Webkit'
+  const urlsToIncludeSwitcherAndSidebar =['/guide/']
+  const siteName = 'Svelte Supertiny'
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = 'https://github.com/shinokada/svelte-awesome-icons'
-  const meta = {
-    title: 'Svelte Icon Webkit: Home',
-    description: 'A collection of reusable Svelte components for building icon-based user interfaces in web applications.',
-    keywords:'Svelte 5, Runes, SvelteKit, UI, icons',
-    url: 'https://svelte-icon-webkit.codewithshin.com/',
-    image: 'https://open-graph-vercel.vercel.app/api/svelte-icon-webkit',
-    imageAlt: 'Svelte Icon Webkit',
-    creator: '@shinokada'
-  }
 </script>
 
-
-<MetaTag {...meta}/>
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
 <div class="lg:flex">
   
@@ -49,6 +37,5 @@
       {@render children()}
       <Footer {brand} {lis} ulClass='dark_bg_theme'/>
     </div>
-  
 </div>
 

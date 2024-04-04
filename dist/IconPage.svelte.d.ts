@@ -22,7 +22,14 @@ export type IconPageSlots = typeof __propDef.slots;
 /**
  * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
  * ## Props
- * @props: icons: { [key
+ * @props: icons: ComponentType;
+ * @props:title: string;
+ * @props:defaultSize?: string;
+ * @props:sizeByTailwind?: boolean;// for flowbite-svelte-icons only
+ * @props:minSize?: string;
+ * @props:maxSize?: string;
+ * @props:class?: string;
+ * @props:threeTabs?: boolean
  */
 export default class IconPage extends SvelteComponent<IconPageProps, IconPageEvents, IconPageSlots> {
 }

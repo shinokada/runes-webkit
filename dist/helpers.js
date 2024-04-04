@@ -1,3 +1,9 @@
+/**
+ * Extracts information from an HTMLElement to create a LinkType object.
+ *
+ * @param {HTMLElement} x - The HTMLElement from which to extract information.
+ * @return {LinkType} The extracted information as a LinkType object.
+ */
 export function extract(x) {
     if (x.firstElementChild)
         return {
@@ -8,6 +14,12 @@ export function extract(x) {
         };
     return { name: '' };
 }
+/**
+ * Removes hyphens from a string and capitalizes each word.
+ *
+ * @param {string} str - the input string
+ * @return {string} the formatted string with hyphens removed and words capitalized
+ */
 export function removeHyphensAndCapitalize(str) {
     // Handle empty string or strings without letters
     if (!str || !/\w/.test(str)) {
@@ -18,6 +30,13 @@ export function removeHyphensAndCapitalize(str) {
     // Remove hyphens and ensure single spaces between words
     return capitalized.replace(/-|\s{2,}/g, ' ');
 }
+/**
+ * Filters icons based on the provided keyword.
+ *
+ * @param {Object} icons - The object containing icons to filter.
+ * @param {string} keyword - The keyword to filter icons by.
+ * @return {Object} The filtered icons object.
+ */
 export function filterIconsByKeyword(icons, keyword) {
     const filteredIcons = {};
     for (const key in icons) {
@@ -44,6 +63,13 @@ export function filterIconsByKeyword(icons, keyword) {
 export const filterStringKeys = (obj) => {
     return Object.fromEntries(Object.entries(obj).filter(([key]) => typeof key === 'string'));
 };
+/**
+ * Exclude items from the input object based on the provided keywords.
+ *
+ * @param {object} items - The input object containing key-value pairs.
+ * @param {string} keywords - The keywords to exclude items by.
+ * @return {object} The filtered object after excluding items based on the keywords.
+ */
 export function excludeItemsByKeywords(items, keywords) {
     const filteredItems = {};
     for (const key in items) {
@@ -53,6 +79,11 @@ export function excludeItemsByKeywords(items, keywords) {
     }
     return filteredItems;
 }
+/**
+ * Generates a random tailwind color class string.
+ *
+ * @return {string} The generated tailwind color class string.
+ */
 export const random_tailwind_color = () => {
     const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
     const shades = ['300', '400', '500'];
@@ -60,6 +91,11 @@ export const random_tailwind_color = () => {
     const randomShade = shades[Math.floor(Math.random() * shades.length)];
     return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0`;
 };
+/**
+ * Generates a random hex color code.
+ *
+ * @return {string} The randomly generated hex color code.
+ */
 export const random_hex_color_code = () => {
     let n = (Math.random() * 0xfffff * 1000000).toString(16);
     return '#' + n.slice(0, 6);

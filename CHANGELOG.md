@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 0.3.4
+
+### Patch Changes
+
+- feat: add filterStringKeys helper ([`6f0ad8ddb5827e7c69c68eeff052cc511e168378`](https://github.com/shinokada/svelte-icon-webkit/commit/6f0ad8ddb5827e7c69c68eeff052cc511e168378))
+  feat: add JSDoc to helpers
+  feat: add svelte ComponentType to IconPage and +page.svelte
+
 ## 0.3.3
 
 ### Patch Changes

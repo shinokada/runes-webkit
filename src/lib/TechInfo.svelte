@@ -27,8 +27,8 @@
     divclass, ulclass, liclass, aclass, cardsize = 'xl' }:Props = $props();
   // const pkgName = pkg.name;
   // const pkgVersion = pkg.version;
-  const h2Cls = twMerge('flex justify-center my-8', h2class);
-  const divCls = twMerge('grid grid-cols-1', divclass);
+  const h2Cls = twMerge('flex justify-center my-8 ', h2class);
+  const divCls = twMerge('grid grid-cols-1 max-w-5xl mx-auto', divclass);
   const ulCls = twMerge('m-4 list-disc p-4 text-left text-lg dark:text-gray-400', ulclass);
   const liCls = twMerge('hover:text-red-700 hover:underline', liclass);
   const aCls = twMerge('me-4 hover:underline md:me-6', aclass);

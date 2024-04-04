@@ -18,7 +18,8 @@
     repoUrl,
     svelteVersion, svelteKitVersion, svelte5uilib, svelteRuneHighlight, viteVersion, 
   }
-  const cardTitle = `${removeHyphensAndCapitalize(pkgName)}: ${pkgVersion}`
+  const homeTitle =`${removeHyphensAndCapitalize(pkgName)}: ${pkgVersion}`
+  const cardTitle = `<h1 class="flex justify-center my-8">${homeTitle}</h1>`
   const cards = [
     {
       title: 'Svelte 4/5/Runes',
@@ -107,5 +108,5 @@
 </SupportBanner>
 
 <HomeCards {cards} {cardTitle}/>
-<HomeCards cards={info} cardTitle='Info'/>
+<HomeCards cards={info} cardTitle='<h2 class="flex justify-center my-8">Info<h2>'/>
 <TechInfo {...pkg}/>

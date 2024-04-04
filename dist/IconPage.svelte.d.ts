@@ -1,11 +1,8 @@
 import { SvelteComponent } from "svelte";
+import type { ComponentType } from 'svelte';
 declare const __propDef: {
     props: {
-        icons: {
-            [key: string]: {
-                render: () => void;
-            };
-        };
+        icons: ComponentType;
         title: string;
         defaultSize?: string | undefined;
         sizeByTailwind?: boolean | undefined;

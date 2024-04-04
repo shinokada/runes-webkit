@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { ComponentType } from 'svelte';
   import { IconPage } from '$lib'
   import * as icons from '../flowbite-samples'
   // console.log('icons', icons)
@@ -7,4 +8,4 @@
   const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
 </script>
 
-<IconPage icons={keyIcons} sizeByTailwind title="Three Tabs: Size by Tailwind" defaultSize='6' maxSize="10" minSize="4"/>
+<IconPage icons={keyIcons as ComponentType} sizeByTailwind title="Three Tabs: Size by Tailwind" defaultSize='6' maxSize="10" minSize="4"/>

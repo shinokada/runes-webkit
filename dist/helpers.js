@@ -27,6 +27,23 @@ export function filterIconsByKeyword(icons, keyword) {
     }
     return filteredIcons;
 }
+/**
+ * Filters out keys in the object that are not strings.
+ * to filter out index.js since it has [Symbol(Symbol.toStringTag)]: 'Module'
+ * Use this where you don't use other filters
+ * @example
+ * import type { ComponentType } from 'svelte';
+ * import * as icons from '../supertiny-samples'
+ * import { filterStringKeys } from './'
+ * const keyIcons = filterStringKeys(icons);
+ * <IconPage icons={keyIcons as ComponentType} threeTabs={false} title="No Tabs" />
+ *
+ * @param {object} obj - The object to filter string keys from.
+ * @return {object} A new object with only the string keys.
+ */
+export const filterStringKeys = (obj) => {
+    return Object.fromEntries(Object.entries(obj).filter(([key]) => typeof key === 'string'));
+};
 export function excludeItemsByKeywords(items, keywords) {
     const filteredItems = {};
     for (const key in items) {

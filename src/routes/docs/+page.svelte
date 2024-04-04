@@ -50,7 +50,9 @@
 
 <H2>MetaTag</H2>
 
+<p>Extend the <Code>MetaTag</Code> component with <Code>title</Code> and <Code>image</Code> props, then use it in <Code>+page.svelte</Code>.</p>
 
+<HighlightCompo codeLang="ts" code={modules['./md/metatag.md'] as string} />
 
 <H2>Components</H2>
 <HighlightCompo codeLang="ts" code={modules['./md/components.md'] as string} />

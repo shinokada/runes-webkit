@@ -22,7 +22,7 @@
   const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/docs']
   const siteName = 'Svelte Icon Webkit'
   const twitterUrl = 'https://twitter.com/shinokada'
-  const githubUrl = 'https://github.com/shinokada/svelte-awesome-icons'
+  const githubUrl = 'https://github.com/shinokada/svelte-icon-webkit'
   const meta = {
     title: 'Svelte Icon Webkit: Home',
     description: 'A collection of reusable Svelte components for building icon-based user interfaces in web applications.',

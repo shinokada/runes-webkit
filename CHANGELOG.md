@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.3.5
+
+### Patch Changes
+
+- fix: remove div and h1 from HomeCards ([`65608772d4f3cb6c21a059236d4da6806215856a`](https://github.com/shinokada/svelte-icon-webkit/commit/65608772d4f3cb6c21a059236d4da6806215856a))
+
 ## 0.3.4
 
 ### Patch Changes

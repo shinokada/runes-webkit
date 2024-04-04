@@ -9,7 +9,6 @@ declare const __propDef: {
             href?: string | undefined;
             iconClass?: string | undefined;
         }[];
-        cardTitle: string;
     };
     events: {
         [evt: string]: CustomEvent<any>;
@@ -22,8 +21,7 @@ export type HomeCardsSlots = typeof __propDef.slots;
 /**
  * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
  * ## Props
- * @props: cards:  CardType[]; = [], cardTitle, ...restProps;
- * @props:cardTitle: string;
+ * @props: cards:  CardType[]; = [], ...restProps;
  */
 export default class HomeCards extends SvelteComponent<HomeCardsProps, HomeCardsEvents, HomeCardsSlots> {
 }

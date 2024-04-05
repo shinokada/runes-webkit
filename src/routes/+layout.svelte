@@ -1,7 +1,7 @@
 <script>
   import '../app.postcss';
   import { page } from '$app/stores';
-  import { Nav, Footer, MetaTag, OnThisPage, extract, Sidebar } from '$lib'
+  import { Nav, Footer, MetaTag, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
   
   let { children } = $props()
   let currentUrl = $state($page.url.pathname);
@@ -20,17 +20,12 @@
     href: 'https://codewithshin.com',
   }
   const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use']
-  const siteName = 'Svelte Icon Webkit'
+  const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
-  const githubUrl = 'https://github.com/shinokada/svelte-icon-webkit'
+  const githubUrl = `https://github.com/shinokada/${__NAME__}`
   const meta = {
-    title: 'Svelte Icon Webkit: Home',
     description: 'A collection of reusable Svelte components for building icon-based user interfaces in web applications.',
     keywords:'Svelte 5, Runes, SvelteKit, UI, icons',
-    url: 'https://svelte-icon-webkit.codewithshin.com/',
-    image: 'https://open-graph-vercel.vercel.app/api/svelte-icon-webkit',
-    imageAlt: 'Svelte Icon Webkit',
-    creator: '@shinokada'
   }
 </script>
 

@@ -2,14 +2,14 @@
   
   import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from '$lib';
   
-  const titles = ['Svelte 4/5/Runes', 'CSS Frameworks support']
+  const cardsToExclude = ['Seven Props']
   const brand = {
     title: 'Brands, Regular, and Solid Icons',
     description: '2000+ SVG Icons.',
     icon: BellActiveAltOutline,
     iconClass: 'text-green-500'
   }
-  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, titles), brand, 2))
+  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
   
 </script>
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { removeHyphensAndCapitalize } from '$lib'
   interface Props {
     title?: string;
     description?: string;
@@ -10,7 +11,17 @@
     imageHeight?: string;
     creator?: string;
   }
-  let { title, description, keywords, url, image, imageAlt, imageHeight = '630', imageWidth = '1200', creator }: Props = $props();
+  let { 
+    title = removeHyphensAndCapitalize(__NAME__), 
+    description, 
+    keywords, 
+    url = `https://${__NAME__}.codewithshin.com/`, 
+    image = `https://open-graph-vercel.vercel.app/api/${__NAME__}`,
+    imageAlt = removeHyphensAndCapitalize(__NAME__), 
+    imageHeight = '630', 
+    imageWidth = '1200', 
+    creator = '@shinokada' 
+  }: Props = $props();
 
 </script>
 

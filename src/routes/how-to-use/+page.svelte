@@ -1,6 +1,6 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
-
+  // import MainLayout from '../+layout.svelte?raw'
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -18,6 +18,12 @@
 
 <H2>Setting</H2>
 
+<H3>package.json</H3>
+
+<p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code> and all URLs:</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/package-json.md'] as string} />
+
 <H3>vite.config.ts</H3>
 
 <HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
@@ -27,7 +33,6 @@
 <p>Set <Code>dark_bg_theme</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/app-pcss.md'] as string} />
-
 
 <H3>tailwind.config.cjs</H3>
 <p>Update <Code>tailwindcss.config.cjs</Code></p>
@@ -57,12 +62,17 @@
 
 <p>Home page has <Code>SupportBanner, MetaTag, HomeCards, TechInfo</Code> components.</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/home-page.md'] as string} />
+<HighlightCompo codeLang="ts" code={modules['./md/home.md'] as string} />
 
 <H2>Icon Page</H2>
 <p>Icon page uses IconPage component with threeTabs and titel props.</p>
-<HighlightCompo codeLang="ts" code={modules['./md/icon-page.md'] as string} />
 
+<H3>no-tabs</H3>
+<HighlightCompo codeLang="ts" code={modules['./md/no-tabs.md'] as string} />
+<H3>three-tabs</H3>
+<HighlightCompo codeLang="ts" code={modules['./md/three-tabs.md'] as string} />
+<H3>three-tabs-sizeby-tailwind</H3>
+<HighlightCompo codeLang="ts" code={modules['./md/three-tabs-sizeby-tailwind.md'] as string} />
 
 <H2>Doc Pages</H2>
 

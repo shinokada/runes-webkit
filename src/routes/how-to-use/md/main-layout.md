@@ -1,8 +1,7 @@
 <script>
-  import '../app.pcss';
-  import { page } from '$app/stores';
-  import { Footer, MetaTag, OnThisPage, extract, Sidebar } from 'svelte-icon-webkit';
-  import Nav from './utils/Nav.svelte';
+	import '../app.pcss';
+	import { page } from '$app/stores';
+  import { Nav, Footer, MetaTag, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from 'svelte-icon-webkit';
   
   let { children } = $props()
   let currentUrl = $state($page.url.pathname);
@@ -18,12 +17,18 @@
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/guide/']
-  const siteName = 'Svelte Supertiny'
+  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use']
+  const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
-  const githubUrl = 'https://github.com/shinokada/svelte-awesome-icons'
+  const githubUrl = `https://github.com/shinokada/${__NAME__}`
+  const meta = {
+    description: 'A collection of reusable Svelte components for building icon-based user interfaces in web applications.',
+    keywords:'Svelte 5, Runes, SvelteKit, UI, icons',
+  }
 </script>
 
+
+<MetaTag {...meta}/>
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
 <div class="lg:flex">
   
@@ -37,5 +42,5 @@
       {@render children()}
       <Footer {brand} {lis} ulClass='dark_bg_theme'/>
     </div>
+  
 </div>
-

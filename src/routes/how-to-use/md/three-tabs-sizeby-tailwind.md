@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';
-  import { IconPage, filterIconsByKeyword } from '$lib'
-  import * as icons from '../flowbite-samples'
+  import { IconPage, filterIconsByKeyword } from 'svelte-icon-webkit'
+  import * as icons from '$lib'
 
   const keywordsToInclude = 'Outline';
   const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);

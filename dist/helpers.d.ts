@@ -1,3 +1,12 @@
+import type { ComponentType } from 'svelte';
+import { BadgeCheckOutline, TruckFastSolid, InfoCircleOutline } from './';
+type Title = string;
+type Card = {
+    title: string;
+    description: string;
+    icon: ComponentType;
+    iconClass: string;
+};
 interface LinkType {
     name: string;
     href?: string;
@@ -73,4 +82,57 @@ export declare const random_tailwind_color: () => string;
  * @return {string} The randomly generated hex color code.
  */
 export declare const random_hex_color_code: () => string;
+/**
+ * Filters an array of objects by their titles.
+ *
+ * @param {Card[]} objects - The array of objects to filter.
+ * @param {Title[]} titles - The titles to filter by.
+ * @return {Card[]} The filtered array of objects.
+ */
+export declare function filterByTitles(objects: Card[], titles: Title[]): Card[];
+/**
+ * Filters out objects based on their title.
+ *
+ * @param {Card[]} objects - array of Card objects to filter
+ * @param {Title[]} titles - array of Titles to exclude by
+ * @return {Card[]} filtered array of Card objects
+ */
+export declare function excludeByTitle(objects: Card[], titles: Title[]): Card[];
+/**
+ * Insert a new object into an array at a specified position.
+ *
+ * @param {Card[]} array - the original array
+ * @param {Card} objectToInsert - the object to insert into the array
+ * @param {number} position - the position where the object should be inserted
+ * @return {any[]} the updated array with the object inserted at the specified position
+ */
+export declare function insertObjectToArray(array: Card[], objectToInsert: Card, position: number): any[];
+export declare const cards: ({
+    title: string;
+    description: string;
+    icon: typeof BadgeCheckOutline;
+    iconClass: string;
+} | {
+    title: string;
+    description: string;
+    icon: typeof TruckFastSolid;
+    iconClass: string;
+})[];
+export declare const info: {
+    title: string;
+    description: string;
+    icon: typeof InfoCircleOutline;
+    href: string;
+    iconClass: string;
+}[];
+export declare const pkg: {
+    pkgName: any;
+    pkgVersion: any;
+    repoUrl: any;
+    svelteVersion: any;
+    svelteKitVersion: any;
+    svelte5uilib: any;
+    svelteRuneHighlight: any;
+    viteVersion: any;
+};
 export {};

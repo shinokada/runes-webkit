@@ -86,4 +86,9 @@
 ## Props
 @props: headingSelector: string;
 @props:extract: (x
+@props:divFixed?: string;
+@props:aClass?: string;
+@props:ulClass?: string;
+@props:divFlex?: string;
+@props:h4Class?: string;
 -->

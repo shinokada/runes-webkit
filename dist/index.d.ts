@@ -60,4 +60,4 @@ export { default as TwitterSolid } from "./icons/TwitterSolid.svelte";
 export { default as Visualstudiocode } from "./icons/Visualstudiocode.svelte";
 export { default as WandMagicSparklesOutline } from "./icons/WandMagicSparklesOutline.svelte";
 export { default as XSolid } from "./icons/XSolid.svelte";
-export { extract, removeHyphensAndCapitalize, filterIconsByKeyword, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from "./helpers";
+export { extract, removeHyphensAndCapitalize, filterIconsByKeyword, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, insertObjectToArray, excludeByTitle, cards, info, pkg } from "./helpers";

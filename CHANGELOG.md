@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.3.6
+
+### Patch Changes
+
+- feat: excludeByTitle, insertObjectToArray, cards, info, pkg in helpers.ts ([`f921289bfece47afd0ba5ff58b13169a3dc1d2cb`](https://github.com/shinokada/svelte-icon-webkit/commit/f921289bfece47afd0ba5ff58b13169a3dc1d2cb))
+  fix: update src/+page.svelte
+
 ## 0.3.5
 
 ### Patch Changes

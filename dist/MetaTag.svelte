@@ -1,4 +1,15 @@
-<script>let { title, description, keywords, url, image, imageAlt, imageHeight = "630", imageWidth = "1200", creator } = $props();
+<script>import { removeHyphensAndCapitalize } from "./";
+let {
+  title = removeHyphensAndCapitalize(__NAME__),
+  description,
+  keywords,
+  url = `https://${__NAME__}.codewithshin.com/`,
+  image = `https://open-graph-vercel.vercel.app/api/${__NAME__}`,
+  imageAlt = removeHyphensAndCapitalize(__NAME__),
+  imageHeight = "630",
+  imageWidth = "1200",
+  creator = "@shinokada"
+} = $props();
 </script>
 
 <svelte:head>

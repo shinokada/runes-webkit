@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.3.7
+
+### Patch Changes
+
+- feat: MetaTag needs only keywords and description and other fields have default values ([`896775bb2a2149a42a3b8da34271323bc0f613f7`](https://github.com/shinokada/svelte-icon-webkit/commit/896775bb2a2149a42a3b8da34271323bc0f613f7))
+
 ## 0.3.6
 
 ### Patch Changes

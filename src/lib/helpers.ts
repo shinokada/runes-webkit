@@ -1,3 +1,13 @@
+import type { ComponentType } from 'svelte';
+import { A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from '$lib';
+
+type Title = string;
+type Card = {
+  title: string;
+  description: string;
+  icon: ComponentType;
+  iconClass: string;
+}
 
 interface LinkType {
   name: string;
@@ -120,3 +130,145 @@ export const random_hex_color_code = () => {
   let n = (Math.random() * 0xfffff * 1000000).toString(16);
   return '#' + n.slice(0, 6);
 };
+
+
+/**
+ * Filters an array of objects by their titles.
+ *
+ * @param {Card[]} objects - The array of objects to filter.
+ * @param {Title[]} titles - The titles to filter by.
+ * @return {Card[]} The filtered array of objects.
+ */
+export function filterByTitles(objects: Card[], titles: Title[]) {
+  return objects.filter(object =>
+    titles.some(title => title.toLowerCase() === object.title.toLowerCase())
+  );
+}
+
+/**
+ * Filters out objects based on their title.
+ *
+ * @param {Card[]} objects - array of Card objects to filter
+ * @param {Title[]} titles - array of Titles to exclude by
+ * @return {Card[]} filtered array of Card objects
+ */
+export function excludeByTitle(objects: Card[], titles: Title[]): Card[] {
+  return objects.filter(object =>
+    !titles.some(title => title.toLowerCase() === object.title.toLowerCase())
+  );
+}
+
+/**
+ * Insert a new object into an array at a specified position.
+ *
+ * @param {Card[]} array - the original array
+ * @param {Card} objectToInsert - the object to insert into the array
+ * @param {number} position - the position where the object should be inserted
+ * @return {any[]} the updated array with the object inserted at the specified position
+ */
+export function insertObjectToArray(array: Card[], objectToInsert: Card, position: number): any[] {
+  // Check for valid position
+  if (position < 0 || position > array.length) {
+    throw new Error("Invalid position. Please provide a position within the array bounds.");
+  }
+
+  // Create a copy of the array to avoid modifying the original
+  const newArray = [...array];
+
+  // Insert the object at the specified position
+  newArray.splice(position, 0, objectToInsert);
+
+  return newArray;
+}
+
+export const cards = [
+  {
+    title: 'Svelte 4/5/Runes',
+    description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
+    icon: BadgeCheckOutline,
+    iconClass: 'text-pink-500'
+  },
+  {
+    title: 'Brands, Regular, and Solid Icons',
+    description: '2000+ SVG Icons.',
+    icon: BellActiveAltOutline,
+    iconClass: 'text-green-500'
+  },
+  {
+    title: 'Accessible SVGs',
+    description: 'A11y props, `title`, `desc`, and `ariaLabel` for accessible SVG icons.',
+    icon: Accessibility,
+    iconClass: 'text-blue-400'
+  },
+  {
+    title:'Faster Compiling',
+    description: 'Import icons directly to optimize compilation speed and improve performance.',
+    icon: TruckFastSolid,
+    iconClass: 'text-yellow-500'
+  },
+  {
+    title:'IDE Support',
+    description: 'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
+    icon: Visualstudiocode,
+    iconClass: 'text-blue-500'
+  },
+  {
+    title:'Global Icons',
+    description: 'Use `IconSolid` and `IconOutline` to careat default icons.',
+    icon: GlobeOutline,
+    iconClass: 'text-purple-500'
+  },
+  {
+    title:'CSS Frameworks support',
+    description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
+    icon:Tailwindcss,
+    iconClass: 'text-blue-500'
+  },
+  {
+    title:'Seven Props',
+    description: 'Control the size, role, color, events, aria-label, title, and desc.',
+    icon:A7Solid,
+    iconClass: 'text-cyan-500'
+  },
+  {
+    title:'Dark mode',
+    description: 'Use `class` props to add your dark mode color.',
+    icon:MoonSolid,
+    iconClass: 'text-yellow-200'
+  }
+]
+
+export const info = [
+  {
+    title: 'Svelte Icon Family',
+    description: 'Explore 29 Svelte SVG Icon Sets.',
+    icon: InfoCircleOutline,
+    href:'https://svelte-svg-icons.codewithshin.com/',
+    iconClass: 'text-amber-500'
+  },
+  {
+    title: 'License',
+    description: 'Released under the MIT License.',
+    icon: InfoCircleOutline,
+    href:'https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE',
+    iconClass: 'text-lime-500'
+  },
+  {
+    title: 'Original source',
+    description: 'FontAwesome/Font-Awesome v6.2.1.',
+    icon: InfoCircleOutline,
+    href:'https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs',
+    iconClass: 'text-orange-500'
+  }
+]
+
+export  const pkg = {
+  pkgName: __NAME__,
+  pkgVersion: __VERSION__, 
+  repoUrl: __GITHUBURL__,
+  svelteVersion: __SVELTE_VERSION__, 
+  svelteKitVersion: __SVELTEKIT_VERSION__, 
+  svelte5uilib: __SVELTE_5_UI_LIB_VERSION__, 
+  svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__, 
+  viteVersion:  __VITE_VERSION__, 
+}

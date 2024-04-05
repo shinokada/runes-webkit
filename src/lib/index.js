@@ -1,4 +1,4 @@
-export { extract, removeHyphensAndCapitalize, filterIconsByKeyword, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code } from './helpers';
+export { extract, removeHyphensAndCapitalize, filterIconsByKeyword, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, insertObjectToArray, excludeByTitle, cards, info, pkg } from './helpers';
 
 export { default as cssNames } from './cssNames.json';
 export * from './highlight/styles';

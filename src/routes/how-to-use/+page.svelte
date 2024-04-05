@@ -12,11 +12,27 @@
 
 <p>This library contails components for 29 Svelte SVG Icon sets websites. However these components can be used in any Svelte project.</p>
 
+<H2>Installation</H2>
+
+<HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
+
 <H2>Setting</H2>
+
+<H3>vite.config.ts</H3>
+
+<HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
+
+<H3>dark_bg_theme</H3>
 
 <p>Set <Code>dark_bg_theme</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/app-pcss.md'] as string} />
+
+
+<H3>tailwind.config.cjs</H3>
+<p>Update <Code>tailwindcss.config.cjs</Code></p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} />
 
 <H2>Main Layout</H2>
 
@@ -33,10 +49,13 @@
 
 <H2>Guide Directory Layout</H2>
 
+<p>Add the following to the <Code>guide/+layout.svelte</Code>:</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/guide-layout.md'] as string} />
 
 <H2>Home Page</H2>
 
-<p>Home page has <Code>SupportBanner, MetaTag, HomeCards, TechInfo</Code>components.</p>
+<p>Home page has <Code>SupportBanner, MetaTag, HomeCards, TechInfo</Code> components.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/home-page.md'] as string} />
 

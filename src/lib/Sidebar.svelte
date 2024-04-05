@@ -3,8 +3,6 @@
   import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
   import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from '$lib';
 
-
-
   let currentUrl = $page.url.pathname;
   $effect(() => {
     currentUrl = $page.url.pathname;

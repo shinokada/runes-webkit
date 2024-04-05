@@ -13,13 +13,13 @@
     {name: '3-Tabs', href: '/three-tabs'},
     {name: '3-Tabs-tailwind', href: '/three-tabs-sizebytailwind'},
     {name: 'No-tabs', href: '/no-tabs'},
-    {name: 'Docs', href: '/docs'},
+    {name: 'How to use', href: '/how-to-use'},
   ]
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/docs']
+  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use']
   const siteName = 'Svelte Icon Webkit'
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = 'https://github.com/shinokada/svelte-icon-webkit'

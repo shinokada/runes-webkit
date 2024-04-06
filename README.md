@@ -2,14 +2,12 @@
 A collection of reusable Svelte components for building user interfaces in Svelte SVG Icon Sets web applications.
 
 - CodeWrapper
-- DynamicCodeBlockStyle
 - Footer
 - helpers
 - HighlightCompo
 - HomeCards
 - IconPage
 - MetaTag
-- Nav
 - SupportBanner
 - TechInfo
 

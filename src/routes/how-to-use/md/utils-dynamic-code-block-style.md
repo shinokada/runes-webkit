@@ -1,7 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   const stylesImport = import.meta.glob('./highlight/styles/*.css');
-  
+
   // @ts-ignore
   let selected: string = $state(
     browser && (localStorage.getItem('CODE_BLOCK_STYLE') ?? 'gigavolt')
@@ -12,7 +12,7 @@
     name: path.slice(path.lastIndexOf('/') + 1, -4)
   }));
 
-   $effect(() => {
+  $effect(() => {
     let link: HTMLLinkElement;
     (async () => {
       const css = await import(`./highlight/styles/${selected}.css?url`);

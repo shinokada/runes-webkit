@@ -18,6 +18,12 @@
 
 <H2>Setting</H2>
 
+<H3>svelte.config.js</H3>
+
+<p>Enable <Code>compilerOptions</Code></p>:
+
+<HighlightCompo codeLang="ts" code={modules['./md/svelte-config-js.md'] as string} />
+
 <H3>package.json</H3>
 
 <p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code> and all URLs:</p>

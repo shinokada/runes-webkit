@@ -1,7 +1,8 @@
 <script>
   import '../app.postcss';
   import { page } from '$app/stores';
-  import { Nav, Footer, MetaTag, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
+  import { Footer, MetaTag, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
+  import Nav from './utils/Nav.svelte';
   
   let { children } = $props()
   let currentUrl = $state($page.url.pathname);

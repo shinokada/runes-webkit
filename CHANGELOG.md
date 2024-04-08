@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.7
+
+### Patch Changes
+
+- fix: change index.js to .ts since exporting types ([`46b7b6b74933dab9e3a0ae67529fd82015bde70a`](https://github.com/shinokada/runes-webkit/commit/46b7b6b74933dab9e3a0ae67529fd82015bde70a))
+
 ## 0.4.6
 
 ### Patch Changes

@@ -1,6 +1,4 @@
 export * from './helpers';
-export type { TwitterType, OgType } from './MetaTag.svelte'
-
 export { default as Anchor } from './Anchor.svelte';
 export { default as Code } from './Code.svelte';
 export { default as CodeWrapper } from './CodeWrapper.svelte';
@@ -17,7 +15,6 @@ export { default as Sidebar } from './Sidebar.svelte';
 export { default as SupportBanner } from './SupportBanner.svelte';
 export { default as TechInfo } from './TechInfo.svelte';
 export { default as Toc } from './Toc.svelte';
-
 // icons
 export { default as A0Solid } from './icons/A0Solid.svelte';
 export { default as A1Solid } from './icons/A1Solid.svelte';

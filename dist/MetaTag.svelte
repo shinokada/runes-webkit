@@ -1,5 +1,6 @@
-<script lang="ts">import { removeHyphensAndCapitalize } from "./";
-let {
+<script context="module" lang="ts"></script>
+
+<script lang="ts">let {
   title,
   robots = true,
   description,

@@ -1,30 +1,32 @@
 import { SvelteComponent } from "svelte";
+export interface TwitterType {
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+    site?: string;
+    handle?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+    imageAlt?: string;
+}
+export interface OgType {
+    type?: string;
+    title?: string;
+    description?: string;
+    url?: string;
+    image?: string;
+    imageAlt?: string;
+    siteName?: string;
+    imageWidth?: string;
+    imageHeight?: string;
+}
 declare const __propDef: {
     props: {
         title?: string | undefined;
         robots?: boolean | undefined;
         description?: string | undefined;
         keywords?: string | undefined;
-        twitter?: {
-            card?: "summary" | "summary_large_image" | "app" | "player" | undefined;
-            site?: string | undefined;
-            handle?: string | undefined;
-            title?: string | undefined;
-            description?: string | undefined;
-            image?: string | undefined;
-            imageAlt?: string | undefined;
-        } | undefined;
-        og?: {
-            type?: string | undefined;
-            title?: string | undefined;
-            description?: string | undefined;
-            url?: string | undefined;
-            image?: string | undefined;
-            imageAlt?: string | undefined;
-            siteName?: string | undefined;
-            imageWidth?: string | undefined;
-            imageHeight?: string | undefined;
-        } | undefined;
+        twitter?: TwitterType | undefined;
+        og?: OgType | undefined;
         url?: string | undefined;
         imageWidth?: string | undefined;
         imageHeight?: string | undefined;

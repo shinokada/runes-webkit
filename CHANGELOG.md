@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.4
+
+### Patch Changes
+
+- fix: export types from MetaTag ([`84566b767dc8788188a311551b9192f62159cd22`](https://github.com/shinokada/runes-webkit/commit/84566b767dc8788188a311551b9192f62159cd22))
+
 ## 0.4.3
 
 ### Patch Changes

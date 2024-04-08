@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.1
+
+### Patch Changes
+
+- fix: remove svelte:head from MetaTag component ([`97618bddcb5b4047c520951efbfc5307db1e9222`](https://github.com/shinokada/svelte-icon-webkit/commit/97618bddcb5b4047c520951efbfc5307db1e9222))
+
 ## 0.4.0
 
 ### Minor Changes

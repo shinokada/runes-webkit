@@ -10,7 +10,7 @@ $effect(() => {
 const hasPath = (key) => currentUrl.includes(key);
 const activeCls = twMerge("flex items-center p-1 text-base font-normal text-white bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600", activeclass);
 const nonActiveCls = twMerge("flex items-center p-1 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700", nonActiveclass);
-const asideCls = twMerge("fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block hidden", asideclass);
+const asideCls = twMerge("fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block", asideclass);
 const divCls = twMerge("dark_bg_theme", divclass);
 const iconCls = twMerge("h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white", iconclass);
 let list = [
@@ -88,3 +88,15 @@ if (menuList) {
     {/each}
   </SidebarGroup>
 </Sidebar>
+
+<!--
+@component
+[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+## Props
+@props: asideclass?: string;
+@props:activeclass?: string;
+@props:nonActiveclass?: string;
+@props:divclass?: string;
+@props:iconclass?: string;
+@props:menuList?: ListType[]
+-->

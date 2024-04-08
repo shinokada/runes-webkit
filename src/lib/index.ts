@@ -1,3 +1,4 @@
+export * from './helpers';
 export type { TwitterType, OgType } from './MetaTag.svelte'
 
 export { default as Anchor } from './Anchor.svelte';

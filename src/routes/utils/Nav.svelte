@@ -17,7 +17,7 @@
   }
   interface Props{
     lis?: LiType[];
-    siteName: string;
+    siteName?: string;
     twitterUrl?: string;
     githubUrl?: string;
     headerClass?: string;
@@ -101,7 +101,9 @@
       />
     </svg>
   </button>
+    {#if siteName}
 			<NavBrand {siteName} spanclass="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500" />
+    {/if}
 			<div class="ml-auto flex items-center lg:order-1">
         {#if include}
 				<DynamicCodeBlockStyle />

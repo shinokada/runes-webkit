@@ -33,12 +33,16 @@
   {...restProps}
 >
   <div class={divCls}>
+    {#if brand}
     <FooterBrand href={brand?.href} name={brand?.name} />
+    {/if}
+    {#if lis}
     <FooterUl
       ulclass={ulCls}
     >
       {@render li(lis)}
     </FooterUl>
+    {/if}
   </div>
 </Footer>
 

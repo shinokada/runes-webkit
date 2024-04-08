@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.3
+
+### Patch Changes
+
+- fix: MetaTag component ([`0e4b87f6c9f9a0d70cf25bd829908572f21d520b`](https://github.com/shinokada/runes-webkit/commit/0e4b87f6c9f9a0d70cf25bd829908572f21d520b))
+
 ## 0.4.2
 
 ### Patch Changes

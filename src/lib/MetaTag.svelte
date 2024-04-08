@@ -1,6 +1,5 @@
-<script lang="ts">
-  import { removeHyphensAndCapitalize } from '$lib'
-  interface TwitterType {
+<script context="module" lang="ts">
+  export interface TwitterType {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     handle?: string;
@@ -9,7 +8,7 @@
     image?: string;
     imageAlt?: string;
   }
-  interface OgType{
+  export interface OgType{
     type?: string;
     title?: string;
     description?: string;
@@ -19,8 +18,10 @@
     siteName?: string;
     imageWidth?: string;
     imageHeight?: string;
-
   }
+</script>
+
+<script lang="ts">
   interface Props {
     title?: string;
     robots?: boolean;
@@ -126,11 +127,12 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: title?: string;
+@props:robots?:  boolean; = true;
 @props:description?: string;
 @props:keywords?: string;
+@props:twitter?: TwitterType;
+@props:og?: OgType;
 @props:url?: string;
-@props:image?: string;
-@props:imageAlt?: string;
 @props:imageWidth?: string;
 @props:imageHeight?: string;
 @props:creator?: string;

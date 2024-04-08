@@ -1,52 +1,89 @@
 <script lang="ts">import { removeHyphensAndCapitalize } from "./";
 let {
-  title = removeHyphensAndCapitalize(__NAME__),
+  title,
+  robots = true,
   description,
   keywords,
-  url = `https://${__NAME__}.codewithshin.com/`,
-  image = `https://open-graph-vercel.vercel.app/api/${__NAME__}`,
-  imageAlt = removeHyphensAndCapitalize(__NAME__),
-  imageHeight = "630",
-  imageWidth = "1200",
-  creator = "@shinokada"
+  twitter,
+  og
 } = $props();
 </script>
 
 <svelte:head>
+  {#if title}
   <title>{title}</title>
-  <meta
-    name="description"
-    content="{description}"
+  {/if}
+  {#if description}
+  <meta name="description" content="{description}"
   />
+  {/if}
+  {#if keywords}
   <meta name="keywords" content="{keywords}" />
+  {/if}
+  {#if robots !==false}
   <meta name="robots" content="index,follow" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="{creator}" />
-  <meta name="twitter:title" content="{title}" />
-  <meta
-    name="twitter:description"
-    content="{description}"
-  />
-  <meta
-    name="twitter:image"
-    content="{image}"
-  />
-  <meta name="twitter:image:alt" content="{imageAlt}" />
-  <meta property="og:url" content="{url}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{title}" />
-  <meta
-    property="og:description"
-    content="{description}"
-  />
-  <meta
-    property="og:image"
-    content="{image}"
-  />
-  <meta property="og:image:alt" content="{imageAlt}" />
-  <meta property="og:image:width" content="{imageWidth}" />
-  <meta property="og:image:height" content="{imageHeight}" />
-  <meta property="og:site_name" content="{title}" />
+  {/if}
+  {#if twitter}
+    {#if twitter.card}
+    <meta name="twitter:card" content="{twitter.card}" />
+    {/if}
+    {#if twitter.handle}
+      <meta name="twitter:creator" content={twitter.handle} />
+    {/if}
+    {#if twitter.site}
+    <meta name="twitter:title" content="{twitter.title}" />
+    {/if}
+    {#if twitter.description}
+    <meta
+      name="twitter:description"
+      content="{twitter.description}"
+    />
+    {/if}
+    {#if twitter.image}
+    <meta
+      name="twitter:image"
+      content="{twitter.image}"
+    />
+    {/if}
+    {#if twitter.imageAlt}
+    <meta name="twitter:image:alt" content="{twitter.imageAlt}" />
+    {/if}
+  {/if}
+  {#if og}
+    {#if og.url}
+    <meta property="og:url" content="{og.url}" />
+    {/if}
+    {#if og.type}
+    <meta property="og:type" content="{og.type}" />
+    {/if}
+    {#if og.title}
+    <meta property="og:title" content="{og.title}" />
+    {/if}
+    {#if og.description}
+    <meta
+      property="og:description"
+      content="{og.description}"
+    />
+    {/if}
+    {#if og.image}
+    <meta
+      property="og:image"
+      content="{og.image}"
+    />
+    {/if}
+    {#if og.imageAlt}
+    <meta property="og:image:alt" content="{og.imageAlt}" />
+    {/if}
+    {#if og.imageWidth}
+    <meta property="og:image:width" content="{og.imageWidth}" />
+    {/if}
+    {#if og.imageHeight}
+    <meta property="og:image:height" content="{og.imageHeight}" />
+    {/if}
+    {#if og.siteName}
+    <meta property="og:site_name" content="{og.siteName}" />
+    {/if}
+  {/if}
 </svelte:head>
 
 <!--
@@ -54,11 +91,12 @@ let {
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: title?: string;
+@props:robots?:  boolean; = true;
 @props:description?: string;
 @props:keywords?: string;
+@props:twitter?: TwitterType;
+@props:og?: OgType;
 @props:url?: string;
-@props:image?: string;
-@props:imageAlt?: string;
 @props:imageWidth?: string;
 @props:imageHeight?: string;
 @props:creator?: string;

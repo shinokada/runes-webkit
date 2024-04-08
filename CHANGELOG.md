@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.5
+
+### Patch Changes
+
+- fix: add exports to package.json by running gen:exports ([`16d19e5a935e91ef6ed809ac57ecf7573024d2b2`](https://github.com/shinokada/runes-webkit/commit/16d19e5a935e91ef6ed809ac57ecf7573024d2b2))
+
 ## 0.4.4
 
 ### Patch Changes

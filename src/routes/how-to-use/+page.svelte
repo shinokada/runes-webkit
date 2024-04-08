@@ -1,6 +1,7 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
   // import MainLayout from '../+layout.svelte?raw'
+  import { List, Li, A } from 'svelte-5-ui-lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -10,7 +11,31 @@
 
 <h1>Documentation</h1>
 
-<p>This library contails components for 29 Svelte SVG Icon sets websites. However these components can be used in any Svelte project.</p>
+<p>This library contails following components for Svelte Runes project.</p>
+
+<List tag='ul'>
+  <Li>CodeWrapper</Li>
+  <Li>DocPage</Li>
+  <Li>Footer</Li>
+  <Li>H2, H3</Li>
+  <Li>Helper functions</Li>
+  <Li>HighlightCompo</Li>
+  <Li>homeCards.json</Li>
+  <Li>IconPage</Li>
+  <Li>MetaTag</Li>
+  <Li>OnThisPage</Li>
+  <Li>Sidebar</Li>
+  <Li>SupportBanner</Li>
+  <Li>TechInfo</Li>
+  <Li>Toc</Li>
+</List>
+
+<p>Also this repo contains examples of how to set up Nav and DynamicCodeBlockStyle.</p>
+<p>Please read the following to learn how to use them.</p>
+
+<H2>Runes Webkit Starter</H2>
+
+<p>If you prefer to use the starter, please refer to <A href="https://github.com/shinokada/runes-webkit-starter">https://github.com/shinokada/runes-webkit-starter</A>.</p>
 
 <H2>Installation</H2>
 

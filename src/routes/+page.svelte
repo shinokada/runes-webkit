@@ -1,6 +1,6 @@
 <script lang="ts">
   import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from '$lib';
-  
+  import { A } from 'svelte-5-ui-lib';
   const cardsToExclude = ['Seven Props']
   const brand = {
     title: 'Brands, Regular, and Solid Icons',
@@ -17,6 +17,7 @@
 </SupportBanner>
 
 <h1 class='flex justify-center my-8'>{removeHyphensAndCapitalize(__NAME__)}</h1>
+<h2 class='flex justify-center my-8'><A href ='/how-to-use' class='underline'>This is a demo page. Please read  How to use page.</A> </h2>
 <HomeCards cards={filteredCards}/>
 <h2 class='flex justify-center my-8'>Info</h2>
 <HomeCards cards={info} />

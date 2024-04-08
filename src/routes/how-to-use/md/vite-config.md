@@ -4,7 +4,7 @@ import pkg from './package.json' assert { type: 'json' };
 import Svelte5UiLibPackage from './node_modules/svelte-5-ui-lib/package.json' assert { type: 'json' };
 import sveltePackage from 'svelte/package.json' assert { type: 'json' };
 import svelteKitPackage from '@sveltejs/kit/package.json' assert { type: 'json' };
-import svelteIconWebkit from 'svelte-icon-webkit/package.json' assert { type: 'json' };
+import svelteIconWebkit from 'runes-webkit/package.json' assert { type: 'json' };
 import svelteRuneHighlight from 'svelte-rune-highlight/package.json' assert { type: 'json' };
 import vitePackage from 'vite/package.json' assert { type: 'json' };
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';
-  import { IconPage, filterIconsByKeyword } from 'svelte-icon-webkit'
+  import { IconPage, filterIconsByKeyword } from 'runes-webkit'
   import * as icons from '$lib'
 
   const keywordsToInclude = 'Outline';

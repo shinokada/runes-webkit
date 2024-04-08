@@ -1,9 +1,9 @@
 {
-  "name": "svelte-icon-webkit",
+  "name": "runes-webkit",
   "version": "0.4.2",
-  "description": "A collection of reusable Svelte components for building icon-based user interfaces in web applications.",
+  "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
-  "homepage": "https://svelte-icon-webkit.codewithshin.com/",
+  "homepage": "https://runes-webkit.codewithshin.com/",
   "author": {
     "name": "Shinichi Okada",
     "email": "connect@codewithshin.com",
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shinokada/svelte-icons-website"
+    "url": "https://github.com/shinokada/runes-webkit"
   },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=18.0.0"
   },
-  "bugs": "https://github.com/shinokada/svelte-icons-website/issues",
+  "bugs": "https://github.com/shinokada/runes-webkit/issues",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",

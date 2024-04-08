@@ -7,8 +7,8 @@
     "email": "connect@codewithshin.com",
     "url": "https://blog.codewithshin.com"
   },
-  "bugs": "https://github.com/shinokada/svelte-icon-webkit-starter/issues",
-  "homepage": "https://svelte-icon-webkit-starter.codewithshin.com/",
+  "bugs": "https://github.com/shinokada/runes-webkit-starter/issues",
+  "homepage": "https://runes-webkit-starter.codewithshin.com/",
   "license": "MIT",
   "keywords": [
     "svelte",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shinokada/svelte-icon-webkit-starter"
+    "url": "https://github.com/shinokada/runes-webkit-starter"
   },
   // move exports to the end
   "exports": {

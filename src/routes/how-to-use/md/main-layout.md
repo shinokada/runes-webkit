@@ -8,7 +8,7 @@
     extract,
     Sidebar,
     removeHyphensAndCapitalize
-  } from 'svelte-icon-webkit';
+  } from 'runes-webkit';
   import Nav from './utils/Nav.svelte';
   let { children } = $props();
   let currentUrl = $state($page.url.pathname);

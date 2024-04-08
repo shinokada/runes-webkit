@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {DocPage} from "svelte-icon-webkit";
+  import {DocPage} from "runes-webkit";
   import type { Snippet } from "svelte";
   interface Props {
     children: Snippet;

@@ -1,6 +1,6 @@
 // utils/Meta.svelte
 <script lang="ts">
-  import { MetaTag } from 'svelte-icon-webkit';
+  import { MetaTag } from 'runes-webkit';
   interface Props{
     title: string;
   }

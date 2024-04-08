@@ -17,7 +17,7 @@
     random_tailwind_color,
     DotsHorizontalOutline,
     XSolid
-  } from 'svelte-icon-webkit';
+  } from 'runes-webkit';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
@@ -124,7 +124,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: lis: LiType[];
 @props:siteName: string;

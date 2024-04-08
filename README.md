@@ -22,5 +22,5 @@ A collection of reusable Svelte components for building user interfaces in Svelt
 ## Installation
 
 ```sh
-pnpm i -D svelte-icon-webkit svelte-rune-highlight highlight.js
+pnpm i -D runes-webkit svelte-rune-highlight highlight.js
 ```

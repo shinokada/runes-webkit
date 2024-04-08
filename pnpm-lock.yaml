@@ -68,6 +68,9 @@ devDependencies:
   publint:
     specifier: ^0.2.7
     version: 0.2.7
+  runatics:
+    specifier: ^0.1.1
+    version: 0.1.1(svelte@5.0.0-next.95)
   svelte:
     specifier: 5.0.0-next.95
     version: 5.0.0-next.95
@@ -3789,6 +3792,14 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: true
+
+  /runatics@0.1.1(svelte@5.0.0-next.95):
+    resolution: {integrity: sha512-2MQ2tDw+riq38eAE/ICTIC9Y1iPj/IQrWKajCqqQqMQ2ms4xvTDtgVj+yUtUqJtlxL/vZKzWjFrrmEm5QPt76w==}
+    peerDependencies:
+      svelte: ^5.0.0
+    dependencies:
+      svelte: 5.0.0-next.95
     dev: true
 
   /sade@1.8.1:

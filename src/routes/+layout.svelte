@@ -3,8 +3,10 @@
   import { page } from '$app/stores';
   import { Footer, MetaTag, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
   import Nav from './utils/Nav.svelte';
-  
-  let { children } = $props()
+  import { Runatics } from 'runatics';
+
+  let { children, data } = $props()
+  const analyticsId = data.ANALYTICS_ID
   let currentUrl = $state($page.url.pathname);
   $effect(() => {
     currentUrl = $page.url.pathname;
@@ -30,7 +32,7 @@
   }
 </script>
 
-
+<Runatics {analyticsId} />
 <MetaTag {...meta}/>
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
 <div class="lg:flex">

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.2
+
+### Patch Changes
+
+- feat: update Sidebar component ([`5fcfc5d9e9caef0e40713cac7bc03f36dd0bbfec`](https://github.com/shinokada/svelte-icon-webkit/commit/5fcfc5d9e9caef0e40713cac7bc03f36dd0bbfec))
+
 ## 0.4.1
 
 ### Patch Changes

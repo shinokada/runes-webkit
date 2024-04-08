@@ -1,3 +1,4 @@
+export * from './helpers';
 export { default as Anchor } from './Anchor.svelte';
 export { default as Code } from './Code.svelte';
 export { default as CodeWrapper } from './CodeWrapper.svelte';

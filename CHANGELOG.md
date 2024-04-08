@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.10
+
+### Patch Changes
+
+- fix: change to export \* from individual functions and consts in index.ts ([`626597ac3e721e3e33e5cc3dabd86bf6e60c0a4b`](https://github.com/shinokada/runes-webkit/commit/626597ac3e721e3e33e5cc3dabd86bf6e60c0a4b))
+
 ## 0.4.9
 
 ### Patch Changes

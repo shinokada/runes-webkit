@@ -42,7 +42,7 @@
     <ul class={ulCls}>
       {#if pkgName && pkgVersion && repoUrl}
       <li class={liCls}>
-        <a href={repoUrl} class="{aCls}">{pkgName} : {pkgVersion}</a>
+        <a href={repoUrl} class="{aCls}">{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a>
       </li>
       {/if}
       {#if svelteVersion}

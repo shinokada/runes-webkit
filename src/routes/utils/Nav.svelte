@@ -16,7 +16,7 @@
     icon?: ComponentType;
   }
   interface Props{
-    lis: LiType[];
+    lis?: LiType[];
     siteName: string;
     twitterUrl?: string;
     githubUrl?: string;
@@ -124,9 +124,11 @@
       </div>
 			</div>
 		{/snippet}
+    {#if lis}
     <NavUl {ulclass}>
       {@render navLi(lis)}
     </NavUl>
+    {/if}
 	</Navbar>
 </header>
 

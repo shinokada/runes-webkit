@@ -30,7 +30,7 @@
     icon?: ComponentType;
   };
   interface Props {
-    lis: LiType[];
+    li?s: LiType[];
     siteName: string;
     twitterUrl?: string;
     githubUrl?: string;
@@ -116,9 +116,11 @@
         </div>
       </div>
     {/snippet}
-    <NavUl {ulclass}>
-      {@render navLi(lis)}
-    </NavUl>
+    {#if lis}
+      <NavUl {ulclass}>
+        {@render navLi(lis)}
+      </NavUl>
+    {/if}
   </Navbar>
 </header>
 

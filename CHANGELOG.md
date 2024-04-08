@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.8
+
+### Patch Changes
+
+- fix: add names in index.ts for all functions and const exports ([`7fbcf689676fde31dbc8df74755255144fff6206`](https://github.com/shinokada/runes-webkit/commit/7fbcf689676fde31dbc8df74755255144fff6206))
+
 ## 0.4.7
 
 ### Patch Changes

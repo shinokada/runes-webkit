@@ -1,4 +1,4 @@
-<script>import { Toc, extract, MetaTag } from "./";
+<script lang="ts">import { Toc, extract, MetaTag } from "./";
 let { children, title, description, keywords, url, image, imageAlt, imageHeight = "630", imageWidth = "1200", creator } = $props();
 </script>
 

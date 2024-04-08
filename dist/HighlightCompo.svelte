@@ -1,4 +1,4 @@
-<script>import { HighlightSvelte, Highlight } from "svelte-rune-highlight";
+<script lang="ts">import { HighlightSvelte, Highlight } from "svelte-rune-highlight";
 import markdown from "svelte-rune-highlight/languages/markdown";
 let { code, codeLang } = $props();
 </script>

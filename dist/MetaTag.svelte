@@ -1,4 +1,4 @@
-<script>import { removeHyphensAndCapitalize } from "./";
+<script lang="ts">import { removeHyphensAndCapitalize } from "./";
 let {
   title = removeHyphensAndCapitalize(__NAME__),
   description,

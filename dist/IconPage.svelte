@@ -1,4 +1,4 @@
-<script>import { Tabs, Label, TabItem } from "svelte-5-ui-lib";
+<script lang="ts">import { Tabs, Label, TabItem } from "svelte-5-ui-lib";
 import { random_hex_color_code, random_tailwind_color } from "./helpers";
 let { icons, title, sizeByTailwind, minSize = "16", defaultSize = "24", maxSize = "48", threeTabs = true, class: classname } = $props();
 let searchTerm = $state("");

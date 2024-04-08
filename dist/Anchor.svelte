@@ -1,4 +1,4 @@
-<script>import { twMerge } from "tailwind-merge";
+<script lang="ts">import { twMerge } from "tailwind-merge";
 let { children, tag, class: className, ...restProps } = $props();
 let content = $state("");
 let slug = $state("");

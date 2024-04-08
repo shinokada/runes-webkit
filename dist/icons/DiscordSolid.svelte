@@ -1,4 +1,4 @@
-<script>import { getContext } from "svelte";
+<script lang="ts">import { getContext } from "svelte";
 import { twMerge } from "tailwind-merge";
 const ctx = getContext("iconCtx") ?? {};
 const sizes = {

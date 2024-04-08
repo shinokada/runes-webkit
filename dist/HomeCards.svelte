@@ -1,4 +1,4 @@
-<script>import { twMerge } from "tailwind-merge";
+<script lang="ts">import { twMerge } from "tailwind-merge";
 import { Card } from "svelte-5-ui-lib";
 let { cards = [], ...restProps } = $props();
 </script>

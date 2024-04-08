@@ -1,9 +1,9 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
   import type { ComponentType } from 'svelte';
-	import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem } from 'svelte-5-ui-lib';
+	import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem, Drawer } from 'svelte-5-ui-lib';
 	import { page } from '$app/stores';
-  import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid } from '$lib'
+  import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar } from '$lib'
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
@@ -25,6 +25,18 @@
   }
   let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
 
+  import { sineIn } from 'svelte/easing';
+
+  let transitionParams = {
+    x: -320,
+    duration: 200,
+    easing: sineIn
+  };
+
+  const navDrawer = uiHelpers();
+  let navDrawerStatus = $state(false);
+  const closeNavDrawer = navDrawer.close;
+
   let currentUrl = $state($page.url.pathname);
 	let nav = uiHelpers();
 
@@ -44,10 +56,14 @@
   let close = dropdown.close;
 
 	$effect(() => {
+    navDrawerStatus = navDrawer.isOpen;
 		navStatus = nav.isOpen;
     isOpen = dropdown.isOpen;
     currentUrl = $page.url.pathname;
 	});
+  const activeClass =
+    'flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-100 dark:hover:bg-gray-700';
+
 </script>
 
 {#snippet navLi(lis)}
@@ -62,6 +78,29 @@
 <header class={headerCls}>
 	<Navbar {navclass} {toggleNav} {closeNav} {navStatus} breakPoint="lg" fluid div2class={divClass}>
 		{#snippet brand()}
+    <button
+    onclick={navDrawer.toggle}
+    type="button"
+    class="z-50 mr-4 mt-1 lg:hidden"
+    aria-controls="navbar-default"
+  >
+    <span class="sr-only">Open drawer menu</span>
+    <svg
+      class="h-5 w-5"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 17 14"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 1h15M1 7h15M1 13h15"
+      />
+    </svg>
+  </button>
 			<NavBrand {siteName} spanclass="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500" />
 			<div class="ml-auto flex items-center lg:order-1">
         {#if include}
@@ -91,6 +130,52 @@
 	</Navbar>
 </header>
 
+<Drawer
+  width="w-64"
+  drawerStatus={navDrawerStatus}
+  closeDrawer={closeNavDrawer}
+  {transitionParams}
+>
+  <div class="flex items-center pb-4">
+    <h5
+      id="drawer-label"
+      class="inline-flex items-center text-lg font-semibold text-gray-500 dark:text-gray-400"
+    >
+      Svelte 5 UI Lib
+    </h5>
+    <button
+      type="button"
+      onclick={closeNavDrawer}
+      class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+      data-modal-hide="default-modal"
+    >
+      <svg
+        class="h-3 w-3"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+        />
+      </svg>
+      <span class="sr-only">Close drawer</span>
+    </button>
+  </div>
+  <Sidebar
+    {activeClass}
+    asideclass="w-48 p-0"
+    divclass="bg-transparent p-0"
+    aclass="p-1 pl-4"
+  >
+    
+  </Sidebar>
+</Drawer>
 <!--
 @component
 [Go to docs](https://svelte-icon-webkit.codewithshin.com/)

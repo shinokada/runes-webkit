@@ -1,4 +1,4 @@
-<script>import { getContext } from "svelte";
+<script lang="ts">import { getContext } from "svelte";
 const ctx = getContext("iconCtx") ?? {};
 let { size = ctx.size || "24", role = ctx.role || "img", color = ctx.color || "currentColor", ariaLabel = "7 solid", class: classname, ...restProps } = $props();
 </script>

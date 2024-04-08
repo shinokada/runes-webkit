@@ -1,4 +1,4 @@
-<script>import { Dropdown, DropdownItem, DropdownDivider, uiHelpers } from "svelte-5-ui-lib";
+<script lang="ts">import { Dropdown, DropdownItem, DropdownDivider, uiHelpers } from "svelte-5-ui-lib";
 import { ChevronDownSolid } from "./";
 let dropdown = uiHelpers();
 let isOpen = $state(false);

@@ -1,4 +1,4 @@
-<script>import { twMerge } from "tailwind-merge";
+<script lang="ts">import { twMerge } from "tailwind-merge";
 let { headingSelector, extract, divFixed, aClass, ulClass, divFlex, h4Class } = $props();
 let headings = $state([]);
 function init(_) {

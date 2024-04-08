@@ -18,12 +18,16 @@ let ulCls = twMerge("flex flex-wrap items-center mt-3 text-sm text-gray-500 dark
   {...restProps}
 >
   <div class={divCls}>
+    {#if brand}
     <FooterBrand href={brand?.href} name={brand?.name} />
+    {/if}
+    {#if lis}
     <FooterUl
       ulclass={ulCls}
     >
       {@render li(lis)}
     </FooterUl>
+    {/if}
   </div>
 </Footer>
 

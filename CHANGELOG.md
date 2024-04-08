@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.11
+
+### Patch Changes
+
+- fix: make lis optional in Nav and Footer ([`8f34b416bdcd5d66f9bc81f2044e298d4d6a092d`](https://github.com/shinokada/runes-webkit/commit/8f34b416bdcd5d66f9bc81f2044e298d4d6a092d))
+
 ## 0.4.10
 
 ### Patch Changes

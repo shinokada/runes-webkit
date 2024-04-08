@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.6
+
+### Patch Changes
+
+- fix: remove Sidebar component from package.json exports ([`17e19fb7bee4036f2e3f03d48330427667ce8c82`](https://github.com/shinokada/runes-webkit/commit/17e19fb7bee4036f2e3f03d48330427667ce8c82))
+
 ## 0.4.5
 
 ### Patch Changes

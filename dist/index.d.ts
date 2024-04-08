@@ -1,4 +1,3 @@
-export { extract, removeHyphensAndCapitalize, filterIconsByKeyword, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, excludeByTitle, insertObjectToArray, cards, info, pkg } from './helpers';
 export type { TwitterType, OgType } from './MetaTag.svelte';
 export { default as Anchor } from './Anchor.svelte';
 export { default as Code } from './Code.svelte';

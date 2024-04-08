@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.9
+
+### Patch Changes
+
+- fix: remove all export functions and const from index.ts ([`88e3dd9ecd7f3510eb93732fb0f0930cc07aae81`](https://github.com/shinokada/runes-webkit/commit/88e3dd9ecd7f3510eb93732fb0f0930cc07aae81))
+
 ## 0.4.8
 
 ### Patch Changes

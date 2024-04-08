@@ -29,7 +29,7 @@ let { size = ctx.size || "md", role, class: classname, ariaLabel = "chart pie ou
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: size?:  "xs" | "sm" | "md" | "lg" | "xl"; = ctx.size || 'md', role, class: classname, ariaLabel;
 @props:role?: string;

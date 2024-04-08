@@ -23,7 +23,7 @@ export type FooterProps = typeof __propDef.props;
 export type FooterEvents = typeof __propDef.events;
 export type FooterSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: brand?: {
  * @props:name: string;

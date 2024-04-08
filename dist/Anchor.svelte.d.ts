@@ -15,7 +15,7 @@ export type AnchorProps = typeof __propDef.props;
 export type AnchorEvents = typeof __propDef.events;
 export type AnchorSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children: Snippet;
  * @props:tag?: string;

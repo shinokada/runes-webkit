@@ -15,7 +15,7 @@ export type SupportBannerProps = typeof __propDef.props;
 export type SupportBannerEvents = typeof __propDef.events;
 export type SupportBannerSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children: Snippet;
  * @props:divclass?: string;

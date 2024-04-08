@@ -78,7 +78,7 @@
   ],
   "peerDependencies": {
     "@sveltejs/kit": "^2.5.5",
-    "svelte": "^5.0.0-next.65"
+    "svelte": "^5.0.0-next.95"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -86,7 +86,8 @@
   "keywords": [
     "svelte",
     "runes",
-    "sveltekit"
+    "sveltekit",
+    "ui"
   ],
   "exports": {
     ".": {

@@ -1,8 +1,6 @@
-# Svelte Icon Webkit
+# Runes Webkit
 
-** MOVED TO RUNES-WEBKIT **
-
-A collection of reusable Svelte components for building user interfaces in Svelte SVG Icon Sets web applications.
+A collection of reusable Svelte components for building user interfaces for Svelte Runes web applications.
 
 - CodeWrapper
 - Footer
@@ -17,7 +15,8 @@ A collection of reusable Svelte components for building user interfaces in Svelt
 
 ## Requirements
 
-- svelte 5 (Runes)
+- Svelte 5 (Runes)
+- SvelteKit
 
 ## Installation
 

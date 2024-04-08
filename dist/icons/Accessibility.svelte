@@ -31,7 +31,7 @@ d="M61.44,0A61.46,61.46,0,1,1,18,18,61.21,61.21,0,0,1,61.44,0Zm-.39,74.18L52.1,9
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: size?:  "xs" | "sm" | "md" | "lg" | "xl"; = ctx.size || 'md', role, class: classname, ariaLabel;
 @props:role?: string;

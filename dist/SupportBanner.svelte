@@ -10,7 +10,7 @@ let { children, divclass = "max-w-3xl mt-8 mx-auto p-2", pclass = "flex items-ce
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: Snippet;
 @props:divclass?: string;

@@ -20,7 +20,7 @@ export type IconPageProps = typeof __propDef.props;
 export type IconPageEvents = typeof __propDef.events;
 export type IconPageSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: icons: ComponentType;
  * @props:title: string;

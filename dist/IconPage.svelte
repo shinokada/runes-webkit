@@ -86,7 +86,7 @@ const contentClass = " rounded-lg dark_bg_theme mt-4";
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: icons: ComponentType;
 @props:title: string;

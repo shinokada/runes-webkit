@@ -29,7 +29,7 @@ let ulCls = twMerge("flex flex-wrap items-center mt-3 text-sm text-gray-500 dark
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: brand?: {
 @props:name: string;

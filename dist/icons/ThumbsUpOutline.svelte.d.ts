@@ -15,7 +15,7 @@ export type ThumbsUpOutlineProps = typeof __propDef.props;
 export type ThumbsUpOutlineEvents = typeof __propDef.events;
 export type ThumbsUpOutlineSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: size?:  "xs" | "sm" | "md" | "lg" | "xl"; = ctx.size || 'md', role, class: classname, ariaLabel;
  * @props:role?: string;

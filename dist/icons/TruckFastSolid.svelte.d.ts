@@ -16,7 +16,7 @@ export type TruckFastSolidProps = typeof __propDef.props;
 export type TruckFastSolidEvents = typeof __propDef.events;
 export type TruckFastSolidSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: size?:  string; = ctx.size || '24', role;
  * @props:role?: string;

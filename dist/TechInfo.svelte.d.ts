@@ -30,7 +30,7 @@ export type TechInfoProps = typeof __propDef.props;
 export type TechInfoEvents = typeof __propDef.events;
 export type TechInfoSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children?: Snippet;
  * @props:pkgName?: string;

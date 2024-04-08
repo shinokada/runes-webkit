@@ -15,7 +15,7 @@ export type CodeWrapperProps = typeof __propDef.props;
 export type CodeWrapperEvents = typeof __propDef.events;
 export type CodeWrapperSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children?: Snippet;
  * @props:class?: string | undefined;

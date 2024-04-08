@@ -53,7 +53,7 @@ const aCls = twMerge("me-4 hover:underline md:me-6", aclass);
       {/if}
       {#if svelteIconWebkit}
       <li class={liCls}>
-        <a href="https://svelte-icon-webkit.codewithshin.com/" class={aCls}>Svelte Icon Webkit: {svelteIconWebkit}</a>
+        <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Svelte Icon Webkit: {svelteIconWebkit}</a>
       </li>
       {/if}
       {#if svelteRuneHighlight}
@@ -75,7 +75,7 @@ const aCls = twMerge("me-4 hover:underline md:me-6", aclass);
 
 <!--
 @component
-[Go to docs](https://svelte-icon-webkit.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children?: Snippet;
 @props:pkgName?: string;

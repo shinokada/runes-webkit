@@ -16,6 +16,10 @@ interface LinkType {
   active?: boolean;
 }
 
+export function toDashCaseLower(text: string): string {
+  return text.replace(/\s+/g, '-').toLowerCase();
+}
+
 /**
  * Extracts information from an HTMLElement to create a LinkType object.
  *

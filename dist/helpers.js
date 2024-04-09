@@ -1,4 +1,7 @@
 import { A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from './';
+export function toDashCaseLower(text) {
+    return text.replace(/\s+/g, '-').toLowerCase();
+}
 /**
  * Extracts information from an HTMLElement to create a LinkType object.
  *

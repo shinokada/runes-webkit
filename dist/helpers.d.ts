@@ -13,6 +13,7 @@ interface LinkType {
     rel?: string;
     active?: boolean;
 }
+export declare function toDashCaseLower(text: string): string;
 /**
  * Extracts information from an HTMLElement to create a LinkType object.
  *

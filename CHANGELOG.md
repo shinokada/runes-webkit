@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.12
+
+### Patch Changes
+
+- feat: add toDashCaseLower function ([`b39b03b39f55f64aff0897a852956ec0f226713b`](https://github.com/shinokada/runes-webkit/commit/b39b03b39f55f64aff0897a852956ec0f226713b))
+
 ## 0.4.11
 
 ### Patch Changes

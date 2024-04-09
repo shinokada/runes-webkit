@@ -107,8 +107,5 @@
 <H2>Doc Pages</H2>
 
 
-
-<HighlightCompo codeLang="ts" code={modules['./md/metatag.md'] as string} />
-
 <H2>Components</H2>
 <HighlightCompo codeLang="ts" code={modules['./md/components.md'] as string} />

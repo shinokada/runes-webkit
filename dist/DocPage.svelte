@@ -1,8 +1,6 @@
-<script lang="ts">import { Toc, extract, MetaTag } from "./";
+<script lang="ts">import { Toc, extract } from "./";
 let { children, title, description, keywords, url, image, imageAlt, imageHeight = "630", imageWidth = "1200", creator } = $props();
 </script>
-
-<MetaTag {title} {description} {keywords} {url} {image} {imageAlt} {imageHeight} {imageWidth} {creator} />
 
 <main class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
   <div class="flex w-full">

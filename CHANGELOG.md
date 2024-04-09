@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.15
+
+### Patch Changes
+
+- fix: remove MetaTag component ([`49a89ba04b32efca9a76d631ec179339df202e8b`](https://github.com/shinokada/runes-webkit/commit/49a89ba04b32efca9a76d631ec179339df202e8b))
+
 ## 0.4.14
 
 ### Patch Changes

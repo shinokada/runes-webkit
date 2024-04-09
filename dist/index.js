@@ -9,7 +9,6 @@ export { default as H3 } from './H3.svelte';
 export { default as HighlightCompo } from './HighlightCompo.svelte';
 export { default as HomeCards } from './HomeCards.svelte';
 export { default as IconPage } from './IconPage.svelte';
-export { default as MetaTag } from './MetaTag.svelte';
 export { default as OnThisPage } from './OnThisPage.svelte';
 export { default as Sidebar } from './Sidebar.svelte';
 export { default as SupportBanner } from './SupportBanner.svelte';

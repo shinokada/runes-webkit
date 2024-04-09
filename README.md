@@ -8,7 +8,6 @@ A collection of reusable Svelte components for building user interfaces for Svel
 - HighlightCompo
 - HomeCards
 - IconPage
-- MetaTag
 - SupportBanner
 - TechInfo
 

@@ -3,7 +3,6 @@
   import { page } from '$app/stores';
   import {
     Footer,
-    MetaTag,
     OnThisPage,
     extract,
     Sidebar,
@@ -35,7 +34,6 @@
   };
 </script>
 
-<MetaTag {...meta} />
 <Nav
   {lis}
   {siteName}

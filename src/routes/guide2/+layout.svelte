@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import { Toc, extract, MetaTag } from '$lib'
+  import { Toc, extract } from '$lib'
 
   interface Props{
     children: Snippet;

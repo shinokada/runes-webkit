@@ -9,7 +9,6 @@
 - HighlightCompo.svelte
 - HomeCards.svelte
 - IconPage.svelte
-- MetaTag.svelte
 - Nav.svelte
 - OnThisPage.svelte
 - Sidebar.svelte

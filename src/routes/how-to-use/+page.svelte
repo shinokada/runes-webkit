@@ -22,7 +22,6 @@
   <Li>HighlightCompo</Li>
   <Li>homeCards.json</Li>
   <Li>IconPage</Li>
-  <Li>MetaTag</Li>
   <Li>OnThisPage</Li>
   <Li>Sidebar</Li>
   <Li>SupportBanner</Li>
@@ -91,7 +90,7 @@
 
 <H2>Home Page</H2>
 
-<p>Home page has <Code>SupportBanner, MetaTag, HomeCards, TechInfo</Code> components.</p>
+<p>Home page has <Code>SupportBanner, HomeCards, TechInfo</Code> components.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/home.md'] as string} />
 
@@ -108,9 +107,6 @@
 <H2>Doc Pages</H2>
 
 
-<H2>MetaTag</H2>
-
-<p>Extend the <Code>MetaTag</Code> component with <Code>title</Code> and <Code>image</Code> props, then use it in <Code>+page.svelte</Code>.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/metatag.md'] as string} />
 

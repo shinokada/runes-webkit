@@ -1,7 +1,7 @@
 <script>
   import '../app.postcss';
   import { page } from '$app/stores';
-  import { Footer, MetaTag, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
 
@@ -33,7 +33,7 @@
 </script>
 
 <Runatics {analyticsId} />
-<MetaTag {...meta}/>
+
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
 <div class="lg:flex">
   

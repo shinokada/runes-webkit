@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.13
+
+### Patch Changes
+
+- feat: add toUpperSnakeCase ([`4c20d21d91eb2ce18430d8c6593304cbb6a9f316`](https://github.com/shinokada/runes-webkit/commit/4c20d21d91eb2ce18430d8c6593304cbb6a9f316))
+
 ## 0.4.12
 
 ### Patch Changes

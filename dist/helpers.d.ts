@@ -14,6 +14,7 @@ interface LinkType {
     active?: boolean;
 }
 export declare function toDashCaseLower(text: string): string;
+export declare function toUpperSnakeCase(text: string): string;
 /**
  * Extracts information from an HTMLElement to create a LinkType object.
  *

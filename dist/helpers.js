@@ -2,6 +2,9 @@ import { A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeO
 export function toDashCaseLower(text) {
     return text.replace(/\s+/g, '-').toLowerCase();
 }
+export function toUpperSnakeCase(text) {
+    return text.replace(/\s+/g, '_').toUpperCase();
+}
 /**
  * Extracts information from an HTMLElement to create a LinkType object.
  *

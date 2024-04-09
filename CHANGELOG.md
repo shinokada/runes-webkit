@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.14
+
+### Patch Changes
+
+- fix: toUpperSnakeCase replace spaces and - to \_ and convert to uppercase ([`f2e5deb13ebda8158170fdcb54bfc4d5cc584e35`](https://github.com/shinokada/runes-webkit/commit/f2e5deb13ebda8158170fdcb54bfc4d5cc584e35))
+
 ## 0.4.13
 
 ### Patch Changes

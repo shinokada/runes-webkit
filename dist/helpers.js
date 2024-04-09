@@ -3,7 +3,8 @@ export function toDashCaseLower(text) {
     return text.replace(/\s+/g, '-').toLowerCase();
 }
 export function toUpperSnakeCase(text) {
-    return text.replace(/\s+/g, '_').toUpperCase();
+    // replace spaces and - to _ and convert to uppercase
+    return text.replace(/[\s-]/g, '_').toUpperCase();
 }
 /**
  * Extracts information from an HTMLElement to create a LinkType object.

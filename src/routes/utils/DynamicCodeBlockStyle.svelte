@@ -1,10 +1,12 @@
 <script lang="ts">
   import { browser } from '$app/environment';
+  import { toUpperSnakeCase } from '$lib';
   const stylesImport = import.meta.glob('./highlight/styles/*.css');
+  const localStorageName = toUpperSnakeCase(__NAME__) + '_CODE_BLOCK_STYLE';
   
   // @ts-ignore
   let selected: string = $state(
-    browser && (localStorage.getItem('CODE_BLOCK_STYLE') ?? 'gigavolt')
+    browser && (localStorage.getItem(localStorageName) ?? 'gigavolt')
   );
 
   const styles = Object.entries(stylesImport).map(([path, importFn]) => ({
@@ -24,7 +26,7 @@
     })();
     if (browser) {
       // get selected style from localStorage
-      localStorage.setItem('CODE_BLOCK_STYLE', selected);
+      localStorage.setItem(localStorageName, selected);
     }
     return () => {
       // clean up

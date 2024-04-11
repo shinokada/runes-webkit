@@ -1,4 +1,13 @@
-import { A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from './';
+import A7Solid from './icons/A7Solid.svelte';
+import BadgeCheckOutline from './icons/BadgeCheckOutline.svelte';
+import BellActiveAltOutline from './icons/BellActiveAltOutline.svelte';
+import Accessibility from './icons/Accessibility.svelte';
+import GlobeOutline from './icons/GlobeOutline.svelte';
+import InfoCircleOutline from './icons/InfoCircleOutline.svelte';
+import MoonSolid from './icons/MoonSolid.svelte';
+import Tailwindcss from './icons/Tailwindcss.svelte';
+import TruckFastSolid from './icons/TruckFastSolid.svelte';
+import Visualstudiocode from './icons/Visualstudiocode.svelte';
 export function toDashCaseLower(text) {
     return text.replace(/\s+/g, '-').toLowerCase();
 }

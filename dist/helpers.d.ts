@@ -1,5 +1,7 @@
 import type { ComponentType } from 'svelte';
-import { BadgeCheckOutline, TruckFastSolid, InfoCircleOutline } from './';
+import BadgeCheckOutline from './icons/BadgeCheckOutline.svelte';
+import InfoCircleOutline from './icons/InfoCircleOutline.svelte';
+import TruckFastSolid from './icons/TruckFastSolid.svelte';
 type Title = string;
 type Card = {
     title: string;

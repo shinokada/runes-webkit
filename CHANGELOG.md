@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.16
+
+### Patch Changes
+
+- fix: use direct import for all icons in helpers.ts ([`5705acc00b17e9b65de6f366cc0e7d198e7c30f3`](https://github.com/shinokada/runes-webkit/commit/5705acc00b17e9b65de6f366cc0e7d198e7c30f3))
+
 ## 0.4.15
 
 ### Patch Changes

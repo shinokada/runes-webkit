@@ -1,5 +1,15 @@
 import type { ComponentType } from 'svelte';
-import { A7Solid, Accessibility, BadgeCheckOutline, BellActiveAltOutline, GlobeOutline, StarOutline, ChartLineUpOutline, CogOutline, ExpandOutline, TruckFastSolid, InfoCircleOutline, MoonSolid, Tailwindcss, Visualstudiocode } from '$lib';
+
+import A7Solid from '$lib/icons/A7Solid.svelte';
+import BadgeCheckOutline from '$lib/icons/BadgeCheckOutline.svelte';
+import BellActiveAltOutline from '$lib/icons/BellActiveAltOutline.svelte';
+import Accessibility from '$lib/icons/Accessibility.svelte';
+import GlobeOutline from '$lib/icons/GlobeOutline.svelte';
+import InfoCircleOutline from '$lib/icons/InfoCircleOutline.svelte';
+import MoonSolid from '$lib/icons/MoonSolid.svelte';
+import Tailwindcss from '$lib/icons/Tailwindcss.svelte';
+import TruckFastSolid from '$lib/icons/TruckFastSolid.svelte';
+import Visualstudiocode from '$lib/icons/Visualstudiocode.svelte';
 
 type Title = string;
 type Card = {

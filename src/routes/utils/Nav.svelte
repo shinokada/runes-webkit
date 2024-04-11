@@ -61,7 +61,7 @@
     isOpen = dropdown.isOpen;
     currentUrl = $page.url.pathname;
 	});
-  const activeClass =
+  const activeclass =
     'flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-100 dark:hover:bg-gray-700';
 
 </script>
@@ -108,9 +108,9 @@
         {#if include}
 				<DynamicCodeBlockStyle />
         {/if}
-        <DotsHorizontalOutline onclick={toggle} class="dark:text-white ml-4" size="lg" />
+        <DotsHorizontalOutline onclick={toggle} class="dark:text-white ml-6 mr-4" size="lg" />
       <div class="relative">
-        <Dropdown {isOpen} divclass="absolute -left-[30px] w-9">
+        <Dropdown {isOpen} divclass="absolute -left-[30px] top-7 w-9">
           {#if twitterUrl}
           <DropdownItem href={twitterUrl} target="_blank" aclass='p-2 m-0'><XSolid /></DropdownItem>
           {/if}
@@ -139,13 +139,14 @@
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   {transitionParams}
+  divclass='dark:bg-stone-900'
 >
   <div class="flex items-center pb-4">
     <h5
       id="drawer-label"
       class="inline-flex items-center text-lg font-semibold text-gray-500 dark:text-gray-400"
     >
-      Svelte 5 UI Lib
+      Runes Webkit
     </h5>
     <button
       type="button"
@@ -172,10 +173,9 @@
     </button>
   </div>
   <Sidebar
-    {activeClass}
-    asideclass="w-48 p-0"
+    {activeclass}
+    asideclass="w-48 p-0 border-none mt-20 ml-4"
     divclass="bg-transparent p-0"
-    aclass="p-1 pl-4"
   >
     
   </Sidebar>

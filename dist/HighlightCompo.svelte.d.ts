@@ -3,6 +3,8 @@ declare const __propDef: {
     props: {
         code: string;
         codeLang?: string | undefined;
+        badgeDivclass?: string | undefined;
+        counter?: number | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

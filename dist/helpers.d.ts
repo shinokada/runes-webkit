@@ -15,6 +15,9 @@ interface LinkType {
     rel?: string;
     active?: boolean;
 }
+export declare function clickToCopy(node: HTMLElement, target: string): {
+    destroy(): void;
+};
 export declare function toDashCaseLower(text: string): string;
 export declare function toUpperSnakeCase(text: string): string;
 /**

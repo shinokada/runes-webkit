@@ -56,3 +56,10 @@
     no code is provided
   {/if}
 </div>
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@props: 
+-->

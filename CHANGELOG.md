@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.17
+
+### Patch Changes
+
+- feat: add copy and success badge to HighlightCompo ([`96606292ae69a3b14e81a2fcbe0b50fc20cba4e7`](https://github.com/shinokada/runes-webkit/commit/96606292ae69a3b14e81a2fcbe0b50fc20cba4e7))
+
 ## 0.4.16
 
 ### Patch Changes

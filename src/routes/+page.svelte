@@ -9,7 +9,7 @@
     iconClass: 'text-green-500'
   }
   let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
-  console.log('runatics:', __RUNATICS_VERSION__)
+
 </script>
 
 <SupportBanner>
@@ -21,6 +21,4 @@
 <HomeCards cards={filteredCards}/>
 <h2 class='flex justify-center my-8'>Info</h2>
 <HomeCards cards={info} />
-<TechInfo {...pkg}>
-<Li>Runatics: hi</Li>
-</TechInfo>
+<TechInfo {...pkg} />

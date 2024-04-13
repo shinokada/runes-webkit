@@ -15,6 +15,8 @@
     liclass?:string;
     aclass?:string;
     cardsize?:"xl" | "xs" | "sm" | "md" | "lg" | undefined;
+    runaticsVersion?:string;
+    runesMetaTagsVersion?:string;
     svelteVersion?: string;
     svelteKitVersion?: string;
     svelte5uilib?: string;
@@ -22,7 +24,7 @@
     svelteRuneHighlight?: string;
     viteVersion?: string;
   }
-  let { children, pkgName, pkgVersion, svelteVersion, svelteKitVersion, svelte5uilib, svelteIconWebkit, svelteRuneHighlight, viteVersion, repoUrl, h2class, 
+  let { children, pkgName, pkgVersion, runaticsVersion, runesMetaTagsVersion, svelteVersion, svelteKitVersion, svelte5uilib, svelteIconWebkit, svelteRuneHighlight, viteVersion, repoUrl, h2class, 
     title = 'Technical information about this website', 
     divclass, ulclass, liclass, aclass, cardsize = 'xl' }:Props = $props();
   // const pkgName = pkg.name;
@@ -45,6 +47,21 @@
         <a href={repoUrl} class="{aCls}">{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a>
       </li>
       {/if}
+      {#if runaticsVersion}
+      <li class={liCls}>
+        <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Runatics: {runaticsVersion}</a>
+      </li>
+      {/if}
+      {#if runesMetaTagsVersion}
+      <li class={liCls}>
+        <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Runes Meta Tags: {runesMetaTagsVersion}</a>
+      </li>
+      {/if}
+      {#if svelteRuneHighlight}
+      <li class={liCls}>
+        <a href="https://svelte-rune-highlight.codewithshin.com/" class={aCls}>Svelte Rune Highlight: {svelteRuneHighlight}</a>
+      </li>
+      {/if}
       {#if svelteVersion}
       <li class={liCls}>
         <a href="https://svelte-5-preview.vercel.app/docs/introduction" class={aCls}>Svelte: {svelteVersion}</a>
@@ -63,11 +80,6 @@
       {#if svelteIconWebkit}
       <li class={liCls}>
         <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Svelte Icon Webkit: {svelteIconWebkit}</a>
-      </li>
-      {/if}
-      {#if svelteRuneHighlight}
-      <li class={liCls}>
-        <a href="https://svelte-rune-highlight.codewithshin.com/" class={aCls}>Svelte Rune Highlight: {svelteRuneHighlight}</a>
       </li>
       {/if}
       {#if viteVersion}

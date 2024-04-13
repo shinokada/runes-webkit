@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {DocPage} from "$lib";
+  import {DocPage} from '$lib';
   import type { Snippet } from "svelte";
   interface Props {
     children: Snippet;

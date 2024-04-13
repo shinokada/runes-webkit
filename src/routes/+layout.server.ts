@@ -12,7 +12,7 @@ export const load = ({ url }) => {
       handle: '@shinokada',
       title: 'Runes Webkit',
       description: 'A quick start for a Svelte Runes project.',
-      image: 'https://open-graph-vercel.vercel.app/api/runes-meta',
+      image: 'https://open-graph-vercel.vercel.app/api/runes-webkit',
       imageAlt: 'Runes Webkit'
     },
     og: {

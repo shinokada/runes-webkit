@@ -1,6 +1,6 @@
 {
   "name": "runes-webkit",
-  "version": "0.4.17",
+  "version": "0.4.18",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://runes-webkit.codewithshin.com/",

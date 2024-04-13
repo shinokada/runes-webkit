@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 0.4.18
+
+### Patch Changes
+
+- fix: update vite.config and TechInfo ([`a27288581c1bbdba04cf9f20e10960e973b136cd`](https://github.com/shinokada/runes-webkit/commit/a27288581c1bbdba04cf9f20e10960e973b136cd))
+
+- fix: add runes-meta-tags ([`89f8c8fc0e52f3d9f9da32d92b691d74161554b0`](https://github.com/shinokada/runes-webkit/commit/89f8c8fc0e52f3d9f9da32d92b691d74161554b0))
+
 ## 0.4.17
 
 ### Patch Changes

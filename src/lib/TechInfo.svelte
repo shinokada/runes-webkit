@@ -109,6 +109,8 @@
 @props:liclass?: string;
 @props:aclass?: string;
 @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+@props:runaticsVersion?: string;
+@props:runesMetaTagsVersion?: string;
 @props:svelteVersion?: string;
 @props:svelteKitVersion?: string;
 @props:svelte5uilib?: string;

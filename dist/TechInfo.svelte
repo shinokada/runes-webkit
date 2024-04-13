@@ -4,6 +4,8 @@ let {
   children,
   pkgName,
   pkgVersion,
+  runaticsVersion,
+  runesMetaTagsVersion,
   svelteVersion,
   svelteKitVersion,
   svelte5uilib,
@@ -36,6 +38,21 @@ const aCls = twMerge("me-4 hover:underline md:me-6", aclass);
         <a href={repoUrl} class="{aCls}">{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a>
       </li>
       {/if}
+      {#if runaticsVersion}
+      <li class={liCls}>
+        <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Runatics: {runaticsVersion}</a>
+      </li>
+      {/if}
+      {#if runesMetaTagsVersion}
+      <li class={liCls}>
+        <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Runes Meta Tags: {runesMetaTagsVersion}</a>
+      </li>
+      {/if}
+      {#if svelteRuneHighlight}
+      <li class={liCls}>
+        <a href="https://svelte-rune-highlight.codewithshin.com/" class={aCls}>Svelte Rune Highlight: {svelteRuneHighlight}</a>
+      </li>
+      {/if}
       {#if svelteVersion}
       <li class={liCls}>
         <a href="https://svelte-5-preview.vercel.app/docs/introduction" class={aCls}>Svelte: {svelteVersion}</a>
@@ -54,11 +71,6 @@ const aCls = twMerge("me-4 hover:underline md:me-6", aclass);
       {#if svelteIconWebkit}
       <li class={liCls}>
         <a href="https://runes-webkit.codewithshin.com/" class={aCls}>Svelte Icon Webkit: {svelteIconWebkit}</a>
-      </li>
-      {/if}
-      {#if svelteRuneHighlight}
-      <li class={liCls}>
-        <a href="https://svelte-rune-highlight.codewithshin.com/" class={aCls}>Svelte Rune Highlight: {svelteRuneHighlight}</a>
       </li>
       {/if}
       {#if viteVersion}
@@ -88,6 +100,8 @@ const aCls = twMerge("me-4 hover:underline md:me-6", aclass);
 @props:liclass?: string;
 @props:aclass?: string;
 @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+@props:runaticsVersion?: string;
+@props:runesMetaTagsVersion?: string;
 @props:svelteVersion?: string;
 @props:svelteKitVersion?: string;
 @props:svelte5uilib?: string;

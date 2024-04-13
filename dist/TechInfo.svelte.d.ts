@@ -14,6 +14,8 @@ declare const __propDef: {
         liclass?: string | undefined;
         aclass?: string | undefined;
         cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+        runaticsVersion?: string | undefined;
+        runesMetaTagsVersion?: string | undefined;
         svelteVersion?: string | undefined;
         svelteKitVersion?: string | undefined;
         svelte5uilib?: string | undefined;
@@ -43,6 +45,8 @@ export type TechInfoSlots = typeof __propDef.slots;
  * @props:liclass?: string;
  * @props:aclass?: string;
  * @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
+ * @props:runaticsVersion?: string;
+ * @props:runesMetaTagsVersion?: string;
  * @props:svelteVersion?: string;
  * @props:svelteKitVersion?: string;
  * @props:svelte5uilib?: string;

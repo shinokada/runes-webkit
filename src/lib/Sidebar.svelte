@@ -123,5 +123,6 @@
 @props:nonActiveclass?: string;
 @props:divclass?: string;
 @props:iconclass?: string;
-@props:menuList?: ListType[]
+@props:menuList?: ListType[];
+@props:sidebarClose?: () => void;
 -->

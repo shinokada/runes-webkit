@@ -1,8 +1,8 @@
-<script lang="ts">import { page } from "$app/stores";
+<script lang='ts'>import { page } from "$app/stores";
 import { twMerge } from "tailwind-merge";
 import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "svelte-5-ui-lib";
 import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from "./";
-let { asideclass, activeclass, nonActiveclass, divclass, iconclass, menuList, ...restProps } = $props();
+let { asideclass, activeclass, nonActiveclass, divclass, iconclass, menuList, sidebarClose, ...restProps } = $props();
 let currentUrl = $page.url.pathname;
 $effect(() => {
   currentUrl = $page.url.pathname;
@@ -66,12 +66,12 @@ if (menuList) {
   <SidebarGroup>
     {#each list as { name, icon, children, href }}
       {#if children}
-      <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass="me-4" btnclass="p-1">
+      <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass='me-4' btnclass='p-1'>
         {#snippet iconSlot()}
           <svelte:component this={icon} class={iconCls} />
         {/snippet}
         {#each children as { name, icon, href }}
-        <SidebarItem label="{name}" {href} aclass='ml-4'>
+        <SidebarItem label={name} onclick={sidebarClose} {href} aclass='ml-4'>
           {#snippet iconSlot()}
           <svelte:component this={icon} class={iconCls} />
         {/snippet}
@@ -79,7 +79,7 @@ if (menuList) {
         {/each}
       </SidebarDropdownWrapper>
       {:else}
-      <SidebarItem label="{name}" {href} >
+      <SidebarItem label={name} onclick={sidebarClose} {href} >
         {#snippet iconSlot()}
           <svelte:component this={icon} class={iconCls} />
         {/snippet}
@@ -98,5 +98,6 @@ if (menuList) {
 @props:nonActiveclass?: string;
 @props:divclass?: string;
 @props:iconclass?: string;
-@props:menuList?: ListType[]
+@props:menuList?: ListType[];
+@props:sidebarClose?: () => void;
 -->

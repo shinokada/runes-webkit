@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.23
+
+### Patch Changes
+
+- fix: add onclick to SidebarItem in Sidebar compo ([`e91eb6d5e37f23562a3f19831231bfd757f0eea9`](https://github.com/shinokada/runes-webkit/commit/e91eb6d5e37f23562a3f19831231bfd757f0eea9))
+
 ## 0.4.22
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.21
+
+### Patch Changes
+
+- fix: add runeswebkitVersion prop to TechInfo ([`63b22babef095545f8c90d7eaf76d1f854eb4e0c`](https://github.com/shinokada/runes-webkit/commit/63b22babef095545f8c90d7eaf76d1f854eb4e0c))
+
 ## 0.4.20
 
 ### Patch Changes

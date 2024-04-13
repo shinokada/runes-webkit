@@ -26,7 +26,6 @@
   }
   let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
 
-
   let transitionParams = {
     x: -320,
     duration: 200,
@@ -181,9 +180,8 @@
     {activeclass}
     asideclass="w-48 p-0 border-none mt-20 ml-4"
     divclass="bg-transparent p-0"
-  >
-    
-  </Sidebar>
+    sidebarClose={closeNavDrawer}
+  />
 </Drawer>
 <!--
 @component

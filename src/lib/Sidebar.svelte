@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
   import { page } from '$app/stores';
   import type { ComponentType } from 'svelte';
   import { twMerge } from 'tailwind-merge';
@@ -18,9 +18,11 @@
     nonActiveclass?: string;
     divclass?: string;
     iconclass?: string;
-    menuList?: ListType[]
+    menuList?: ListType[];
+    sidebarClose?: () => void;
   }
-  let { asideclass, activeclass, nonActiveclass, divclass, iconclass, menuList, ...restProps }: Props = $props();
+
+  let { asideclass, activeclass, nonActiveclass, divclass, iconclass, menuList, sidebarClose, ...restProps }: Props = $props();
 
   let currentUrl = $page.url.pathname;
   $effect(() => {
@@ -30,9 +32,9 @@
 
   const activeCls = twMerge('flex items-center p-1 text-base font-normal text-white bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600', activeclass);
   const nonActiveCls = twMerge('flex items-center p-1 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700', nonActiveclass);
-  const asideCls= twMerge("fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block", asideclass)
+  const asideCls= twMerge('fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block', asideclass)
   const divCls = twMerge('dark_bg_theme', divclass)
-  const iconCls = twMerge("h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white", iconclass)
+  const iconCls = twMerge('h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white', iconclass)
 
   let list: ListType[] = [
     {
@@ -89,12 +91,12 @@
   <SidebarGroup>
     {#each list as { name, icon, children, href }}
       {#if children}
-      <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass="me-4" btnclass="p-1">
+      <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass='me-4' btnclass='p-1'>
         {#snippet iconSlot()}
           <svelte:component this={icon} class={iconCls} />
         {/snippet}
         {#each children as { name, icon, href }}
-        <SidebarItem label="{name}" {href} aclass='ml-4'>
+        <SidebarItem label={name} onclick={sidebarClose} {href} aclass='ml-4'>
           {#snippet iconSlot()}
           <svelte:component this={icon} class={iconCls} />
         {/snippet}
@@ -102,7 +104,7 @@
         {/each}
       </SidebarDropdownWrapper>
       {:else}
-      <SidebarItem label="{name}" {href} >
+      <SidebarItem label={name} onclick={sidebarClose} {href} >
         {#snippet iconSlot()}
           <svelte:component this={icon} class={iconCls} />
         {/snippet}

@@ -316,8 +316,6 @@ export  const pkg = {
   pkgName: __NAME__,
   pkgVersion: __VERSION__, 
   repoUrl: __GITHUBURL__,
-  runaticsVersion: __RUNATICS_VERSION__, 
-  runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
   svelteVersion: __SVELTE_VERSION__, 
   svelteKitVersion: __SVELTEKIT_VERSION__, 
   svelte5uilib: __SVELTE_5_UI_LIB_VERSION__, 

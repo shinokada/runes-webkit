@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.4.20
+
+### Patch Changes
+
+- fix: index page TechInfo update
+  fix: class name update
+
 ## 0.4.19
 
 ### Patch Changes

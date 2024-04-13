@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.22
+
+### Patch Changes
+
+- fix: OnThisPage dropdown ([`0915555342da3970331ce6efd43bd69544389228`](https://github.com/shinokada/runes-webkit/commit/0915555342da3970331ce6efd43bd69544389228))
+
 ## 0.4.21
 
 ### Patch Changes

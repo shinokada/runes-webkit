@@ -1,11 +1,16 @@
 <script lang="ts">import { Dropdown, DropdownItem, DropdownDivider, uiHelpers } from "svelte-5-ui-lib";
 import { ChevronDownSolid } from "./";
+import { sineIn } from "svelte/easing";
+let transitionParams = {
+  y: 0,
+  duration: 200,
+  easing: sineIn
+};
 let dropdown = uiHelpers();
-let isOpen = $state(false);
-let toggle = dropdown.toggle;
-let close = dropdown.close;
+let dropdownStatus = $state(false);
+let closeDropdown = dropdown.close;
 $effect(() => {
-  isOpen = dropdown.isOpen;
+  dropdownStatus = dropdown.isOpen;
 });
 let { headingSelector, extract } = $props();
 let headings = $state([]);
@@ -29,12 +34,12 @@ function toc() {
 </script>
 
 <div class="xl:hidden z-20 fixed top-20 p-2 right-6 flex dark:bg-neutral-900 dark:text-white">
-<button onclick={toggle} class='flex'>
+<button onclick={dropdown.toggle} class='flex'>
   On this page
   <ChevronDownSolid class="flex-inline w-4 h-4 ms-2 mt-1 text-white dark:text-white" />
 </button>
 <div use:init>
-    <Dropdown {isOpen} divclass="w-60 absolute right-[8px] top-[30px]">
+    <Dropdown  dropdownStatus={dropdownStatus} closeDropdown={closeDropdown} {transitionParams} divclass="w-60 absolute right-[8px] top-[30px]">
       {#snippet children()}
       <DropdownItem href="#top">Return to top</DropdownItem>
       <DropdownDivider />

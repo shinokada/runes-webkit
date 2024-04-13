@@ -9,6 +9,7 @@
     "email": "connect@codewithshin.com",
     "url": "https://blog.codewithshin.com"
   },
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/shinokada/runes-webkit"

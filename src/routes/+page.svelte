@@ -10,6 +10,9 @@
   }
   let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
 
+  const runaticsVersion = __RUNATICS_VERSION__;
+  const runesMetaTagsVersion = __RUNES_METATAGS_VERSION__;
+  let newPkg = $state({...pkg, runaticsVersion, runesMetaTagsVersion})
 </script>
 
 <SupportBanner>
@@ -21,4 +24,4 @@
 <HomeCards cards={filteredCards}/>
 <h2 class='flex justify-center my-8'>Info</h2>
 <HomeCards cards={info} />
-<TechInfo {...pkg} />
+<TechInfo {...newPkg} />

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.19
+
+### Patch Changes
+
+- fix: remove runaticsVersion and runesMetaTagsVersion from helpers
+
 ## 0.4.18
 
 ### Patch Changes

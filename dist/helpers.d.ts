@@ -136,8 +136,6 @@ export declare const pkg: {
     pkgName: any;
     pkgVersion: any;
     repoUrl: any;
-    runaticsVersion: any;
-    runesMetaTagsVersion: any;
     svelteVersion: any;
     svelteKitVersion: any;
     svelte5uilib: any;

@@ -5,6 +5,7 @@
 	import { page } from '$app/stores';
   import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar } from '$lib'
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
+  import { sineIn } from 'svelte/easing';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some(allowedUrl => url.startsWith(allowedUrl));
@@ -25,13 +26,20 @@
   }
   let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
 
-  import { sineIn } from 'svelte/easing';
 
   let transitionParams = {
     x: -320,
     duration: 200,
     easing: sineIn
   };
+  let dropdownTransitionParams = {
+    y: 0,
+    duration: 200,
+    easing: sineIn
+  };
+  let dropdown = uiHelpers();
+  let dropdownStatus = $state(false);
+  let closeDropdown = dropdown.close;
 
   const navDrawer = uiHelpers();
   let navDrawerStatus = $state(false);
@@ -49,16 +57,11 @@
 	let ulclass = 'dark:lg:bg-transparent lg:space-x-4';
 	let navclass = 'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
   let headerCls = twMerge('sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950', headerClass)
-  let dropdown = uiHelpers();
-
-  let isOpen = $state(false);
-  let toggle = dropdown.toggle;
-  let close = dropdown.close;
 
 	$effect(() => {
     navDrawerStatus = navDrawer.isOpen;
 		navStatus = nav.isOpen;
-    isOpen = dropdown.isOpen;
+    dropdownStatus = dropdown.isOpen;
     currentUrl = $page.url.pathname;
 	});
   const activeclass =
@@ -108,9 +111,11 @@
         {#if include}
 				<DynamicCodeBlockStyle />
         {/if}
-        <DotsHorizontalOutline onclick={toggle} class="dark:text-white ml-6 mr-4" size="lg" />
+        <DotsHorizontalOutline onclick={dropdown.toggle} class="dark:text-white ml-6 mr-4" size="lg" />
       <div class="relative">
-        <Dropdown {isOpen} divclass="absolute -left-[30px] top-7 w-9">
+        <Dropdown {dropdownStatus}
+        {closeDropdown}
+        transitionParams={dropdownTransitionParams} divclass="absolute -left-[47px] top-8 w-12 pl-1.5">
           {#if twitterUrl}
           <DropdownItem href={twitterUrl} target="_blank" aclass='p-2 m-0'><XSolid /></DropdownItem>
           {/if}

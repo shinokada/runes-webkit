@@ -2,14 +2,24 @@
   import '../app.postcss';
   import { page } from '$app/stores';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
+  import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
 
   let { children, data } = $props()
   const analyticsId = data.ANALYTICS_ID
+  let metaTags = $state(
+    $page.data.pageMetaTags
+      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+      : data.layoutMetaTags
+  );
+
   let currentUrl = $state($page.url.pathname);
   $effect(() => {
     currentUrl = $page.url.pathname;
+    metaTags = $page.data.pageMetaTags
+      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+      : data.layoutMetaTags;
   })
   const lis =[
     {name: 'Guide', href: '/guide/svelte-4/getting-started'},
@@ -31,7 +41,7 @@
     keywords:'Svelte 5, Runes, SvelteKit, UI, icons',
   }
 </script>
-
+<RunesMetaTags {...metaTags} />
 <Runatics {analyticsId} />
 
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>

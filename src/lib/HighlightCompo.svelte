@@ -3,7 +3,6 @@
   import { Badge } from 'svelte-5-ui-lib';
   import { clickToCopy } from './helpers';
   import markdown from 'svelte-rune-highlight/languages/markdown';
-  import { twMerge } from 'tailwind-merge';
 
   interface Props {
     code: string;
@@ -72,5 +71,7 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: 
+@props: code: string;
+@props:codeLang?: string;
+@props:counter?:  number; = 2;
 -->

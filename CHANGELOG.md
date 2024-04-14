@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.0
+
+### Minor Changes
+
+- feat: move styles to static/styles/runes-webkit.css and import it in app.pcss ([`7ea026798cfcdb7dc5cacf090f32b144a2839747`](https://github.com/shinokada/runes-webkit/commit/7ea026798cfcdb7dc5cacf090f32b144a2839747))
+
 ## 0.4.23
 
 ### Patch Changes

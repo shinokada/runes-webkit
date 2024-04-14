@@ -2,7 +2,7 @@
 let { children } = $props();
 </script>
 
-<Anchor tag="h3" class="text-gray-900 dark:text-white leading-tight text-xl font-bold"
+<Anchor tag="h3" class="h3_h3"
   >
   {@render children()}
   </Anchor

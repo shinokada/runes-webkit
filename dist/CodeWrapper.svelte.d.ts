@@ -4,7 +4,6 @@ declare const __propDef: {
         children?: ((this: void) => typeof import("svelte").SnippetReturn & {
             _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
         }) | undefined;
-        class?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
@@ -18,7 +17,6 @@ export type CodeWrapperSlots = typeof __propDef.slots;
  * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children?: Snippet;
- * @props:class?: string | undefined;
  */
 export default class CodeWrapper extends SvelteComponent<CodeWrapperProps, CodeWrapperEvents, CodeWrapperSlots> {
 }

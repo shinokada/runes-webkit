@@ -2,17 +2,12 @@
 import { twMerge } from "tailwind-merge";
 import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "svelte-5-ui-lib";
 import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from "./";
-let { asideclass, activeclass, nonActiveclass, divclass, iconclass, menuList, sidebarClose, ...restProps } = $props();
+let { menuList, sidebarClose, active_class, nonactive_class, div_class, aside_class, ...restProps } = $props();
 let currentUrl = $page.url.pathname;
 $effect(() => {
   currentUrl = $page.url.pathname;
 });
 const hasPath = (key) => currentUrl.includes(key);
-const activeCls = twMerge("flex items-center p-1 text-base font-normal text-white bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600", activeclass);
-const nonActiveCls = twMerge("flex items-center p-1 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700", nonActiveclass);
-const asideCls = twMerge("fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block", asideclass);
-const divCls = twMerge("dark_bg_theme", divclass);
-const iconCls = twMerge("h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white", iconclass);
 let list = [
   {
     name: "Svelte 4 & 5",
@@ -62,18 +57,18 @@ if (menuList) {
 }
 </script>
 
-<Sidebar activeClass={activeCls} nonActiveClass={nonActiveCls} divclass={divCls} asideclass={asideCls} {...restProps}>
+<Sidebar activeClass="s_b_active  {active_class}" nonActiveClass='s_b_nonactive {nonactive_class}' divclass="s_b_div {div_class}" asideclass="s_b_aside {aside_class}" {...restProps}>
   <SidebarGroup>
     {#each list as { name, icon, children, href }}
       {#if children}
       <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass='me-4' btnclass='p-1'>
         {#snippet iconSlot()}
-          <svelte:component this={icon} class={iconCls} />
+          <svelte:component this={icon} class="s_b_icon" />
         {/snippet}
         {#each children as { name, icon, href }}
         <SidebarItem label={name} onclick={sidebarClose} {href} aclass='ml-4'>
           {#snippet iconSlot()}
-          <svelte:component this={icon} class={iconCls} />
+          <svelte:component this={icon} class="s_b_icon" />
         {/snippet}
         </SidebarItem>
         {/each}
@@ -81,7 +76,7 @@ if (menuList) {
       {:else}
       <SidebarItem label={name} onclick={sidebarClose} {href} >
         {#snippet iconSlot()}
-          <svelte:component this={icon} class={iconCls} />
+          <svelte:component this={icon} class="s_b_icon" />
         {/snippet}
       </SidebarItem> 
       {/if}
@@ -93,11 +88,10 @@ if (menuList) {
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: asideclass?: string;
-@props:activeclass?: string;
-@props:nonActiveclass?: string;
-@props:divclass?: string;
-@props:iconclass?: string;
-@props:menuList?: ListType[];
+@props: menuList?: ListType[];
 @props:sidebarClose?: () => void;
+@props:active_class?: string;
+@props:nonactive_class?: string;
+@props:div_class?: string;
+@props:aside_class?: string;
 -->

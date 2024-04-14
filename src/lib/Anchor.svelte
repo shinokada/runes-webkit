@@ -35,5 +35,4 @@
 ## Props
 @props: children: Snippet;
 @props:tag?: string;
-@props:class?: string;
 -->

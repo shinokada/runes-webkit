@@ -8,7 +8,6 @@ declare const __propDef: {
         sizeByTailwind?: boolean | undefined;
         minSize?: string | undefined;
         maxSize?: string | undefined;
-        class?: string | undefined;
         threeTabs?: boolean | undefined;
     };
     events: {
@@ -28,7 +27,6 @@ export type IconPageSlots = typeof __propDef.slots;
  * @props:sizeByTailwind?: boolean;// for flowbite-svelte-icons only
  * @props:minSize?: string;
  * @props:maxSize?: string;
- * @props:class?: string;
  * @props:threeTabs?: boolean
  */
 export default class IconPage extends SvelteComponent<IconPageProps, IconPageEvents, IconPageSlots> {

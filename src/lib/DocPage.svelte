@@ -29,13 +29,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: Snippet;
-@props:title?: string;
-@props:description?: string;
-@props:keywords?: string;
-@props:url?: string;
-@props:image?: string;
-@props:imageAlt?: string;
-@props:imageWidth?: string;
-@props:imageHeight?: string;
-@props:creator?: string;
+@props:headingSelector?: string;
 -->

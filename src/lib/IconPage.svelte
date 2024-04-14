@@ -101,6 +101,5 @@
 @props:sizeByTailwind?: boolean;// for flowbite-svelte-icons only
 @props:minSize?: string;
 @props:maxSize?: string;
-@props:class?: string;
 @props:threeTabs?: boolean
 -->

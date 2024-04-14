@@ -178,3 +178,53 @@
 .s_b_icon{
   @apply h-5 w-5 text-gray-500  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white
 }
+
+/* TechInfo component */
+.t_i_h2{
+  @apply flex justify-center my-8
+}
+
+.t_i_div{
+  @apply grid grid-cols-1 max-w-5xl mx-auto
+}
+
+.t_i_ul{
+  @apply m-4 list-disc p-4 text-left text-lg dark:text-gray-400
+}
+
+.t_i_li{
+  @apply hover:text-red-700 hover:underline
+}
+
+.t_i_a{
+  @apply me-4 hover:underline md:me-6
+}
+
+/* Toc component */
+.t_div_1{
+  @apply relative
+}
+
+.t_div_2{
+  @apply fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-4 xl:text-sm xl:block right-0
+}
+
+.t_div_3{
+  @apply flex overflow-y-auto sticky top-12 flex-col justify-between pb-6 h-[calc(100vh-5rem)]
+}
+
+.t_div_4{
+  @apply mb-8
+}
+
+.t_ul{
+  @apply overflow-x-hidden font-medium text-gray-500 dark:text-gray-400 space-y-2.5
+}
+
+.t_h4{
+  @apply pl-2.5 my-4 text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-white
+}
+
+.t_a{
+  @apply inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-['#'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100
+}

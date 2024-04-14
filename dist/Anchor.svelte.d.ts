@@ -4,7 +4,6 @@ declare const __propDef: {
     props: {
         children: Snippet;
         tag?: string | undefined;
-        class?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
@@ -19,7 +18,6 @@ export type AnchorSlots = typeof __propDef.slots;
  * ## Props
  * @props: children: Snippet;
  * @props:tag?: string;
- * @props:class?: string;
  */
 export default class Anchor extends SvelteComponent<AnchorProps, AnchorEvents, AnchorSlots> {
 }

@@ -1,7 +1,6 @@
 <script lang='ts'>
   import { page } from '$app/stores';
   import type { ComponentType } from 'svelte';
-  import { twMerge } from 'tailwind-merge';
   import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
   import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from '$lib';
 
@@ -111,11 +110,10 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: asideclass?: string;
-@props:activeclass?: string;
-@props:nonActiveclass?: string;
-@props:divclass?: string;
-@props:iconclass?: string;
-@props:menuList?: ListType[];
+@props: menuList?: ListType[];
 @props:sidebarClose?: () => void;
+@props:active_class?: string;
+@props:nonactive_class?: string;
+@props:div_class?: string;
+@props:aside_class?: string;
 -->

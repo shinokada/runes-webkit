@@ -176,7 +176,7 @@
     </button>
   </div>
   <Sidebar
-    aside_class="w-48 p-0 border-none mt-20 ml-4"
+    aside_class="w-48 p-0 border-none mt-20 ml-4 !important"
     div_class="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
   />

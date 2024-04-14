@@ -1,5 +1,5 @@
 <script>
-  import '../app.postcss';
+  import '../app.pcss';
   import { page } from '$app/stores';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
@@ -48,14 +48,14 @@
 <div class="lg:flex">
   
   {#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
-    <Sidebar asideclass='hidden'/>
+    <Sidebar aside_class='hidden lg:block border-e border-gray-200 dark:border-gray-600'/>
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
     </div>
   {/if}
     <div class="relative h-full w-full overflow-y-auto px-8">
       {@render children()}
-      <Footer {brand} {lis} ulClass='dark_bg_theme'/>
+      <Footer {brand} {lis}/>
     </div>
   
 </div>

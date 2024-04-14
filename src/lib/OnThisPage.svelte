@@ -59,18 +59,18 @@
   }
 </script>
 
-<div class="xl:hidden z-20 fixed top-20 p-2 right-6 flex dark:bg-neutral-900 dark:text-white">
+<div class="o_t_p_div">
 <button onclick={dropdown.toggle} class='flex'>
   On this page
-  <ChevronDownSolid class="flex-inline w-4 h-4 ms-2 mt-1 text-white dark:text-white" />
+  <ChevronDownSolid class="o_t_p_svg" />
 </button>
 <div use:init>
-    <Dropdown  dropdownStatus={dropdownStatus} closeDropdown={closeDropdown} {transitionParams} divclass="w-60 absolute right-[8px] top-[30px]">
+    <Dropdown  dropdownStatus={dropdownStatus} closeDropdown={closeDropdown} {transitionParams} divclass="o_t_p_dropdown_div" ulclass="o_t_p_ul">
       {#snippet children()}
       <DropdownItem href="#top">Return to top</DropdownItem>
       <DropdownDivider />
       {#each headings as { rel, href, name }}
-        <DropdownItem liclass='my-2 hover:text-primary-400'>
+        <DropdownItem liclass='o_t_p_li'>
           <a {href} class="{indent(rel)}">{name}</a>
         </DropdownItem>
       {/each}

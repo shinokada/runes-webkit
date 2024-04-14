@@ -6,7 +6,7 @@
   let { children }: Props = $props();
 </script>
 
-<code class="text-primary-700 dark:text-primary-700">
+<code class="c_code">
   {@render children()}
 </code>
 

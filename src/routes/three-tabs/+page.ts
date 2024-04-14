@@ -1,4 +1,4 @@
-import type { MetaProps } from '$lib';
+import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
   const pageMetaTags = Object.freeze({

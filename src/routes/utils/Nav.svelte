@@ -63,8 +63,7 @@
     dropdownStatus = dropdown.isOpen;
     currentUrl = $page.url.pathname;
 	});
-  const activeclass =
-    'flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-100 dark:hover:bg-gray-700';
+  
 
 </script>
 
@@ -177,9 +176,8 @@
     </button>
   </div>
   <Sidebar
-    {activeclass}
-    asideclass="w-48 p-0 border-none mt-20 ml-4"
-    divclass="bg-transparent p-0"
+    aside_class="w-48 p-0 border-none mt-20 ml-4"
+    div_class="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>

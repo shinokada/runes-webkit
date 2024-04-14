@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.1
+
+### Patch Changes
+
+- feat: update runes-webkit.css and Toc component ([`f6faf6de9cc6e8df224a5383975288bf6e158ba3`](https://github.com/shinokada/runes-webkit/commit/f6faf6de9cc6e8df224a5383975288bf6e158ba3))
+
 ## 0.5.0
 
 ### Minor Changes

@@ -1,5 +1,5 @@
 <script lang="ts">import { twMerge } from "tailwind-merge";
-let { headingSelector, extract, divFixed, aClass, ulClass, divFlex, h4Class } = $props();
+let { headingSelector, extract, div_1_class, div_2_class, div_3_class, div_4_class, a_class, ul_class, h4_class } = $props();
 let headings = $state([]);
 function init(_) {
   const observer = new MutationObserver(toc);
@@ -18,31 +18,26 @@ function toc() {
     return;
   headings = [...document.querySelectorAll(headingSelector)].map(extract).filter((x) => x.name);
 }
-const aCls = twMerge("inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-['#'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100", aClass);
-const ulCls = twMerge("overflow-x-hidden font-medium text-gray-500 dark:text-gray-400 space-y-2.5", ulClass);
-const divFixedCls = twMerge("fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-4 xl:text-sm xl:block right-0", divFixed);
-const divFlexCls = twMerge("flex overflow-y-auto sticky top-12 flex-col justify-between pb-6 h-[calc(100vh-5rem)]", divFlex);
-const h4Cls = twMerge("pl-2.5 my-4 text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-white", h4Class);
 </script>
 
-<div class="relative">
+<div class="t_div_1 {div_1_class}">
   <div
     use:init
-    class="{divFixedCls}"
+    class="t_div_2 {div_2_class}"
   >
     {#if headings.length}
       <div
-        class={divFlexCls}
+        class="t_div_3 {div_3_class}"
       >
-        <div class="mb-8">
-          <h4 class={h4Cls}>
+        <div class="t_div_4 {div_4_class}">
+          <h4 class="t_h4 {h4_class}">
             On this page
           </h4>
           <nav>
-            <ul class={ulCls}>
+            <ul class="t_ul {ul_class}">
               {#each headings as { rel, href, name }}
                 <li>
-                  <a {href} class="{indent(rel)} {aCls}">{name}</a>
+                  <a {href} class="{indent(rel)} t_a {a_class}">{name}</a>
                 </li>
               {/each}
             </ul>
@@ -59,9 +54,11 @@ const h4Cls = twMerge("pl-2.5 my-4 text-sm font-semibold tracking-wide text-gray
 ## Props
 @props: headingSelector: string;
 @props:extract: (x
-@props:divFixed?: string;
-@props:aClass?: string;
-@props:ulClass?: string;
-@props:divFlex?: string;
-@props:h4Class?: string;
+@props:a_class?: string;
+@props:ul_class?: string;
+@props:div_1_class?: string;
+@props:div_2_class?: string;
+@props:div_3_class?: string;
+@props:div_4_class?: string;
+@props:h4_class?: string;
 -->

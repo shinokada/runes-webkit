@@ -1,5 +1,4 @@
 <script lang='ts'>import { page } from "$app/stores";
-import { twMerge } from "tailwind-merge";
 import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "svelte-5-ui-lib";
 import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from "./";
 let { menuList, sidebarClose, active_class, nonactive_class, div_class, aside_class, ...restProps } = $props();

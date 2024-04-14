@@ -1,5 +1,4 @@
-<script lang="ts">import { twMerge } from "tailwind-merge";
-import { Footer, FooterBrand, FooterLi, FooterUl } from "svelte-5-ui-lib";
+<script lang="ts">import { Footer, FooterBrand, FooterLi, FooterUl } from "svelte-5-ui-lib";
 let { brand, lis, footerType = "logo", ...restProps } = $props();
 </script>
 

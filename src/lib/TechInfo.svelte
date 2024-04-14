@@ -93,12 +93,12 @@
 @props:pkgName?: string;
 @props:pkgVersion?: string;
 @props:repoUrl?: string;
-@props:h2class?: string;
 @props:title?: string;
-@props:divclass?: string;
-@props:ulclass?: string;
-@props:liclass?: string;
-@props:aclass?: string;
+@props:h2_class?: string;
+@props:div_class?: string;
+@props:ul_class?: string;
+@props:li_class?: string;
+@props:a_class?: string;
 @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
 @props:runeswebkitVersion?: string;
 @props:runaticsVersion?: string;

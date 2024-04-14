@@ -2,7 +2,6 @@
 import { Badge } from "svelte-5-ui-lib";
 import { clickToCopy } from "./helpers";
 import markdown from "svelte-rune-highlight/languages/markdown";
-import { twMerge } from "tailwind-merge";
 let {
   code,
   codeLang,

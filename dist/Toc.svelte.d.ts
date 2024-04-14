@@ -8,11 +8,13 @@ declare const __propDef: {
             rel?: string | undefined;
             active?: boolean | undefined;
         };
-        divFixed?: string | undefined;
-        aClass?: string | undefined;
-        ulClass?: string | undefined;
-        divFlex?: string | undefined;
-        h4Class?: string | undefined;
+        a_class?: string | undefined;
+        ul_class?: string | undefined;
+        div_1_class?: string | undefined;
+        div_2_class?: string | undefined;
+        div_3_class?: string | undefined;
+        div_4_class?: string | undefined;
+        h4_class?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
@@ -27,11 +29,13 @@ export type TocSlots = typeof __propDef.slots;
  * ## Props
  * @props: headingSelector: string;
  * @props:extract: (x
- * @props:divFixed?: string;
- * @props:aClass?: string;
- * @props:ulClass?: string;
- * @props:divFlex?: string;
- * @props:h4Class?: string;
+ * @props:a_class?: string;
+ * @props:ul_class?: string;
+ * @props:div_1_class?: string;
+ * @props:div_2_class?: string;
+ * @props:div_3_class?: string;
+ * @props:div_4_class?: string;
+ * @props:h4_class?: string;
  */
 export default class Toc extends SvelteComponent<TocProps, TocEvents, TocSlots> {
 }

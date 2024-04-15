@@ -2,23 +2,12 @@
 
 A collection of reusable Svelte components for building user interfaces for Svelte Runes web applications.
 
-- CodeWrapper
-- Footer
-- helpers
-- HighlightCompo
-- HomeCards
-- IconPage
-- SupportBanner
-- TechInfo
+## Docs
 
-
-## Requirements
-
-- Svelte 5 (Runes)
-- SvelteKit
+[Runes Webkit](https://runes-webkit.codewithshin.com/)
 
 ## Installation
 
 ```sh
-pnpm i -D runes-webkit svelte-rune-highlight highlight.js
+pnpm i -D svelte-5-ui-lib tailwind-merge svelte-rune-highlight highlight.js runes-webkit svelte-lib-helpers
 ```

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.5
+
+### Patch Changes
+
+- fix: typo update and cleanup
+
 ## 0.5.4
 
 ### Patch Changes

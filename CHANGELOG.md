@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.6
+
+### Patch Changes
+
+- fix: change to dark_bg_theme in styles ([`02118988c7be23b1535abb62d36d511490fdb519`](https://github.com/shinokada/runes-webkit/commit/02118988c7be23b1535abb62d36d511490fdb519))
+
 ## 0.5.5
 
 ### Patch Changes

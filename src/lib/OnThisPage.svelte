@@ -65,7 +65,7 @@
   <ChevronDownSolid class="o_t_p_svg" />
 </button>
 <div use:init>
-    <Dropdown  dropdownStatus={dropdownStatus} closeDropdown={closeDropdown} {transitionParams} divclass="o_t_p_dropdown_div" ulclass="o_t_p_ul">
+    <Dropdown dropdownStatus={dropdownStatus} closeDropdown={closeDropdown} {transitionParams} divclass="o_t_p_dropdown_div" ulclass="o_t_p_ul">
       {#snippet children()}
       <DropdownItem href="#top">Return to top</DropdownItem>
       <DropdownDivider />

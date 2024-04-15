@@ -150,7 +150,7 @@
 
   /* OnThisPage component */
   .o_t_p_div {
-    @apply xl:hidden z-20 fixed top-20 p-2 right-6 flex dark:bg-neutral-900 dark:text-white
+    @apply xl:hidden z-20 fixed top-20 p-2 right-6 flex dark_bg_theme dark:text-white
   }
 
   .o_t_p_svg {
@@ -213,7 +213,7 @@
   }
 
   .t_div_2 {
-    @apply fixed top-24 bg-white dark:bg-neutral-900 right-8 flex-none hidden w-64 pl-4 xl:text-sm xl:block right-0
+    @apply fixed top-24 bg-white dark_bg_theme right-8 flex-none hidden w-64 pl-4 xl:text-sm xl:block right-0
   }
 
   .t_div_3 {

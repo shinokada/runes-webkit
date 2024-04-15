@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.7
+
+### Patch Changes
+
+- style: fix onThisPage, layout Sidebar css ([`2ddce9ef6cc764e61929bfb671b43081193e1e8b`](https://github.com/shinokada/runes-webkit/commit/2ddce9ef6cc764e61929bfb671b43081193e1e8b))
+
 ## 0.5.6
 
 ### Patch Changes

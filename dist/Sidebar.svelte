@@ -11,7 +11,7 @@ if (menuList) {
 }
 </script>
 
-<Sidebar activeClass="s_b_active  {active_class}" nonActiveClass='s_b_nonactive {nonactive_class}' divclass="s_b_div {div_class}" asideclass="s_b_aside {aside_class}" {...restProps}>
+<Sidebar activeClass="s_b_active  {active_class}" nonActiveClass="s_b_nonactive {nonactive_class}" divclass="s_b_div {div_class}" asideclass="s_b_aside {aside_class}" {...restProps}>
   <SidebarGroup>
     {#each sidebarList as { name, icon, children, href }}
       {#if children}

@@ -31,7 +31,7 @@
 
   /* DocPage component */
   .d_p_main {
-    @apply flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible
+    @apply relative flex-auto w-full min-w-0 lg:max-h-full lg:overflow-visible
   }
 
   .d_p_div_1 {
@@ -39,11 +39,11 @@
   }
 
   .d_p_div_2 {
-    @apply flex flex-col max-w-3xl 2xl:ml-20 px-4 min-w-0 lg:px-12 pb-12 xl:pb-16 lg:pb-16 divide-y divide-gray-200 dark:divide-gray-800
+    @apply flex flex-col max-w-3xl min-w-0 divide-y divide-gray-200 dark:divide-gray-800
   }
 
   .d_p_div_3 {
-    @apply pb-20
+    @apply pb-20 pr-8 2xl:pr-0
   }
 
   /* Footer component */
@@ -213,7 +213,7 @@
   }
 
   .t_div_2 {
-    @apply fixed top-24 bg-white dark_bg_theme right-8 2xl:right-16 flex-none hidden w-64 pl-4 xl:text-sm xl:block right-0
+    @apply fixed bg-white dark_bg_theme 2xl:right-16 flex-none hidden w-64  mt-4 xl:text-sm xl:block right-0
   }
 
   .t_div_3 {

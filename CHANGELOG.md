@@ -1,5 +1,15 @@
 # svelte-icon-webkit
 
+## 0.5.4
+
+### Patch Changes
+
+- fix: update const ([`6320f6bd9fcc7dd92ddf299a8136646e21493228`](https://github.com/shinokada/runes-webkit/commit/6320f6bd9fcc7dd92ddf299a8136646e21493228))
+  fix: add **ORIGINAL_SOURCE_NAME** and **ORIGINAL_SOURCE_URL**
+  fix: update const cards and info in helpers.ts
+  fix: add contributors to package.json for original source
+  tests: update test.ts
+
 ## 0.5.3
 
 ### Patch Changes

@@ -1,6 +1,5 @@
 <script>
   import '../app.pcss';
-  import '$lib/runeswebkit.css'
   import { page } from '$app/stores';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList } from '$lib'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
@@ -37,10 +36,7 @@
   const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = `https://github.com/shinokada/${__NAME__}`
-  const meta = {
-    description: 'A collection of reusable Svelte components for building icon-based user interfaces in web applications.',
-    keywords:'Svelte 5, Runes, SvelteKit, UI, icons',
-  }
+
 </script>
 <RunesMetaTags {...metaTags} />
 <Runatics {analyticsId} />

@@ -1,3 +1,4 @@
+@import './lib/runeswebkit.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,11 +64,5 @@
 
   #mainContent > pre {
     @apply text-sm rounded-xl overflow-auto w-full my-4 mx-auto bg-gradient-to-r text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-2 sm:p-6;
-  }
-}
-
-@layer components {
-  .dark_bg_theme {
-    @apply dark:bg-stone-900 !important;
   }
 }

@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import type { ComponentType } from 'svelte';
   import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
-  import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from '$lib';
+  // import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from '$lib';
 
   type ListType = {
     name: string;

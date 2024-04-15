@@ -1,7 +1,7 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
   // import MainLayout from '../+layout.svelte?raw'
-  import { List, Li, A } from 'svelte-5-ui-lib';
+  import { List, Li, A, Tabs, TabItem } from 'svelte-5-ui-lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -13,90 +13,88 @@
 
 <p>This library contails following components for Svelte Runes project.</p>
 
-<List tag='ul'>
-  <Li>Anchor</Li>
-  <Li>Code</Li>
-  <Li>CodeWrapper</Li>
-  <Li>DocPage</Li>
-  <Li>Footer</Li>
-  <Li>H2, H3</Li>
-  <Li>Helper functions</Li>
-  <Li>HighlightCompo</Li>
-  <Li>homeCards.json</Li>
-  <Li>HomeCards</Li>
-  <Li>IconPage</Li>
-  <Li>OnThisPage</Li>
-  <Li>Sidebar</Li>
-  <Li>SupportBanner</Li>
-  <Li>TechInfo</Li>
-  <Li>Toc</Li>
-</List>
-
-<H3>Helper functions</H3>
-
-<List>
-  <Li>clickToCopy</Li>
-  <Li>convertToKebabCase</Li>
-  <Li>toDashCaseLower</Li>
-  <Li>toUpperSnakeCase</Li>
-  <Li>extract</Li>
-  <Li>removeHyphensAndCapitalize</Li>
-  <Li>filterIconsByKeyword</Li>
-  <Li>filterStringKeys</Li>
-  <Li>excludeItemsByKeywords</Li>
-  <Li>random_tailwind_color</Li>
-  <Li>random_hex_color_code</Li>
-  <Li>filterByTitles</Li>
-  <Li>excludeByTitle</Li>
-  <Li>insertObjectToArray</Li>
-  <Li>const cards</Li>
-  <Li>info</Li>
-  <Li>sidebarList</Li>
-</List>
-
-<H3>Components in the utils directory</H3>
-
-<List>
-  <Li>highlight</Li>
-  <Li>Nav</Li>
-  <Li>DynamicCodeBlockStyle</Li>
-</List>
-
-<H3>Tests</H3>
-
-<List>
-  <Li>test.ts</Li>
-</List>
-
-<H3>Pages</H3>
-
-<List>
-  <Li>Home</Li>
-  <Li>Guide
-    <List>
-      <Li>Custom icons</Li>
-      <Li>Global icons</Li>
-      <Li>Svelte 4
-        <List>
-          <Li>Getting started</Li>
-          <Li>Props</Li>
-        </List>
-      </Li>
-      <Li>Svelte 5
-        <List>
-          <Li>Getting started</Li>
-          <Li>Props</Li>
-        </List>
-      </Li>
+<Tabs>
+  <TabItem open title="Components">
+    <List tag='ul'>
+      <Li>Anchor</Li>
+      <Li>Code</Li>
+      <Li>CodeWrapper</Li>
+      <Li>DocPage</Li>
+      <Li>Footer</Li>
+      <Li>H2, H3</Li>
+      <Li>Helper functions</Li>
+      <Li>HighlightCompo</Li>
+      <Li>homeCards.json</Li>
+      <Li>HomeCards</Li>
+      <Li>IconPage</Li>
+      <Li>OnThisPage</Li>
+      <Li>Sidebar</Li>
+      <Li>SupportBanner</Li>
+      <Li>TechInfo</Li>
+      <Li>Toc</Li>
     </List>
-  </Li>
-  <Li>How to use</Li>
-</List>
+  </TabItem>
+  <TabItem title="Helper functions">
+    <List>
+      <Li>clickToCopy</Li>
+      <Li>convertToKebabCase</Li>
+      <Li>toDashCaseLower</Li>
+      <Li>toUpperSnakeCase</Li>
+      <Li>extract</Li>
+      <Li>removeHyphensAndCapitalize</Li>
+      <Li>filterIconsByKeyword</Li>
+      <Li>filterStringKeys</Li>
+      <Li>excludeItemsByKeywords</Li>
+      <Li>random_tailwind_color</Li>
+      <Li>random_hex_color_code</Li>
+      <Li>filterByTitles</Li>
+      <Li>excludeByTitle</Li>
+      <Li>insertObjectToArray</Li>
+      <Li>const cards</Li>
+      <Li>info</Li>
+      <Li>sidebarList</Li>
+    </List>
+  </TabItem>
+  <TabItem title="utils Directory">
+    <List>
+      <Li>highlight</Li>
+      <Li>Nav</Li>
+      <Li>DynamicCodeBlockStyle</Li>
+    </List>
+  </TabItem>
+  <TabItem title="Tests">
+    <List>
+      <Li>test.ts</Li>
+    </List>
+  </TabItem>
+  <TabItem title='Pages'>
+    <List>
+      <Li>Home</Li>
+      <Li>Guide
+        <List>
+          <Li>Custom icons</Li>
+          <Li>Global icons</Li>
+          <Li>Svelte 4
+            <List>
+              <Li>Getting started</Li>
+              <Li>Props</Li>
+            </List>
+          </Li>
+          <Li>Svelte 5
+            <List>
+              <Li>Getting started</Li>
+              <Li>Props</Li>
+            </List>
+          </Li>
+        </List>
+      </Li>
+      <Li>How to use</Li>
+    </List>
+  </TabItem>
+</Tabs>
 
 
-
-<p>Also this repo contains examples of how to set up Nav and DynamicCodeBlockStyle.</p>
-<p>Please read the following to learn how to use them.</p>
+<p>Use the <code>utils</code> and <code>+layout.svelte</code> examples how to set up Nav and DynamicCodeBlockStyle.</p>
 
 <H2>Runes Webkit Starter</H2>
 
@@ -124,9 +122,9 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
 
-<H3>dark_bg_theme</H3>
+<H3>runeswebkit.css</H3>
 
-<p>Set <Code>dark_bg_theme</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
+<p>Import <Code>runeswebkit.css</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file. To overwrite the default style, add your style in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/app-pcss.md'] as string} />
 
@@ -169,9 +167,3 @@
 <HighlightCompo codeLang="ts" code={modules['./md/three-tabs.md'] as string} />
 <H3>three-tabs-sizeby-tailwind</H3>
 <HighlightCompo codeLang="ts" code={modules['./md/three-tabs-sizeby-tailwind.md'] as string} />
-
-<H2>Doc Pages</H2>
-
-
-<H2>Components</H2>
-<HighlightCompo codeLang="ts" code={modules['./md/components.md'] as string} />

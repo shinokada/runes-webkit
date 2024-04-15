@@ -1,6 +1,5 @@
 <script lang='ts'>import { page } from "$app/stores";
 import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from "svelte-5-ui-lib";
-import { StarOutline, BadgeCheckOutline, ChartPieOutline, BellActiveAltOutline, CogOutline, GlobeOutline } from "./";
 let { sidebarList, menuList, sidebarClose, active_class, nonactive_class, div_class, aside_class, ...restProps } = $props();
 let currentUrl = $page.url.pathname;
 $effect(() => {

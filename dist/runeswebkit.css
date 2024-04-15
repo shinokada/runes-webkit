@@ -48,7 +48,7 @@
 
   /* Footer component */
   .f_footer {
-    @apply shadow-none bg-gray-50 rounded-none mt-24 border-t border-gray-100 dark:border-gray-800 dark_bg_theme
+    @apply shadow-none rounded-none mt-24 border-t border-gray-100 dark:border-gray-800 dark_bg_theme
   }
 
   .f_div {
@@ -171,7 +171,7 @@
   }
 
   .s_b_aside {
-    @apply fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-gray-50 dark_bg_theme lg:pt-0 lg:block w-64 p-0 ml-4
+    @apply fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block p-0 ml-4
   }
 
   .s_b_nonactive {

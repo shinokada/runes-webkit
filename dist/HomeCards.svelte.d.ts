@@ -7,7 +7,7 @@ declare const __propDef: {
             description: string;
             icon: ComponentType;
             href?: string | undefined;
-            iconClass?: string | undefined;
+            icon_class?: string | undefined;
         }[];
     };
     events: {

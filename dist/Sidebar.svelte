@@ -43,7 +43,8 @@ if (menuList) {
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: menuList?: ListType[];
+@props: sidebarList: ListType[];
+@props:menuList?: ListType[];
 @props:sidebarClose?: () => void;
 @props:active_class?: string;
 @props:nonactive_class?: string;

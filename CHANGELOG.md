@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.2
+
+### Patch Changes
+
+- fix: move static/styles/css to lib dir ([`e273177aca50d3ad8b74958f8c1c5984a790f328`](https://github.com/shinokada/runes-webkit/commit/e273177aca50d3ad8b74958f8c1c5984a790f328))
+
 ## 0.5.1
 
 ### Patch Changes

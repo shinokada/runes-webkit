@@ -7,7 +7,7 @@ type Card = {
     title: string;
     description: string;
     icon: ComponentType;
-    iconClass: string;
+    icon_class: string;
 };
 interface LinkType {
     name: string;
@@ -125,19 +125,19 @@ export declare const cards: ({
     title: string;
     description: string;
     icon: typeof BadgeCheckOutline;
-    iconClass: string;
+    icon_class: string;
 } | {
     title: string;
     description: string;
     icon: typeof TruckFastSolid;
-    iconClass: string;
+    icon_class: string;
 })[];
 export declare const info: {
     title: string;
     description: string;
     icon: typeof InfoCircleOutline;
     href: string;
-    iconClass: string;
+    icon_class: string;
 }[];
 export declare const pkg: {
     pkgName: any;

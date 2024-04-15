@@ -1,5 +1,5 @@
 import type { ComponentType } from 'svelte';
-import BadgeCheckOutline from './icons/BadgeCheckOutline.svelte';
+import BellActiveAltOutline from './icons/BellActiveAltOutline.svelte';
 import InfoCircleOutline from './icons/InfoCircleOutline.svelte';
 import TruckFastSolid from './icons/TruckFastSolid.svelte';
 type Title = string;
@@ -124,7 +124,7 @@ export declare function insertObjectToArray(array: Card[], objectToInsert: Card,
 export declare const cards: ({
     title: string;
     description: string;
-    icon: typeof BadgeCheckOutline;
+    icon: typeof BellActiveAltOutline;
     icon_class: string;
 } | {
     title: string;
@@ -143,6 +143,8 @@ export declare const pkg: {
     pkgName: any;
     pkgVersion: any;
     repoUrl: any;
+    runaticsVersion: any;
+    runesMetaTagsVersion: any;
     svelteVersion: any;
     svelteKitVersion: any;
     svelte5uilib: any;

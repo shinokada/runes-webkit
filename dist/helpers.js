@@ -189,22 +189,22 @@ export function insertObjectToArray(array, objectToInsert, position) {
 }
 export const cards = [
     {
+        title: `${removeHyphensAndCapitalize(__NAME__)}`,
+        description: `${__DESCRIPTION__}`,
+        icon: BellActiveAltOutline,
+        icon_class: 'text-blue-500'
+    },
+    {
         title: 'Svelte 4/5/Runes',
         description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
         icon: BadgeCheckOutline,
         icon_class: 'text-pink-500'
     },
     {
-        title: 'Brands, Regular, and Solid Icons',
-        description: '2000+ SVG Icons.',
-        icon: BellActiveAltOutline,
-        icon_class: 'text-green-500'
-    },
-    {
         title: 'Accessible SVGs',
         description: 'A11y props, `title`, `desc`, and `ariaLabel` for accessible SVG icons.',
         icon: Accessibility,
-        icon_class: 'text-blue-400'
+        icon_class: 'text-green-400'
     },
     {
         title: 'Faster Compiling',
@@ -216,7 +216,7 @@ export const cards = [
         title: 'IDE Support',
         description: 'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
         icon: Visualstudiocode,
-        icon_class: 'text-blue-500'
+        icon_class: 'text-amber-500'
     },
     {
         title: 'Global Icons',
@@ -228,7 +228,7 @@ export const cards = [
         title: 'CSS Frameworks support',
         description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
         icon: Tailwindcss,
-        icon_class: 'text-blue-500'
+        icon_class: 'text-orange-500'
     },
     {
         title: 'Seven Props',
@@ -240,7 +240,7 @@ export const cards = [
         title: 'Dark mode',
         description: 'Use `class` props to add your dark mode color.',
         icon: MoonSolid,
-        icon_class: 'text-yellow-200'
+        icon_class: 'text-emerald-200'
     }
 ];
 export const info = [
@@ -255,14 +255,14 @@ export const info = [
         title: 'License',
         description: 'Released under the MIT License.',
         icon: InfoCircleOutline,
-        href: 'https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE',
+        href: `https://github.com/shinokada/${__NAME__}/blob/main/LICENSE`,
         icon_class: 'text-lime-500'
     },
     {
         title: 'Original source',
-        description: 'FontAwesome/Font-Awesome v6.2.1.',
+        description: `${__ORIGINAL_SOURCE_NAME__}`,
         icon: InfoCircleOutline,
-        href: 'https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs',
+        href: `${__ORIGINAL_SOURCE_URL__}`,
         icon_class: 'text-orange-500'
     }
 ];
@@ -270,6 +270,8 @@ export const pkg = {
     pkgName: __NAME__,
     pkgVersion: __VERSION__,
     repoUrl: __GITHUBURL__,
+    runaticsVersion: __RUNATICS_VERSION__,
+    runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
     svelteVersion: __SVELTE_VERSION__,
     svelteKitVersion: __SVELTEKIT_VERSION__,
     svelte5uilib: __SVELTE_5_UI_LIB_VERSION__,

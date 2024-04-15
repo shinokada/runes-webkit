@@ -20,6 +20,13 @@
     "type": "git",
     "url": "https://github.com/shinokada/runes-webkit-starter"
   },
+  "contributors": [
+    {
+      // original source git repo name and url
+      "name": "edent/SuperTinyIcons",
+      "url": "https://github.com/edent/SuperTinyIcons"
+    }
+  ],
   // move exports to the end
   "exports": {
 		".": {

@@ -114,7 +114,7 @@
 
 <H3>package.json</H3>
 
-<p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code> and all URLs:</p>
+<p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code>, <Code>contributors</Code>  that is the original author, and all URLs:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/package-json.md'] as string} />
 
@@ -130,6 +130,7 @@
 
 <H3>tailwind.config.cjs</H3>
 <p>Update <Code>tailwindcss.config.cjs</Code></p>
+<p>Check more primary colors at <A href='https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs'>here</A>.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} />
 
@@ -167,3 +168,7 @@
 <HighlightCompo codeLang="ts" code={modules['./md/three-tabs.md'] as string} />
 <H3>three-tabs-sizeby-tailwind</H3>
 <HighlightCompo codeLang="ts" code={modules['./md/three-tabs-sizeby-tailwind.md'] as string} />
+
+<H2>Tests</H2>
+
+<p>Please refer to <A href='https://github.com/shinokada/runes-webkit/blob/main/tests/test.ts'>tests/test.ts</A></p>

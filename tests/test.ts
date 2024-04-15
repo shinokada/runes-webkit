@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('index page has expected h1', async ({ page }) => {
-  await expect(page.getByRole('heading', { name: 'Runes Webkit' })).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('Runes Webkit');
 });
 
 test('index page has expected meta title', async ({ page }) => {
@@ -61,25 +61,25 @@ test('index page has expected meta twitter', async ({ page }) => {
 
 test('svelte-4/getting-started page has expected h1', async ({ page }) => {
   await page.goto('/guide/svelte-4/getting-started');
-  // await expect(page.getByRole('heading', { name: 'Svelte Icon Webkit: v1 (EXAMPLE)' })).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('Runes Webkit: v1');
 });
 
 test('three-tabs page has expected h1', async ({ page }) => {
   await page.goto('/three-tabs');
-  // await expect(page.getByRole('heading', { name: 'Three Tabs' })).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('Three Tabs');
 });
 
 test('three-tabs-sizebytailwind page has expected h1', async ({ page }) => {
   await page.goto('/three-tabs-sizebytailwind');
-  // await expect(page.getByRole('heading', { name: 'Three Tabs: Size by Tailwind' })).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('Three Tabs: Size by Tailwind');
 });
 
 test('no-tabs page has expected h1', async ({ page }) => {
   await page.goto('/no-tabs');
-  // await expect(page.getByRole('heading', { name: 'No Tabs' })).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('No Tabs');
 });
 
 test('how to use page has expected h1', async ({ page }) => {
   await page.goto('/how-to-use');
-  // await expect(page.getByRole('heading', { name: 'Documentation' })).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('Documentation');
 });

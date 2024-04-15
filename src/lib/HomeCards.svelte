@@ -7,7 +7,7 @@
     description: string;
     icon: ComponentType;
     href?: string;
-    iconClass?: string;
+    icon_class?: string;
   }
   interface Props{
     cards: CardType[];
@@ -16,9 +16,9 @@
 
 </script>
 
-{#snippet cardSnippet({title, description, icon, href, iconClass})}
+{#snippet cardSnippet({title, description, icon, href, icon_class})}
 <Card {href} class='home_c_card'>
-  <svelte:component this={icon} class="home_c_card_icon {iconClass}"  />
+  <svelte:component this={icon} class="home_c_card_icon {icon_class}"  />
   <h3 class="home_c_card_h3">{title}</h3>
   <p class="home_c_card_p">
   {description}

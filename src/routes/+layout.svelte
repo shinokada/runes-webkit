@@ -1,7 +1,8 @@
 <script>
   import '../app.pcss';
+  import '$lib/runeswebkit.css'
   import { page } from '$app/stores';
-  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib'
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList } from '$lib'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
@@ -48,7 +49,9 @@
 <div class="lg:flex">
   
   {#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
-    <Sidebar aside_class='hidden lg:block border-e border-gray-200 dark:border-gray-600'/>
+    <Sidebar 
+    {sidebarList}
+    aside_class='hidden lg:block border-e border-gray-200 dark:border-gray-600'/>
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
     </div>

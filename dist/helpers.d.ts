@@ -15,6 +15,12 @@ interface LinkType {
     rel?: string;
     active?: boolean;
 }
+type ListType = {
+    name: string;
+    href?: string;
+    icon: ComponentType;
+    children?: ListType[];
+};
 export declare function clickToCopy(node: HTMLElement, target: string): {
     destroy(): void;
 };
@@ -46,6 +52,7 @@ export declare function filterIconsByKeyword(icons: {
 }, keyword: string): {
     [key: string]: any;
 };
+export declare function convertToKebabCase(str: string): string;
 /**
  * Filters out keys in the object that are not strings.
  * to filter out index.js since it has [Symbol(Symbol.toStringTag)]: 'Module'
@@ -142,4 +149,5 @@ export declare const pkg: {
     svelteRuneHighlight: any;
     viteVersion: any;
 };
+export declare const sidebarList: ListType[];
 export {};

@@ -6,7 +6,8 @@
     OnThisPage,
     extract,
     Sidebar,
-    removeHyphensAndCapitalize
+    removeHyphensAndCapitalize,
+    sidebarList
   } from 'runes-webkit';
   import Nav from './utils/Nav.svelte';
   let { children } = $props();
@@ -43,7 +44,7 @@
 />
 <div class="lg:flex">
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
-    <Sidebar />
+    <Sidebar {sidebarList}/>
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
     </div>

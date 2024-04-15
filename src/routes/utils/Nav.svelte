@@ -3,7 +3,7 @@
   import type { ComponentType } from 'svelte';
 	import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem, Drawer } from 'svelte-5-ui-lib';
 	import { page } from '$app/stores';
-  import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar } from '$lib'
+  import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar, sidebarList } from '$lib'
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
 
@@ -64,7 +64,6 @@
     currentUrl = $page.url.pathname;
 	});
   
-
 </script>
 
 {#snippet navLi(lis)}
@@ -176,11 +175,13 @@
     </button>
   </div>
   <Sidebar
+    {sidebarList}
     aside_class="w-48 p-0 border-none mt-20 ml-4 !important"
     div_class="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>
+
 <!--
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)

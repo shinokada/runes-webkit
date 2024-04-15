@@ -12,6 +12,7 @@
   }
 
   interface Props{
+    sidebarList: ListType[];
     menuList?: ListType[];
     sidebarClose?: () => void;
     active_class?: string;
@@ -20,7 +21,7 @@
     aside_class?: string;
   }
 
-  let { menuList, sidebarClose, active_class, nonactive_class, div_class, aside_class, ...restProps }: Props = $props();
+  let { sidebarList, menuList, sidebarClose, active_class, nonactive_class, div_class, aside_class, ...restProps }: Props = $props();
 
   let currentUrl = $page.url.pathname;
   $effect(() => {
@@ -28,60 +29,60 @@
   });
   const hasPath = (key: string) => currentUrl.includes(key);
 
-  let list: ListType[] = [
-    {
-      name: 'Svelte 4 & 5',
-      icon: StarOutline as ComponentType,
-      children: [
-        {
-          name: 'Getting Started',
-          icon: CogOutline as ComponentType,
-          href: '/guide/svelte-4/getting-started'
-        },
-        {
-          name: 'Props',
-          icon: BadgeCheckOutline as ComponentType,
-          href: '/guide/svelte-4/props'
-        }
-      ]
-    },
-    {
-      name: 'Svelte 5: Runes',
-      icon: BellActiveAltOutline as ComponentType,
-      children: [
-        {
-          name: 'Getting Started',
-          icon: CogOutline as ComponentType,
-          href: '/guide/svelte-5/getting-started'
-        },
-        {
-          name: 'Props',
-          icon: BadgeCheckOutline as ComponentType,
-          href: '/guide/svelte-5/props'
-        }
-      ]
-    },
-    {
-      name: 'Global Icons',
-      icon: GlobeOutline as ComponentType,
-      href: '/guide/global-icons'
-    },
-    { 
-      name: 'Custom Icons', 
-    icon: ChartPieOutline as ComponentType, 
-    href: '/guide/custom-icons'
-   }
-  ];
+  // let list: ListType[] = [
+  //   {
+  //     name: 'Svelte 4 & 5',
+  //     icon: StarOutline as ComponentType,
+  //     children: [
+  //       {
+  //         name: 'Getting Started',
+  //         icon: CogOutline as ComponentType,
+  //         href: '/guide/svelte-4/getting-started'
+  //       },
+  //       {
+  //         name: 'Props',
+  //         icon: BadgeCheckOutline as ComponentType,
+  //         href: '/guide/svelte-4/props'
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     name: 'Svelte 5: Runes',
+  //     icon: BellActiveAltOutline as ComponentType,
+  //     children: [
+  //       {
+  //         name: 'Getting Started',
+  //         icon: CogOutline as ComponentType,
+  //         href: '/guide/svelte-5/getting-started'
+  //       },
+  //       {
+  //         name: 'Props',
+  //         icon: BadgeCheckOutline as ComponentType,
+  //         href: '/guide/svelte-5/props'
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     name: 'Global Icons',
+  //     icon: GlobeOutline as ComponentType,
+  //     href: '/guide/global-icons'
+  //   },
+  //   { 
+  //     name: 'Custom Icons', 
+  //   icon: ChartPieOutline as ComponentType, 
+  //   href: '/guide/custom-icons'
+  //  }
+  // ];
   
   if (menuList) {
-    list.push(...menuList);
+    sidebarList.push(...menuList);
   }
   
 </script>
 
 <Sidebar activeClass="s_b_active  {active_class}" nonActiveClass='s_b_nonactive {nonactive_class}' divclass="s_b_div {div_class}" asideclass="s_b_aside {aside_class}" {...restProps}>
   <SidebarGroup>
-    {#each list as { name, icon, children, href }}
+    {#each sidebarList as { name, icon, children, href }}
       {#if children}
       <SidebarDropdownWrapper label={name} isOpen={hasPath('components')} svgclass='me-4' btnclass='p-1'>
         {#snippet iconSlot()}

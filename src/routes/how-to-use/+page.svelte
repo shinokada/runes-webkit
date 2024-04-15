@@ -14,6 +14,8 @@
 <p>This library contails following components for Svelte Runes project.</p>
 
 <List tag='ul'>
+  <Li>Anchor</Li>
+  <Li>Code</Li>
   <Li>CodeWrapper</Li>
   <Li>DocPage</Li>
   <Li>Footer</Li>
@@ -21,6 +23,7 @@
   <Li>Helper functions</Li>
   <Li>HighlightCompo</Li>
   <Li>homeCards.json</Li>
+  <Li>HomeCards</Li>
   <Li>IconPage</Li>
   <Li>OnThisPage</Li>
   <Li>Sidebar</Li>
@@ -28,6 +31,69 @@
   <Li>TechInfo</Li>
   <Li>Toc</Li>
 </List>
+
+<H3>Helper functions</H3>
+
+<List>
+  <Li>clickToCopy</Li>
+  <Li>convertToKebabCase</Li>
+  <Li>toDashCaseLower</Li>
+  <Li>toUpperSnakeCase</Li>
+  <Li>extract</Li>
+  <Li>removeHyphensAndCapitalize</Li>
+  <Li>filterIconsByKeyword</Li>
+  <Li>filterStringKeys</Li>
+  <Li>excludeItemsByKeywords</Li>
+  <Li>random_tailwind_color</Li>
+  <Li>random_hex_color_code</Li>
+  <Li>filterByTitles</Li>
+  <Li>excludeByTitle</Li>
+  <Li>insertObjectToArray</Li>
+  <Li>const cards</Li>
+  <Li>info</Li>
+  <Li>sidebarList</Li>
+</List>
+
+<H3>Components in the utils directory</H3>
+
+<List>
+  <Li>highlight</Li>
+  <Li>Nav</Li>
+  <Li>DynamicCodeBlockStyle</Li>
+</List>
+
+<H3>Tests</H3>
+
+<List>
+  <Li>test.ts</Li>
+</List>
+
+<H3>Pages</H3>
+
+<List>
+  <Li>Home</Li>
+  <Li>Guide
+    <List>
+      <Li>Custom icons</Li>
+      <Li>Global icons</Li>
+      <Li>Svelte 4
+        <List>
+          <Li>Getting started</Li>
+          <Li>Props</Li>
+        </List>
+      </Li>
+      <Li>Svelte 5
+        <List>
+          <Li>Getting started</Li>
+          <Li>Props</Li>
+        </List>
+      </Li>
+    </List>
+  </Li>
+  <Li>How to use</Li>
+</List>
+
+
 
 <p>Also this repo contains examples of how to set up Nav and DynamicCodeBlockStyle.</p>
 <p>Please read the following to learn how to use them.</p>

@@ -1,4 +1,4 @@
-@import '../static/styles/runes-webkit.css';
+/* @import '../static/styles/runes-webkit.css'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -69,6 +69,7 @@
 }
 
 @layer components {
+  /* overwrite runeswebkit.css using !important */
   .dark_bg_theme {
     @apply dark:bg-stone-900 !important;
   }

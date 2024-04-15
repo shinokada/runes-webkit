@@ -8,6 +8,9 @@ import MoonSolid from './icons/MoonSolid.svelte';
 import Tailwindcss from './icons/Tailwindcss.svelte';
 import TruckFastSolid from './icons/TruckFastSolid.svelte';
 import Visualstudiocode from './icons/Visualstudiocode.svelte';
+import StarOutline from './icons/StarOutline.svelte';
+import CogOutline from './icons/CogOutline.svelte';
+import ChartPieOutline from './icons/ChartPieOutline.svelte';
 export function clickToCopy(node, target) {
     async function copyText() {
         let text = target;
@@ -85,6 +88,11 @@ export function filterIconsByKeyword(icons, keyword) {
         }
     }
     return filteredIcons;
+}
+export function convertToKebabCase(str) {
+    // Use replace() method with a regular expression to match all whitespace characters (\s) globally (g flag)
+    // and replace them with '-'
+    return str.replace(/\s/g, '-').toLowerCase();
 }
 /**
  * Filters out keys in the object that are not strings.
@@ -268,3 +276,47 @@ export const pkg = {
     svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
     viteVersion: __VITE_VERSION__,
 };
+export const sidebarList = [
+    {
+        name: 'Svelte 4 & 5',
+        icon: StarOutline,
+        children: [
+            {
+                name: 'Getting Started',
+                icon: CogOutline,
+                href: '/guide/svelte-4/getting-started'
+            },
+            {
+                name: 'Props',
+                icon: BadgeCheckOutline,
+                href: '/guide/svelte-4/props'
+            }
+        ]
+    },
+    {
+        name: 'Svelte 5: Runes',
+        icon: BellActiveAltOutline,
+        children: [
+            {
+                name: 'Getting Started',
+                icon: CogOutline,
+                href: '/guide/svelte-5/getting-started'
+            },
+            {
+                name: 'Props',
+                icon: BadgeCheckOutline,
+                href: '/guide/svelte-5/props'
+            }
+        ]
+    },
+    {
+        name: 'Global Icons',
+        icon: GlobeOutline,
+        href: '/guide/global-icons'
+    },
+    {
+        name: 'Custom Icons',
+        icon: ChartPieOutline,
+        href: '/guide/custom-icons'
+    }
+];

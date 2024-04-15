@@ -10,13 +10,17 @@ import MoonSolid from '$lib/icons/MoonSolid.svelte';
 import Tailwindcss from '$lib/icons/Tailwindcss.svelte';
 import TruckFastSolid from '$lib/icons/TruckFastSolid.svelte';
 import Visualstudiocode from '$lib/icons/Visualstudiocode.svelte';
+import StarOutline from '$lib/icons/StarOutline.svelte';
+
+import CogOutline from '$lib/icons/CogOutline.svelte';
+import ChartPieOutline from '$lib/icons/ChartPieOutline.svelte';
 
 type Title = string;
 type Card = {
   title: string;
   description: string;
   icon: ComponentType;
-  iconClass: string;
+  icon_class: string;
 }
 
 interface LinkType {
@@ -26,6 +30,12 @@ interface LinkType {
   active?: boolean;
 }
 
+type ListType = {
+  name: string;
+  href?: string;
+  icon: ComponentType;
+  children?: ListType[]
+}
 
 export function clickToCopy(node: HTMLElement, target: string) {
 	async function copyText() {
@@ -119,6 +129,12 @@ export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: str
     }
   }
   return filteredIcons;
+}
+
+export function convertToKebabCase(str: string) {
+  // Use replace() method with a regular expression to match all whitespace characters (\s) globally (g flag)
+  // and replace them with '-'
+  return str.replace(/\s/g, '-').toLowerCase();
 }
 
 /**
@@ -236,55 +252,55 @@ export const cards = [
     title: 'Svelte 4/5/Runes',
     description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
     icon: BadgeCheckOutline,
-    iconClass: 'text-pink-500'
+    icon_class: 'text-pink-500'
   },
   {
     title: 'Brands, Regular, and Solid Icons',
     description: '2000+ SVG Icons.',
     icon: BellActiveAltOutline,
-    iconClass: 'text-green-500'
+    icon_class: 'text-green-500'
   },
   {
     title: 'Accessible SVGs',
     description: 'A11y props, `title`, `desc`, and `ariaLabel` for accessible SVG icons.',
     icon: Accessibility,
-    iconClass: 'text-blue-400'
+    icon_class: 'text-blue-400'
   },
   {
     title:'Faster Compiling',
     description: 'Import icons directly to optimize compilation speed and improve performance.',
     icon: TruckFastSolid,
-    iconClass: 'text-yellow-500'
+    icon_class: 'text-yellow-500'
   },
   {
     title:'IDE Support',
     description: 'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
     icon: Visualstudiocode,
-    iconClass: 'text-blue-500'
+    icon_class: 'text-blue-500'
   },
   {
     title:'Global Icons',
     description: 'Use `IconSolid` and `IconOutline` to careat default icons.',
     icon: GlobeOutline,
-    iconClass: 'text-purple-500'
+    icon_class: 'text-purple-500'
   },
   {
     title:'CSS Frameworks support',
     description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
     icon:Tailwindcss,
-    iconClass: 'text-blue-500'
+    icon_class: 'text-blue-500'
   },
   {
     title:'Seven Props',
     description: 'Control the size, role, color, events, aria-label, title, and desc.',
     icon:A7Solid,
-    iconClass: 'text-cyan-500'
+    icon_class: 'text-cyan-500'
   },
   {
     title:'Dark mode',
     description: 'Use `class` props to add your dark mode color.',
     icon:MoonSolid,
-    iconClass: 'text-yellow-200'
+    icon_class: 'text-yellow-200'
   }
 ]
 
@@ -294,21 +310,21 @@ export const info = [
     description: 'Explore 29 Svelte SVG Icon Sets.',
     icon: InfoCircleOutline,
     href:'https://svelte-svg-icons.codewithshin.com/',
-    iconClass: 'text-amber-500'
+    icon_class: 'text-amber-500'
   },
   {
     title: 'License',
     description: 'Released under the MIT License.',
     icon: InfoCircleOutline,
     href:'https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE',
-    iconClass: 'text-lime-500'
+    icon_class: 'text-lime-500'
   },
   {
     title: 'Original source',
     description: 'FontAwesome/Font-Awesome v6.2.1.',
     icon: InfoCircleOutline,
     href:'https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs',
-    iconClass: 'text-orange-500'
+    icon_class: 'text-orange-500'
   }
 ]
 
@@ -322,3 +338,48 @@ export  const pkg = {
   svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__, 
   viteVersion: __VITE_VERSION__, 
 }
+
+export const sidebarList: ListType[] = [
+  {
+    name: 'Svelte 4 & 5',
+    icon: StarOutline as ComponentType,
+    children: [
+      {
+        name: 'Getting Started',
+        icon: CogOutline as ComponentType,
+        href: '/guide/svelte-4/getting-started'
+      },
+      {
+        name: 'Props',
+        icon: BadgeCheckOutline as ComponentType,
+        href: '/guide/svelte-4/props'
+      }
+    ]
+  },
+  {
+    name: 'Svelte 5: Runes',
+    icon: BellActiveAltOutline as ComponentType,
+    children: [
+      {
+        name: 'Getting Started',
+        icon: CogOutline as ComponentType,
+        href: '/guide/svelte-5/getting-started'
+      },
+      {
+        name: 'Props',
+        icon: BadgeCheckOutline as ComponentType,
+        href: '/guide/svelte-5/props'
+      }
+    ]
+  },
+  {
+    name: 'Global Icons',
+    icon: GlobeOutline as ComponentType,
+    href: '/guide/global-icons'
+  },
+  { 
+    name: 'Custom Icons', 
+  icon: ChartPieOutline as ComponentType, 
+  href: '/guide/custom-icons'
+ }
+];

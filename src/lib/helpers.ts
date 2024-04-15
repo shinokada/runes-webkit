@@ -306,11 +306,11 @@ export const cards = [
 
 export const info = [
   {
-    title: 'Svelte Icon Family',
-    description: 'Explore 29 Svelte SVG Icon Sets.',
+    title: 'Original source',
+    description: `${__ORIGINAL_SOURCE_NAME__}`,
     icon: InfoCircleOutline,
-    href:'https://svelte-svg-icons.codewithshin.com/',
-    icon_class: 'text-amber-500'
+    href:`${__ORIGINAL_SOURCE_URL__}`,
+    icon_class: 'text-orange-500'
   },
   {
     title: 'License',
@@ -320,11 +320,11 @@ export const info = [
     icon_class: 'text-lime-500'
   },
   {
-    title: 'Original source',
-    description: `${__ORIGINAL_SOURCE_NAME__}`,
+    title: 'Svelte Icon Family',
+    description: 'Explore 29 Svelte SVG Icon Sets.',
     icon: InfoCircleOutline,
-    href:`${__ORIGINAL_SOURCE_URL__}`,
-    icon_class: 'text-orange-500'
+    href:'https://svelte-svg-icons.codewithshin.com/',
+    icon_class: 'text-amber-500'
   }
 ]
 

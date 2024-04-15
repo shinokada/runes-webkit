@@ -1,4 +1,4 @@
-@import './lib/runeswebkit.css';
+@import '../node_modules/runes-webkit/dist/runeswebkit.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,16 +50,6 @@
 
   p {
     @apply text-lg my-3;
-  }
-
-  .related-components,
-  .references {
-    @apply w-full flex flex-wrap;
-  }
-
-  .related-components p,
-  .references p {
-    @apply w-full md:w-1/2 lg:w-1/3;
   }
 
   #mainContent > pre {

@@ -9,7 +9,6 @@ import svelte5uilibPackage from 'svelte-5-ui-lib/package.json' assert { type: 'j
 import runesmetatagsPackage from 'runes-meta-tags/package.json' assert { type: 'json' };
 import runaticsPackage from './node_modules/runatics/package.json' assert { type: 'json' };
 
-
 export default defineConfig({
   plugins: [sveltekit()],
   define: {

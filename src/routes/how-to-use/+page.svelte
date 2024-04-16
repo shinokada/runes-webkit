@@ -139,12 +139,15 @@
 <p>Create <Code>+layout.svelte, utils/Nav.svelte, utils/DynamicCodeBlockStyle.svelte</Code> and create a directory named <Code>utils/highlight</Code> and add all styles to it.</p>
 
 <H3>+layout.svelte</H3>
+<p>Add the following to the <Code>+layout.svelte</Code>:</p>
 <HighlightCompo codeLang="ts" code={modules['./md/main-layout.md'] as string} />
 
-<H3>utils/Nav.svelte</H3>
+<H3>Nav.svelte</H3>
+<p>Add the following to the <Code>utils/Nav.svelte</Code>:</p>
 <HighlightCompo codeLang="ts" code={modules['./md/utils-nav.md'] as string} />
 
-<H3>utils/DynamicCodeBlockStyle.svelte</H3>
+<H3>Dynamic Code Block Style</H3>
+<p>Add the following to the <Code>utils/DynamicCodeBlockStyle.svelte</Code>:</p>
 <HighlightCompo codeLang="ts" code={modules['./md/utils-dynamic-code-block-style.md'] as string} />
 
 <H2>Guide Directory Layout</H2>

@@ -42,20 +42,17 @@
 <Runatics {analyticsId} />
 
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
-<div class="lg:flex max-w-7xl mx-auto">  
+<div class="lg:flex">  
 {#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
   <Sidebar 
   {sidebarList}
-  aside_class='relative hidden lg:block border-e border-gray-200 dark:border-gray-600'
+  aside_class='fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden'
   div_class='fixed top-20 px-2 w-60'
   />
   <div class="relative">
     <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
   </div>
 {/if}
-  <div class="relative h-full w-full overflow-y-auto px-8">
-    {@render children()}
-    <Footer {brand} {lis}/>
-  </div>
-  
+  {@render children()}
 </div>
+<Footer {brand} {lis}/>

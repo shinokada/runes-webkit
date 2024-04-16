@@ -31,7 +31,7 @@
 
   /* DocPage component */
   .d_p_main {
-    @apply relative flex-auto w-full min-w-0 lg:max-h-full lg:overflow-visible
+    @apply flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible
   }
 
   .d_p_div_1 {
@@ -39,7 +39,7 @@
   }
 
   .d_p_div_2 {
-    @apply flex flex-col max-w-3xl min-w-0 divide-y divide-gray-200 dark:divide-gray-800
+    @apply flex flex-col max-w-4xl mx-auto px-4 min-w-0 lg:px-4 xl:pb-24 lg:pb-16 divide-y divide-gray-200 dark:divide-gray-800
   }
 
   .d_p_div_3 {
@@ -48,11 +48,11 @@
 
   /* Footer component */
   .f_footer {
-    @apply shadow-none rounded-none mt-24 border-t border-gray-100 dark:border-gray-800 dark_bg_theme
+    @apply shadow-none rounded-none border-t border-gray-100 dark:border-gray-700 dark_bg_theme !important
   }
 
   .f_div {
-    @apply mx-auto max-w-7xl sm:flex sm:items-center sm:justify-between
+    @apply mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between
   }
 
   .f_ulclass {
@@ -209,15 +209,15 @@
 
   /* Toc component */
   .t_div_1 {
-    @apply relative
+    @apply flex-none hidden w-64 xl:text-sm xl:block
   }
 
   .t_div_2 {
-    @apply fixed bg-white dark_bg_theme 2xl:right-16 flex-none hidden w-64  mt-4 xl:text-sm xl:block right-0
+    @apply fixed bg-white dark_bg_theme flex-none right-2 
   }
 
   .t_div_3 {
-    @apply flex overflow-y-auto sticky top-12 flex-col justify-between pb-6 h-[calc(100vh-5rem)]
+    @apply flex overflow-y-auto flex-col justify-between h-[calc(100vh-168px)]
   }
 
   .t_div_4 {
@@ -225,7 +225,7 @@
   }
 
   .t_ul {
-    @apply overflow-x-hidden font-medium text-gray-500 dark:text-gray-400 space-y-2.5
+    @apply overflow-x-scroll font-medium text-gray-500 dark:text-gray-400 space-y-2.5 
   }
 
   .t_h4 {

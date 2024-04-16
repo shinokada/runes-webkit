@@ -15,6 +15,7 @@
   let newPkg = $state({...pkg, runaticsVersion, runesMetaTagsVersion})
 </script>
 
+<div class="relative h-full max-w-7xl mx-auto overflow-y-auto px-8">
 <SupportBanner>
     To Keep It Going, Please Show Your Love.<a href='https://ko-fi.com/Z8Z2CHALG' target='_blank'><img height='40' style='border:0px;height:40px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </SupportBanner>
@@ -25,3 +26,4 @@
 <h2 class='flex justify-center my-8'>Info</h2>
 <HomeCards cards={info} />
 <TechInfo {...newPkg} />
+</div>

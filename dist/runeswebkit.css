@@ -108,6 +108,10 @@
   }
 
   /* IconPage component */
+  .i_p_wrapper{
+    @apply max-w-7xl mx-auto px-8
+  }
+  
   .i_p_div_1 {
     @apply relative overflow-x-auto
   }

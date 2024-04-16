@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.10
+
+### Patch Changes
+
+- fix: add i_p_wrapper class to IconPage ([`b48238b192714d0f2590a0bc42a89b847fee30ea`](https://github.com/shinokada/runes-webkit/commit/b48238b192714d0f2590a0bc42a89b847fee30ea))
+
 ## 0.5.9
 
 ### Patch Changes

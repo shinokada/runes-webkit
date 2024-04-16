@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.9
+
+### Patch Changes
+
+- fix: update layout for +layout.svelte, +page.svelte, guide/+layout.svelte, and css ([`b9846c434cfea5c90e732103ec85d7d04b9bddb0`](https://github.com/shinokada/runes-webkit/commit/b9846c434cfea5c90e732103ec85d7d04b9bddb0))
+
 ## 0.5.8
 
 ### Patch Changes

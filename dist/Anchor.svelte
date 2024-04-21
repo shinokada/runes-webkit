@@ -1,4 +1,4 @@
-<script lang="ts">let { children, tag, ...restProps } = $props();
+<script lang="ts">let { children, tag, class: classname, ...restProps } = $props();
 let content = $state("");
 let slug = $state("");
 function init(node) {
@@ -7,7 +7,7 @@ function init(node) {
 }
 </script>
 
-<svelte:element this={tag} {...restProps} class="a_wrapper" use:init>
+<svelte:element this={tag} {...restProps} class="a_wrapper group {classname}" use:init>
   {@render children()}
   <span id={slug} class="a_span"></span>
   <a
@@ -24,5 +24,6 @@ function init(node) {
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: Snippet;
+@props:class?: string;
 @props:tag?: string;
 -->

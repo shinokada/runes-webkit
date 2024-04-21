@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.5.12
+
+### Patch Changes
+
+- fix: showing `#` on hover in Anchor ([`adf1e058ebbc8b9f4b927a5bd034c4e31fc3f3df`](https://github.com/shinokada/runes-webkit/commit/adf1e058ebbc8b9f4b927a5bd034c4e31fc3f3df))
+  docs: update how to use
+
 ## 0.5.11
 
 ### Patch Changes

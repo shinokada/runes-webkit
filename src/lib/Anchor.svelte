@@ -3,9 +3,10 @@
 
   interface Props{
     children: Snippet;
+    class?: string;
     tag?: string;
   }
-  let { children, tag, ...restProps }: Props = $props();
+  let { children, tag, class: classname, ...restProps }: Props = $props();
 
   let content: string = $state('')
   let slug: string= $state('')
@@ -17,7 +18,7 @@
 
 </script>
 
-<svelte:element this={tag} {...restProps} class="a_wrapper" use:init>
+<svelte:element this={tag} {...restProps} class="a_wrapper group {classname}" use:init>
   {@render children()}
   <span id={slug} class="a_span"></span>
   <a

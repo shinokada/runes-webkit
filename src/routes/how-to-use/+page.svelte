@@ -106,49 +106,53 @@
 
 <H2>Setting</H2>
 
-<H3>svelte.config.js</H3>
+<Tabs>
+  <TabItem open title="svelte.config.js">
+    <p>Enable <Code>compilerOptions</Code></p>:
+    <HighlightCompo codeLang="ts" code={modules['./md/svelte-config-js.md'] as string} />
+  </TabItem>
+  <TabItem title="package.json">
+    <p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code>, <Code>contributors</Code>  that is the original author, and all URLs:</p>
+    <HighlightCompo codeLang="ts" code={modules['./md/package-json.md'] as string} />
+  </TabItem>
+  <TabItem title="vite.config.ts">
+    <HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
+  </TabItem>
+  <TabItem title="runeswebkit.css">
+    <p>Import <Code>runeswebkit.css</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file. To overwrite the default style, add your style in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
+    <HighlightCompo codeLang="ts" code={modules['./md/app-pcss.md'] as string} />
+  </TabItem>
+  <TabItem title='tailwind.config.cjs'>
+    <p>Update <Code>tailwindcss.config.cjs</Code></p>
+    <p>Check more primary colors at <A href='https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs'>here</A>.</p>
 
-<p>Enable <Code>compilerOptions</Code></p>:
+    <HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} />
+  </TabItem>
+</Tabs>
 
-<HighlightCompo codeLang="ts" code={modules['./md/svelte-config-js.md'] as string} />
 
-<H3>package.json</H3>
 
-<p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code>, <Code>contributors</Code>  that is the original author, and all URLs:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/package-json.md'] as string} />
 
-<H3>vite.config.ts</H3>
-
-<HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
-
-<H3>runeswebkit.css</H3>
-
-<p>Import <Code>runeswebkit.css</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file. To overwrite the default style, add your style in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/app-pcss.md'] as string} />
-
-<H3>tailwind.config.cjs</H3>
-<p>Update <Code>tailwindcss.config.cjs</Code></p>
-<p>Check more primary colors at <A href='https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs'>here</A>.</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} />
-
-<H2>Main Layout</H2>
+<H2>Layout</H2>
 
 <p>Create <Code>+layout.svelte, utils/Nav.svelte, utils/DynamicCodeBlockStyle.svelte</Code> and create a directory named <Code>utils/highlight</Code> and add all styles to it.</p>
 
-<H3>+layout.svelte</H3>
-<p>Add the following to the <Code>+layout.svelte</Code>:</p>
-<HighlightCompo codeLang="ts" code={modules['./md/main-layout.md'] as string} />
+<Tabs>
+  <TabItem open title="+layout.svelte">
+    <p>Add the following to the <Code>+layout.svelte</Code>:</p>
+    <HighlightCompo codeLang="ts" code={modules['./md/main-layout.md'] as string} />
+  </TabItem>
+  <TabItem title="Nav.svelte">
+    <p>Add the following to the <Code>utils/Nav.svelte</Code>:</p>
+    <HighlightCompo codeLang="ts" code={modules['./md/utils-nav.md'] as string} />
+  </TabItem>
+  <TabItem title="Dynamic Code Block Style">
+    <p>Add the following to the <Code>utils/DynamicCodeBlockStyle.svelte</Code>:</p>
+    <HighlightCompo codeLang="ts" code={modules['./md/utils-dynamic-code-block-style.md'] as string} />
+  </TabItem>
+</Tabs>
 
-<H3>Nav.svelte</H3>
-<p>Add the following to the <Code>utils/Nav.svelte</Code>:</p>
-<HighlightCompo codeLang="ts" code={modules['./md/utils-nav.md'] as string} />
-
-<H3>Dynamic Code Block Style</H3>
-<p>Add the following to the <Code>utils/DynamicCodeBlockStyle.svelte</Code>:</p>
-<HighlightCompo codeLang="ts" code={modules['./md/utils-dynamic-code-block-style.md'] as string} />
 
 <H2>Guide Directory Layout</H2>
 

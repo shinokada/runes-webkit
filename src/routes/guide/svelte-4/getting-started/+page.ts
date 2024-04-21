@@ -1,16 +1,22 @@
 import type { MetaProps } from 'runes-meta-tags';
+import { metaTitle, metaDescription, metaImg, splitAndCapitalize } from 'runes-meta-tags';
 
-export const load = () => {
+export const load = ({ url }) => {
+  const title = metaTitle(url.pathname, __NAME__);
+  const basicDesc = splitAndCapitalize(__NAME__);
+  const description = metaDescription(url.pathname, basicDesc);
+  const image = metaImg(url.pathname, __NAME__);
+
   const pageMetaTags = Object.freeze({
-    title: 'Svelte 4 Getting started example - Runes Webkit',
-    description: 'Svelte 4 Getting started example',
+    title,
+    description,
     og: {
-      title: 'Svelte 4 Getting started example - Runes Webkit',
-      description: 'Svelte 4 Getting started example',
+      title,
+      description,
     },
     twitter: {
-      title: 'Svelte 4 Getting started example - Runes Webkit',
-      description: 'Svelte 4 Getting started example',
+      title,
+      description,
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

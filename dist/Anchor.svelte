@@ -9,7 +9,7 @@ function init(node) {
 
 <svelte:element this={tag} {...restProps} class="a_wrapper" use:init>
   {@render children()}
-  <span id={slug} class="a_span" />
+  <span id={slug} class="a_span"></span>
   <a
     class="a_a"
     href="#{slug}"

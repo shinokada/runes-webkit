@@ -1,28 +1,36 @@
 import type { MetaProps } from 'runes-meta-tags';
 import { ANALYTICS_ID } from '$env/static/private';
+import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 
 export const load = ({ url }) => {
+  const siteName = metaTitle('/', __NAME__);
+  const title = metaTitle(url.pathname, __NAME__);
+  const basicDesc = 'A quick start for a Svelte Runes project.'
+  const description = metaDescription(url.pathname, basicDesc);
+  const image = metaImg(url.pathname, __NAME__);
+  const keywords = 'svelte, runes, webkit, ui, components';
+
   const layoutMetaTags: MetaProps = {
-    title: 'Runes Webkit',
-    description: 'A quick start for a Svelte Runes project.',
-    keywords: 'svelte, runes, webkit, ui, components',
+    title,
+    description,
+    keywords,
     twitter: {
       card: 'summary_large_image',
       site: '@shinokada',
       handle: '@shinokada',
-      title: 'Runes Webkit',
-      description: 'A quick start for a Svelte Runes project.',
-      image: 'https://open-graph-vercel.vercel.app/api/runes-webkit',
-      imageAlt: 'Runes Webkit'
+      title,
+      description,
+      image,
+      imageAlt: title,
     },
     og: {
       type: 'website',
-      title: 'Runes Webkit',
-      description: 'A quick start for a Svelte Runes project.',
+      title,
+      description,
       url: url.href,
-      image: 'https://open-graph-vercel.vercel.app/api/runes-webkit',
-      imageAlt: 'Runes Webkit',
-      siteName: 'Runes Webkit',
+      image,
+      imageAlt: title,
+      siteName,
       imageWidth: '1200',
       imageHeight: '630'
     }

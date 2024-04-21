@@ -1,7 +1,7 @@
 const config = {
   content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/svelte-5-ui-lib/**/*.{html,js,svelte,ts}'],
 
-  darkMode: 'class',
+  darkMode: 'selector',
 
   theme: {
     extend: {

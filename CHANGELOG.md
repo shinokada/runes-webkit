@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 0.5.11
+
+### Patch Changes
+
+- fix: self-closing tag ([`3152704ecc1d64a7050b4f0007ec3a0def0ece6d`](https://github.com/shinokada/runes-webkit/commit/3152704ecc1d64a7050b4f0007ec3a0def0ece6d))
+  tests: add home.test.ts, guide.home.test.ts
+  tests: update +layout.server and +page.ts using runes-meta-tags functions
+
 ## 0.5.10
 
 ### Patch Changes

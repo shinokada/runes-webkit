@@ -169,13 +169,35 @@
 <H2>Icon Page</H2>
 <p>Icon page uses IconPage component with threeTabs and titel props.</p>
 
-<H3>no-tabs</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/no-tabs.md'] as string} />
-<H3>three-tabs</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/three-tabs.md'] as string} />
-<H3>three-tabs-sizeby-tailwind</H3>
-<HighlightCompo codeLang="ts" code={modules['./md/three-tabs-sizeby-tailwind.md'] as string} />
+<Tabs>
+  <TabItem open title="no-tabs">
+    <HighlightCompo codeLang="ts" code={modules['./md/no-tabs.md'] as string} />
+  </TabItem>
+  <TabItem title="three-tabs">
+    <HighlightCompo codeLang="ts" code={modules['./md/three-tabs.md'] as string} />
+  </TabItem>
+  <TabItem title="three-tabs-sizeby-tailwind">
+    <HighlightCompo codeLang="ts" code={modules['./md/three-tabs-sizeby-tailwind.md'] as string} />
+  </TabItem>
+</Tabs>
+
+
 
 <H2>Tests</H2>
 
 <p>Please refer to <A href='https://github.com/shinokada/runes-webkit/blob/main/tests/test.ts'>tests/test.ts</A></p>
+
+<Tabs>
+  <TabItem open title="+layout.server.ts">
+    <HighlightCompo codeLang="ts" code={modules['./md/layout-server.md'] as string} />
+  </TabItem>
+  <TabItem title="tests/home.test.ts">
+    <HighlightCompo codeLang="ts" code={modules['./md/home-test.md'] as string} />
+  </TabItem>
+  <TabItem title="+page.ts">
+    <HighlightCompo codeLang="ts" code={modules['./md/page-ts.md'] as string} />
+  </TabItem>
+  <TabItem title="tests/page.test.ts">
+    <HighlightCompo codeLang="ts" code={modules['./md/page-test.md'] as string} />
+  </TabItem>
+</Tabs>

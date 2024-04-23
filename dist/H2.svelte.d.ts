@@ -3,6 +3,7 @@ import type { Snippet } from "svelte";
 declare const __propDef: {
     props: {
         children: Snippet;
+        h2_h2?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

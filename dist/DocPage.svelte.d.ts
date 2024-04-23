@@ -4,6 +4,10 @@ declare const __propDef: {
     props: {
         children: Snippet;
         headingSelector?: string | undefined;
+        d_p_main?: string | undefined;
+        d_p_div_1?: string | undefined;
+        d_p_div_2?: string | undefined;
+        d_p_div_3?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

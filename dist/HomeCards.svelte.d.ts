@@ -9,6 +9,11 @@ declare const __propDef: {
             href?: string | undefined;
             icon_class?: string | undefined;
         }[];
+        home_c_card?: string | undefined;
+        home_c_div?: string | undefined;
+        home_c_card_icon?: string | undefined;
+        home_c_card_h3?: string | undefined;
+        home_c_card_p?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

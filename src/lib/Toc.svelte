@@ -11,16 +11,16 @@
   interface Props{
     headingSelector: string;
     extract: (x: HTMLElement) => LinkType;
-    a_class?: string;
-    ul_class?: string;
-    div_1_class?: string;
-    div_2_class?: string;
-    div_3_class?: string;
-    div_4_class?: string;
-    h4_class?: string;
+    t_a?: string;
+    t_ul?: string;
+    t_div_1?: string;
+    t_div_2?: string;
+    t_div_3?: string;
+    t_div_4?: string;
+    t_h4?: string;
   }
 
-  let { headingSelector, extract, div_1_class, div_2_class, div_3_class, div_4_class, a_class, ul_class,  h4_class }: Props = $props();
+  let { headingSelector, extract, t_div_1, t_div_2, t_div_3, t_div_4, t_a, t_ul, t_h4 }: Props = $props();
 
   let headings: LinkType[] = $state([]);
 
@@ -49,24 +49,24 @@
 
 </script>
 
-<div class="t_div_1 {div_1_class}">
+<div class="{twMerge('flex-none hidden w-64 xl:text-sm xl:block _t_div_1_', t_div_1)} ">
   <div
     use:init
-    class="t_div_2 {div_2_class}"
+    class="{twMerge('fixed bg-white dark_bg_theme flex-none right-2 _t_div_2_', t_div_2)}"
   >
     {#if headings.length}
       <div
-        class="t_div_3 {div_3_class}"
+        class="{twMerge('flex overflow-y-auto flex-col justify-between h-[calc(100vh-168px)] _t_div_3_', t_div_3)}"
       >
-        <div class="t_div_4 {div_4_class}">
-          <h4 class="t_h4 {h4_class}">
+        <div class="{twMerge('mb-8 p-4 _t_div_4_', t_div_4)}">
+          <h4 class="{twMerge('pl-2.5 my-4 text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-white _t_h4_', t_h4)}">
             On this page
           </h4>
           <nav>
-            <ul class="t_ul {ul_class}">
+            <ul class="{twMerge('overflow-x-scroll font-medium text-gray-500 dark:text-gray-400 space-y-2.5 _t_ul_', t_ul)}">
               {#each headings as { rel, href, name }}
                 <li>
-                  <a {href} class="{indent(rel)} t_a {a_class}">{name}</a>
+                  <a {href} class="{indent(rel)} {twMerge('inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-[\'#\'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100 _t_a_', t_a)}">{name}</a>
                 </li>
               {/each}
             </ul>

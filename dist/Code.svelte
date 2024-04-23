@@ -1,7 +1,8 @@
-<script lang="ts">let { children } = $props();
+<script lang="ts">import { twMerge } from "tailwind-merge";
+let { children, c_code } = $props();
 </script>
 
-<code class="c_code">
+<code class="{twMerge('text-primary-700 dark:text-primary-700 _c_code_', c_code)}">
   {@render children()}
 </code>
 

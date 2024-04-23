@@ -1,4 +1,5 @@
-<script lang="ts">let { children, tag, class: classname, ...restProps } = $props();
+<script lang="ts">import { twMerge } from "tailwind-merge";
+let { children, a_span, a_a, a_wrapper, tag, ...restProps } = $props();
 let content = $state("");
 let slug = $state("");
 function init(node) {
@@ -7,11 +8,11 @@ function init(node) {
 }
 </script>
 
-<svelte:element this={tag} {...restProps} class="a_wrapper group {classname}" use:init>
+<svelte:element this={tag} {...restProps} class="{twMerge('relative group _a_wrapper_', a_wrapper)}" use:init>
   {@render children()}
-  <span id={slug} class="a_span"></span>
+  <span id={slug} class="{twMerge('absolute -top-[100px] _a_span_', a_span)}"></span>
   <a
-    class="a_a"
+    class="{twMerge('ml-2 text-primary-700 opacity-0 transition-opacity dark:text-primary-700 group-hover:opacity-100 _a_a_', a_a)}"
     href="#{slug}"
     aria-label="Link to this section: {content}"
   >

@@ -8,13 +8,13 @@ declare const __propDef: {
             rel?: string | undefined;
             active?: boolean | undefined;
         };
-        a_class?: string | undefined;
-        ul_class?: string | undefined;
-        div_1_class?: string | undefined;
-        div_2_class?: string | undefined;
-        div_3_class?: string | undefined;
-        div_4_class?: string | undefined;
-        h4_class?: string | undefined;
+        t_a?: string | undefined;
+        t_ul?: string | undefined;
+        t_div_1?: string | undefined;
+        t_div_2?: string | undefined;
+        t_div_3?: string | undefined;
+        t_div_4?: string | undefined;
+        t_h4?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

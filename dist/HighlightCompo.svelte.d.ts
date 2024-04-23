@@ -4,6 +4,10 @@ declare const __propDef: {
         code: string;
         codeLang?: string | undefined;
         counter?: number | undefined;
+        h_c_badge_div?: string | undefined;
+        h_c_div?: string | undefined;
+        h_c_btn?: string | undefined;
+        h_c_svg?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

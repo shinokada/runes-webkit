@@ -8,6 +8,11 @@ declare const __propDef: {
             rel?: string | undefined;
             active?: boolean | undefined;
         };
+        o_t_p_div?: string | undefined;
+        o_t_p_ul?: string | undefined;
+        o_t_p_svg?: string | undefined;
+        o_t_p_li?: string | undefined;
+        o_t_p_dropdown_div?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

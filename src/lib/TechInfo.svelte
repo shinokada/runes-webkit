@@ -9,11 +9,11 @@
     pkgVersion?:string;
     repoUrl?:string;
     title?:string;
-    h2_class?:string;
-    div_class?:string;
-    ul_class?:string;
-    li_class?:string;
-    a_class?:string;
+    t_i_h2?:string;
+    t_i_div?:string;
+    t_i_ul?:string;
+    t_i_li?:string;
+    t_i_a?:string;
     cardsize?:"xl" | "xs" | "sm" | "md" | "lg" | undefined;
     runeswebkitVersion?:string;
     runaticsVersion?:string;
@@ -24,58 +24,60 @@
     svelteRuneHighlight?: string;
     viteVersion?: string;
   }
-  let { children, pkgName, pkgVersion, runeswebkitVersion, runaticsVersion, runesMetaTagsVersion, svelteVersion, svelteKitVersion, svelte5uilib,  svelteRuneHighlight, viteVersion, repoUrl, title = 'Technical information about this website', h2_class, div_class, ul_class, li_class, a_class, cardsize = 'xl' }:Props = $props();
+  let { children, pkgName, pkgVersion, runeswebkitVersion, runaticsVersion, runesMetaTagsVersion, svelteVersion, svelteKitVersion, svelte5uilib,  svelteRuneHighlight, viteVersion, repoUrl, title = 'Technical information about this website', t_i_h2, t_i_div, t_i_ul, t_i_li, t_i_a, cardsize = 'xl' }:Props = $props();
   
+  let li_class = twMerge('hover:text-red-700 hover:underline _t_i_li_', t_i_li);
+  let a_class = twMerge('me-4 hover:underline md:me-6 _t_i_a_', t_i_a)
 </script>
 
-<h2 class="t_i_h2 {h2_class}">{title}</h2>
+<h2 class="{twMerge('flex justify-center my-8 _t_i_h2_', t_i_h2)} ">{title}</h2>
 
-<div class="t_i_div {div_class}">
+<div class="{twMerge('grid grid-cols-1 max-w-5xl mx-auto _t_i_div_', t_i_div)}">
   <Card size={cardsize}>
-    <ul class="t_i_ul {ul_class}">
+    <ul class="{twMerge('m-4 list-disc p-4 text-left text-lg dark:text-gray-400 _t_i_ul_', t_i_ul)} ">
       {#if pkgName && pkgVersion && repoUrl}
-      <li class="t_i_li {li_class}">
-        <a href={repoUrl} class="t_i_a {a_class}">{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a>
+      <li class="{li_class}">
+        <a href={repoUrl} class="{a_class}">{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a>
       </li>
       {/if}
       {#if runaticsVersion}
-      <li class="t_i_li {li_class}">
-        <a href="https://runatics.codewithshin.com/" class="t_i_a {a_class}">Runatics: {runaticsVersion}</a>
+      <li class="{li_class}">
+        <a href="https://runatics.codewithshin.com/" class="{a_class}">Runatics: {runaticsVersion}</a>
       </li>
       {/if}
       {#if runesMetaTagsVersion}
-      <li class="t_i_li {li_class}">
-        <a href="https://runes-meta-tags.codewithshin.com/" class="t_i_a {a_class}">Runes Meta Tags: {runesMetaTagsVersion}</a>
+      <li class="{li_class}">
+        <a href="https://runes-meta-tags.codewithshin.com/" class="{a_class}">Runes Meta Tags: {runesMetaTagsVersion}</a>
       </li>
       {/if}
       {#if svelteRuneHighlight}
-      <li class="t_i_li {li_class}">
-        <a href="https://svelte-rune-highlight.codewithshin.com/" class="t_i_a {a_class}">Svelte Rune Highlight: {svelteRuneHighlight}</a>
+      <li class="{li_class}">
+        <a href="https://svelte-rune-highlight.codewithshin.com/" class="{a_class}">Svelte Rune Highlight: {svelteRuneHighlight}</a>
       </li>
       {/if}
       {#if runeswebkitVersion}
-      <li class="t_i_li {li_class}">
-        <a href="https://runes-webkit.codewithshin.com/" class="t_i_a {a_class}">Runes Webkit: {runeswebkitVersion}</a>
+      <li class="{li_class}">
+        <a href="https://runes-webkit.codewithshin.com/" class="{a_class}">Runes Webkit: {runeswebkitVersion}</a>
       </li>
       {/if}
       {#if svelteVersion}
-      <li class="t_i_li {li_class}">
-        <a href="https://svelte-5-preview.vercel.app/docs/introduction" class="t_i_a {a_class}">Svelte: {svelteVersion}</a>
+      <li class="{li_class}">
+        <a href="https://svelte-5-preview.vercel.app/docs/introduction" class="{a_class}">Svelte: {svelteVersion}</a>
       </li>
       {/if}
       {#if svelteKitVersion}
-      <li class="t_i_li {li_class}">
-        <a href="https://kit.svelte.dev/docs/introduction" class="t_i_a {a_class}">SvelteKit: {svelteKitVersion}</a>
+      <li class="{li_class}">
+        <a href="https://kit.svelte.dev/docs/introduction" class="{a_class}">SvelteKit: {svelteKitVersion}</a>
       </li>
       {/if}
       {#if svelte5uilib}
-      <li class="t_i_li {li_class}">
-        <a href="https://svelte-5-ui-lib.codewithshin.com/" class="t_i_a {a_class}">Svelte 5 UI Lib: {svelte5uilib}</a>
+      <li class="{li_class}">
+        <a href="https://svelte-5-ui-lib.codewithshin.com/" class="{a_class}">Svelte 5 UI Lib: {svelte5uilib}</a>
       </li>
       {/if}
       {#if viteVersion}
-      <li class="t_i_li {li_class}">
-        <a href="https://vitejs.dev/" class="t_i_a {a_class}">Vite: {viteVersion}</a>
+      <li class="{li_class}">
+        <a href="https://vitejs.dev/" class="{a_class}">Vite: {viteVersion}</a>
       </li>
       {/if}
       {#if children}
@@ -96,7 +98,7 @@
 @props:title?: string;
 @props:h2_class?: string;
 @props:div_class?: string;
-@props:ul_class?: string;
+@props:t_i_ul?: string;
 @props:li_class?: string;
 @props:a_class?: string;
 @props:cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;

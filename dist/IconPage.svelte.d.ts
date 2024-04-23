@@ -9,6 +9,17 @@ declare const __propDef: {
         minSize?: string | undefined;
         maxSize?: string | undefined;
         threeTabs?: boolean | undefined;
+        i_p_wrapper?: string | undefined;
+        i_p_div_1?: string | undefined;
+        i_p_div_2?: string | undefined;
+        i_p_div_3?: string | undefined;
+        i_p_div_4?: string | undefined;
+        i_p_label?: string | undefined;
+        i_p_input_search?: string | undefined;
+        i_p_tabitem_div_1?: string | undefined;
+        i_p_tabitem_div_2?: string | undefined;
+        i_p_input_range?: string | undefined;
+        i_p_tabs?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

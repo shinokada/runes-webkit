@@ -1,4 +1,3 @@
-@import '../node_modules/runes-webkit/dist/runeswebkit.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

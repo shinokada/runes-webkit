@@ -4,6 +4,7 @@ declare const __propDef: {
         children?: ((this: void) => typeof import("svelte").SnippetReturn & {
             _: "functions passed to {@render ...} tags must use the `Snippet` type imported from \"svelte\"";
         }) | undefined;
+        c_w_div?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

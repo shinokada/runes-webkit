@@ -1,8 +1,9 @@
 <script lang="ts">import Anchor from "./Anchor.svelte";
-let { children } = $props();
+import { twMerge } from "tailwind-merge";
+let { children, h2_h2 } = $props();
 </script>
 
-<Anchor tag="h2" class="h2_h2"
+<Anchor tag="h2" a_wrapper="{twMerge('text-gray-900 dark:text-white leading-tight text-2xl font-bold _h2_h2_'), h2_h2}}"
   >
   {@render children()}
   </Anchor

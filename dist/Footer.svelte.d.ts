@@ -10,6 +10,9 @@ declare const __propDef: {
             href: string;
         }[] | undefined;
         footerType?: "logo" | "sitemap" | "default" | "socialmedia" | undefined;
+        f_footer?: string | undefined;
+        f_div?: string | undefined;
+        f_ulclass?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

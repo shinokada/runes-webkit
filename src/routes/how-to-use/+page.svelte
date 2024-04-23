@@ -64,6 +64,8 @@
   </TabItem>
   <TabItem title="Tests">
     <List>
+      <Li>guide.home.test.ts</Li>
+      <Li>home.test.ts</Li>
       <Li>test.ts</Li>
     </List>
   </TabItem>
@@ -131,9 +133,6 @@
 </Tabs>
 
 
-
-
-
 <H2>Layout</H2>
 
 <p>Create <Code>+layout.svelte, utils/Nav.svelte, utils/DynamicCodeBlockStyle.svelte</Code> and create a directory named <Code>utils/highlight</Code> and add all styles to it.</p>
@@ -153,7 +152,16 @@
   </TabItem>
 </Tabs>
 
+<H2>Style</H2>
 
+<p>There are two ways to style components.</p>
+<p>Use Developer tools to find CSS class names. It starts and ends with underscore, like <Code>_iconPage_div_1_</Code>.</p>
+
+<p>The first part is the abbriviation of the component name and the second part is tag name.</p>
+
+<p>The props names are without underscore, like <Code>iconPage_div_1</Code>. Use the props name to add the styles to a component.</p>
+
+<p>Another way is to add style to the <Code>app.pcss</Code> file using a class name with underbars, like <Code>_iconPage_div_1_</Code>, etc.</p>
 <H2>Guide Directory Layout</H2>
 
 <p>Add the following to the <Code>guide/+layout.svelte</Code>:</p>

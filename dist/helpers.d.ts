@@ -18,7 +18,7 @@ interface LinkType {
 type ListType = {
     name: string;
     href?: string;
-    icon: ComponentType;
+    icon?: ComponentType;
     children?: ListType[];
 };
 export declare function clickToCopy(node: HTMLElement, target: string): {

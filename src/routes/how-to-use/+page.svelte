@@ -120,10 +120,6 @@
   <TabItem title="vite.config.ts">
     <HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
   </TabItem>
-  <TabItem title="runeswebkit.css">
-    <p>Import <Code>runeswebkit.css</Code> in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file. To overwrite the default style, add your style in the <Code>app.postcss</Code> or <Code>app.pcss</Code> file.</p>
-    <HighlightCompo codeLang="ts" code={modules['./md/app-pcss.md'] as string} />
-  </TabItem>
   <TabItem title='tailwind.config.cjs'>
     <p>Update <Code>tailwindcss.config.cjs</Code></p>
     <p>Check more primary colors at <A href='https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs'>here</A>.</p>

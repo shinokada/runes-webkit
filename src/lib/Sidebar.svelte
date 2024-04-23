@@ -3,12 +3,17 @@
   import type { ComponentType } from 'svelte';
   import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
-
+  
+  type ChildrenType = {
+    name: string;
+    href?: string;
+    icon?: ComponentType;
+  }
   type ListType = {
     name: string;
     href?: string;
     icon?: ComponentType;
-    children?: ListType[]
+    children?: ChildrenType[]; 
   }
 
   interface Props{

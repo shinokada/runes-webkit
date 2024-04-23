@@ -176,8 +176,8 @@
   </div>
   <Sidebar
     {sidebarList}
-    aside_class="w-48 p-0 border-none mt-20 ml-4 !important"
-    div_class="bg-transparent p-0"
+    s_b_aside="w-48 p-0 border-none mt-20 ml-4 !important"
+    s_b_div="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>

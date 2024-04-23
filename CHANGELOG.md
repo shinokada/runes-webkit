@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.1
+
+### Patch Changes
+
+- fix: remove typescript circular dependencies for Sidebar component ([`719385e30872050bf77d31702a3065be2ac3c277`](https://github.com/shinokada/runes-webkit/commit/719385e30872050bf77d31702a3065be2ac3c277))
+
 ## 0.6.0
 
 ### Minor Changes

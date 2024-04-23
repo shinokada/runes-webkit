@@ -26,7 +26,7 @@
 {/snippet}
 
 <Footer
-  footerclass="{twMerge('shadow-none rounded-none border-t border-gray-100 dark:border-gray-700 dark_bg_theme mt-24 _f_footer_', f_footer)}"
+  footerclass="{twMerge('shadow-none rounded-none border-t border-gray-100 dark:border-gray-700 dark_bg_theme _f_footer_', f_footer)}"
   {footerType}
   {...restProps}
 >

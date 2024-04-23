@@ -33,7 +33,7 @@ interface LinkType {
 type ListType = {
   name: string;
   href?: string;
-  icon: ComponentType;
+  icon?: ComponentType;
   children?: ListType[]
 }
 

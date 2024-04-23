@@ -24,7 +24,7 @@
     headerClass?: string;
     urlsToIncludeSwitcher?: string[];
   }
-  let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
+  let { lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
 
   let transitionParams = {
     x: -320,

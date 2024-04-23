@@ -7,7 +7,7 @@
   type ListType = {
     name: string;
     href?: string;
-    icon: ComponentType;
+    icon?: ComponentType;
     children?: ListType[]
   }
 
@@ -37,9 +37,9 @@
 </script>
 
 <Sidebar 
-activeClass="{twMerge('flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600 dark:hover:bg-gray-700 _s_b_active_', s_b_active)}"
+activeClass="{twMerge('flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600 _s_b_active_', s_b_active)}"
 
-nonActiveClass="{twMerge('flex items-center p-1 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 _s_b_nonactive_', s_b_nonactive)} " 
+nonActiveClass="{twMerge('flex items-center p-2 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 _s_b_nonactive_', s_b_nonactive)} " 
 
 divclass="{twMerge('dark_bg_theme bg-transparent _s_b_div_', s_b_div)}" 
 
@@ -54,8 +54,8 @@ asideclass="{twMerge('fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg
         {#each children as { name, icon, href }}
         <SidebarItem label={name} onclick={sidebarClose} {href} aclass='ml-4'>
           {#snippet iconSlot()}
-          <svelte:component this={icon} class="s_b_icon" />
-        {/snippet}
+            <svelte:component this={icon} class="s_b_icon" />
+          {/snippet}
         </SidebarItem>
         {/each}
       </SidebarDropdownWrapper>

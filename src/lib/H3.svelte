@@ -20,4 +20,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: Snippet;
+@props:h3_h3?: string;
 -->

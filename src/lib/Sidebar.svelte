@@ -77,8 +77,9 @@ asideclass="{twMerge('fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg
 @props: sidebarList: ListType[];
 @props:menuList?: ListType[];
 @props:sidebarClose?: () => void;
-@props:active_class?: string;
+@props:s_b_active?: string;
 @props:s_b_nonactive?: string;
 @props:s_b_div?: string;
 @props:s_b_aside?: string;
+@props:s_b_icon?: string;
 -->

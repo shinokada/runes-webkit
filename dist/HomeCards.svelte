@@ -23,5 +23,10 @@ let { cards = [], home_c_card, home_c_div, home_c_card_icon, home_c_card_h3, hom
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: cards:  CardType[]; = [], ...restProps;
+@props: cards:  CardType[]; = [], home_c_card, home_c_div, home_c_card_icon, home_c_card_h3, home_c_card_p, ...restProps;
+@props:home_c_card?: string;
+@props:home_c_div?: string;
+@props:home_c_card_icon?: string;
+@props:home_c_card_h3?: string;
+@props:home_c_card_p?: string;
 -->

@@ -54,11 +54,11 @@ function toc() {
 ## Props
 @props: headingSelector: string;
 @props:extract: (x
-@props:a_class?: string;
-@props:ul_class?: string;
-@props:div_1_class?: string;
-@props:div_2_class?: string;
-@props:div_3_class?: string;
-@props:div_4_class?: string;
-@props:h4_class?: string;
+@props:t_a?: string;
+@props:t_ul?: string;
+@props:t_div_1?: string;
+@props:t_div_2?: string;
+@props:t_div_3?: string;
+@props:t_div_4?: string;
+@props:t_h4?: string;
 -->

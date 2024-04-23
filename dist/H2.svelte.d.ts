@@ -17,6 +17,7 @@ export type H2Slots = typeof __propDef.slots;
  * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children: Snippet;
+ * @props:h2_h2?: string;
  */
 export default class H2 extends SvelteComponent<H2Props, H2Events, H2Slots> {
 }

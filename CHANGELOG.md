@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.6.0
+
+### Minor Changes
+
+- fix: remove styles from runeswebkit.css ([`5b55fd2c633512ce9da8b9b8ce14106877c7275a`](https://github.com/shinokada/runes-webkit/commit/5b55fd2c633512ce9da8b9b8ce14106877c7275a))
+  fix: update all components using local css
+
 ## 0.5.12
 
 ### Patch Changes

@@ -17,6 +17,7 @@ export type H3Slots = typeof __propDef.slots;
  * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children: Snippet;
+ * @props:h3_h3?: string;
  */
 export default class H3 extends SvelteComponent<H3Props, H3Events, H3Slots> {
 }

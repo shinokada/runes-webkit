@@ -38,7 +38,18 @@ export type IconPageSlots = typeof __propDef.slots;
  * @props:sizeByTailwind?: boolean;// for flowbite-svelte-icons only
  * @props:minSize?: string;
  * @props:maxSize?: string;
- * @props:threeTabs?: boolean
+ * @props:threeTabs?: boolean;
+ * @props:i_p_wrapper?: string;
+ * @props:i_p_div_1?: string;
+ * @props:i_p_div_2?: string;
+ * @props:i_p_div_3?: string;
+ * @props:i_p_div_4?: string;
+ * @props:i_p_label?: string;
+ * @props:i_p_input_search?: string;
+ * @props:i_p_tabitem_div_1?: string;
+ * @props:i_p_tabitem_div_2?: string;
+ * @props:i_p_input_range?: string;
+ * @props:i_p_tabs?: string;
  */
 export default class IconPage extends SvelteComponent<IconPageProps, IconPageEvents, IconPageSlots> {
 }

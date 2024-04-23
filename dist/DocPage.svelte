@@ -22,4 +22,8 @@ let { children, d_p_div_1, d_p_div_2, d_p_div_3, d_p_main, headingSelector = "#m
 ## Props
 @props: children: Snippet;
 @props:headingSelector?: string;
+@props:d_p_main?: string;
+@props:d_p_div_1?: string;
+@props:d_p_div_2?: string;
+@props:d_p_div_3?: string;
 -->

@@ -60,4 +60,9 @@ function toc() {
 ## Props
 @props: headingSelector: string;
 @props:extract: (x
+@props:o_t_p_div?: string;
+@props:o_t_p_ul?: string;
+@props:o_t_p_svg?: string;
+@props:o_t_p_li?: string;
+@props:o_t_p_dropdown_div?: string;
 -->

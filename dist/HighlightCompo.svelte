@@ -67,5 +67,9 @@ function timeout() {
 ## Props
 @props: code: string;
 @props:codeLang?: string;
-@props:counter?:  number; = 2;
+@props:counter?:  number; = 2, h_c_badge_div, h_c_div, h_c_btn, h_c_svg;
+@props:h_c_badge_div?: string;
+@props:h_c_div?: string;
+@props:h_c_btn?: string;
+@props:h_c_svg?: string;
 -->

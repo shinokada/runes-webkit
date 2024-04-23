@@ -13,4 +13,5 @@ let { children, c_w_div } = $props();
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children?: Snippet;
+@props:c_w_div?: string;
 -->

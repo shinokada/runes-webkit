@@ -22,6 +22,10 @@ export type DocPageSlots = typeof __propDef.slots;
  * ## Props
  * @props: children: Snippet;
  * @props:headingSelector?: string;
+ * @props:d_p_main?: string;
+ * @props:d_p_div_1?: string;
+ * @props:d_p_div_2?: string;
+ * @props:d_p_div_3?: string;
  */
 export default class DocPage extends SvelteComponent<DocPageProps, DocPageEvents, DocPageSlots> {
 }

@@ -25,6 +25,8 @@ function init(node) {
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: Snippet;
-@props:class?: string;
 @props:tag?: string;
+@props:a_span?: string;
+@props:a_a?: string;
+@props:a_wrapper?: string;
 -->

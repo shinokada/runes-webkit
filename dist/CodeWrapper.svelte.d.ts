@@ -18,6 +18,7 @@ export type CodeWrapperSlots = typeof __propDef.slots;
  * [Go to docs](https://runes-webkit.codewithshin.com/)
  * ## Props
  * @props: children?: Snippet;
+ * @props:c_w_div?: string;
  */
 export default class CodeWrapper extends SvelteComponent<CodeWrapperProps, CodeWrapperEvents, CodeWrapperSlots> {
 }

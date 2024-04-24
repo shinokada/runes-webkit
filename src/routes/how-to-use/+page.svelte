@@ -14,6 +14,27 @@
 <p>This library contails following components for Svelte Runes project.</p>
 
 <Tabs>
+  <TabItem open title="Features">
+    <List tag='ul'>
+      <Li>Code block style changer</Li>
+      <Li>On This Page</Li>
+      <Li>CodeWrapper</Li>
+      <Li>HighlightCompo</Li>
+      <Li>homeCards.json</Li>
+      <Li>HomeCards</Li>
+      <Li>IconPage</Li>
+      <Li>DocPage</Li>
+      <Li>Footer</Li>
+      <Li>Sidebar</Li>
+      <Li>SupportBanner</Li>
+      <Li>TechInfo</Li>
+      <Li>Toc</Li>
+      <Li>Anchor</Li>
+      <Li>Code</Li>
+      <Li>H2, H3</Li>
+      <Li>Helper functions</Li>
+    </List>
+  </TabItem>
   <TabItem open title="Components">
     <List tag='ul'>
       <Li>Anchor</Li>

@@ -10,7 +10,7 @@ let filteredEntries = $derived(
 );
 let size = $state(defaultSize);
 </script>
-<div class='w-full'>
+<div class='w-full pb-20'>
 <div class="{twMerge('max-w-7xl mx-auto px-8 _i_p_wrapper_', i_p_wrapper)}">
   <h1>{title}</h1>
 

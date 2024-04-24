@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.2
+
+### Patch Changes
+
+- style: fix bottom padding ([`e5e43de26ffcb447967f83e7e70b8ce589829361`](https://github.com/shinokada/runes-webkit/commit/e5e43de26ffcb447967f83e7e70b8ce589829361))
+
 ## 0.6.1
 
 ### Patch Changes

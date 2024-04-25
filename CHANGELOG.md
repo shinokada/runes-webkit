@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.3
+
+### Patch Changes
+
+- fix: export types from helpers.ts ([`43b9361e41455dce6229784da7b0477577716337`](https://github.com/shinokada/runes-webkit/commit/43b9361e41455dce6229784da7b0477577716337))
+
 ## 0.6.2
 
 ### Patch Changes

@@ -3,19 +3,19 @@ import BellActiveAltOutline from './icons/BellActiveAltOutline.svelte';
 import InfoCircleOutline from './icons/InfoCircleOutline.svelte';
 import TruckFastSolid from './icons/TruckFastSolid.svelte';
 type Title = string;
-type Card = {
+export type Card = {
     title: string;
     description: string;
     icon: ComponentType;
     icon_class: string;
 };
-interface LinkType {
+export interface LinkType {
     name: string;
     href?: string;
     rel?: string;
     active?: boolean;
 }
-type ListType = {
+export type ListType = {
     name: string;
     href?: string;
     icon?: ComponentType;

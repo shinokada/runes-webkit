@@ -18,16 +18,15 @@
     <List tag='ul'>
       <Li>Code block style changer</Li>
       <Li>On This Page</Li>
-      <Li>CodeWrapper</Li>
+      <Li>Code wrapper</Li>
       <Li>HighlightCompo</Li>
-      <Li>homeCards.json</Li>
-      <Li>HomeCards</Li>
-      <Li>IconPage</Li>
-      <Li>DocPage</Li>
+      <Li>Home cards</Li>
+      <Li>Icon page</Li>
+      <Li>Doc page</Li>
       <Li>Footer</Li>
       <Li>Sidebar</Li>
-      <Li>SupportBanner</Li>
-      <Li>TechInfo</Li>
+      <Li>Support banner</Li>
+      <Li>Tech info</Li>
       <Li>Toc</Li>
       <Li>Anchor</Li>
       <Li>Code</Li>

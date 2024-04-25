@@ -35,26 +35,6 @@
       <Li>Helper functions</Li>
     </List>
   </TabItem>
-  <TabItem open title="Components">
-    <List tag='ul'>
-      <Li>Anchor</Li>
-      <Li>Code</Li>
-      <Li>CodeWrapper</Li>
-      <Li>DocPage</Li>
-      <Li>Footer</Li>
-      <Li>H2, H3</Li>
-      <Li>Helper functions</Li>
-      <Li>HighlightCompo</Li>
-      <Li>homeCards.json</Li>
-      <Li>HomeCards</Li>
-      <Li>IconPage</Li>
-      <Li>OnThisPage</Li>
-      <Li>Sidebar</Li>
-      <Li>SupportBanner</Li>
-      <Li>TechInfo</Li>
-      <Li>Toc</Li>
-    </List>
-  </TabItem>
   <TabItem title="Helper functions">
     <List>
       <Li>clickToCopy</Li>

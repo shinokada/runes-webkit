@@ -16,21 +16,21 @@ import CogOutline from '$lib/icons/CogOutline.svelte';
 import ChartPieOutline from '$lib/icons/ChartPieOutline.svelte';
 
 type Title = string;
-type Card = {
+export type Card = {
   title: string;
   description: string;
   icon: ComponentType;
   icon_class: string;
 }
 
-interface LinkType {
+export interface LinkType {
   name: string;
   href?: string;
   rel?: string;
   active?: boolean;
 }
 
-type ListType = {
+export type ListType = {
   name: string;
   href?: string;
   icon?: ComponentType;

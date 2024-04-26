@@ -6,6 +6,7 @@
   import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar, sidebarList } from 'runes-webkit'
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
+  import { newSidebarList } from '../+layout.svelte';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some(allowedUrl => url.startsWith(allowedUrl));
@@ -24,7 +25,7 @@
     headerClass?: string;
     urlsToIncludeSwitcher?: string[];
   }
-  let {  lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
+  let { lis, siteName, twitterUrl, githubUrl, headerClass, urlsToIncludeSwitcher = ['/guide'], ...restProps}: Props = $props();
 
   let transitionParams = {
     x: -320,
@@ -141,7 +142,7 @@
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   {transitionParams}
-  divclass='dark:bg-stone-900'
+  divclass='dark_bg_theme'
 >
   <div class="flex items-center pb-4">
     <h5
@@ -175,9 +176,9 @@
     </button>
   </div>
   <Sidebar
-    {sidebarList}
-    aside_class="w-48 p-0 border-none mt-20 ml-4 !important"
-    div_class="bg-transparent p-0"
+    sidebarList={newSidebarList}
+    s_b_aside="w-48 p-0 border-none mt-20 ml-4 !important"
+    s_b_div="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>

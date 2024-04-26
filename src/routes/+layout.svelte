@@ -1,7 +1,32 @@
-<script>
+<script context="module">
+  const extra: ListType[] = [
+    {
+      name: '3 Tabs',
+      icon: ExpandOutline as ComponentType,
+      href: '/three-tabs'
+    },
+    {
+      name: '3 Tabs Tailwind ',
+      icon: CogOutline as ComponentType,
+      href: '/three-tabs-sizebytailwind'
+    },
+    {
+      name: 'No Tabs',
+      icon: GridPlusOutline as ComponentType,
+      href: '/no-tabs'
+    }
+  ];
+  export const newSidebarList: ListType[] = [
+    ...sidebarList, ...extra 
+  ];
+</script>
+
+<script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList } from '$lib'
+  import type { ComponentType } from 'svelte';
+  import type { ListType } from '$lib';
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList, ExpandOutline, GridPlusOutline, CogOutline } from '$lib'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
@@ -45,7 +70,7 @@
 <div class="lg:flex">  
 {#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
   <Sidebar 
-  {sidebarList}
+  sidebarList={newSidebarList}
   s_b_aside='fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden'
   s_b_div='fixed top-20 px-2 w-60'
   />

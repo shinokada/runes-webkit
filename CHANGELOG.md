@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.5
+
+### Patch Changes
+
+- fix: remove gap-4 from IconPage no-tab section ([`180e40dc597b75b699b178b00dae82a17d30e11e`](https://github.com/shinokada/runes-webkit/commit/180e40dc597b75b699b178b00dae82a17d30e11e))
+
 ## 0.6.4
 
 ### Patch Changes

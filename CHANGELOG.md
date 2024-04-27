@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.6
+
+### Patch Changes
+
+- fix: change to left-4 in Copy component ([`8b12d96d7fe7335a067e37fa7d4e449913166328`](https://github.com/shinokada/runes-webkit/commit/8b12d96d7fe7335a067e37fa7d4e449913166328))
+
 ## 0.6.5
 
 ### Patch Changes

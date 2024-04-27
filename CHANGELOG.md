@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 0.6.4
+
+### Patch Changes
+
+- feat: add Copy component that the copy icon name ([`eab529fa5c0605a9e1a9f7e107d0d9162ff1a71b`](https://github.com/shinokada/runes-webkit/commit/eab529fa5c0605a9e1a9f7e107d0d9162ff1a71b))
+  fix: update Icon page using Copy component
+  fix: update no-tab page using props
+
 ## 0.6.3
 
 ### Patch Changes

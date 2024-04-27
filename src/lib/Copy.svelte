@@ -55,3 +55,15 @@
     {@render children()}
   </button>
 </div>
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@props: children: any;
+@props:iconName: string;
+@props:counter?:  number; = 2, c_t_c_badge_div, c_t_c_div, c_t_c_btn;
+@props:c_t_c_badge_div?: string;
+@props:c_t_c_div?: string;
+@props:c_t_c_btn?: string;
+-->

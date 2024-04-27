@@ -97,7 +97,7 @@
     <div class="w-full text-left text-gray-500 dark:text-gray-400">
     <div class="{twMerge('grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 _i_p_div_3_', i_p_div_3)}" >
       {#each filteredEntries as [name, component]}
-        <div class="{twMerge('flex flex-wrap gap-4 items-center _i_p_div_4_', i_p_div_4)}">
+        <div class="{twMerge('flex flex-wrap items-center _i_p_div_4_', i_p_div_4)}">
           <svelte:component this={component} class="shrink-0" {size} />
           <Copy iconName={name}>{name}</Copy>
         </div>

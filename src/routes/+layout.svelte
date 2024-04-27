@@ -52,12 +52,13 @@
     {name: '3-Tabs-tailwind', href: '/three-tabs-sizebytailwind'},
     {name: 'No-tabs', href: '/no-tabs'},
     {name: 'How to use', href: '/how-to-use'},
+    {name: 'Quick start', href: '/quick-start'},
   ]
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use']
+  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use','/quick-start']
   const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = `https://github.com/shinokada/${__NAME__}`

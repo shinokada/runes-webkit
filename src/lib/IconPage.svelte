@@ -3,6 +3,7 @@
   import { random_hex_color_code, random_tailwind_color } from './helpers';
   import type { ComponentType } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import { Copy } from '$lib'
   
   interface Props{
     icons: ComponentType;
@@ -52,13 +53,13 @@
       <TabItem open title="Mono">
         <div class="{twMerge('grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 _i_p_tabitem_div_1_', i_p_tabitem_div_1)}">
         {#each filteredEntries as [name, component]}
-          <div class="{twMerge('flex gap-4 items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
+          <div class="{twMerge('flex items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
             {#if sizeByTailwind}
             <svelte:component this={component} class="shrink-0 h-{size} w-{size}" />
             {:else}
-            <svelte:component this={component} class="shrink-0" {size} />
+              <svelte:component this={component} class="shrink-0" {size} />
             {/if}
-            {name}
+            <Copy iconName={name}>{name}</Copy>
           </div>
         {/each}
       </div>
@@ -66,13 +67,13 @@
       <TabItem title="Random Hex Colors">
         <div class="{twMerge('grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 _i_p_tabitem_div_1_', i_p_tabitem_div_1)}">
         {#each filteredEntries as [name, component]}
-          <div class="{twMerge('flex gap-4 items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
+          <div class="{twMerge('flex items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
             {#if sizeByTailwind}
             <svelte:component this={component}  color={random_hex_color_code()} class="shrink-0 h-{size} w-{size}" />
             {:else}
             <svelte:component this={component}  color={random_hex_color_code()} class="shrink-0" {size} />
             {/if}
-            {name}
+            <Copy iconName={name}>{name}</Copy>
           </div>
         {/each}
       </div>
@@ -80,25 +81,25 @@
       <TabItem title="Random Tailwind CSS Colors">
         <div class="{twMerge('grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 _i_p_tabitem_div_1_', i_p_tabitem_div_1)}" >
         {#each filteredEntries as [name, component]}
-          <div class="{twMerge('flex gap-4 items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
+          <div class="{twMerge('flex items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
             {#if sizeByTailwind}
             <svelte:component this={component} class="{random_tailwind_color()} shrink-0 h-{size} w-{size}" />
             {:else}
             <svelte:component this={component} class="{random_tailwind_color()}" {size} />
             {/if}
-            {name}
+            <Copy iconName={name}>{name}</Copy>
           </div>
         {/each}
       </div>
       </TabItem>
     </Tabs>
     {:else}
-    <div class="w-full text-left text-sm text-gray-500 dark:text-gray-400">
+    <div class="w-full text-left text-gray-500 dark:text-gray-400">
     <div class="{twMerge('grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 _i_p_div_3_', i_p_div_3)}" >
       {#each filteredEntries as [name, component]}
         <div class="{twMerge('flex flex-wrap gap-4 items-center _i_p_div_4_', i_p_div_4)}">
           <svelte:component this={component} class="shrink-0" {size} />
-          {name}
+          <Copy iconName={name}>{name}</Copy>
         </div>
       {/each}
     </div>

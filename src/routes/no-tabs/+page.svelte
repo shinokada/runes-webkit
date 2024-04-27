@@ -7,4 +7,8 @@
 
 </script>
 
-<IconPage icons={keyIcons as ComponentType} threeTabs={false} title="No Tabs" />
+<IconPage 
+minSize = '60'
+defaultSize='80' maxSize='100'
+i_p_div_3='lg:grid-cols-3 md:grid-cols-2 '
+icons={keyIcons as ComponentType} threeTabs={false} title="No Tabs" />

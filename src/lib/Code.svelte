@@ -8,7 +8,7 @@
   let { children, c_code }: Props = $props();
 </script>
 
-<code class="{twMerge('text-primary-700 dark:text-primary-700 _c_code_', c_code)}">
+<code class="{twMerge('text-primary-700 dark:text-primary-400 _c_code_', c_code)}">
   {@render children()}
 </code>
 

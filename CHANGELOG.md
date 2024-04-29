@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.9
+
+### Patch Changes
+
+- fix: Code dark color ([`2beb52871a1498d0a9fff5f6a0e5f9cef2c5c198`](https://github.com/shinokada/runes-webkit/commit/2beb52871a1498d0a9fff5f6a0e5f9cef2c5c198))
+
 ## 0.6.8
 
 ### Patch Changes

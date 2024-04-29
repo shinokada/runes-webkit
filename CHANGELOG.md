@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.7
+
+### Patch Changes
+
+- feat: add class to SupportBanner ([`b94885d9654eb20a77bc11f45a06c60a7568f1b9`](https://github.com/shinokada/runes-webkit/commit/b94885d9654eb20a77bc11f45a06c60a7568f1b9))
+
 ## 0.6.6
 
 ### Patch Changes

@@ -7,7 +7,7 @@
     divclass?: string;
     pclass?: string;
   }
-  let { children, divclass = 'max-w-3xl mt-8 mx-auto p-2 _s_b_div_', pclass = 'flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100 _s_b_p_', ...attributes }: Props = $props();
+  let { children, divclass = 'max-w-3xl mt-8 mx-auto p-2 _support_div_', pclass = 'flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100 _support_p_', ...attributes }: Props = $props();
 
 </script>
 

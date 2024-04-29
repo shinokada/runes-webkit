@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.8
+
+### Patch Changes
+
+- fix: \_s_b_xxx to \_support_xxx ([`9147c090cbc1a92243b47ee69dfa2b1ca11b0d01`](https://github.com/shinokada/runes-webkit/commit/9147c090cbc1a92243b47ee69dfa2b1ca11b0d01))
+
 ## 0.6.7
 
 ### Patch Changes

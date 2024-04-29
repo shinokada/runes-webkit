@@ -30,7 +30,7 @@
   <Checkbox><Li>.env.development to .env</Li></Checkbox>
   <Checkbox><Li>README file</Li></Checkbox>
   <Checkbox><Li>Remove unnecessary directories, awesome-samples, flowbite-samples, guide2, how-to-use, quick-start, supertiny-samples.</Li></Checkbox>
-  <Checkbox><Li>+layout.svelte</Li></Checkbox>
+  <Checkbox><Li>const lis, const urlsToIncludeSwitcherAndSidebar in +layout.svelte </Li></Checkbox>
   <Checkbox><Li>+layout.server.ts</Li></Checkbox>
   <Checkbox><Li>utils/Nav.svelte</Li></Checkbox>
 </List>

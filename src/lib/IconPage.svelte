@@ -24,8 +24,9 @@
     i_p_tabitem_div_2?: string;
     i_p_input_range?: string;
     i_p_tabs?: string;
+    variation?: string;
   }
-  let { icons, i_p_wrapper, i_p_div_1, i_p_div_2, i_p_div_3, i_p_div_4, i_p_label, i_p_input_search, i_p_tabitem_div_1, i_p_tabitem_div_2, i_p_input_range, i_p_tabs,  title, sizeByTailwind, minSize =  '16', defaultSize = '24', maxSize = '48', threeTabs = true }: Props = $props();
+  let { icons, i_p_wrapper, i_p_div_1, i_p_div_2, i_p_div_3, i_p_div_4, i_p_label, i_p_input_search, i_p_tabitem_div_1, i_p_tabitem_div_2, i_p_input_range, i_p_tabs,  title, sizeByTailwind, minSize =  '16', defaultSize = '24', maxSize = '48', threeTabs = true, variation, ...restProps }: Props = $props();
   
   let searchTerm = $state('');
 
@@ -55,9 +56,9 @@
         {#each filteredEntries as [name, component]}
           <div class="{twMerge('flex items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
             {#if sizeByTailwind}
-            <svelte:component this={component} class="shrink-0 h-{size} w-{size}" />
+            <svelte:component this={component} class="shrink-0 h-{size} w-{size}" {variation} {...restProps}/>
             {:else}
-              <svelte:component this={component} class="shrink-0" {size} />
+              <svelte:component this={component} class="shrink-0" {size} {variation} {...restProps}/>
             {/if}
             <Copy iconName={name}>{name}</Copy>
           </div>
@@ -69,9 +70,9 @@
         {#each filteredEntries as [name, component]}
           <div class="{twMerge('flex items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
             {#if sizeByTailwind}
-            <svelte:component this={component}  color={random_hex_color_code()} class="shrink-0 h-{size} w-{size}" />
+            <svelte:component this={component} color={random_hex_color_code()} class="shrink-0 h-{size} w-{size}" {variation} {...restProps}/>
             {:else}
-            <svelte:component this={component}  color={random_hex_color_code()} class="shrink-0" {size} />
+            <svelte:component this={component} color={random_hex_color_code()} class="shrink-0" {size} {variation} {...restProps}/>
             {/if}
             <Copy iconName={name}>{name}</Copy>
           </div>
@@ -83,9 +84,9 @@
         {#each filteredEntries as [name, component]}
           <div class="{twMerge('flex items-center text-lg _i_p_tabitem_div_2_', i_p_tabitem_div_2)}">
             {#if sizeByTailwind}
-            <svelte:component this={component} class="{random_tailwind_color()} shrink-0 h-{size} w-{size}" />
+            <svelte:component this={component} class="{random_tailwind_color()} shrink-0 h-{size} w-{size}" {variation} {...restProps}/>
             {:else}
-            <svelte:component this={component} class="{random_tailwind_color()}" {size} />
+            <svelte:component this={component} class="{random_tailwind_color()}" {size} {variation} {...restProps}/>
             {/if}
             <Copy iconName={name}>{name}</Copy>
           </div>
@@ -98,7 +99,7 @@
     <div class="{twMerge('grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 _i_p_div_3_', i_p_div_3)}" >
       {#each filteredEntries as [name, component]}
         <div class="{twMerge('flex flex-wrap items-center _i_p_div_4_', i_p_div_4)}">
-          <svelte:component this={component} class="shrink-0" {size} />
+          <svelte:component this={component} class="shrink-0" {size} {variation} {...restProps} />
           <Copy iconName={name}>{name}</Copy>
         </div>
       {/each}

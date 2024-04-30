@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.10
+
+### Patch Changes
+
+- fix: add {variation} {...restProps} to IconPage ([`2312367812ac871cc918239bc1067e1044097665`](https://github.com/shinokada/runes-webkit/commit/2312367812ac871cc918239bc1067e1044097665))
+
 ## 0.6.9
 
 ### Patch Changes

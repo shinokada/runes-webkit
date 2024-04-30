@@ -132,4 +132,5 @@
 @props:i_p_tabitem_div_2?: string;
 @props:i_p_input_range?: string;
 @props:i_p_tabs?: string;
+@props:variation?: string;
 -->

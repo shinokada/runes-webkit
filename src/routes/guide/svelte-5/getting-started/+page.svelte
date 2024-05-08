@@ -35,7 +35,9 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
 
+<H2>IDE support</H2>
 
+<p>If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, features, props, events, etc.</p>
 
 <H2>Faster compiling</H2>
 

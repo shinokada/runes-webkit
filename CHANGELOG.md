@@ -1,5 +1,12 @@
 # svelte-icon-webkit
 
+## 0.6.11
+
+### Patch Changes
+
+- fix: update Sidebar component style ([`0f42ab15e0a5026c8647665977c4f4ac7322cd3c`](https://github.com/shinokada/runes-webkit/commit/0f42ab15e0a5026c8647665977c4f4ac7322cd3c))
+  fix: update utils/Nav style
+
 ## 0.6.10
 
 ### Patch Changes

@@ -42,13 +42,13 @@
 </script>
 
 <Sidebar 
-activeClass="{twMerge('flex items-center p-2 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600 _s_b_active_', s_b_active)}"
+activeClass="{twMerge('flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600 _s_b_active_', s_b_active)}"
 
-nonActiveClass="{twMerge('flex items-center p-2 text-base font-normal text-green-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 _s_b_nonactive_', s_b_nonactive)} " 
+nonActiveClass="{twMerge('flex items-center p-1 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 _s_b_nonactive_', s_b_nonactive)} " 
 
-divclass="{twMerge('dark_bg_theme bg-transparent _s_b_div_', s_b_div)}" 
+divclass="{twMerge('dark_bg_theme mx-2 bg-transparent _s_b_div_', s_b_div)}" 
 
-asideclass="{twMerge('fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block p-0 _s_b_aside_', s_b_aside)} " {...restProps}>
+asideclass="{twMerge('fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block  _s_b_aside_', s_b_aside)} " {...restProps}>
   <SidebarGroup>
     {#each sidebarList as { name, icon, children, href }}
       {#if children}
@@ -67,7 +67,7 @@ asideclass="{twMerge('fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg
       {:else}
       <SidebarItem label={name} onclick={sidebarClose} {href} >
         {#snippet iconSlot()}
-          <svelte:component this={icon} class="{twMerge('h-5 w-5 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white _s_b_icon_', s_b_icon)}" />
+          <svelte:component this={icon} class="{twMerge('h-5 w-5 _s_b_icon_', s_b_icon)}" />
         {/snippet}
       </SidebarItem> 
       {/if}

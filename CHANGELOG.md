@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.14
+
+### Patch Changes
+
+- fix: remove the first global icons card from const cards ([`d703e13c612703424f4e10741953419e3ad59cf5`](https://github.com/shinokada/runes-webkit/commit/d703e13c612703424f4e10741953419e3ad59cf5))
+
 ## 0.6.13
 
 ### Patch Changes

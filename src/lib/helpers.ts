@@ -285,6 +285,12 @@ export const cards = [
     icon_class: 'text-purple-500'
   },
   {
+    title: 'Global Icons',
+    description: 'Use <code>Icon</code> to careat default global icons.',
+    icon: GlobeOutline,
+    icon_class: 'text-purple-500'
+  },
+  {
     title:'CSS Frameworks support',
     description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
     icon:Tailwindcss,

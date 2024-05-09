@@ -279,13 +279,7 @@ export const cards = [
     icon_class: 'text-amber-500'
   },
   {
-    title:'Global Icons',
-    description: 'Use <code>IconSolid</code> and <code>IconOutline</code> to careat default icons.',
-    icon: GlobeOutline,
-    icon_class: 'text-purple-500'
-  },
-  {
-    title: 'Global Icons',
+    title: 'Global Icon',
     description: 'Use <code>Icon</code> to careat default global icons.',
     icon: GlobeOutline,
     icon_class: 'text-purple-500'

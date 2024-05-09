@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';  
   import { Card } from 'svelte-5-ui-lib';
-    import { twMerge } from 'tailwind-merge';
+  import { twMerge } from 'tailwind-merge';
 
   type CardType = {
     title: string;
@@ -27,7 +27,7 @@
   <svelte:component this={icon} class="{twMerge('w-8 h-8 mb-3 _home_c_card_icon_', home_c_card_icon)} {icon_class}"  />
   <h3 class="{twMerge('mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white _home_c_card_h3_', home_c_card_h3)}">{title}</h3>
   <p class="{twMerge('font-normal text-gray-700 dark:text-gray-400 leading-tight _home_c_card_p_', home_c_card_p)}">
-  {description}
+  {@html description}
   </p>
 </Card>
 {/snippet}

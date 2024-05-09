@@ -262,7 +262,7 @@ export const cards = [
   },
   {
     title: 'Accessible SVGs',
-    description: 'A11y props, `title`, `desc`, and `ariaLabel` for accessible SVG icons.',
+    description: 'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
     icon: Accessibility,
     icon_class: 'text-green-400'
   },
@@ -280,7 +280,7 @@ export const cards = [
   },
   {
     title:'Global Icons',
-    description: 'Use `IconSolid` and `IconOutline` to careat default icons.',
+    description: 'Use <code>IconSolid</code> and <code>IconOutline</code> to careat default icons.',
     icon: GlobeOutline,
     icon_class: 'text-purple-500'
   },
@@ -298,7 +298,7 @@ export const cards = [
   },
   {
     title:'Dark mode',
-    description: 'Use `class` props to add your dark mode color.',
+    description: 'Use <code>class</code> props to add your dark mode color.',
     icon:MoonSolid,
     icon_class: 'text-emerald-200'
   }

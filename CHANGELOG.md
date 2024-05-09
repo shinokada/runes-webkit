@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.13
+
+### Patch Changes
+
+- fix: add second global icons to const card ([`778a314ac0d752a9a25ad125507e6a6e5dd66df4`](https://github.com/shinokada/runes-webkit/commit/778a314ac0d752a9a25ad125507e6a6e5dd66df4))
+
 ## 0.6.12
 
 ### Patch Changes

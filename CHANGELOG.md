@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.12
+
+### Patch Changes
+
+- fix: add code to app.pcss and update const cards ([`5c6bd3180a5dc0487a01229377e0a13446a20ba0`](https://github.com/shinokada/runes-webkit/commit/5c6bd3180a5dc0487a01229377e0a13446a20ba0))
+
 ## 0.6.11
 
 ### Patch Changes

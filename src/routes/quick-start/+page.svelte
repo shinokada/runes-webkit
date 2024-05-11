@@ -18,6 +18,7 @@
 
 <List tag='ul' list="none" ctxclass='my-1 text-lg'>
   <Checkbox><Li><Code>.changeset/config.json</Code></Li></Checkbox>
+  <Checkbox><Li>Run <Code>npx changeset pre enter next</Code> to enter prerelease mode</Li></Checkbox>
   <Checkbox><Li>package.json</Li></Checkbox>
   <Checkbox><Li>change <Code>.git</Code> directory and check if it is <Code>svelte-5-runes</Code> branch</Li></Checkbox>
   <Checkbox><Li><Code>.dark_bg_theme</Code> in <Code>app.pcss</Code></Li></Checkbox>

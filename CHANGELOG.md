@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.15
+
+### Patch Changes
+
+- fix: update random_hex_color_code fn ([`8d33f918690da0ef705e96a3688641d3d61688a9`](https://github.com/shinokada/runes-webkit/commit/8d33f918690da0ef705e96a3688641d3d61688a9))
+
 ## 0.6.14
 
 ### Patch Changes

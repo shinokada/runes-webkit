@@ -188,15 +188,16 @@ export const random_tailwind_color = () => {
 };
 
 /**
- * Generates a random hex color code.
+ * Generate three random numbers within a specific range (e.g., 30-230) for RGB values
  *
  * @return {string} The randomly generated hex color code.
  */
 export const random_hex_color_code = () => {
-  let n = (Math.random() * 0xfffff * 1000000).toString(16);
-  return '#' + n.slice(0, 6);
+  const r = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
+  const g = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
+  const b = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
+  return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
 };
-
 
 /**
  * Filters an array of objects by their titles.

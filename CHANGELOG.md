@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.17
+
+### Patch Changes
+
+- fix: componenet docs ([`0a405256bab568b01a43e570bb3735575efac376`](https://github.com/shinokada/runes-webkit/commit/0a405256bab568b01a43e570bb3735575efac376))
+
 ## 0.6.16
 
 ### Patch Changes

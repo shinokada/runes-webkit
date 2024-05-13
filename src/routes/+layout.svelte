@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
   const extra: ListType[] = [
     {
       name: '3 Tabs',

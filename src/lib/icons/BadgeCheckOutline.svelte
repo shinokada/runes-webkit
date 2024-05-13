@@ -45,8 +45,9 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: size?:  "xs" | "sm" | "md" | "lg" | "xl"; = ctx.size || 'md', role, class: classname, ariaLabel;
-@props:role?: string;
-@props:class?: string;
-@props:ariaLabel?: string;
+@prop size = ctx.size || 'md'
+@prop role
+@prop class: classname
+@prop ariaLabel =  "badge check outline"
+@prop ...restProps
 -->

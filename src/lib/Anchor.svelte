@@ -37,9 +37,10 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: children: Snippet;
-@props:tag?: string;
-@props:a_span?: string;
-@props:a_a?: string;
-@props:a_wrapper?: string;
+@prop children
+@prop a_span
+@prop a_a
+@prop a_wrapper
+@prop tag
+@prop ...restProps
 -->

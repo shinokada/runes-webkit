@@ -19,6 +19,6 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: children?: Snippet;
-@props:c_w_div?: string;
+@prop children
+@prop c_w_div
 -->

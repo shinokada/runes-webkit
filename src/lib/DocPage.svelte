@@ -33,10 +33,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: children: Snippet;
-@props:headingSelector?: string;
-@props:d_p_main?: string;
-@props:d_p_div_1?: string;
-@props:d_p_div_2?: string;
-@props:d_p_div_3?: string;
+@prop children
+@prop d_p_div_1
+@prop d_p_div_2
+@prop d_p_div_3
+@prop d_p_main
+@prop headingSelector = '#mainContent > :where(h2
+@prop h3)'
 -->

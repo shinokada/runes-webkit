@@ -114,23 +114,24 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: icons: ComponentType;
-@props:title: string;
-@props:defaultSize?: string;
-@props:sizeByTailwind?: boolean;// for flowbite-svelte-icons only
-@props:minSize?: string;
-@props:maxSize?: string;
-@props:threeTabs?: boolean;
-@props:i_p_wrapper?: string;
-@props:i_p_div_1?: string;
-@props:i_p_div_2?: string;
-@props:i_p_div_3?: string;
-@props:i_p_div_4?: string;
-@props:i_p_label?: string;
-@props:i_p_input_search?: string;
-@props:i_p_tabitem_div_1?: string;
-@props:i_p_tabitem_div_2?: string;
-@props:i_p_input_range?: string;
-@props:i_p_tabs?: string;
-@props:variation?: string;
+@prop icons
+@prop i_p_wrapper
+@prop i_p_div_1
+@prop i_p_div_2
+@prop i_p_div_3
+@prop i_p_div_4
+@prop i_p_label
+@prop i_p_input_search
+@prop i_p_tabitem_div_1
+@prop i_p_tabitem_div_2
+@prop i_p_input_range
+@prop i_p_tabs
+@prop title
+@prop sizeByTailwind
+@prop minSize =  '16'
+@prop defaultSize = '24'
+@prop maxSize = '48'
+@prop threeTabs = true
+@prop variation
+@prop ...restProps
 -->

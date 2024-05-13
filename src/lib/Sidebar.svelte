@@ -79,12 +79,13 @@ asideclass="{twMerge('fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: sidebarList: ListType[];
-@props:menuList?: ListType[];
-@props:sidebarClose?: () => void;
-@props:s_b_active?: string;
-@props:s_b_nonactive?: string;
-@props:s_b_div?: string;
-@props:s_b_aside?: string;
-@props:s_b_icon?: string;
+@prop sidebarList
+@prop menuList
+@prop sidebarClose
+@prop s_b_active
+@prop s_b_nonactive
+@prop s_b_div
+@prop s_b_aside
+@prop s_b_icon
+@prop ...restProps
 -->

@@ -89,11 +89,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: headingSelector: string;
-@props:extract: (x
-@props:o_t_p_div?: string;
-@props:o_t_p_ul?: string;
-@props:o_t_p_svg?: string;
-@props:o_t_p_li?: string;
-@props:o_t_p_dropdown_div?: string;
+@prop headingSelector
+@prop extract
+@prop o_t_p_div
+@prop o_t_p_ul
+@prop o_t_p_li
+@prop o_t_p_svg
+@prop o_t_p_dropdown_div
 -->

@@ -48,7 +48,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: brand?: {
-@props:name: string;
-@props:href: string;
+@prop brand
+@prop f_div
+@prop f_footer
+@prop f_ulclass
+@prop lis
+@prop footerType =  'logo'
+@prop ...restProps
 -->

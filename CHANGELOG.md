@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.16
+
+### Patch Changes
+
+- fix: add ts to context module in +layout.svelte ([`5bfd828249ef1b0d9e3d5b5dd978c41e7b6f631e`](https://github.com/shinokada/runes-webkit/commit/5bfd828249ef1b0d9e3d5b5dd978c41e7b6f631e))
+
 ## 0.6.15
 
 ### Patch Changes

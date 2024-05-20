@@ -1,1 +1,1 @@
-<CalendarCheckRegular id="my-svg" transform="rotate(45)" />
+<AdminLineUserFaces id="my-svg" transform="rotate(45)" />

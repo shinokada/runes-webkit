@@ -1,6 +1,4 @@
-<AddressBookOutline
-  title={{ id: 'my-title', title: 'Red bell' }}
-  desc={{ id: 'my-descrip', desc: 'The shape of a red bell' }}
-  ariaLabel="red bell"
-  color="red"
+<AdminLineUserFaces
+  ariaLabel="blue admin user svg icon with face"
+  color="blue"
 />

@@ -1,7 +1,6 @@
 
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3, removeHyphensAndCapitalize } from '$lib';
-  import { AddressBookOutline } from '../../../flowbite-samples';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -14,9 +13,9 @@
 
 <div class="flex gap-2 my-8">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" ></a>
-<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm" ></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-awesome-icons" alt="License" ></a>
-<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-awesome-icons.svg" alt="npm" ></a>
+<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-remix" alt="npm" ></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-remix" alt="License" ></a>
+<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-remix.svg" alt="npm" ></a>
 </div>
 
 <H2>Requirements</H2>
@@ -39,28 +38,17 @@
 <HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
 
 
-<H2>A11y friendly</H2>
+<H2>aria-label</H2>
 
-<p>Use `title`, `desc`, and `ariaLabel` props to make your icons accessible.</p>
+<p>Use <Code>ariaLabel</Code> props to edit the <Code>aria-label</Code>.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/a11y-friendly.md'] as string} />
-
-
-<p>Check out this icon in the console:</p>
-
-<CodeWrapper>
-  <AddressBookOutline
-  title={{ id: 'my-title', title: 'Red bell' }}
-  desc={{ id: 'my-descrip', desc: 'The shape of a red bell' }}
-  ariaLabel="red bell"
-  color="red"
-  />
-</CodeWrapper>
 
 
 <H2>IDE support</H2>
 
 <p>If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, features, props, events, etc.</p>
+
 
 <H2>Faster compiling</H2>
 
@@ -71,7 +59,7 @@
 
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have "...$$restProps", you can pass other attibutes as well.</p>
+<p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
 
@@ -86,6 +74,6 @@
 
 <H2>Import all</H2>
 
-<p>Use `import * as Icon from 'svelte-awesome-icons`.</p>
+<p>Use `import * as Icon from 'svelte-remix`.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/import-all.md'] as string} />

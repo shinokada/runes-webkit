@@ -1,5 +1,5 @@
 <script>
-  import CalendarCheckRegular from 'svelte-awesome-icons/CalendarCheckRegular.svelte';
+  import AdminLineUserFaces from 'svelte-remix/AdminLineUserFaces.svelte';
 </script>
 
-<CalendarCheckRegular />
+<AdminLineUserFaces />

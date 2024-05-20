@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';
   const config = {
-    size: "xl",
+    size: '30',
     color: '#FF5733'
   };
-  import { IconSolid } from 'flowbite-svelte-icons';
+  import { Icon } from 'svelte-radix';
   export let icon: ComponentType;
 </script>
 
-<IconSolid {...config} {icon} />
+<Icon {...config} {icon} />

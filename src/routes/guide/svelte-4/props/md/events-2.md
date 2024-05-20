@@ -1,1 +1,1 @@
-<CalendarCheckRegular withEvents on:click="{handleClick}" />
+<AdminLineUserFaces on:click="{handleClick}" />

@@ -1,1 +1,1 @@
-<CalendarCheckRegular size="40" />
+<AdminLineUserFaces size="40" />

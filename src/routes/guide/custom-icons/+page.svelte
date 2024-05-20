@@ -8,18 +8,21 @@
   });
 </script>
 
-
 <h1>Custom Default Icons</h1>
 
-<p>You can create a custom default icon, by using `IconSolid` or `IconOutline`:</p>
+<p>If you wish to create a custom default icon, you can follow these steps:</p>
 
 <H2>Create a custom component</H2>
 
-<p>Create a Svelte component named `src/lib/MyIcon.svelte`:</p>
+<p>Create a Svelte component named <Code>src/lib/MyIcon.svelte</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} />
 
-<p>This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.</p>
+<p>
+  This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to
+  pass in the specific icon component you want to display. The default configuration is also applied
+  to the icon.
+</p>
 
 <H2>Implementation</H2>
 
@@ -27,4 +30,8 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} />
 
-<p>Here, we import the `MyIcon` component and the `AngleLeftSolid` icon. By passing the `AngleLeftSolid` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.</p>
+<p>
+  Here, we import the <Code>MyIcon</Code> component and the <Code>Accessibility</Code> icon. By passing
+  the <Code>Accessibility</Code> icon to the <Code>icon</Code> prop of MyIcon, you apply the default
+  configuration to the icon.
+</p>

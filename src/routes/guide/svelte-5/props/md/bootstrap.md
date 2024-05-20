@@ -1,1 +1,1 @@
-<AppstoreAddOutlined class="position-absolute top-0 px-1" />
+<Accessibility class="position-absolute top-0 px-1" />

@@ -1,7 +1,4 @@
 - size: string = ctx.size || '24';
 - role: string = ctx.role || 'img';
 - color: string = ctx.color || 'currentColor';
-- withEvents = ctx.withEvents || false;
-- ariaLabel: string = '0 solid';
-- title: TitleType = {};
-- desc: DescType = {};
+- ariaLabel: string = '<icon file name>';

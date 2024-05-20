@@ -1,1 +1,1 @@
-<CalendarCheckRegular size="40" color="#ff5511" />
+<AdminLineUserFaces size="40" color="#ff5511" />

@@ -1,10 +1,10 @@
 <script>
   import { setContext } from 'svelte';
-  import { MapLocationOutline } from 'flowbite-svelte-icons';
+  import { Accessibility } from 'svelte-radix';
   const iconCtx = {
-    size: 'xl'
+    size: '30'
   };
   setContext('iconCtx', iconCtx);
 </script>
 
-<MapLocationOutline color="#ff4488" />
+<Accessibility color="#ff4488" />

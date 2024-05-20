@@ -1,1 +1,1 @@
-<AppstoreAddOutlined size="40" />
+<Accessibility size="40" />

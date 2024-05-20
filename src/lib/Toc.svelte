@@ -63,7 +63,7 @@
             On this page
           </h4>
           <nav>
-            <ul class="{twMerge('overflow-x-scroll font-medium text-gray-500 dark:text-gray-400 space-y-2.5 _t_ul_', t_ul)}">
+            <ul class="{twMerge('font-medium text-gray-500 dark:text-gray-400 space-y-2.5 _t_ul_', t_ul)}">
               {#each headings as { rel, href, name }}
                 <li>
                   <a {href} class="{indent(rel)} {twMerge('inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-[\'#\'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100 _t_a_', t_a)}">{name}</a>

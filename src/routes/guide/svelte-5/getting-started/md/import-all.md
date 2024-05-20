@@ -1,8 +1,6 @@
 <script>
-  import * as Icon from 'svelte-awesome-icons';
+  import * as Icon from 'svelte-radix';
 </script>
 
-<Icon.CalendarCheckRegular />
-
-<h1>Size</h1>
-<Icon.CalendarCheckRegular size="30" />
+<Icon.Accessibility />
+<Icon.Accessibility size="30" />

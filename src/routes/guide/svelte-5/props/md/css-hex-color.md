@@ -1,1 +1,2 @@
-<AppstoreAddOutlined color="#ff0000" />
+<Accessibility color="#ff0000" />
+<Accessibility color="green" />

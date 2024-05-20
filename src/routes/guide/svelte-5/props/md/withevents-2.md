@@ -1,1 +1,1 @@
-<AppstoreAddOutlined tabindex="0" withEvents />
+<Accessibility tabindex="0" withEvents />

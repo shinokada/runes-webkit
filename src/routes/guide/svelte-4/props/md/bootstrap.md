@@ -1,1 +1,1 @@
-<CalendarCheckRegular class="position-absolute top-0 px-1" />
+<AdminLineUserFaces class="position-absolute top-0 px-1" />

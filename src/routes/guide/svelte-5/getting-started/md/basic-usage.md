@@ -1,5 +1,5 @@
 <script>
-  import { CalendarCheckRegular } from 'svelte-awesome-icons';
+  import { Accessibility } from 'svelte-radix';
 </script>
 
-<CalendarCheckRegular />
+<Accessibility />

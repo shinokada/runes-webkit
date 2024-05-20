@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Snippet } from "svelte";
-  import { twMerge } from "tailwind-merge";
+  import type { Snippet } from 'svelte';
+  import { twMerge } from 'tailwind-merge';
 
-  interface Props{
+  interface Props {
     children: Snippet;
     tag?: string;
     a_span?: string;
@@ -11,21 +11,28 @@
   }
   let { children, a_span, a_a, a_wrapper, tag, ...restProps }: Props = $props();
 
-  let content: string = $state('')
-  let slug: string= $state('')
+  let content: string = $state('');
+  let slug: string = $state('');
 
   function init(node: HTMLElement) {
     content = node.innerText ?? '';
     slug = content.replace(/\s/g, '_').replace(/__#+/g, '');
   }
-
 </script>
 
-<svelte:element this={tag} {...restProps} class="{twMerge('relative group _a_wrapper_', a_wrapper)}" use:init>
+<svelte:element
+  this={tag}
+  {...restProps}
+  class={twMerge('_a_wrapper_ group relative', a_wrapper)}
+  use:init
+>
   {@render children()}
-  <span id={slug} class="{twMerge('absolute -top-[100px] _a_span_', a_span)}"></span>
+  <span id={slug} class={twMerge('_a_span_ absolute -top-[100px]', a_span)}></span>
   <a
-    class="{twMerge('ml-2 text-primary-700 opacity-0 transition-opacity dark:text-primary-700 group-hover:opacity-100 _a_a_', a_a)}"
+    class={twMerge(
+      '_a_a_ ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100 dark:text-primary-700',
+      a_a
+    )}
     href="#{slug}"
     aria-label="Link to this section: {content}"
   >

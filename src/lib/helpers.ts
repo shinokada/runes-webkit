@@ -21,7 +21,7 @@ export type Card = {
   description: string;
   icon: ComponentType;
   icon_class: string;
-}
+};
 
 export interface LinkType {
   name: string;
@@ -34,38 +34,38 @@ export type ListType = {
   name: string;
   href?: string;
   icon?: ComponentType;
-  children?: ListType[]
-}
+  children?: ListType[];
+};
 
 export function clickToCopy(node: HTMLElement, target: string) {
-	async function copyText() {
-		let text = target ;
-		
-		try {
-			await navigator.clipboard.writeText(text);
-			
-			node.dispatchEvent(
+  async function copyText() {
+    let text = target;
+
+    try {
+      await navigator.clipboard.writeText(text);
+
+      node.dispatchEvent(
         new CustomEvent('copysuccess', {
-					bubbles: true
-				})
+          bubbles: true
+        })
       );
-		} catch(error) {
-			node.dispatchEvent(
+    } catch (error) {
+      node.dispatchEvent(
         new CustomEvent('copyerror', {
-					bubbles: true,
-					detail: error
-				})
+          bubbles: true,
+          detail: error
+        })
       );
-		}
-	}
-	
-	node.addEventListener('click', copyText);
-	
-	return {
-		destroy() {
-			node.removeEventListener('click', copyText);
-		}
-	}
+    }
+  }
+
+  node.addEventListener('click', copyText);
+
+  return {
+    destroy() {
+      node.removeEventListener('click', copyText);
+    }
+  };
 }
 
 export function toDashCaseLower(text: string): string {
@@ -138,23 +138,21 @@ export function convertToKebabCase(str: string) {
 }
 
 /**
- * Filters out keys in the object that are not strings. 
+ * Filters out keys in the object that are not strings.
  * to filter out index.js since it has [Symbol(Symbol.toStringTag)]: 'Module'
  * Use this where you don't use other filters
- * @example 
+ * @example
  * import type { ComponentType } from 'svelte';
  * import * as icons from '../supertiny-samples'
  * import { filterStringKeys } from '$lib'
  * const keyIcons = filterStringKeys(icons);
  * <IconPage icons={keyIcons as ComponentType} threeTabs={false} title="No Tabs" />
- * 
+ *
  * @param {object} obj - The object to filter string keys from.
  * @return {object} A new object with only the string keys.
  */
 export const filterStringKeys = (obj: { [key: string]: any }) => {
-  return Object.fromEntries(
-    Object.entries(obj).filter(([key]) => typeof key === 'string')
-  );
+  return Object.fromEntries(Object.entries(obj).filter(([key]) => typeof key === 'string'));
 };
 
 /**
@@ -207,8 +205,8 @@ export const random_hex_color_code = () => {
  * @return {Card[]} The filtered array of objects.
  */
 export function filterByTitles(objects: Card[], titles: Title[]) {
-  return objects.filter(object =>
-    titles.some(title => title.toLowerCase() === object.title.toLowerCase())
+  return objects.filter((object) =>
+    titles.some((title) => title.toLowerCase() === object.title.toLowerCase())
   );
 }
 
@@ -220,8 +218,8 @@ export function filterByTitles(objects: Card[], titles: Title[]) {
  * @return {Card[]} filtered array of Card objects
  */
 export function excludeByTitle(objects: Card[], titles: Title[]): Card[] {
-  return objects.filter(object =>
-    !titles.some(title => title.toLowerCase() === object.title.toLowerCase())
+  return objects.filter(
+    (object) => !titles.some((title) => title.toLowerCase() === object.title.toLowerCase())
   );
 }
 
@@ -236,7 +234,7 @@ export function excludeByTitle(objects: Card[], titles: Title[]): Card[] {
 export function insertObjectToArray(array: Card[], objectToInsert: Card, position: number): any[] {
   // Check for valid position
   if (position < 0 || position > array.length) {
-    throw new Error("Invalid position. Please provide a position within the array bounds.");
+    throw new Error('Invalid position. Please provide a position within the array bounds.');
   }
 
   // Create a copy of the array to avoid modifying the original
@@ -263,19 +261,21 @@ export const cards = [
   },
   {
     title: 'Accessible SVGs',
-    description: 'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
+    description:
+      'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
     icon: Accessibility,
     icon_class: 'text-green-400'
   },
   {
-    title:'Faster Compiling',
+    title: 'Faster Compiling',
     description: 'Import icons directly to optimize compilation speed and improve performance.',
     icon: TruckFastSolid,
     icon_class: 'text-yellow-500'
   },
   {
-    title:'IDE Support',
-    description: 'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
+    title: 'IDE Support',
+    description:
+      'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
     icon: Visualstudiocode,
     icon_class: 'text-amber-500'
   },
@@ -286,61 +286,61 @@ export const cards = [
     icon_class: 'text-purple-500'
   },
   {
-    title:'CSS Frameworks support',
+    title: 'CSS Frameworks support',
     description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
-    icon:Tailwindcss,
+    icon: Tailwindcss,
     icon_class: 'text-orange-500'
   },
   {
-    title:'Seven Props',
+    title: 'Seven Props',
     description: 'Control the size, role, color, events, aria-label, title, and desc.',
-    icon:A7Solid,
+    icon: A7Solid,
     icon_class: 'text-cyan-500'
   },
   {
-    title:'Dark mode',
+    title: 'Dark mode',
     description: 'Use <code>class</code> props to add your dark mode color.',
-    icon:MoonSolid,
+    icon: MoonSolid,
     icon_class: 'text-emerald-200'
   }
-]
+];
 
 export const info = [
   {
     title: 'Original source',
     description: `${__ORIGINAL_SOURCE_NAME__}`,
     icon: InfoCircleOutline,
-    href:`${__ORIGINAL_SOURCE_URL__}`,
+    href: `${__ORIGINAL_SOURCE_URL__}`,
     icon_class: 'text-orange-500'
   },
   {
     title: 'License',
     description: 'Released under the MIT License.',
     icon: InfoCircleOutline,
-    href:`https://github.com/shinokada/${__NAME__}/blob/main/LICENSE`,
+    href: `https://github.com/shinokada/${__NAME__}/blob/main/LICENSE`,
     icon_class: 'text-lime-500'
   },
   {
     title: 'Svelte Icon Family',
     description: 'Explore 29 Svelte SVG Icon Sets.',
     icon: InfoCircleOutline,
-    href:'https://svelte-svg-icons.codewithshin.com/',
+    href: 'https://svelte-svg-icons.codewithshin.com/',
     icon_class: 'text-amber-500'
   }
-]
+];
 
-export  const pkg = {
+export const pkg = {
   pkgName: __NAME__,
-  pkgVersion: __VERSION__, 
+  pkgVersion: __VERSION__,
   repoUrl: __GITHUBURL__,
   runaticsVersion: __RUNATICS_VERSION__,
   runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
-  svelteVersion: __SVELTE_VERSION__, 
-  svelteKitVersion: __SVELTEKIT_VERSION__, 
-  svelte5uilib: __SVELTE_5_UI_LIB_VERSION__, 
-  svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__, 
-  viteVersion: __VITE_VERSION__, 
-}
+  svelteVersion: __SVELTE_VERSION__,
+  svelteKitVersion: __SVELTEKIT_VERSION__,
+  svelte5uilib: __SVELTE_5_UI_LIB_VERSION__,
+  svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
+  viteVersion: __VITE_VERSION__
+};
 
 export const sidebarList: ListType[] = [
   {
@@ -380,9 +380,9 @@ export const sidebarList: ListType[] = [
     icon: GlobeOutline as ComponentType,
     href: '/guide/global-icons'
   },
-  { 
-    name: 'Custom Icons', 
-  icon: ChartPieOutline as ComponentType, 
-  href: '/guide/custom-icons'
- }
+  {
+    name: 'Custom Icons',
+    icon: ChartPieOutline as ComponentType,
+    href: '/guide/custom-icons'
+  }
 ];

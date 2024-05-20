@@ -1,20 +1,26 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   interface CtxType {
-		size?: string;
-		role?: string;
-		color?: string;
-	}
+    size?: string;
+    role?: string;
+    color?: string;
+  }
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props{
+  interface Props {
     size?: string;
     role?: string;
     color?: string;
     ariaLabel?: string;
     class?: string;
   }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel = 'Tailwindcss', class: classname, ...restProps }: Props = $props();
-
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    ariaLabel = 'Tailwindcss',
+    class: classname,
+    ...restProps
+  }: Props = $props();
 </script>
 
 <svg
@@ -24,7 +30,7 @@
   fill={color}
   {...restProps}
   {role}
-  class={classname} 
+  class={classname}
   aria-label={ariaLabel}
   xmlns="http://www.w3.org/2000/svg"
   ><title>Tailwind CSS</title><path

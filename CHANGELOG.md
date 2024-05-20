@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.18
+
+### Patch Changes
+
+- fix: TOC style update ([`009c3fa785a023931711b4bb1b7e7a3c6d0650a6`](https://github.com/shinokada/runes-webkit/commit/009c3fa785a023931711b4bb1b7e7a3c6d0650a6))
+
 ## 0.6.17
 
 ### Patch Changes

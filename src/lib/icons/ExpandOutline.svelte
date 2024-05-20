@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
   }
 
@@ -15,30 +15,37 @@
     xl: 'w-8 h-8'
   };
 
-  interface Props{
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  interface Props {
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     class?: string;
     ariaLabel?: string;
   }
-  let { size = ctx.size || 'md', role, class: classname, ariaLabel =  "expand outline"  , ...restProps }: Props = $props();
-
+  let {
+    size = ctx.size || 'md',
+    role,
+    class: classname,
+    ariaLabel = 'expand outline',
+    ...restProps
+  }: Props = $props();
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
+  class={twMerge('shrink-0', sizes[size], classname)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 24 24"
 >
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"
+  />
 </svg>
 
 <!--
@@ -48,6 +55,6 @@
 @prop size = ctx.size || 'md'
 @prop role
 @prop class: classname
-@prop ariaLabel =  "expand outline"
+@prop ariaLabel = 'expand outline'
 @prop ...restProps
 -->

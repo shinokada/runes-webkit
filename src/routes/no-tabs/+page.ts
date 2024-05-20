@@ -6,11 +6,11 @@ export const load = () => {
     description: 'No tabs example',
     og: {
       title: 'No tabs example - Runes Webkit',
-      description: 'No tabs example',
+      description: 'No tabs example'
     },
     twitter: {
       title: 'No tabs example - Runes Webkit',
-      description: 'No tabs example',
+      description: 'No tabs example'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

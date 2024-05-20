@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   interface CtxType {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
   }
 
@@ -15,30 +15,36 @@
     xl: 'w-8 h-8'
   };
 
-  interface Props{
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  interface Props {
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     class?: string;
     ariaLabel?: string;
   }
-  let { size = ctx.size || 'md', role, class: classname, ariaLabel =  "adjustments vertical outline"  , ...restProps }: Props = $props();
-
+  let {
+    size = ctx.size || 'md',
+    role,
+    class: classname,
+    ariaLabel = 'adjustments vertical outline',
+    ...restProps
+  }: Props = $props();
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
   {...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
+  class={twMerge('shrink-0', sizes[size], classname)}
   {role}
   aria-label={ariaLabel}
   viewBox="0 0 24 24"
 >
-     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6 4v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2m6-16v2m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v10m6-16v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-width="2"
+    d="M6 4v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2m6-16v2m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v10m6-16v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2"
+  />
 </svg>
 
 <!--

@@ -15,7 +15,7 @@
 
 <Tabs>
   <TabItem open title="Features">
-    <List tag='ul'>
+    <List tag="ul">
       <Li>Code block style changer</Li>
       <Li>On This Page</Li>
       <Li>Code wrapper</Li>
@@ -69,20 +69,23 @@
       <Li>test.ts</Li>
     </List>
   </TabItem>
-  <TabItem title='Pages'>
+  <TabItem title="Pages">
     <List>
       <Li>Home</Li>
-      <Li>Guide
+      <Li
+        >Guide
         <List>
           <Li>Custom icons</Li>
           <Li>Global icons</Li>
-          <Li>Svelte 4
+          <Li
+            >Svelte 4
             <List>
               <Li>Getting started</Li>
               <Li>Props</Li>
             </List>
           </Li>
-          <Li>Svelte 5
+          <Li
+            >Svelte 5
             <List>
               <Li>Getting started</Li>
               <Li>Props</Li>
@@ -95,12 +98,18 @@
   </TabItem>
 </Tabs>
 
-
-<p>Use the <code>utils</code> and <code>+layout.svelte</code> examples how to set up Nav and DynamicCodeBlockStyle.</p>
+<p>
+  Use the <code>utils</code> and <code>+layout.svelte</code> examples how to set up Nav and DynamicCodeBlockStyle.
+</p>
 
 <H2>Runes Webkit Starter</H2>
 
-<p>If you prefer to use the starter, please refer to <A href="https://github.com/shinokada/runes-webkit-starter">https://github.com/shinokada/runes-webkit-starter</A>.</p>
+<p>
+  If you prefer to use the starter, please refer to <A
+    href="https://github.com/shinokada/runes-webkit-starter"
+    >https://github.com/shinokada/runes-webkit-starter</A
+  >.
+</p>
 
 <H2>Installation</H2>
 
@@ -110,28 +119,38 @@
 
 <Tabs>
   <TabItem open title="svelte.config.js">
-    <p>Enable <Code>compilerOptions</Code></p>:
+    <p>Enable <Code>compilerOptions</Code></p>
+    :
     <HighlightCompo codeLang="ts" code={modules['./md/svelte-config-js.md'] as string} />
   </TabItem>
   <TabItem title="package.json">
-    <p>Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and update <Code>keywords</Code>, <Code>contributors</Code>  that is the original author, and all URLs:</p>
+    <p>
+      Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and
+      update <Code>keywords</Code>, <Code>contributors</Code> that is the original author, and all URLs:
+    </p>
     <HighlightCompo codeLang="ts" code={modules['./md/package-json.md'] as string} />
   </TabItem>
   <TabItem title="vite.config.ts">
     <HighlightCompo codeLang="ts" code={modules['./md/vite-config.md'] as string} />
   </TabItem>
-  <TabItem title='tailwind.config.cjs'>
+  <TabItem title="tailwind.config.cjs">
     <p>Update <Code>tailwindcss.config.cjs</Code></p>
-    <p>Check more primary colors at <A href='https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs'>here</A>.</p>
+    <p>
+      Check more primary colors at <A
+        href="https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs">here</A
+      >.
+    </p>
 
     <HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} />
   </TabItem>
 </Tabs>
 
-
 <H2>Layout</H2>
 
-<p>Create <Code>+layout.svelte, utils/Nav.svelte, utils/DynamicCodeBlockStyle.svelte</Code> and create a directory named <Code>utils/highlight</Code> and add all styles to it.</p>
+<p>
+  Create <Code>+layout.svelte, utils/Nav.svelte, utils/DynamicCodeBlockStyle.svelte</Code> and create
+  a directory named <Code>utils/highlight</Code> and add all styles to it.
+</p>
 
 <Tabs>
   <TabItem open title="+layout.svelte">
@@ -144,20 +163,33 @@
   </TabItem>
   <TabItem title="Dynamic Code Block Style">
     <p>Add the following to the <Code>utils/DynamicCodeBlockStyle.svelte</Code>:</p>
-    <HighlightCompo codeLang="ts" code={modules['./md/utils-dynamic-code-block-style.md'] as string} />
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/utils-dynamic-code-block-style.md'] as string}
+    />
   </TabItem>
 </Tabs>
 
 <H2>Style</H2>
 
 <p>There are two ways to style components.</p>
-<p>Use Developer tools to find CSS class names. It starts and ends with underscore, like <Code>_iconPage_div_1_</Code>.</p>
+<p>
+  Use Developer tools to find CSS class names. It starts and ends with underscore, like <Code
+    >_iconPage_div_1_</Code
+  >.
+</p>
 
 <p>The first part is the abbriviation of the component name and the second part is tag name.</p>
 
-<p>The props names are without underscore, like <Code>iconPage_div_1</Code>. Use the props name to add the styles to a component.</p>
+<p>
+  The props names are without underscore, like <Code>iconPage_div_1</Code>. Use the props name to
+  add the styles to a component.
+</p>
 
-<p>Another way is to add style to the <Code>app.pcss</Code> file using a class name with underbars, like <Code>_iconPage_div_1_</Code>, etc.</p>
+<p>
+  Another way is to add style to the <Code>app.pcss</Code> file using a class name with underbars, like
+  <Code>_iconPage_div_1_</Code>, etc.
+</p>
 <H2>Guide Directory Layout</H2>
 
 <p>Add the following to the <Code>guide/+layout.svelte</Code>:</p>
@@ -185,11 +217,13 @@
   </TabItem>
 </Tabs>
 
-
-
 <H2>Tests</H2>
 
-<p>Please refer to <A href='https://github.com/shinokada/runes-webkit/blob/main/tests/test.ts'>tests/test.ts</A></p>
+<p>
+  Please refer to <A href="https://github.com/shinokada/runes-webkit/blob/main/tests/test.ts"
+    >tests/test.ts</A
+  >
+</p>
 
 <Tabs>
   <TabItem open title="+layout.server.ts">

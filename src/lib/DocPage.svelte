@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import { Toc, extract } from '$lib'
+  import { Toc, extract } from '$lib';
   import { twMerge } from 'tailwind-merge';
 
-  interface Props{
+  interface Props {
     children: Snippet;
     headingSelector?: string;
     d_p_main?: string;
@@ -12,16 +12,31 @@
     d_p_div_3?: string;
   }
 
-  let { children, d_p_div_1, d_p_div_2, d_p_div_3, d_p_main, headingSelector = '#mainContent > :where(h2, h3)' }: Props = $props();
- 
+  let {
+    children,
+    d_p_div_1,
+    d_p_div_2,
+    d_p_div_3,
+    d_p_main,
+    headingSelector = '#mainContent > :where(h2, h3)'
+  }: Props = $props();
 </script>
 
-<main class="{twMerge('flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible _d_p_main_', d_p_main)}" id="top">
-  <div class="flex w-full _d_p_div_1_">
+<main
+  class={twMerge(
+    '_d_p_main_ w-full min-w-0 flex-auto lg:static lg:max-h-full lg:overflow-visible',
+    d_p_main
+  )}
+  id="top"
+>
+  <div class="_d_p_div_1_ flex w-full">
     <div
-      class="{twMerge('flex flex-col max-w-4xl mx-auto px-4 min-w-0 lg:px-4 xl:pb-24 lg:pb-16 divide-y divide-gray-200 dark:divide-gray-800 _d_p_div_2_' , d_p_div_2)}"
+      class={twMerge(
+        '_d_p_div_2_ mx-auto flex min-w-0 max-w-4xl flex-col divide-y divide-gray-200 px-4 lg:px-4 lg:pb-16 xl:pb-24 dark:divide-gray-800',
+        d_p_div_2
+      )}
     >
-      <div id="mainContent" class="{twMerge('pb-20 pr-8 2xl:pr-0 _d_p_div_3_', d_p_div_3)}">
+      <div id="mainContent" class={twMerge('_d_p_div_3_ pb-20 pr-8 2xl:pr-0', d_p_div_3)}>
         {@render children()}
       </div>
     </div>

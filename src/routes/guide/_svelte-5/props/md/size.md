@@ -1,1 +1,0 @@
-<AppstoreAddOutlined size="40" />

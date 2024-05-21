@@ -53,6 +53,7 @@
       <Li>const cards</Li>
       <Li>info</Li>
       <Li>sidebarList</Li>
+      <Li>sitemap.xml/+server.ts</Li>
     </List>
   </TabItem>
   <TabItem title="utils Directory">

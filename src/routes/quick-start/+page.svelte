@@ -51,4 +51,5 @@
   <Checkbox><Li>const lis, const urlsToIncludeSwitcherAndSidebar in +layout.svelte</Li></Checkbox>
   <Checkbox><Li>+layout.server.ts</Li></Checkbox>
   <Checkbox><Li>utils/Nav.svelte</Li></Checkbox>
+  <Checkbox><Li>sitemap.xml/+server.ts</Li></Checkbox>
 </List>

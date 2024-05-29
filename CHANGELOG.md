@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.6.19
+
+### Patch Changes
+
+- fix: next.143 changed ComponentType to Component ([`7b6dce4d632b5ff9ba8f26dfa0035afcf1970944`](https://github.com/shinokada/runes-webkit/commit/7b6dce4d632b5ff9ba8f26dfa0035afcf1970944))
+
 ## 0.6.18
 
 ### Patch Changes

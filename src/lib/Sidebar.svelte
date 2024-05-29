@@ -1,18 +1,18 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
 
   type ChildrenType = {
     name: string;
     href?: string;
-    icon?: ComponentType;
+    icon?: Component;
   };
   type ListType = {
     name: string;
     href?: string;
-    icon?: ComponentType;
+    icon?: Component;
     children?: ChildrenType[];
   };
 

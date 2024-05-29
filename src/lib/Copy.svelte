@@ -2,7 +2,6 @@
   import { Badge } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
   import { clickToCopy } from './helpers';
-  // import type { ComponentType } from 'svelte';
 
   interface Props {
     children: any;

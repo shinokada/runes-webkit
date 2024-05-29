@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import { Card } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
 
   type CardType = {
     title: string;
     description: string;
-    icon: ComponentType;
+    icon: Component;
     href?: string;
     icon_class?: string;
   };

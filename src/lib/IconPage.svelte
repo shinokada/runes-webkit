@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Tabs, Label, TabItem } from 'svelte-5-ui-lib';
   import { random_hex_color_code, random_tailwind_color } from './helpers';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   import { Copy } from '$lib';
 
   interface Props {
-    icons: ComponentType;
+    icons: Component;
     title: string;
     defaultSize?: string;
     sizeByTailwind?: boolean; // for flowbite-svelte-icons only

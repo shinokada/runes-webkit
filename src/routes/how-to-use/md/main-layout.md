@@ -2,17 +2,17 @@
   const extra: ListType[] = [
     {
       name: '3 Tabs',
-      icon: ExpandOutline as ComponentType,
+      icon: ExpandOutline as Component,
       href: '/three-tabs'
     },
     {
       name: '3 Tabs Tailwind ',
-      icon: CogOutline as ComponentType,
+      icon: CogOutline as Component,
       href: '/three-tabs-sizebytailwind'
     },
     {
       name: 'No Tabs',
-      icon: GridPlusOutline as ComponentType,
+      icon: GridPlusOutline as Component,
       href: '/no-tabs'
     }
   ];
@@ -24,7 +24,7 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList, ExpandOutline, GridPlusOutline, CogOutline } from 'runes-webkit'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';

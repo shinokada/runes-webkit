@@ -1,4 +1,4 @@
-import type { ComponentType } from 'svelte';
+import type { Component } from 'svelte';
 
 import A7Solid from '$lib/icons/A7Solid.svelte';
 import BadgeCheckOutline from '$lib/icons/BadgeCheckOutline.svelte';
@@ -19,7 +19,7 @@ type Title = string;
 export type Card = {
   title: string;
   description: string;
-  icon: ComponentType;
+  icon: Component;
   icon_class: string;
 };
 
@@ -33,7 +33,7 @@ export interface LinkType {
 export type ListType = {
   name: string;
   href?: string;
-  icon?: ComponentType;
+  icon?: Component;
   children?: ListType[];
 };
 
@@ -142,11 +142,11 @@ export function convertToKebabCase(str: string) {
  * to filter out index.js since it has [Symbol(Symbol.toStringTag)]: 'Module'
  * Use this where you don't use other filters
  * @example
- * import type { ComponentType } from 'svelte';
+ * import type { Component } from 'svelte';
  * import * as icons from '../supertiny-samples'
  * import { filterStringKeys } from '$lib'
  * const keyIcons = filterStringKeys(icons);
- * <IconPage icons={keyIcons as ComponentType} threeTabs={false} title="No Tabs" />
+ * <IconPage icons={keyIcons as Component} threeTabs={false} title="No Tabs" />
  *
  * @param {object} obj - The object to filter string keys from.
  * @return {object} A new object with only the string keys.
@@ -345,44 +345,44 @@ export const pkg = {
 export const sidebarList: ListType[] = [
   {
     name: 'Svelte 4 & 5',
-    icon: StarOutline as ComponentType,
+    icon: StarOutline as Component,
     children: [
       {
         name: 'Getting Started',
-        icon: CogOutline as ComponentType,
+        icon: CogOutline as Component,
         href: '/guide/svelte-4/getting-started'
       },
       {
         name: 'Props',
-        icon: BadgeCheckOutline as ComponentType,
+        icon: BadgeCheckOutline as Component,
         href: '/guide/svelte-4/props'
       }
     ]
   },
   {
     name: 'Svelte 5: Runes',
-    icon: BellActiveAltOutline as ComponentType,
+    icon: BellActiveAltOutline as Component,
     children: [
       {
         name: 'Getting Started',
-        icon: CogOutline as ComponentType,
+        icon: CogOutline as Component,
         href: '/guide/svelte-5/getting-started'
       },
       {
         name: 'Props',
-        icon: BadgeCheckOutline as ComponentType,
+        icon: BadgeCheckOutline as Component,
         href: '/guide/svelte-5/props'
       }
     ]
   },
   {
     name: 'Global Icons',
-    icon: GlobeOutline as ComponentType,
+    icon: GlobeOutline as Component,
     href: '/guide/global-icons'
   },
   {
     name: 'Custom Icons',
-    icon: ChartPieOutline as ComponentType,
+    icon: ChartPieOutline as Component,
     href: '/guide/custom-icons'
   }
 ];

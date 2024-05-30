@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.7.2
+
+### Patch Changes
+
+- fix: remove empty index.d.ts ([`3c5dbc58944eb6c39f9cfdace765f2efa891617d`](https://github.com/shinokada/runes-webkit/commit/3c5dbc58944eb6c39f9cfdace765f2efa891617d))
+
 ## 0.7.1
 
 ### Patch Changes

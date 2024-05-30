@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.7.1
+
+### Patch Changes
+
+- fix: add src/lib/index.d.ts ([`aa035e69fad7d0ef64934a56edbd63d7000154c5`](https://github.com/shinokada/runes-webkit/commit/aa035e69fad7d0ef64934a56edbd63d7000154c5))
+
 ## 0.7.0
 
 ### Minor Changes

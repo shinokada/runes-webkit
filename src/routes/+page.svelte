@@ -10,7 +10,7 @@
     info
   } from '$lib';
   import { A } from 'svelte-5-ui-lib';
-  const cardsToExclude = ['Seven Props'];
+  
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${__DESCRIPTION__}`,

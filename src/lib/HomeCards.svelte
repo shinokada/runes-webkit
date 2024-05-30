@@ -1,15 +1,8 @@
 <script lang="ts">
-  import type { Component } from 'svelte';
   import { Card } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
+  import type { CardType } from '$lib';
 
-  type CardType = {
-    title: string;
-    description: string;
-    icon: Component;
-    href?: string;
-    icon_class?: string;
-  };
   interface Props {
     cards: CardType[];
     home_c_card?: string;

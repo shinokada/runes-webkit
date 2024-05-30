@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Tabs, Label, TabItem } from 'svelte-5-ui-lib';
-  import { random_hex_color_code, random_tailwind_color } from './helpers';
+  import { random_hex_color_code, random_tailwind_color } from '$lib';
   import type { Component } from 'svelte';
   import { twMerge } from 'tailwind-merge';
   import { Copy } from '$lib';

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Badge } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
-  import { clickToCopy } from './helpers';
+  import { clickToCopy } from '$lib';
 
   interface Props {
     children: any;

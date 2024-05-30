@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.7.0
+
+### Minor Changes
+
+- fix: move lib/helpers.ts content to lib/index.ts and update src/routes/+page.svelte ([`0f2fa46be3acf37d1ec9cffb9684cb1c6d6377cc`](https://github.com/shinokada/runes-webkit/commit/0f2fa46be3acf37d1ec9cffb9684cb1c6d6377cc))
+
 ## 0.6.19
 
 ### Patch Changes

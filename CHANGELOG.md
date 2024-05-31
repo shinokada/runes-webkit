@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.7.4
+
+### Patch Changes
+
+- fix: import and export helpers.ts from index.ts ([`6ae8d1d6732e5fe8b966cf9fdf185c778f45a7e3`](https://github.com/shinokada/runes-webkit/commit/6ae8d1d6732e5fe8b966cf9fdf185c778f45a7e3))
+
 ## 0.7.3
 
 ### Patch Changes

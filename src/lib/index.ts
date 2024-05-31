@@ -60,6 +60,10 @@ export { default as Visualstudiocode } from './icons/Visualstudiocode.svelte';
 export { default as WandMagicSparklesOutline } from './icons/WandMagicSparklesOutline.svelte';
 export { default as XSolid } from './icons/XSolid.svelte';
 
-export * from './helpers';
 export * from './types';
+
+import { clickToCopy, toDashCaseLower, toUpperSnakeCase, extract, removeHyphensAndCapitalize, filterIconsByKeyword, convertToKebabCase, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, excludeByTitle, insertObjectToArray, cards, info, sidebarList } from './helpers';
+
+export { clickToCopy, toDashCaseLower, toUpperSnakeCase, extract, removeHyphensAndCapitalize, filterIconsByKeyword, convertToKebabCase, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, excludeByTitle, insertObjectToArray, cards, info, sidebarList };
+
 

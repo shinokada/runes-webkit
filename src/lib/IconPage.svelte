@@ -56,6 +56,12 @@
       return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
     })
   );
+  // let filteredEntries = $state(Object.entries(icons))
+  // $effect(() => {
+  //   filteredEntries = Object.entries(icons).filter(([name, component]) => {
+  //     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+  //   });
+  // })
 
   let size = $state(defaultSize);
 </script>
@@ -103,7 +109,7 @@
                 i_p_tabitem_div_1
               )}
             >
-              {#each filteredEntries as [name, component]}
+              {#each filteredEntries as [name, component] (name)}
                 <div
                   class={twMerge(
                     '_i_p_tabitem_div_2_ flex items-center text-lg',
@@ -138,7 +144,7 @@
                 i_p_tabitem_div_1
               )}
             >
-              {#each filteredEntries as [name, component]}
+              {#each filteredEntries as [name, component] (name) }
                 <div
                   class={twMerge(
                     '_i_p_tabitem_div_2_ flex items-center text-lg',
@@ -175,7 +181,7 @@
                 i_p_tabitem_div_1
               )}
             >
-              {#each filteredEntries as [name, component]}
+              {#each filteredEntries as [name, component] (name)}
                 <div
                   class={twMerge(
                     '_i_p_tabitem_div_2_ flex items-center text-lg',
@@ -212,7 +218,7 @@
               i_p_div_3
             )}
           >
-            {#each filteredEntries as [name, component]}
+            {#each filteredEntries as [name, component] (name)}
               <div class={twMerge('_i_p_div_4_ flex flex-wrap items-center', i_p_div_4)}>
                 <svelte:component
                   this={component}

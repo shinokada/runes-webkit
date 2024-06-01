@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.7.6
+
+### Patch Changes
+
+- fix: add index, name to Icon page to fix search problem ([`aecf33d3885a0e3fa8cb0cedf8119acc06d67624`](https://github.com/shinokada/runes-webkit/commit/aecf33d3885a0e3fa8cb0cedf8119acc06d67624))
+
 ## 0.7.5
 
 ### Patch Changes

@@ -57,7 +57,7 @@
 @prop children
 @prop iconName
 @prop counter = 2
-@prop c_t_c_badge_div
+@prop c_t_c_badge_div = 'fixed right-4 top-20'
 @prop c_t_c_div
 @prop c_t_c_btn
 -->

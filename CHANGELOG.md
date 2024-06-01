@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.7.5
+
+### Patch Changes
+
+- fix: update Copy.svelte ([`a8f69f61f14f66d865aeaf3fa06656111d5edc7f`](https://github.com/shinokada/runes-webkit/commit/a8f69f61f14f66d865aeaf3fa06656111d5edc7f))
+
 ## 0.7.4
 
 ### Patch Changes

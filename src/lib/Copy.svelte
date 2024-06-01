@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Badge } from 'svelte-5-ui-lib';
-  import { twMerge } from 'tailwind-merge';
   import { clickToCopy } from '$lib';
 
   interface Props {
@@ -11,13 +10,13 @@
     c_t_c_div?: string;
     c_t_c_btn?: string;
   }
-  let { children, iconName, counter = 2, c_t_c_badge_div, c_t_c_div, c_t_c_btn }: Props = $props();
+  let { children, iconName, counter = 2, c_t_c_badge_div = 'fixed right-4 top-20', c_t_c_div, c_t_c_btn }: Props = $props();
 
   let text = $state('');
   let open = $state(false);
 
-  function copySuccess() {
-    text = 'Icon name copied';
+  function copySuccess(iconName: string) {
+    text = `Copied ${iconName}`;
   }
 
   function copyError(event: CustomEvent) {
@@ -31,24 +30,22 @@
   }
 
   function timeout() {
-    if (--counter > 0) return setTimeout(timeout, 1000);
+    if (--counter > 0) return setTimeout(timeout, 1500);
     open = false;
   }
 </script>
 
 {#if open}
-  <div class="relative">
-    <Badge
-      large
-      divclass={twMerge('w-36 absolute -top-10 left-4 _c_t_c_badge_div_', c_t_c_badge_div)}
-    >
-      <span class="font-medium">{text}</span>
-    </Badge>
-  </div>
+  <Badge
+    large
+    divclass={c_t_c_badge_div}
+  >
+    <span class="font-medium">{text}</span>
+  </Badge>
 {/if}
 
-<div oncopysuccess={copySuccess} oncopyerror={copyError}>
-  <button type="button" class="ml-4" use:clickToCopy={iconName} onclick={trigger}>
+<div oncopysuccess={copySuccess(iconName)} oncopyerror={copyError} class='{c_t_c_div} _c_t_c_div_'>
+  <button type="button" class="ml-4 {c_t_c_btn} _c_t_c_btn_" use:clickToCopy={iconName} onclick={trigger}>
     {@render children()}
   </button>
 </div>

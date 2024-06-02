@@ -1,7 +1,7 @@
 import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title: 'Global icons example - Runes Webkit',
     description: 'Global icons example',
     og: {
@@ -12,6 +12,6 @@ export const load = () => {
       title: 'Global icons example - Runes Webkit',
       description: 'Global icons example'
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

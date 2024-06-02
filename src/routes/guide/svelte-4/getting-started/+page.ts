@@ -1,23 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
-import { metaTitle, metaDescription, metaImg, splitAndCapitalize } from 'runes-meta-tags';
+const title = 'Getting Started - Runes Webkit';
+const description = 'Getting Started - Runes Webkit';
+const image = 'https://open-graph-vercel.vercel.app/api/runes-webkit';
+const ogUrl = 'http://localhost:4173/guide/svelte-4/getting-started'
 
-export const load = ({ url }) => {
-  const title = metaTitle(url.pathname, __NAME__);
-  const basicDesc = splitAndCapitalize(__NAME__);
-  const description = metaDescription(url.pathname, basicDesc);
-  const image = metaImg(url.pathname, __NAME__);
-
-  const pageMetaTags = Object.freeze({
+export const load = () => {
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
       title,
-      description
+      description,
+      url: ogUrl,
+      image
     },
     twitter: {
+      description,
       title,
-      description
+      image
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

@@ -1,7 +1,7 @@
 import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title: 'No tabs example - Runes Webkit',
     description: 'No tabs example',
     og: {
@@ -12,6 +12,6 @@ export const load = () => {
       title: 'No tabs example - Runes Webkit',
       description: 'No tabs example'
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

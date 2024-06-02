@@ -43,15 +43,16 @@
   const analyticsId = data.ANALYTICS_ID;
   let metaTags = $state(
     $page.data.pageMetaTags
-      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+      ? $page.data.pageMetaTags
       : data.layoutMetaTags
   );
+  // console.log('data', $page.data.layoutMetaTags)
 
   let currentUrl = $state($page.url.pathname);
   $effect(() => {
     currentUrl = $page.url.pathname;
     metaTags = $page.data.pageMetaTags
-      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+      ? $page.data.pageMetaTags 
       : data.layoutMetaTags;
   });
   const lis = [

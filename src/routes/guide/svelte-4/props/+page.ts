@@ -1,17 +1,22 @@
 import type { MetaProps } from 'runes-meta-tags';
+const title = 'Svelte 4 Props - Svelte Awesome Icons';
+const description = 'Svelte 4 Props for Svelte Awesome Icons';
+const image = 'https://open-graph-vercel.vercel.app/api/runes-webkit';
 
 export const load = () => {
-  const pageMetaTags = Object.freeze({
-    title: 'Svelte 4 Props - Svelte Awesome Icons',
-    description: 'Svelte Awesome Icons Props for Svelte 4',
+  const pageMetaTags: MetaProps = {
+    title,
+    description,
     og: {
-      title: 'Svelte 4 Props - Svelte Awesome Icons',
-      description: 'Svelte Awesome Icons Props for Svelte 4'
+      title,
+      description,
+      image
     },
     twitter: {
-      title: 'Svelte 4 Props - Svelte Awesome Icons',
-      description: 'Svelte Awesome Icons Props for Svelte 4'
+      title,
+      description,
+      image
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

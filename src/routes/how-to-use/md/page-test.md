@@ -28,7 +28,7 @@ test('Guide home page has expected meta og', async ({ page }) => {
   const metaOgImage = page.locator('meta[property="og:image"]');
   await expect(metaOgImage).toHaveAttribute(
     'content',
-    'https://open-graph-vercel.vercel.app/api/runes-webkit?title=Getting Started'
+    'https://open-graph-vercel.vercel.app/api/runes-webkit'
   );
 });
 
@@ -40,6 +40,6 @@ test('Guide home page has expected meta twitter', async ({ page }) => {
   const metaTwitterImage = page.locator('meta[name="twitter:image"]');
   await expect(metaTwitterImage).toHaveAttribute(
     'content',
-    'https://open-graph-vercel.vercel.app/api/runes-webkit?title=Getting Started'
+    'https://open-graph-vercel.vercel.app/api/runes-webkit'
   );
 });

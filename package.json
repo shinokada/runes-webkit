@@ -227,13 +227,13 @@
       "types": "./dist/icons/CheckCircleOutline.svelte.d.ts",
       "svelte": "./dist/icons/CheckCircleOutline.svelte"
     },
-    "./ChevronDownSolid.svelte": {
-      "types": "./dist/icons/ChevronDownSolid.svelte.d.ts",
-      "svelte": "./dist/icons/ChevronDownSolid.svelte"
+    "./ChevronDownOutline.svelte": {
+      "types": "./dist/icons/ChevronDownOutline.svelte.d.ts",
+      "svelte": "./dist/icons/ChevronDownOutline.svelte"
     },
-    "./ChevronUpSolid.svelte": {
-      "types": "./dist/icons/ChevronUpSolid.svelte.d.ts",
-      "svelte": "./dist/icons/ChevronUpSolid.svelte"
+    "./ChevronUpOutline.svelte": {
+      "types": "./dist/icons/ChevronUpOutline.svelte.d.ts",
+      "svelte": "./dist/icons/ChevronUpOutline.svelte"
     },
     "./ClipboardListOutline.svelte": {
       "types": "./dist/icons/ClipboardListOutline.svelte.d.ts",
@@ -287,9 +287,9 @@
       "types": "./dist/icons/InfoCircleOutline.svelte.d.ts",
       "svelte": "./dist/icons/InfoCircleOutline.svelte"
     },
-    "./MediumBrand.svelte": {
-      "types": "./dist/icons/MediumBrand.svelte.d.ts",
-      "svelte": "./dist/icons/MediumBrand.svelte"
+    "./MediumBrands.svelte": {
+      "types": "./dist/icons/MediumBrands.svelte.d.ts",
+      "svelte": "./dist/icons/MediumBrands.svelte"
     },
     "./MoonSolid.svelte": {
       "types": "./dist/icons/MoonSolid.svelte.d.ts",
@@ -303,9 +303,9 @@
       "types": "./dist/icons/StarOutline.svelte.d.ts",
       "svelte": "./dist/icons/StarOutline.svelte"
     },
-    "./Tailwindcss.svelte": {
-      "types": "./dist/icons/Tailwindcss.svelte.d.ts",
-      "svelte": "./dist/icons/Tailwindcss.svelte"
+    "./TailwindSolid.svelte": {
+      "types": "./dist/icons/TailwindSolid.svelte.d.ts",
+      "svelte": "./dist/icons/TailwindSolid.svelte"
     },
     "./ThumbsUpOutline.svelte": {
       "types": "./dist/icons/ThumbsUpOutline.svelte.d.ts",

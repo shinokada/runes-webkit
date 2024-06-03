@@ -38,7 +38,7 @@
   "css-frameworks": {
     "title": "CSS Frameworks support",
     "description": "Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.",
-    "icon": "Tailwindcss",
+    "icon": "TailwindSolid",
     "icon_class": "text-blue-500"
   },
   "seven-props": {

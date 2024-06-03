@@ -7,7 +7,7 @@
   }
 
   import { Dropdown, DropdownItem, DropdownDivider, uiHelpers } from 'svelte-5-ui-lib';
-  import { ChevronDownSolid } from '$lib';
+  import { ChevronDownOutline } from '$lib';
   import { sineIn } from 'svelte/easing';
   import { twMerge } from 'tailwind-merge';
 
@@ -81,7 +81,7 @@
 >
   <button onclick={dropdown.toggle} class="flex">
     On this page
-    <ChevronDownSolid
+    <ChevronDownOutline
       class={twMerge('_o_t_p_svg_ ms-2 mt-1 h-4 w-4 text-white dark:text-white', o_t_p_svg)}
     />
   </button>

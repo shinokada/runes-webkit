@@ -1,9 +1,33 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
-  interface CtxType {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+
+  interface BaseProps {
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
+    color?: string;
+strokeWidth?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+
+  interface CtxType extends BaseProps {}
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -15,46 +39,94 @@
     xl: 'w-8 h-8'
   };
 
-  interface Props {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-    role?: string;
-    class?: string;
-    ariaLabel?: string;
-  }
-  let {
-    size = ctx.size || 'md',
-    role,
-    class: classname,
-    ariaLabel = 'code outline',
-    ...restProps
-  }: Props = $props();
+  let { 
+    size = ctx.size || 'md', 
+    role, 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+strokeWidth= ctx.strokeWidth || "2",
+    desc,  
+    class: classname, 
+    ariaLabel =  "code outline" , 
+    onclick, 
+    onkeydown, 
+    onkeyup, 
+    ...restProps 
+    }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
+{#if withEvents}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-  {...restProps}
-  class={twMerge('shrink-0', sizes[size], classname)}
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
   {role}
   aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+  onclick={onclick}
+  onkeydown={onkeydown}
+  onkeyup={onkeyup}
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>  
+</svg>
+{:else}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+{color}
+{...restProps}
+  class={twMerge(
+    'shrink-0',
+    sizes[size],
+    classname
+  )}
+  {role}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
-  <path
-    stroke="currentColor"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"
-  />
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14"/>  
 </svg>
+{/if}
 
 <!--
 @component
-[Go to docs](https://runes-webkit.codewithshin.com/)
+[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
 ## Props
 @prop size = ctx.size || 'md'
 @prop role
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop strokeWidth= ctx.strokeWidth || "2"
+@prop desc
 @prop class: classname
-@prop ariaLabel = 'code outline'
+@prop ariaLabel =  "code outline"
+@prop onclick
+@prop onkeydown
+@prop onkeyup
 @prop ...restProps
 -->

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
-  import { Accessibility } from '$lib';
+  import { ClipboardListOutline } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -77,7 +77,7 @@
 <HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} />
 
 <CodeWrapper>
-  <Accessibility
+  <ClipboardListOutline
     title={{ id: 'my-title', title: 'A green accessibility' }}
     desc={{ id: 'my-descrip', desc: 'The shape of a green accessibility icon' }}
     ariaLabel="green accessibility"

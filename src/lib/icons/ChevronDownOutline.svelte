@@ -48,7 +48,7 @@ strokeWidth?: string;
 strokeWidth= ctx.strokeWidth || "2",
     desc,  
     class: classname, 
-    ariaLabel =  "arrow up right from square outline" , 
+    ariaLabel =  "chevron down outline" , 
     onclick, 
     onkeydown, 
     onkeyup, 
@@ -84,7 +84,7 @@ strokeWidth= ctx.strokeWidth || "2",
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m8 10 4 4 4-4"/>  
 </svg>
 {:else}
 <svg
@@ -108,7 +108,7 @@ strokeWidth= ctx.strokeWidth || "2",
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>  
+     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="m8 10 4 4 4-4"/>  
 </svg>
 {/if}
 
@@ -124,7 +124,7 @@ strokeWidth= ctx.strokeWidth || "2",
 @prop strokeWidth= ctx.strokeWidth || "2"
 @prop desc
 @prop class: classname
-@prop ariaLabel =  "arrow up right from square outline"
+@prop ariaLabel =  "chevron down outline"
 @prop onclick
 @prop onkeydown
 @prop onkeyup

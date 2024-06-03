@@ -14,7 +14,6 @@
     size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
-strokeWidth?: string;
     withEvents?: boolean;
     onclick?: (event: MouseEvent) => void;
     onkeydown?: (event: KeyboardEvent) => void;
@@ -45,10 +44,9 @@ strokeWidth?: string;
     color = ctx.color || 'currentColor', 
     withEvents = ctx.withEvents || false, 
     title, 
-strokeWidth= ctx.strokeWidth || "2",
     desc,  
     class: classname, 
-    ariaLabel =  "arrow up right from square outline" , 
+    ariaLabel =  "tailwind solid" , 
     onclick, 
     onkeydown, 
     onkeyup, 
@@ -62,8 +60,7 @@ strokeWidth= ctx.strokeWidth || "2",
 {#if withEvents}
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-{color}
+  fill={color}
 {...restProps}
   class={twMerge(
     'shrink-0',
@@ -84,13 +81,12 @@ strokeWidth= ctx.strokeWidth || "2",
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>  
+     <path d="M11.782 5.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231-1.253-.673-2.19-3.438-5.959-3.318ZM6.8 11.979A4.772 4.772 0 0 0 2 16.151a3.431 3.431 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231-1.253-.673-2.19-3.443-5.963-3.317Z"/>  
 </svg>
 {:else}
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-{color}
+  fill={color}
 {...restProps}
   class={twMerge(
     'shrink-0',
@@ -108,7 +104,7 @@ strokeWidth= ctx.strokeWidth || "2",
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>  
+     <path d="M11.782 5.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231-1.253-.673-2.19-3.438-5.959-3.318ZM6.8 11.979A4.772 4.772 0 0 0 2 16.151a3.431 3.431 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231-1.253-.673-2.19-3.443-5.963-3.317Z"/>  
 </svg>
 {/if}
 
@@ -121,10 +117,9 @@ strokeWidth= ctx.strokeWidth || "2",
 @prop color = ctx.color || 'currentColor'
 @prop withEvents = ctx.withEvents || false
 @prop title
-@prop strokeWidth= ctx.strokeWidth || "2"
 @prop desc
 @prop class: classname
-@prop ariaLabel =  "arrow up right from square outline"
+@prop ariaLabel =  "tailwind solid"
 @prop onclick
 @prop onkeydown
 @prop onkeyup

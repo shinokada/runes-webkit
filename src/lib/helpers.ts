@@ -6,7 +6,7 @@ import Accessibility from './icons/Accessibility.svelte';
 import GlobeOutline from './icons/GlobeOutline.svelte';
 import InfoCircleOutline from './icons/InfoCircleOutline.svelte';
 import MoonSolid from './icons/MoonSolid.svelte';
-import Tailwindcss from './icons/Tailwindcss.svelte';
+import TailwindSolid from './icons/TailwindSolid.svelte';
 import TruckFastSolid from './icons/TruckFastSolid.svelte';
 import Visualstudiocode from './icons/Visualstudiocode.svelte';
 import StarOutline from './icons/StarOutline.svelte';
@@ -258,7 +258,7 @@ export const cards = [
   {
     title: 'CSS Frameworks support',
     description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
-    icon: Tailwindcss,
+    icon: TailwindSolid,
     icon_class: 'text-orange-500'
   },
   {

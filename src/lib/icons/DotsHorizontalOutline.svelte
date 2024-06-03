@@ -112,7 +112,7 @@
 
 <!--
 @component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+[Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop size = ctx.size || 'md'
 @prop role

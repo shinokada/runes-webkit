@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.0
+
+### Minor Changes
+
+- fix: icons update ([`a6c843a43d83152097fbc11d444bf7300a353279`](https://github.com/shinokada/runes-webkit/commit/a6c843a43d83152097fbc11d444bf7300a353279))
+
 ## 0.7.6
 
 ### Patch Changes

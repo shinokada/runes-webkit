@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.2
+
+### Patch Changes
+
+- fix: remove Icon component from mono, random hex, and random tailwind ([`3cf5c0084238d52ae73fbb02a2400217536e2c06`](https://github.com/shinokada/runes-webkit/commit/3cf5c0084238d52ae73fbb02a2400217536e2c06))
+
 ## 0.8.1
 
 ### Patch Changes

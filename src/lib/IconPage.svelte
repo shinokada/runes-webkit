@@ -110,30 +110,32 @@
               )}
             >
               {#each filteredEntries as [name, component] (name)}
-                <div
-                  class={twMerge(
-                    '_i_p_tabitem_div_2_ flex items-center text-lg',
-                    i_p_tabitem_div_2
-                  )}
-                >
-                  {#if sizeByTailwind}
-                    <svelte:component
-                      this={component}
-                      class="shrink-0 h-{size} w-{size}"
-                      {variation}
-                      {...restProps}
-                    />
-                  {:else}
-                    <svelte:component
-                      this={component}
-                      class="shrink-0"
-                      {size}
-                      {variation}
-                      {...restProps}
-                    />
-                  {/if}
-                  <Copy iconName={name}>{name}</Copy>
-                </div>
+                {#if name !== 'Icon'}
+                  <div
+                    class={twMerge(
+                      '_i_p_tabitem_div_2_ flex items-center text-lg',
+                      i_p_tabitem_div_2
+                    )}
+                  >
+                    {#if sizeByTailwind}
+                      <svelte:component
+                        this={component}
+                        class="shrink-0 h-{size} w-{size}"
+                        {variation}
+                        {...restProps}
+                      />
+                    {:else}
+                      <svelte:component
+                        this={component}
+                        class="shrink-0"
+                        {size}
+                        {variation}
+                        {...restProps}
+                      />
+                    {/if}
+                    <Copy iconName={name}>{name}</Copy>
+                  </div>
+                {/if}
               {/each}
             </div>
           </TabItem>
@@ -145,32 +147,34 @@
               )}
             >
               {#each filteredEntries as [name, component] (name) }
-                <div
-                  class={twMerge(
-                    '_i_p_tabitem_div_2_ flex items-center text-lg',
-                    i_p_tabitem_div_2
-                  )}
-                >
-                  {#if sizeByTailwind}
-                    <svelte:component
-                      this={component}
-                      color={random_hex_color_code()}
-                      class="shrink-0 h-{size} w-{size}"
-                      {variation}
-                      {...restProps}
-                    />
-                  {:else}
-                    <svelte:component
-                      this={component}
-                      color={random_hex_color_code()}
-                      class="shrink-0"
-                      {size}
-                      {variation}
-                      {...restProps}
-                    />
-                  {/if}
-                  <Copy iconName={name}>{name}</Copy>
-                </div>
+                {#if name !== 'Icon'}
+                  <div
+                    class={twMerge(
+                      '_i_p_tabitem_div_2_ flex items-center text-lg',
+                      i_p_tabitem_div_2
+                    )}
+                  >
+                    {#if sizeByTailwind}
+                      <svelte:component
+                        this={component}
+                        color={random_hex_color_code()}
+                        class="shrink-0 h-{size} w-{size}"
+                        {variation}
+                        {...restProps}
+                      />
+                    {:else}
+                      <svelte:component
+                        this={component}
+                        color={random_hex_color_code()}
+                        class="shrink-0"
+                        {size}
+                        {variation}
+                        {...restProps}
+                      />
+                    {/if}
+                    <Copy iconName={name}>{name}</Copy>
+                  </div>
+                {/if}
               {/each}
             </div>
           </TabItem>
@@ -182,30 +186,32 @@
               )}
             >
               {#each filteredEntries as [name, component] (name)}
-                <div
-                  class={twMerge(
-                    '_i_p_tabitem_div_2_ flex items-center text-lg',
-                    i_p_tabitem_div_2
-                  )}
-                >
-                  {#if sizeByTailwind}
-                    <svelte:component
-                      this={component}
-                      class="{random_tailwind_color()} shrink-0 h-{size} w-{size}"
-                      {variation}
-                      {...restProps}
-                    />
-                  {:else}
-                    <svelte:component
-                      this={component}
-                      class={random_tailwind_color()}
-                      {size}
-                      {variation}
-                      {...restProps}
-                    />
-                  {/if}
-                  <Copy iconName={name}>{name}</Copy>
-                </div>
+                {#if name !== 'Icon'}
+                  <div
+                    class={twMerge(
+                      '_i_p_tabitem_div_2_ flex items-center text-lg',
+                      i_p_tabitem_div_2
+                    )}
+                  >
+                    {#if sizeByTailwind}
+                      <svelte:component
+                        this={component}
+                        class="{random_tailwind_color()} shrink-0 h-{size} w-{size}"
+                        {variation}
+                        {...restProps}
+                      />
+                    {:else}
+                      <svelte:component
+                        this={component}
+                        class={random_tailwind_color()}
+                        {size}
+                        {variation}
+                        {...restProps}
+                      />
+                    {/if}
+                    <Copy iconName={name}>{name}</Copy>
+                  </div>
+                {/if}
               {/each}
             </div>
           </TabItem>

@@ -219,16 +219,18 @@
             )}
           >
             {#each filteredEntries as [name, component] (name)}
-              <div class={twMerge('_i_p_div_4_ flex flex-wrap items-center', i_p_div_4)}>
-                <svelte:component
-                  this={component}
-                  class="shrink-0"
-                  {size}
-                  {variation}
-                  {...restProps}
-                />
-                <Copy iconName={name}>{name}</Copy>
-              </div>
+              {#if name !== 'Icon'}
+                <div class={twMerge('_i_p_div_4_ flex flex-wrap items-center', i_p_div_4)}>
+                  <svelte:component
+                    this={component}
+                    class="shrink-0"
+                    {size}
+                    {variation}
+                    {...restProps}
+                  />
+                  <Copy iconName={name}>{name}</Copy>
+                </div>
+              {/if}
             {/each}
           </div>
         </div>

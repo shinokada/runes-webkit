@@ -72,8 +72,8 @@ importers:
         specifier: 5.0.0-next.148
         version: 5.0.0-next.148
       svelte-5-ui-lib:
-        specifier: ^0.4.13
-        version: 0.4.13(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3)
+        specifier: ^0.5.0
+        version: 0.5.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3)
       svelte-check:
         specifier: ^3.8.0
         version: 3.8.0(postcss-load-config@4.0.2(postcss@8.4.38))(postcss@8.4.38)(svelte@5.0.0-next.148)
@@ -2255,8 +2255,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.4.13:
-    resolution: {integrity: sha512-hCSj1OFmjXWMAoENPz+1OT4Do/v+I/BbdWhCY0qzzwWQFJPN6aKZA5y60NCZRerVssW8kcR08kax1V9+Jmcypg==}
+  svelte-5-ui-lib@0.5.0:
+    resolution: {integrity: sha512-7HZXm7eXyYbLT5lhBIgQITVu/JVctI1/uLyUSCDo0RFLG149mOupdWdPUTNOfCB3qW08GjztgVqZoFqxU8NHHQ==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -4907,7 +4907,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.4.13(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3):
+  svelte-5-ui-lib@0.5.0(@sveltejs/kit@2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(tailwindcss@3.4.3):
     dependencies:
       '@floating-ui/dom': 1.6.5
       '@sveltejs/kit': 2.5.10(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.148)(vite@5.2.12))(svelte@5.0.0-next.148)(vite@5.2.12)

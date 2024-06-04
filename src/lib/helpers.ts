@@ -141,7 +141,8 @@ export const filterStringKeys = (obj: { [key: string]: any }) => {
 export function excludeItemsByKeywords(items: { [key: string]: any }, keywords: string) {
   const filteredItems: { [key: string]: any } = {};
   for (const key in items) {
-    if (keywords.every((keyword) => !key.includes(keyword))) {
+    const doesNotContainKeyword = keywords.split(' ').every(keyword => !key.includes(keyword));
+    if (doesNotContainKeyword) {
       filteredItems[key] = items[key];
     }
   }

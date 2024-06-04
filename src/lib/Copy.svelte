@@ -33,6 +33,7 @@
     if (--counter > 0) return setTimeout(timeout, 1500);
     open = false;
   }
+
 </script>
 
 {#if open}

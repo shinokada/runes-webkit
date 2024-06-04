@@ -1,3 +1,4 @@
+export { default as Icon } from './Icon.svelte';
 export { default as A1Password } from './A1Password.svelte';
 export { default as Acast } from './Acast.svelte';
 export { default as Access } from './Access.svelte';

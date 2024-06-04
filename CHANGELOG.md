@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.1
+
+### Patch Changes
+
+- fix: IconPage filter Icon component ([`ddfcd52e19c569e2fe6c7e55202efb20bc35e09f`](https://github.com/shinokada/runes-webkit/commit/ddfcd52e19c569e2fe6c7e55202efb20bc35e09f))
+
 ## 0.8.0
 
 ### Minor Changes

@@ -10,7 +10,7 @@
     c_t_c_div?: string;
     c_t_c_btn?: string;
   }
-  let { children, iconName, counter = 2, c_t_c_badge_div = 'fixed right-4 top-20', c_t_c_div, c_t_c_btn }: Props = $props();
+  let { children, iconName, counter = 2, c_t_c_badge_div = 'fixed flex items-center justify-center', c_t_c_div, c_t_c_btn }: Props = $props();
 
   let text = $state('');
   let open = $state(false);
@@ -30,7 +30,7 @@
   }
 
   function timeout() {
-    if (--counter > 0) return setTimeout(timeout, 1500);
+    if (--counter > 0) return setTimeout(timeout, 1000);
     open = false;
   }
 

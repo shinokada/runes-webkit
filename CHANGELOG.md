@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.3
+
+### Patch Changes
+
+- fix: change Copy notice position
+
 ## 0.8.2
 
 ### Patch Changes

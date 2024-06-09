@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.4
+
+### Patch Changes
+
+- fix: Copy component position update' ([`53d07343460be82cbfeb1cbe345105a64fa85e8c`](https://github.com/shinokada/runes-webkit/commit/53d07343460be82cbfeb1cbe345105a64fa85e8c))
+
 ## 0.8.3
 
 ### Patch Changes

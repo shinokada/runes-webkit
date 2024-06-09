@@ -10,13 +10,13 @@
     c_t_c_div?: string;
     c_t_c_btn?: string;
   }
-  let { children, iconName, counter = 2, c_t_c_badge_div = 'fixed flex items-center justify-center', c_t_c_div, c_t_c_btn }: Props = $props();
+  let { children, iconName, counter = 2, c_t_c_badge_div = 'absolute top-4 w-44 p-1', c_t_c_div, c_t_c_btn }: Props = $props();
 
   let text = $state('');
   let open = $state(false);
 
   function copySuccess(iconName: string) {
-    text = `Copied ${iconName}`;
+    text = `Copied the icon name!`;
   }
 
   function copyError(event: CustomEvent) {
@@ -37,12 +37,14 @@
 </script>
 
 {#if open}
+  <div class='relative'>
   <Badge
     large
     divclass={c_t_c_badge_div}
   >
     <span class="font-medium">{text}</span>
   </Badge>
+  </div>
 {/if}
 
 <div oncopysuccess={copySuccess(iconName)} oncopyerror={copyError} class='{c_t_c_div} _c_t_c_div_'>
@@ -58,7 +60,7 @@
 @prop children
 @prop iconName
 @prop counter = 2
-@prop c_t_c_badge_div = 'fixed flex items-center justify-center'
+@prop c_t_c_badge_div = 'absolute top-4 w-44 p-1'
 @prop c_t_c_div
 @prop c_t_c_btn
 -->

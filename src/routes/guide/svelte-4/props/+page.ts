@@ -1,7 +1,8 @@
 import type { MetaProps } from 'runes-meta-tags';
-const title = 'Svelte 4 Props - Svelte Awesome Icons';
-const description = 'Svelte 4 Props for Svelte Awesome Icons';
-const image = 'https://open-graph-vercel.vercel.app/api/runes-webkit';
+
+const title = 'Props - Svelte Remix v1'
+const description = 'How to use Svelte Remix v1 props'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
 
 export const load = () => {
   const pageMetaTags: MetaProps = {
@@ -10,12 +11,12 @@ export const load = () => {
     og: {
       title,
       description,
-      image
+      image: imgUrl
     },
     twitter: {
       title,
       description,
-      image
+      image: imgUrl
     }
   };
   return { pageMetaTags };

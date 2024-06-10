@@ -1,23 +1,22 @@
 import type { MetaProps } from 'runes-meta-tags';
-const title = 'Getting Started - Runes Webkit';
-const description = 'Getting Started - Runes Webkit';
-const image = 'https://open-graph-vercel.vercel.app/api/runes-webkit';
-const ogUrl = 'http://localhost:4173/guide/svelte-4/getting-started'
 
-export const load = () => {
+const title = 'Getting Started - Svelte Remix v1'
+const description = 'How to get started with Svelte Remix v1'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
+
+export const load = ({ url }) => {
   const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
       title,
       description,
-      url: ogUrl,
-      image
+      image: imgUrl
     },
     twitter: {
-      description,
       title,
-      image
+      description,
+      image: imgUrl
     }
   };
   return { pageMetaTags };

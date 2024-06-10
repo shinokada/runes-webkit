@@ -3,11 +3,11 @@ import { ANALYTICS_ID } from '$env/static/private';
 import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 
 export const load = ({ url }) => {
-  const siteName = 'Runes Webkit';
-  const title = 'Runes Webkit';
-  const basicDesc = 'A quick start for a Svelte Runes project.';
-  const description = 'A collection of reusable Svelte components for building user interfaces for Runes';
-  const image = 'https://open-graph-vercel.vercel.app/api/runes-webkit';
+  const siteName = metaTitle('/', __NAME__);
+  const title = metaTitle(url.pathname, __NAME__);
+  const basicDesc = 'A collection of reusable Svelte components for building user interfaces for Runes'
+  const description = metaDescription(url.pathname, basicDesc);
+  const image = metaImg(url.pathname, __NAME__);
   const keywords = 'svelte, runes, webkit, ui, components';
 
   const layoutMetaTags: MetaProps = {
@@ -21,7 +21,7 @@ export const load = ({ url }) => {
       title,
       description,
       image,
-      imageAlt: title
+      imageAlt: title,
     },
     og: {
       type: 'website',

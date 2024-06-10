@@ -1,48 +1,44 @@
 import { expect, test } from '@playwright/test';
 
+const title = 'Getting Started - Svelte Remix v1'
+const description = 'How to get started with Svelte Remix v1'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
+const ogUrl = 'http://localhost:4173/guide/svelte-4/getting-started'
+
 test.beforeEach(async ({ page }) => {
   console.log(`Running ${test.info().title}`);
   await page.goto('/guide/svelte-4/getting-started');
 });
 
 test('Guide home page has expected h1, meta title', async ({ page }) => {
-  await expect(page.getByRole('heading', { name: 'Runes Webkit: v1' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: title, level: 1 })).toBeVisible();
 });
 
 test('Guide home page has expected meta title', async ({ page }) => {
-  await expect(page).toHaveTitle('Getting Started - Runes Webkit');
+  await expect(page).toHaveTitle(title);
 });
 
 test('Guide home page has expected meta description', async ({ page }) => {
   const metaDescription = page.locator('meta[name="description"]');
-  await expect(metaDescription).toHaveAttribute('content', 'Getting Started - Runes Webkit');
+  await expect(metaDescription).toHaveAttribute('content', description);
 });
 
 test('Guide home page has expected meta og', async ({ page }) => {
   const metaOgTitle = page.locator('meta[property="og:title"]');
-  await expect(metaOgTitle).toHaveAttribute('content', 'Getting Started - Runes Webkit');
+  await expect(metaOgTitle).toHaveAttribute('content', title);
   const metaOgDescription = page.locator('meta[property="og:description"]');
-  await expect(metaOgDescription).toHaveAttribute('content', 'Getting Started - Runes Webkit');
+  await expect(metaOgDescription).toHaveAttribute('content', description);
   const metaOgUrl = page.locator('meta[property="og:url"]');
-  await expect(metaOgUrl).toHaveAttribute(
-    'content',
-    'http://localhost:4173/guide/svelte-4/getting-started'
-  );
+  await expect(metaOgUrl).toHaveAttribute('content', ogUrl);
   const metaOgImage = page.locator('meta[property="og:image"]');
-  await expect(metaOgImage).toHaveAttribute(
-    'content',
-    'https://open-graph-vercel.vercel.app/api/runes-webkit'
-  );
+  await expect(metaOgImage).toHaveAttribute( 'content', imgUrl );
 });
 
 test('Guide home page has expected meta twitter', async ({ page }) => {
   const metaTwitterTitle = page.locator('meta[name="twitter:title"]');
-  await expect(metaTwitterTitle).toHaveAttribute('content', 'Getting Started - Runes Webkit');
+  await expect(metaTwitterTitle).toHaveAttribute('content', title);
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');
-  await expect(metaTwitterDescription).toHaveAttribute('content', 'Getting Started - Runes Webkit');
+  await expect(metaTwitterDescription).toHaveAttribute('content', description);
   const metaTwitterImage = page.locator('meta[name="twitter:image"]');
-  await expect(metaTwitterImage).toHaveAttribute(
-    'content',
-    'https://open-graph-vercel.vercel.app/api/runes-webkit'
-  );
+  await expect(metaTwitterImage).toHaveAttribute( 'content', imgUrl );
 });

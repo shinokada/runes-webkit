@@ -1,16 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
 
+const title = 'Custom icons - Svelte Remix'
+const description = 'How to create a custom icons with Svelte Remix'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
+const ogUrl = 'http://localhost:4173/guide/custom-icons'
+
 export const load = () => {
   const pageMetaTags: MetaProps = {
-    title: 'Custom icons example - Runes Webkit',
-    description: 'Custom icons example',
+    title,
+    description,
     og: {
-      title: 'Custom icons example - Runes Webkit',
-      description: 'Custom icons example'
+      title,
+      description,
+      image: imgUrl,
+      url: ogUrl
     },
     twitter: {
-      title: 'Custom icons example - Runes Webkit',
-      description: 'Custom icons example'
+      title,
+      description,
+      image: imgUrl
     }
   };
   return { pageMetaTags };

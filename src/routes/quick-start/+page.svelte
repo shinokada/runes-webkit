@@ -52,4 +52,5 @@
   <Checkbox><Li>+layout.server.ts</Li></Checkbox>
   <Checkbox><Li>utils/Nav.svelte</Li></Checkbox>
   <Checkbox><Li>sitemap.xml/+server.ts</Li></Checkbox>
+  <Checkbox><Li>Change localhost:4173 to url in all the test files</Li></Checkbox>
 </List>

@@ -7,7 +7,7 @@
   });
 </script>
 
-<h1>Runes Webkit: v2</h1>
+<h1>Getting Started - Svelte Remix v2</h1>
 
 <div class="my-8 flex gap-2">
   <a href="https://github.com/sponsors/shinokada" target="_blank"

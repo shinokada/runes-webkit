@@ -10,20 +10,20 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/guide/svelte-4/getting-started');
 });
 
-test('Guide home page has expected h1, meta title', async ({ page }) => {
+test('Guide Svelte 4 home page has expected h1, meta title', async ({ page }) => {
   await expect(page.getByRole('heading', { name: title, level: 1 })).toBeVisible();
 });
 
-test('Guide home page has expected meta title', async ({ page }) => {
+test('Guide Svelte 4 home page has expected meta title', async ({ page }) => {
   await expect(page).toHaveTitle(title);
 });
 
-test('Guide home page has expected meta description', async ({ page }) => {
+test('Guide Svelte 4 home page has expected meta description', async ({ page }) => {
   const metaDescription = page.locator('meta[name="description"]');
   await expect(metaDescription).toHaveAttribute('content', description);
 });
 
-test('Guide home page has expected meta og', async ({ page }) => {
+test('Guide Svelte 4 home page has expected meta og', async ({ page }) => {
   const metaOgTitle = page.locator('meta[property="og:title"]');
   await expect(metaOgTitle).toHaveAttribute('content', title);
   const metaOgDescription = page.locator('meta[property="og:description"]');
@@ -34,7 +34,7 @@ test('Guide home page has expected meta og', async ({ page }) => {
   await expect(metaOgImage).toHaveAttribute( 'content', imgUrl );
 });
 
-test('Guide home page has expected meta twitter', async ({ page }) => {
+test('Guide Svelte 4 home page has expected meta twitter', async ({ page }) => {
   const metaTwitterTitle = page.locator('meta[name="twitter:title"]');
   await expect(metaTwitterTitle).toHaveAttribute('content', title);
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');

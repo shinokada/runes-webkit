@@ -1,2 +1,2 @@
-<h1>Icons - Svelte Remix</h1>
+<h1>Icons - Runes Webkit</h1>
 

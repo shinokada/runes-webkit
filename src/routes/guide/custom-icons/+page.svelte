@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Custom icons - Svelte Remix</h1>
+<h1>Custom icons - Runes Webkit</h1>
 
 <p>If you wish to create a custom default icon, you can follow these steps:</p>
 

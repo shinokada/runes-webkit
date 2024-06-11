@@ -1,11 +1,10 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-const title = 'Props - Svelte Remix v2'
-const description = 'How to use Svelte Remix v2 props'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
-const ogUrl = 'http://localhost:4173/guide/svelte-5/props'
+const title = 'Props - Runes Webkit v2'
+const description = 'How to use Runes Webkit v2 props'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros'
 
-export const load = () => {
+export const load = ({ url }) => {
   const pageMetaTags: MetaProps = {
     title,
     description,
@@ -13,7 +12,7 @@ export const load = () => {
       title,
       description,
       image: imgUrl,
-      url: ogUrl
+      url: url.href
     },
     twitter: {
       title,

@@ -103,7 +103,7 @@
   Use the <code>utils</code> and <code>+layout.svelte</code> examples how to set up Nav and DynamicCodeBlockStyle.
 </p>
 
-<H2>Runes Webkit Starter</H2>
+<H2>Runes Webkit</H2>
 
 <p>
   If you prefer to use the starter, please refer to <A

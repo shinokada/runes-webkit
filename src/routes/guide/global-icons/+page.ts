@@ -1,11 +1,10 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-const title = 'Setting Global Icon - Svelte Remix'
-const description = 'How to create a global icon using setContext with Svelte Remix'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
-const ogUrl = 'http://localhost:4173/guide/global-icons'
+const title = 'Setting Global Icon - Runes Webkit'
+const description = 'How to create a global icon using setContext with Runes Webkit'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros'
 
-export const load = () => {
+export const load = ({ url }) => {
   const pageMetaTags: MetaProps = {
     title,
     description,
@@ -13,7 +12,7 @@ export const load = () => {
       title,
       description,
       image: imgUrl,
-      url: ogUrl
+      url: url.href
     },
     twitter: {
       title,

@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Props - Svelte Remix v1</h1>
+<h1>Props - Runes Webkit v1</h1>
 
 <H2>Prop</H2>
 

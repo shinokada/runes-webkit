@@ -1,5 +1,36 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { License, StaticBadge, NpmVersion, NpmDownload } from 'svelte-shields'
+  import type { StaticBadgePropsType, NpmVersionPropsType, LicensePropsType, NpmDownloadPropsType } from 'svelte-shields';
+
+  const sponsor: StaticBadgePropsType = {
+    badgeContent: 'Sponsor-❤-blue',
+    logo: 'GitHub',
+    color:'fe8e86',
+    link: ['https://github.com/sponsors/shinokada', 'https://github.com/sponsors/shinokada']
+  }
+
+  const npmVersion: NpmVersionPropsType ={
+    packageName: 'svelte-remix',
+    logo: 'npm',
+    tag: 'next',
+    color: 'red',
+    link: ['https://www.npmjs.com/package/svelte-remix', 'https://github.com/shinokada/svelte-remix']
+  }
+
+  const license: LicensePropsType = {
+    source: 'github',
+    github_user: 'shinokada',
+    github_repo: 'svelte-remix',
+    link: ['https://github.com/shinokada/svelte-remix/blob/master/LICENSE', 'https://github.com/shinokada/svelte-remix/blob/master/LICENSE']
+  }
+
+  const downloads: NpmDownloadPropsType = {
+    packageName: 'svelte-remix',
+    logo: 'npm',
+    link:['https://www.npmjs.com/package/svelte-remix']
+  }
+
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -10,21 +41,10 @@
 <h1>Getting Started - Runes Webkit v2</h1>
 
 <div class="my-8 flex gap-2">
-  <a href="https://github.com/sponsors/shinokada" target="_blank"
-    ><img
-      src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86"
-      alt="sponsor"
-    /></a
-  >
-  <a href="https://www.npmjs.com/package/svelte-radix" rel="nofollow" target="_blank"
-    ><img src="https://img.shields.io/npm/v/svelte-radix" alt="npm" /></a
-  >
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"
-    ><img src="https://img.shields.io/github/license/shinokada/svelte-radix" alt="License" /></a
-  >
-  <a href="https://www.npmjs.com/package/svelte-radix" rel="nofollow" target="_blank"
-    ><img src="https://img.shields.io/npm/dw/svelte-radix.svg" alt="npm" /></a
-  >
+  <StaticBadge {...sponsor} />
+  <NpmVersion {...npmVersion}/>
+  <License {...license} />
+  <NpmDownload {...downloads}/>
 </div>
 
 <H2>Requirements</H2>

@@ -86,6 +86,9 @@ importers:
       svelte-rune-highlight:
         specifier: ^0.5.9
         version: 0.5.9(svelte@5.0.0-next.153)
+      svelte-shields:
+        specifier: ^0.4.1
+        version: 0.4.1(svelte@5.0.0-next.153)
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -2330,6 +2333,12 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       svelte: ^5.0.0-next.65
+
+  svelte-shields@0.4.1:
+    resolution: {integrity: sha512-+uO7qvRxh/g75CVip7l6yHcCvTDvHcRy1hlT2eQ72udXpx/aTCpPFZergXi+8ekfyRdDTluS6nWUzmSW4onDoA==}
+    engines: {node: '>=18.0.0', npm: '>=7.0.0'}
+    peerDependencies:
+      svelte: ^5.0.0
 
   svelte2tsx@0.7.9:
     resolution: {integrity: sha512-Rm+0LAwg9wT4H2IsR8EaM9EWErTzi9LmuZKxkH5b1ua94XjQmwHstBP4VabLgA9AE6XmwBg+xK7Cjzwfm6ustQ==}
@@ -4972,6 +4981,10 @@ snapshots:
   svelte-rune-highlight@0.5.9(svelte@5.0.0-next.153):
     dependencies:
       highlight.js: 11.9.0
+      svelte: 5.0.0-next.153
+
+  svelte-shields@0.4.1(svelte@5.0.0-next.153):
+    dependencies:
       svelte: 5.0.0-next.153
 
   svelte2tsx@0.7.9(svelte@5.0.0-next.153)(typescript@5.4.5):

@@ -64,7 +64,7 @@
 
   <h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
   <h2 class="my-8 flex justify-center">
-    <A href="/how-to-use" aclass="underline">This is a demo page. Please read How to use page.</A>
+    <A href="/how-to-use" class="underline">This is a demo page. Please read How to use page.</A>
   </h2>
   <HomeCards cards={filteredCards} />
   <h2 class="my-8 flex justify-center">Info</h2>

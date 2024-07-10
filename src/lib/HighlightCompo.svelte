@@ -41,7 +41,7 @@
 
 {#if open}
   <div class="relative">
-    <Badge large divclass={twMerge('absolute -top-10 right-0 _h_c_badge_div_', h_c_badge_div)}>
+    <Badge large class={twMerge('absolute -top-10 right-0 _h_c_badge_div_', h_c_badge_div)}>
       <span class="font-medium">{text}</span>
     </Badge>
   </div>

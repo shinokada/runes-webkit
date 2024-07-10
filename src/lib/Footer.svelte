@@ -33,7 +33,7 @@
 {/snippet}
 
 <Footer
-  footerclass={twMerge(
+  class={twMerge(
     'shadow-none rounded-none border-t border-gray-100 dark:border-gray-700 dark_bg_theme _f_footer_',
     f_footer
   )}
@@ -48,7 +48,7 @@
     {/if}
     {#if lis}
       <FooterUl
-        ulclass={twMerge(
+        class={twMerge(
           'flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0 _f_ulclass_',
           f_ulclass
         )}

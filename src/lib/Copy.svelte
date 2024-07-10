@@ -40,7 +40,7 @@
   <div class='relative'>
   <Badge
     large
-    divclass={c_t_c_badge_div}
+    class={c_t_c_badge_div}
   >
     <span class="font-medium">{text}</span>
   </Badge>

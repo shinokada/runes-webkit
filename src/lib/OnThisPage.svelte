@@ -90,7 +90,7 @@
       {dropdownStatus}
       {closeDropdown}
       {transitionParams}
-      divclass={twMerge(
+      divClass={twMerge(
         'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700 _o_t_p_dropdown_div_',
         o_t_p_dropdown_div
       )}
@@ -100,7 +100,7 @@
         <DropdownItem href="#top">Return to top</DropdownItem>
         <DropdownDivider />
         {#each headings as { rel, href, name }}
-          <DropdownItem liclass={twMerge('my-2 hover:text-primary-400 _o_t_p_li_', o_t_p_li)}>
+          <DropdownItem liClass={twMerge('my-2 hover:text-primary-400 _o_t_p_li_', o_t_p_li)}>
             <a {href} class={indent(rel)}>{name}</a>
           </DropdownItem>
         {/each}

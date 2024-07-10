@@ -59,7 +59,7 @@
     'flex items-center p-1 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 _s_b_nonactive_',
     s_b_nonactive
   )} "
-  divclass={twMerge('dark_bg_theme mx-2 bg-transparent _s_b_div_', s_b_div)}
+  divClass={twMerge('dark_bg_theme mx-2 bg-transparent _s_b_div_', s_b_div)}
   asideclass="{twMerge(
     'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block  _s_b_aside_',
     s_b_aside

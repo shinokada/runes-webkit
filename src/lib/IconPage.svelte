@@ -72,7 +72,7 @@
 
     <div class={twMerge('_i_p_div_1_ relative overflow-x-auto', i_p_div_1)}>
       <div class={twMerge('_i_p_div_2_ w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3', i_p_div_2)}>
-        <Label labelclass={twMerge('text-lg py-4 _i_p_label_', i_p_label)}>Icon size: {size}</Label>
+        <Label class={twMerge('text-lg py-4 _i_p_label_', i_p_label)}>Icon size: {size}</Label>
         <input
           type="search"
           id="site-search"

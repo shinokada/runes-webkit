@@ -94,7 +94,7 @@
         'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700 _o_t_p_dropdown_div_',
         o_t_p_dropdown_div
       )}
-      ulclass={o_t_p_ul}
+      ulClass={o_t_p_ul}
     >
       {#snippet children()}
         <DropdownItem href="#top">Return to top</DropdownItem>

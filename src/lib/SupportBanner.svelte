@@ -27,7 +27,7 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop divclass = 'max-w-3xl mt-8 mx-auto p-2 _support_div_'
-@prop pclass = 'flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100 _support_p_'
+@prop divClass = 'max-w-3xl mt-8 mx-auto p-2 _support_div_'
+@prop pClass = 'flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100 _support_p_'
 @prop ...attributes
 -->

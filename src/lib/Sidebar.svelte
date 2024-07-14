@@ -60,7 +60,7 @@
     s_b_nonactive
   )} "
   divClass={twMerge('dark_bg_theme mx-2 bg-transparent _s_b_div_', s_b_div)}
-  asideclass="{twMerge(
+  asideClass="{twMerge(
     'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block  _s_b_aside_',
     s_b_aside
   )} "
@@ -72,8 +72,8 @@
         <SidebarDropdownWrapper
           label={name}
           isOpen={hasPath('components')}
-          svgclass="me-4"
-          btnclass="p-1"
+          svgClass="me-4"
+          btnClass="p-1"
         >
           {#snippet iconSlot()}
             <svelte:component this={icon} class="s_b_icon" />

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.5
+
+### Patch Changes
+
+- fix: update class names ([`77a9df2c63ee9e7b6db579d9cfbdccd7c40661cd`](https://github.com/shinokada/runes-webkit/commit/77a9df2c63ee9e7b6db579d9cfbdccd7c40661cd))
+
 ## 0.8.4
 
 ### Patch Changes

@@ -15,13 +15,14 @@
   let text = $state('');
   let open = $state(false);
 
-  // function copySuccess(iconName: string) {
-  //   text = `Copied the icon name!`;
-  // }
+ 
+  function copySuccess(iconName: string) {
+    text = `Copied the icon name!`;
+  }
 
-  // function copyError(event: CustomEvent) {
-  //   text = `Error! ${event.detail}`;
-  // }
+  function copyError(event: CustomEvent) {
+    text = `Error! ${event.detail}`;
+  }
 
   function trigger() {
     open = true;
@@ -47,7 +48,7 @@
   </div>
 {/if}
 
-<div class='{c_t_c_div} _c_t_c_div_'>
+<div oncopysuccess={copySuccess(iconName)} oncopyerror={copyError} class='{c_t_c_div} _c_t_c_div_'>
   <button type="button" class="ml-4 {c_t_c_btn} _c_t_c_btn_" use:clickToCopy={iconName} onclick={trigger}>
     {@render children()}
   </button>

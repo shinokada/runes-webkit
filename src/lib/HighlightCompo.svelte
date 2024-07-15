@@ -52,6 +52,8 @@
     '_h_c_div_ my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700',
     h_c_div
   )}
+  oncopysuccess={copySuccess}
+  oncopyerror={copyError}
 >
   <div class="relative">
     <button

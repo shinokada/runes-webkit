@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.8.8
+
+### Patch Changes
+
+- fix: HighlightCompo ([`5beecfb5f025c811f96211773284f8b8c781a467`](https://github.com/shinokada/runes-webkit/commit/5beecfb5f025c811f96211773284f8b8c781a467))
+
 ## 0.8.7
 
 ### Patch Changes

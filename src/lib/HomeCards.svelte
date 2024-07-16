@@ -60,10 +60,12 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop cards = []
-@prop home_c_card
-@prop home_c_div
-@prop home_c_card_icon
-@prop home_c_card_h3
-@prop home_c_card_p
+@prop cardClass = 'max-w-2xl'
+@prop classDiv = 'mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'
+@prop divClass
+@prop iconClass = 'mb-3 h-8 w-8'
+@prop classH3 = 'mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white'
+@prop h3Class
+@prop pClass = 'font-normal leading-tight text-gray-700 dark:text-gray-400'
 @prop ...restProps
 -->

@@ -19,5 +19,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop c_code
+@prop class: className = 'text-primary-700 dark:text-primary-400'
 -->

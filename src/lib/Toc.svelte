@@ -94,11 +94,13 @@
 ## Props
 @prop headingSelector
 @prop extract
-@prop div1Class
-@prop div2Class
-@prop div3Class
-@prop div4Class
+@prop div1Class = 'hidden w-64 flex-none xl:block xl:text-sm'
+@prop div2Class = 'dark_bg_theme fixed right-2 flex-none'
+@prop div3Class = 'flex h-[calc(100vh-168px)] flex-col justify-between overflow-y-auto'
+@prop div4Class = 'mb-8 p-4'
 @prop aClass
-@prop ulClass
+@prop classA = "inline-block border-l border-white duration-200 hover:text-gray-900 transition-none dark:text-gray-300 dark:hover:text-gray-400 hover:border-gray-300 after:content-['#'] after:text-primary-700 dark:after:text-primary-700 dark:border-gray-900 dark:hover:border-gray-700 after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-100"
+@prop ulClass = 'space-y-2.5 font-medium text-gray-500 dark:text-gray-400'
 @prop h4Class
+@prop classH4 = 'my-4 pl-2.5 text-sm font-semibold uppercase tracking-wide text-gray-900 dark:text-white'
 -->

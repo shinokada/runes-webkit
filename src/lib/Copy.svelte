@@ -62,7 +62,8 @@
 @prop children
 @prop iconName
 @prop counter = 2
-@prop c_t_c_badge_div = 'absolute top-4 w-44 p-1'
-@prop c_t_c_div
-@prop c_t_c_btn
+@prop badgeClass = 'absolute top-4 w-44 p-1'
+@prop divClass
+@prop btnClass = 'ml-4'
+@prop ...attributes
 -->

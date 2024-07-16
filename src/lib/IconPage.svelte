@@ -220,17 +220,22 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop icons
-@prop wrapperClass
-@prop div1Class
+@prop wrapperClass = 'mx-auto max-w-7xl px-8'
+@prop div1Class = 'relative overflow-x-auto'
 @prop div2Class
+@prop classDiv2 = 'w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3'
 @prop div3Class
-@prop div4Class
-@prop labelClass
+@prop classDiv3 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white'
+@prop div4Class = 'flex flex-wrap items-center'
+@prop labelClass = 'text-lg py-4'
 @prop searchClass
+@prop classSearch = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
 @prop tab1Class
-@prop tab2Class
+@prop classTab1 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white'
+@prop tab2Class = 'flex items-center text-lg'
 @prop rangeClass
-@prop contentClass
+@prop classRange = 'mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700'
+@prop contentClass = 'rounded-lg dark_bg_theme mt-4'
 @prop title
 @prop sizeByTailwind
 @prop minSize = '16'

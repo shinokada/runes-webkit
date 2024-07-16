@@ -51,9 +51,10 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop spanClass
+@prop spanClass = 'absolute -top-[100px]'
+@prop classA = 'ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100 dark:text-primary-700'
 @prop aClass
-@prop wrapperClass
+@prop wrapperClass = 'group relative'
 @prop tag
 @prop ...restProps
 -->

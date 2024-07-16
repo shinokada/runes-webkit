@@ -139,10 +139,11 @@
 @prop viteVersion
 @prop repoUrl
 @prop title = 'Technical information about this website'
-@prop h2Class
-@prop divClass
+@prop h2Class = 'my-8 flex justify-center'
+@prop divClass = 'mx-auto grid max-w-5xl grid-cols-1'
 @prop ulClass
-@prop liClass
-@prop aClass
+@prop classUl = 'm-4 list-disc p-4 text-left text-lg dark:text-gray-400'
+@prop liClass = 'hover:text-red-700 hover:underline'
+@prop aClass = 'me-4 hover:underline md:me-6'
 @prop cardsize = 'xl'
 -->

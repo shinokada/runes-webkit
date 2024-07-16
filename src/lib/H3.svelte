@@ -18,5 +18,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop h3Class
+@prop h3Class = 'text-gray-900 dark:text-white leading-tight text-xl font-bold'
 -->

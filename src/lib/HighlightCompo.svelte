@@ -105,8 +105,10 @@
 @prop code
 @prop codeLang
 @prop counter = 2
-@prop badgeClass
+@prop badgeClass = 'absolute -top-10 right-0'
+@prop classDiv = 'my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700'
 @prop divClass
+@prop classBtn = 'absolute right-0 -mt-11 flex items-center border border-gray-200 bg-gray-100 px-3 py-2 text-xs font-medium text-gray-600 hover:bg-gray-200 hover:text-primary-700 dark:border-gray-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
 @prop btnClass
-@prop svgClass
+@prop svgClass = 'me-2 h-4 w-4'
 -->

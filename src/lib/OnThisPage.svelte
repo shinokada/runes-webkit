@@ -114,8 +114,11 @@
 @prop headingSelector
 @prop extract
 @prop divClass
+@prop classDiv = 'fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white'
 @prop ulClass
-@prop liClass
+@prop liClass = 'my-2 hover:text-primary-400'
 @prop svgClass
+@prop classSvg = 'ms-2 mt-1 h-4 w-4 text-white dark:text-white'
 @prop dropdownDivClass
+@prop classDropdownDiv= 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700'
 -->

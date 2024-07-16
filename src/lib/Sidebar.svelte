@@ -1,20 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import type { Component } from 'svelte';
   import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
-
-  type ChildrenType = {
-    name: string;
-    href?: string;
-    icon?: Component;
-  };
-  type ListType = {
-    name: string;
-    href?: string;
-    icon?: Component;
-    children?: ChildrenType[];
-  };
+  import type { ListType } from './types';
 
   interface Props {
     sidebarList: ListType[];

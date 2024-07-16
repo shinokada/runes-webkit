@@ -25,9 +25,14 @@ export interface LinkType {
   active?: boolean;
 }
 
+type ChildrenType = {
+  name: string;
+  href?: string;
+  icon?: Component;
+};
 export type ListType = {
   name: string;
   href?: string;
   icon?: Component;
-  children?: ListType[];
+  children?: ChildrenType[];
 };

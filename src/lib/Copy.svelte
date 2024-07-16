@@ -17,7 +17,7 @@
   let open = $state(false);
 
  
-  function copySuccess(iconName: string) {
+  function copySuccess() {
     text = `Copied the icon name!`;
   }
 
@@ -49,7 +49,11 @@
   </div>
 {/if}
 
-<div oncopysuccess={copySuccess(iconName)} oncopyerror={copyError} class={divClass} {...attributes}>
+<div 
+  role="button"
+  tabindex="0"
+  onclick={copySuccess}
+ class={divClass} {...attributes}>
   <button type="button" class={btnClass} use:clickToCopy={iconName} onclick={trigger}>
     {@render children()}
   </button>

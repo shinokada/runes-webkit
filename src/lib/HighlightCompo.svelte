@@ -59,10 +59,12 @@
   </div>
 {/if}
 
+<!-- svelte-ignore a11y_click_events_have_key_events -->
 <div
+  role="button"
+  tabindex="0"
   class={twMerge(classDiv, divClass)}
-  oncopysuccess={copySuccess}
-  oncopyerror={copyError}
+  onclick={copySuccess}
 >
   <div class="relative">
     <button

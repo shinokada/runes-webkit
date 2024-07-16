@@ -30,21 +30,27 @@
   interface Props {
     headingSelector: string;
     extract: (x: HTMLElement) => LinkType;
-    o_t_p_div?: string;
-    o_t_p_ul?: string;
-    o_t_p_svg?: string;
-    o_t_p_li?: string;
-    o_t_p_dropdown_div?: string;
+    divClass?: string;
+    classDiv?: string | undefined | null;
+    ulClass?: string;
+    svgClass?: string;
+    classSvg?: string | undefined | null;
+    liClass?: string;
+    dropdownDivClass?: string;
+    classDropdownDiv?: string | undefined | null;
   }
 
   let {
     headingSelector,
     extract,
-    o_t_p_div,
-    o_t_p_ul,
-    o_t_p_li,
-    o_t_p_svg,
-    o_t_p_dropdown_div
+    divClass,
+    classDiv = 'fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white',
+    ulClass,
+    liClass = 'my-2 hover:text-primary-400',
+    svgClass,
+    classSvg = 'ms-2 mt-1 h-4 w-4 text-white dark:text-white',
+    dropdownDivClass,
+    classDropdownDiv= 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700'
   }: Props = $props();
 
   let headings: LinkType[] = $state([]);
@@ -73,16 +79,11 @@
   }
 </script>
 
-<div
-  class={twMerge(
-    'dark_bg_theme _o_t_p_div_ fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white',
-    o_t_p_div
-  )}
->
+<div class={twMerge(classDiv, divClass )}>
   <button onclick={dropdown.toggle} class="flex">
     On this page
     <ChevronDownOutline
-      class={twMerge('_o_t_p_svg_ ms-2 mt-1 h-4 w-4 text-white dark:text-white', o_t_p_svg)}
+      class={twMerge( classSvg, svgClass)}
     />
   </button>
   <div use:init>
@@ -90,17 +91,14 @@
       {dropdownStatus}
       {closeDropdown}
       {transitionParams}
-      divClass={twMerge(
-        'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700 _o_t_p_dropdown_div_',
-        o_t_p_dropdown_div
-      )}
-      ulClass={o_t_p_ul}
+      divClass={twMerge(classDropdownDiv, dropdownDivClass)}
+      {ulClass}
     >
       {#snippet children()}
         <DropdownItem href="#top">Return to top</DropdownItem>
         <DropdownDivider />
         {#each headings as { rel, href, name }}
-          <DropdownItem liClass={twMerge('my-2 hover:text-primary-400 _o_t_p_li_', o_t_p_li)}>
+          <DropdownItem {liClass}>
             <a {href} class={indent(rel)}>{name}</a>
           </DropdownItem>
         {/each}
@@ -115,9 +113,9 @@
 ## Props
 @prop headingSelector
 @prop extract
-@prop o_t_p_div
-@prop o_t_p_ul
-@prop o_t_p_li
-@prop o_t_p_svg
-@prop o_t_p_dropdown_div
+@prop divClass
+@prop ulClass
+@prop liClass
+@prop svgClass
+@prop dropdownDivClass
 -->

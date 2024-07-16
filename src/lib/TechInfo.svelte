@@ -9,11 +9,12 @@
     pkgVersion?: string;
     repoUrl?: string;
     title?: string;
-    t_i_h2?: string;
-    t_i_div?: string;
-    t_i_ul?: string;
-    t_i_li?: string;
-    t_i_a?: string;
+    h2Class?: string | undefined;
+    divClass?: string | undefined;
+    ulClass?: string | undefined;
+    classUl?: string | undefined;
+    liClass?: string | undefined;
+    aClass?: string | undefined;
     cardsize?: 'xl' | 'xs' | 'sm' | 'md' | 'lg' | undefined;
     runeswebkitVersion?: string;
     runaticsVersion?: string;
@@ -38,84 +39,80 @@
     viteVersion,
     repoUrl,
     title = 'Technical information about this website',
-    t_i_h2,
-    t_i_div,
-    t_i_ul,
-    t_i_li,
-    t_i_a,
+    h2Class = 'my-8 flex justify-center',
+    divClass = 'mx-auto grid max-w-5xl grid-cols-1',
+    ulClass,
+    classUl = 'm-4 list-disc p-4 text-left text-lg dark:text-gray-400',
+    liClass = 'hover:text-red-700 hover:underline',
+    aClass = 'me-4 hover:underline md:me-6',
     cardsize = 'xl'
   }: Props = $props();
-
-  let li_class = twMerge('hover:text-red-700 hover:underline _t_i_li_', t_i_li);
-  let a_class = twMerge('me-4 hover:underline md:me-6 _t_i_a_', t_i_a);
 </script>
 
-<h2 class="{twMerge('_t_i_h2_ my-8 flex justify-center', t_i_h2)} ">{title}</h2>
+<h2 class={h2Class}>{title}</h2>
 
-<div class={twMerge('_t_i_div_ mx-auto grid max-w-5xl grid-cols-1', t_i_div)}>
+<div class={divClass}>
   <Card size={cardsize}>
-    <ul
-      class="{twMerge('_t_i_ul_ m-4 list-disc p-4 text-left text-lg dark:text-gray-400', t_i_ul)} "
-    >
+    <ul class={twMerge(classUl, ulClass)} >
       {#if pkgName && pkgVersion && repoUrl}
-        <li class={li_class}>
-          <a href={repoUrl} class={a_class}
+        <li class={liClass}>
+          <a href={repoUrl} class={aClass}
             >{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a
           >
         </li>
       {/if}
       {#if runaticsVersion}
-        <li class={li_class}>
-          <a href="https://runatics.codewithshin.com/" class={a_class}
+        <li class={liClass}>
+          <a href="https://runatics.codewithshin.com/" class={aClass}
             >Runatics: {runaticsVersion}</a
           >
         </li>
       {/if}
       {#if runesMetaTagsVersion}
-        <li class={li_class}>
-          <a href="https://runes-meta-tags.codewithshin.com/" class={a_class}
+        <li class={liClass}>
+          <a href="https://runes-meta-tags.codewithshin.com/" class={aClass}
             >Runes Meta Tags: {runesMetaTagsVersion}</a
           >
         </li>
       {/if}
       {#if svelteRuneHighlight}
-        <li class={li_class}>
-          <a href="https://svelte-rune-highlight.codewithshin.com/" class={a_class}
+        <li class={liClass}>
+          <a href="https://svelte-rune-highlight.codewithshin.com/" class={aClass}
             >Svelte Rune Highlight: {svelteRuneHighlight}</a
           >
         </li>
       {/if}
       {#if runeswebkitVersion}
-        <li class={li_class}>
-          <a href="https://runes-webkit.codewithshin.com/" class={a_class}
+        <li class={liClass}>
+          <a href="https://runes-webkit.codewithshin.com/" class={aClass}
             >Runes Webkit: {runeswebkitVersion}</a
           >
         </li>
       {/if}
       {#if svelteVersion}
-        <li class={li_class}>
-          <a href="https://svelte-5-preview.vercel.app/docs/introduction" class={a_class}
+        <li class={liClass}>
+          <a href="https://svelte-5-preview.vercel.app/docs/introduction" class={aClass}
             >Svelte: {svelteVersion}</a
           >
         </li>
       {/if}
       {#if svelteKitVersion}
-        <li class={li_class}>
-          <a href="https://kit.svelte.dev/docs/introduction" class={a_class}
+        <li class={liClass}>
+          <a href="https://kit.svelte.dev/docs/introduction" class={aClass}
             >SvelteKit: {svelteKitVersion}</a
           >
         </li>
       {/if}
       {#if svelte5uilib}
-        <li class={li_class}>
-          <a href="https://svelte-5-ui-lib.codewithshin.com/" class={a_class}
+        <li class={liClass}>
+          <a href="https://svelte-5-ui-lib.codewithshin.com/" class={aClass}
             >Svelte 5 UI Lib: {svelte5uilib}</a
           >
         </li>
       {/if}
       {#if viteVersion}
-        <li class={li_class}>
-          <a href="https://vitejs.dev/" class={a_class}>Vite: {viteVersion}</a>
+        <li class={liClass}>
+          <a href="https://vitejs.dev/" class={aClass}>Vite: {viteVersion}</a>
         </li>
       {/if}
       {#if children}
@@ -142,10 +139,10 @@
 @prop viteVersion
 @prop repoUrl
 @prop title = 'Technical information about this website'
-@prop t_i_h2
-@prop t_i_div
-@prop t_i_ul
-@prop t_i_li
-@prop t_i_a
+@prop h2Class
+@prop divClass
+@prop ulClass
+@prop liClass
+@prop aClass
 @prop cardsize = 'xl'
 -->

@@ -1,16 +1,17 @@
 <script lang="ts">
   import { Badge } from 'svelte-5-ui-lib';
   import { clickToCopy } from '$lib';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLDivElement> {
     children: any;
-    iconName: string;
+    iconName: string ;
     counter?: number;
-    c_t_c_badge_div?: string;
-    c_t_c_div?: string;
-    c_t_c_btn?: string;
+    badgeClass?: string;
+    divClass?: string;
+    btnClass?: string;
   }
-  let { children, iconName, counter = 2, c_t_c_badge_div = 'absolute top-4 w-44 p-1', c_t_c_div, c_t_c_btn }: Props = $props();
+  let { children, iconName, counter = 2, badgeClass = 'absolute top-4 w-44 p-1', divClass, btnClass = 'ml-4', ...attributes }: Props = $props();
 
   let text = $state('');
   let open = $state(false);
@@ -41,15 +42,15 @@
   <div class='relative'>
   <Badge
     large
-    class={c_t_c_badge_div}
+    class={badgeClass}
   >
     <span class="font-medium">{text}</span>
   </Badge>
   </div>
 {/if}
 
-<div oncopysuccess={copySuccess(iconName)} oncopyerror={copyError} class='{c_t_c_div} _c_t_c_div_'>
-  <button type="button" class="ml-4 {c_t_c_btn} _c_t_c_btn_" use:clickToCopy={iconName} onclick={trigger}>
+<div oncopysuccess={copySuccess(iconName)} oncopyerror={copyError} class={divClass} {...attributes}>
+  <button type="button" class={btnClass} use:clickToCopy={iconName} onclick={trigger}>
     {@render children()}
   </button>
 </div>

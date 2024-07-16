@@ -220,8 +220,8 @@
   </div>
   <Sidebar
     sidebarList={newSidebarList}
-    s_b_aside="w-60 p-0 border-none mx-2 mt-20 !important"
-    s_b_div="bg-transparent p-0"
+    asideClass="w-60 p-0 border-none mx-2 mt-20 !important"
+    divClass="bg-transparent p-0"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>

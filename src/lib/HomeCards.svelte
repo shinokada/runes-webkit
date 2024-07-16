@@ -2,45 +2,44 @@
   import { Card } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
   import type { CardType } from '$lib';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLDivElement> {
     cards: CardType[];
-    home_c_card?: string;
-    home_c_div?: string;
-    home_c_card_icon?: string;
-    home_c_card_h3?: string;
-    home_c_card_p?: string;
+    cardClass?: string | undefined ;
+    classDiv?: string | undefined | null;
+    divClass?: string | undefined | null;
+    iconClass?: string | undefined | null;
+    classH3?: string | undefined | null;
+    h3Class?: string | undefined | null;
+    pClass?: string | undefined | null;
   }
   let {
     cards = [],
-    home_c_card,
-    home_c_div,
-    home_c_card_icon,
-    home_c_card_h3,
-    home_c_card_p,
+    cardClass = 'max-w-2xl',
+    classDiv = 'mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3',
+    divClass,
+    iconClass = 'mb-3 h-8 w-8',
+    classH3 = 'mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white',
+    h3Class,
+    pClass = 'font-normal leading-tight text-gray-700 dark:text-gray-400',
     ...restProps
   }: Props = $props();
 </script>
 
 {#snippet cardSnippet({ title, description, icon, href, icon_class })}
-  <Card {href} class={twMerge('_home_c_card_ max-w-2xl', home_c_card)}>
+  <Card {href} class={cardClass}>
     <svelte:component
       this={icon}
-      class="{twMerge('_home_c_card_icon_ mb-3 h-8 w-8', home_c_card_icon)} {icon_class}"
+      class="{iconClass} {icon_class}"
     />
     <h3
-      class={twMerge(
-        '_home_c_card_h3_ mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white',
-        home_c_card_h3
-      )}
+      class={twMerge(classH3, h3Class)}
     >
       {title}
     </h3>
     <p
-      class={twMerge(
-        '_home_c_card_p_ font-normal leading-tight text-gray-700 dark:text-gray-400',
-        home_c_card_p
-      )}
+      class={pClass}
     >
       {@html description}
     </p>
@@ -48,10 +47,7 @@
 {/snippet}
 
 <div
-  class={twMerge(
-    '_home_c_div_ mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3',
-    home_c_div
-  )}
+  class={twMerge(classDiv, divClass)}
   {...restProps}
 >
   {#each cards as card}

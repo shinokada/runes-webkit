@@ -1,18 +1,17 @@
 <script lang="ts">
   import Anchor from './Anchor.svelte';
   import type { Snippet } from 'svelte';
-  import { twMerge } from 'tailwind-merge';
+
   interface Props {
     children: Snippet;
-    h2_h2?: string;
+    h2Class?: string;
   }
-  let { children, h2_h2 }: Props = $props();
+  let { children, h2Class = 'text-gray-900 dark:text-white leading-tight text-2xl font-bold' }: Props = $props();
 </script>
 
 <Anchor
   tag="h2"
-  a_wrapper="{(twMerge('text-gray-900 dark:text-white leading-tight text-2xl font-bold _h2_h2_'),
-  h2_h2)}}"
+  wrapperClass={h2Class}
 >
   {@render children()}
 </Anchor>
@@ -22,5 +21,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop h2_h2
+@prop h2Class
 -->

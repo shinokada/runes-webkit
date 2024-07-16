@@ -7,14 +7,26 @@
 
   interface Props {
     code: string;
-    codeLang?: string;
+    codeLang?: string | undefined | null;
     counter?: number;
-    h_c_badge_div?: string;
-    h_c_div?: string;
-    h_c_btn?: string;
-    h_c_svg?: string;
+    badgeClass?: string | undefined | null;
+    classDiv?: string | undefined | null;
+    divClass?: string | undefined | null;
+    classBtn?: string | undefined | null;
+    btnClass?: string | undefined | null;
+    svgClass?: string | undefined | null;
   }
-  let { code, codeLang, counter = 2, h_c_badge_div, h_c_div, h_c_btn, h_c_svg }: Props = $props();
+  let { 
+    code, 
+    codeLang, 
+    counter = 2, 
+    badgeClass = 'absolute -top-10 right-0', 
+    classDiv = 'my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700',
+    divClass,
+    classBtn = 'absolute right-0 -mt-11 flex items-center border border-gray-200 bg-gray-100 px-3 py-2 text-xs font-medium text-gray-600 hover:bg-gray-200 hover:text-primary-700 dark:border-gray-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white',
+    btnClass, 
+    svgClass = 'me-2 h-4 w-4' 
+  }: Props = $props();
 
   let text = $state('');
   let open = $state(false);
@@ -41,17 +53,14 @@
 
 {#if open}
   <div class="relative">
-    <Badge large class={twMerge('absolute -top-10 right-0 _h_c_badge_div_', h_c_badge_div)}>
+    <Badge large class={badgeClass}>
       <span class="font-medium">{text}</span>
     </Badge>
   </div>
 {/if}
 
 <div
-  class={twMerge(
-    '_h_c_div_ my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700',
-    h_c_div
-  )}
+  class={twMerge(classDiv, divClass)}
   oncopysuccess={copySuccess}
   oncopyerror={copyError}
 >
@@ -60,13 +69,10 @@
       type="button"
       use:clickToCopy={code}
       onclick={trigger}
-      class={twMerge(
-        '_h_c_btn_ absolute right-0 -mt-11 flex items-center border border-gray-200 bg-gray-100 px-3 py-2 text-xs font-medium text-gray-600 hover:bg-gray-200 hover:text-primary-700 dark:border-gray-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white',
-        h_c_btn
-      )}
+      class={twMerge(classBtn, btnClass)}
     >
       <svg
-        class={twMerge('_h_c_svg_ me-2 h-4 w-4', h_c_svg)}
+        class={svgClass}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -99,8 +105,8 @@
 @prop code
 @prop codeLang
 @prop counter = 2
-@prop h_c_badge_div
-@prop h_c_div
-@prop h_c_btn
-@prop h_c_svg
+@prop badgeClass
+@prop divClass
+@prop btnClass
+@prop svgClass
 -->

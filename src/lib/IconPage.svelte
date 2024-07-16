@@ -13,32 +13,42 @@
     minSize?: string;
     maxSize?: string;
     threeTabs?: boolean;
-    i_p_wrapper?: string;
-    i_p_div_1?: string;
-    i_p_div_2?: string;
-    i_p_div_3?: string;
-    i_p_div_4?: string;
-    i_p_label?: string;
-    i_p_input_search?: string;
-    i_p_tabitem_div_1?: string;
-    i_p_tabitem_div_2?: string;
-    i_p_input_range?: string;
-    i_p_tabs?: string;
+    wrapperClass?: string | undefined;
+    div1Class?: string | undefined;
+    div2Class?: string | undefined;
+    classDiv2?: string | undefined;
+    div3Class?: string | undefined;
+    classDiv3?: string | undefined;
+    div4Class?: string | undefined;
+    labelClass?: string | undefined;
+    searchClass?: string | undefined;
+    classSearch?: string | undefined;
+    tab1Class?: string | undefined;
+    classTab1?: string | undefined;
+    tab2Class?: string | undefined;
+    rangeClass?: string | undefined;
+    classRange?: string | undefined;
+    contentClass?: string;
     variation?: string;
   }
   let {
     icons,
-    i_p_wrapper,
-    i_p_div_1,
-    i_p_div_2,
-    i_p_div_3,
-    i_p_div_4,
-    i_p_label,
-    i_p_input_search,
-    i_p_tabitem_div_1,
-    i_p_tabitem_div_2,
-    i_p_input_range,
-    i_p_tabs,
+    wrapperClass = 'mx-auto max-w-7xl px-8',
+    div1Class = 'relative overflow-x-auto',
+    div2Class,
+    classDiv2 = 'w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3',
+    div3Class,
+    classDiv3 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
+    div4Class = 'flex flex-wrap items-center',
+    labelClass = 'text-lg py-4',
+    searchClass,
+    classSearch = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500',
+    tab1Class,
+    classTab1 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
+    tab2Class = 'flex items-center text-lg',
+    rangeClass,
+    classRange = 'mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700',
+    contentClass = 'rounded-lg dark_bg_theme mt-4',
     title,
     sizeByTailwind,
     minSize = '16',
@@ -67,20 +77,17 @@
 </script>
 
 <div class="w-full pb-20">
-  <div class={twMerge('_i_p_wrapper_ mx-auto max-w-7xl px-8', i_p_wrapper)}>
+  <div class={wrapperClass}>
     <h1>{title}</h1>
 
-    <div class={twMerge('_i_p_div_1_ relative overflow-x-auto', i_p_div_1)}>
-      <div class={twMerge('_i_p_div_2_ w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3', i_p_div_2)}>
-        <Label class={twMerge('text-lg py-4 _i_p_label_', i_p_label)}>Icon size: {size}</Label>
+    <div class={div1Class}>
+      <div class={twMerge(classDiv2, div2Class)}>
+        <Label class={labelClass}>Icon size: {size}</Label>
         <input
           type="search"
           id="site-search"
           name="q"
-          class={twMerge(
-            '_i_p_input_search_ block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500',
-            i_p_input_search
-          )}
+          class={twMerge(classSearch, searchClass)}
           placeholder="Search icons"
           bind:value={searchTerm}
         />
@@ -90,33 +97,20 @@
           min={minSize}
           max={maxSize}
           bind:value={size}
-          class={twMerge(
-            '_i_p_input_range_ mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700',
-            i_p_input_range
-          )}
+          class={twMerge(classRange, rangeClass)}
         />
       </div>
       {#if threeTabs}
         <Tabs
           style="pill"
-          contentClass={twMerge('rounded-lg dark_bg_theme mt-4 _i_p_tabs_', i_p_tabs)}
+          {contentClass}
           divider={false}
         >
           <TabItem open title="Mono">
-            <div
-              class={twMerge(
-                '_i_p_tabitem_div_1_ grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
-                i_p_tabitem_div_1
-              )}
-            >
+            <div class={twMerge(classTab1, tab1Class)} >
               {#each filteredEntries as [name, component] (name)}
                 {#if name !== 'Icon'}
-                  <div
-                    class={twMerge(
-                      '_i_p_tabitem_div_2_ flex items-center text-lg',
-                      i_p_tabitem_div_2
-                    )}
-                  >
+                  <div class={tab2Class}>
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
@@ -140,20 +134,10 @@
             </div>
           </TabItem>
           <TabItem title="Random Hex Colors">
-            <div
-              class={twMerge(
-                '_i_p_tabitem_div_1_ grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
-                i_p_tabitem_div_1
-              )}
-            >
+            <div class={twMerge(classTab1, tab1Class)} >
               {#each filteredEntries as [name, component] (name) }
                 {#if name !== 'Icon'}
-                  <div
-                    class={twMerge(
-                      '_i_p_tabitem_div_2_ flex items-center text-lg',
-                      i_p_tabitem_div_2
-                    )}
-                  >
+                <div class={tab2Class}>
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
@@ -179,20 +163,10 @@
             </div>
           </TabItem>
           <TabItem title="Random Tailwind CSS Colors">
-            <div
-              class={twMerge(
-                '_i_p_tabitem_div_1_ grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
-                i_p_tabitem_div_1
-              )}
-            >
+            <div class={twMerge(classTab1, tab1Class)} >
               {#each filteredEntries as [name, component] (name)}
                 {#if name !== 'Icon'}
-                  <div
-                    class={twMerge(
-                      '_i_p_tabitem_div_2_ flex items-center text-lg',
-                      i_p_tabitem_div_2
-                    )}
-                  >
+                <div class={tab2Class}>
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
@@ -218,15 +192,11 @@
         </Tabs>
       {:else}
         <div class="w-full text-left text-gray-500 dark:text-gray-400">
-          <div
-            class={twMerge(
-              '_i_p_div_3_ grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
-              i_p_div_3
-            )}
+          <div class={twMerge(classDiv3, div3Class)}
           >
             {#each filteredEntries as [name, component] (name)}
               {#if name !== 'Icon'}
-                <div class={twMerge('_i_p_div_4_ flex flex-wrap items-center', i_p_div_4)}>
+                <div class={div4Class}>
                   <svelte:component
                     this={component}
                     class="shrink-0"
@@ -250,17 +220,17 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop icons
-@prop i_p_wrapper
-@prop i_p_div_1
-@prop i_p_div_2
-@prop i_p_div_3
-@prop i_p_div_4
-@prop i_p_label
-@prop i_p_input_search
-@prop i_p_tabitem_div_1
-@prop i_p_tabitem_div_2
-@prop i_p_input_range
-@prop i_p_tabs
+@prop wrapperClass
+@prop div1Class
+@prop div2Class
+@prop div3Class
+@prop div4Class
+@prop labelClass
+@prop searchClass
+@prop tab1Class
+@prop tab2Class
+@prop rangeClass
+@prop contentClass
 @prop title
 @prop sizeByTailwind
 @prop minSize = '16'

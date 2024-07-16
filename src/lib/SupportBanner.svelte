@@ -4,14 +4,14 @@
 
   interface Props {
     children: Snippet;
-    divClass?: string;
-    pClass?: string;
+    divClass?: string | undefined;
+    pClass?: string | undefined;
     attributes?: any;
   }
   let {
     children,
-    divClass = 'max-w-3xl mt-8 mx-auto p-2 _support_div_',
-    pClass = 'flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100 _support_p_',
+    divClass = 'max-w-3xl mt-8 mx-auto p-2',
+    pClass = 'flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100',
     ...attributes
   }: Props = $props();
 </script>

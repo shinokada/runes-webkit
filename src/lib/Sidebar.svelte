@@ -20,22 +20,28 @@
     sidebarList: ListType[];
     menuList?: ListType[];
     sidebarClose?: () => void;
-    s_b_active?: string;
-    s_b_nonactive?: string;
-    s_b_div?: string;
-    s_b_aside?: string;
-    s_b_icon?: string;
+    activeClass?: string;
+    classActive?: string | undefined ;
+    nonActiveClass?: string;
+    classNonActive?: string | undefined ;
+    divClass?: string | undefined ;
+    asideClass?: string | undefined ;
+    classAside?: string | undefined ;
+    iconClass?: string | undefined ;
   }
 
   let {
     sidebarList,
     menuList,
     sidebarClose,
-    s_b_active,
-    s_b_nonactive,
-    s_b_div,
-    s_b_aside,
-    s_b_icon,
+    activeClass,
+    classActive = 'flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600',
+    nonActiveClass,
+    classNonActive = 'flex items-center p-1 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700',
+    divClass = 'dark_bg_theme mx-2 bg-transparent',
+    asideClass,
+    classAside = 'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block',
+    iconClass,
     ...restProps
   }: Props = $props();
 
@@ -51,19 +57,10 @@
 </script>
 
 <Sidebar
-  activeClass={twMerge(
-    'flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600 _s_b_active_',
-    s_b_active
-  )}
-  nonActiveClass="{twMerge(
-    'flex items-center p-1 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 _s_b_nonactive_',
-    s_b_nonactive
-  )} "
-  divClass={twMerge('dark_bg_theme mx-2 bg-transparent _s_b_div_', s_b_div)}
-  asideClass="{twMerge(
-    'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block  _s_b_aside_',
-    s_b_aside
-  )} "
+  activeClass={twMerge(classActive, activeClass)}
+  nonActiveClass={twMerge(classNonActive,nonActiveClass)}
+  {divClass}
+  asideClass={twMerge(classAside, asideClass)}
   {...restProps}
 >
   <SidebarGroup>
@@ -76,12 +73,12 @@
           btnClass="p-1"
         >
           {#snippet iconSlot()}
-            <svelte:component this={icon} class="s_b_icon" />
+            <svelte:component this={icon} class={iconClass} />
           {/snippet}
           {#each children as { name, icon, href }}
             <SidebarItem label={name} onclick={sidebarClose} {href} class="ml-4">
               {#snippet iconSlot()}
-                <svelte:component this={icon} class="s_b_icon" />
+                <svelte:component this={icon} class={iconClass} />
               {/snippet}
             </SidebarItem>
           {/each}
@@ -89,7 +86,7 @@
       {:else}
         <SidebarItem label={name} onclick={sidebarClose} {href}>
           {#snippet iconSlot()}
-            <svelte:component this={icon} class={twMerge('_s_b_icon_ h-5 w-5', s_b_icon)} />
+            <svelte:component this={icon} class={twMerge('h-5 w-5', iconClass)} />
           {/snippet}
         </SidebarItem>
       {/if}
@@ -104,10 +101,10 @@
 @prop sidebarList
 @prop menuList
 @prop sidebarClose
-@prop s_b_active
-@prop s_b_nonactive
-@prop s_b_div
-@prop s_b_aside
-@prop s_b_icon
+@prop activeClass
+@prop nonActiveClass
+@prop divClass
+@prop asideClass
+@prop iconClass
 @prop ...restProps
 -->

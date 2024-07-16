@@ -77,7 +77,6 @@ strokeWidth= ctx.strokeWidth || "2",
      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z"/>  
 </svg>
 
-
 <!--
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
@@ -85,14 +84,10 @@ strokeWidth= ctx.strokeWidth || "2",
 @prop size = ctx.size || 'md'
 @prop role
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop strokeWidth= ctx.strokeWidth || "2"
 @prop desc
 @prop class: classname
 @prop ariaLabel =  "clipboard list outline"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
 @prop ...restProps
 -->

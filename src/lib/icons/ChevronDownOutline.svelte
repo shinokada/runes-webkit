@@ -84,14 +84,10 @@ strokeWidth= ctx.strokeWidth || "2",
 @prop size = ctx.size || 'md'
 @prop role
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop strokeWidth= ctx.strokeWidth || "2"
 @prop desc
 @prop class: classname
 @prop ariaLabel =  "chevron down outline"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
 @prop ...restProps
 -->

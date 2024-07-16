@@ -77,7 +77,6 @@ strokeWidth= ctx.strokeWidth || "2",
      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>  
 </svg>
 
-
 <!--
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
@@ -85,14 +84,10 @@ strokeWidth= ctx.strokeWidth || "2",
 @prop size = ctx.size || 'md'
 @prop role
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop strokeWidth= ctx.strokeWidth || "2"
 @prop desc
 @prop class: classname
 @prop ariaLabel =  "expand outline"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
 @prop ...restProps
 -->

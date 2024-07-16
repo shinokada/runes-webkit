@@ -82,13 +82,9 @@
 @prop size = ctx.size || 'md'
 @prop role
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
 @prop ariaLabel =  "dots horizontal outline"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
 @prop ...restProps
 -->

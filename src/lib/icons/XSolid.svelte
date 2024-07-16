@@ -74,7 +74,6 @@
      <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>  
 </svg>
 
-
 <!--
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
@@ -82,13 +81,9 @@
 @prop size = ctx.size || 'md'
 @prop role
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
 @prop ariaLabel =  "X solid"
-@prop onclick
-@prop onkeydown
-@prop onkeyup
 @prop ...restProps
 -->

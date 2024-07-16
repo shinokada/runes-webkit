@@ -1,6 +1,8 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
     id?: string;
     title?: string;
@@ -10,15 +12,11 @@
     desc?: string;
   };
 
-  interface BaseProps {
+  interface BaseProps extends SVGAttributes<SVGSVGElement> {
     size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
 strokeWidth?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
 
@@ -43,15 +41,11 @@ strokeWidth?: string;
     size = ctx.size || 'md', 
     role, 
     color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
     title, 
 strokeWidth= ctx.strokeWidth || "2",
     desc,  
     class: classname, 
     ariaLabel =  "chart pie outline" , 
-    onclick, 
-    onkeydown, 
-    onkeyup, 
     ...restProps 
     }: Props = $props();
 
@@ -59,34 +53,6 @@ strokeWidth= ctx.strokeWidth || "2",
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-{color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
-  {role}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
-  onclick={onclick}
-  onkeydown={onkeydown}
-  onkeyup={onkeyup}
->
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/>  
-</svg>
-{:else}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
@@ -110,7 +76,7 @@ strokeWidth= ctx.strokeWidth || "2",
   {/if}
      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/>  
 </svg>
-{/if}
+
 
 <!--
 @component

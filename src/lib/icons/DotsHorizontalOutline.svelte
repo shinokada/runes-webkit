@@ -1,6 +1,8 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
     id?: string;
     title?: string;
@@ -10,14 +12,10 @@
     desc?: string;
   };
 
-  interface BaseProps {
+  interface BaseProps extends SVGAttributes<SVGSVGElement> {
     size?: "xs" | "sm" | "md" | "lg" | "xl";
     role?: string;
     color?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
 
@@ -42,14 +40,10 @@
     size = ctx.size || 'md', 
     role, 
     color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
     title, 
     desc,  
     class: classname, 
     ariaLabel =  "dots horizontal outline" , 
-    onclick, 
-    onkeydown, 
-    onkeyup, 
     ...restProps 
     }: Props = $props();
 
@@ -57,34 +51,6 @@
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-{color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
-  {role}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
-  onclick={onclick}
-  onkeydown={onkeydown}
-  onkeyup={onkeyup}
->
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/>  
-</svg>
-{:else}
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
@@ -108,7 +74,6 @@
   {/if}
      <path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/>  
 </svg>
-{/if}
 
 <!--
 @component

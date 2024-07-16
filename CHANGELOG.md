@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.2
+
+### Patch Changes
+
+- fix: ListType move to types.ts ([`66e4ebf69e7db4e05dfb47d017b56b8d37e1545d`](https://github.com/shinokada/runes-webkit/commit/66e4ebf69e7db4e05dfb47d017b56b8d37e1545d))
+
 ## 0.9.1
 
 ### Patch Changes

@@ -41,7 +41,7 @@
   import Analytics from './utils/Analytics.svelte';
 
   let { children, data } = $props();
-  const analyticsId = data.ANALYTICS_ID;
+  // const analyticsId = data.ANALYTICS_ID;
   let metaTags = $state(
     $page.data.pageMetaTags
       ? $page.data.pageMetaTags

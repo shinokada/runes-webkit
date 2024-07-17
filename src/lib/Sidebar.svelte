@@ -64,7 +64,7 @@
             <svelte:component this={icon} class={iconClass} />
           {/snippet}
           {#each children as { name, icon, href }}
-            <SidebarItem label={name} onclick={sidebarClose} {href} class="ml-4">
+            <SidebarItem label={name} onclick={sidebarClose} {href} aClass="ml-4">
               {#snippet iconSlot()}
                 <svelte:component this={icon} class={iconClass} />
               {/snippet}

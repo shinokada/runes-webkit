@@ -21,5 +21,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop h2Class = 'text-gray-900 dark:text-white leading-tight text-2xl font-bold'
+@prop h2Class = 'group relative'
 -->

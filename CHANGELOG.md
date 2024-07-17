@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.5
+
+### Patch Changes
+
+- fix: H2 component h2Class ([`389995a81b8187c09e54142ac3b1ab8643adb0a3`](https://github.com/shinokada/runes-webkit/commit/389995a81b8187c09e54142ac3b1ab8643adb0a3))
+
 ## 0.9.4
 
 ### Patch Changes

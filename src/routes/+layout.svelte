@@ -35,13 +35,12 @@
     GridPlusOutline,
     CogOutline
   } from '$lib';
-  import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
+  import { RunesMetaTags } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
-  // import { Runatics } from 'runatics';
-  import Analytics from './utils/Analytics.svelte';
+  import { Runatics } from 'runatics';
 
   let { children, data } = $props();
-  // const analyticsId = data.ANALYTICS_ID;
+  const analyticsId = data.ANALYTICS_ID;
   let metaTags = $state(
     $page.data.pageMetaTags
       ? $page.data.pageMetaTags
@@ -74,8 +73,8 @@
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
 </script>
 
+<Runatics {analyticsId} />
 <RunesMetaTags {...metaTags} />
-<Analytics />
 
 <Nav
   {lis}

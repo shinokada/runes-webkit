@@ -6,7 +6,7 @@
     children: Snippet;
     h3Class?: string;
   }
-  let { children, h3Class = 'text-gray-900 dark:text-white leading-tight text-xl font-bold' }: Props = $props();
+  let { children, h3Class = 'group relative' }: Props = $props();
 </script>
 
 <Anchor tag="h3" wrapperClass={h3Class}>

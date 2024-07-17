@@ -67,7 +67,7 @@
 @prop brand
 @prop classDiv = 'mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between'
 @prop divClass
-@prop classFooter = 'shadow-none rounded-none border-t border-gray-100 dark:border-gray-700 dark_bg_theme'
+@prop classFooter = 'shadow-none rounded-none border-t border-gray-100 dark:border-gray-600 dark_bg_theme'
 @prop footerClass
 @prop classUl = 'flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0'
 @prop ulClass

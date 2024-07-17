@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.7
+
+### Patch Changes
+
+- fix: Footer border dark color ([`084868632c01d48a33ccdf59f502e7a528e38e9c`](https://github.com/shinokada/runes-webkit/commit/084868632c01d48a33ccdf59f502e7a528e38e9c))
+
 ## 0.9.6
 
 ### Patch Changes

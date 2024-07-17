@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.4
+
+### Patch Changes
+
+- fix: SidebarItem class to aClass ([`5d115061ffc2e2c2c22027a6ff00c3ecc3b230dd`](https://github.com/shinokada/runes-webkit/commit/5d115061ffc2e2c2c22027a6ff00c3ecc3b230dd))
+
 ## 0.9.3
 
 ### Patch Changes

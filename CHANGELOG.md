@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.6
+
+### Patch Changes
+
+- fix: H3 class update ([`74fcc93e3aba4a5c5ef137e5635638a042e69012`](https://github.com/shinokada/runes-webkit/commit/74fcc93e3aba4a5c5ef137e5635638a042e69012))
+
 ## 0.9.5
 
 ### Patch Changes

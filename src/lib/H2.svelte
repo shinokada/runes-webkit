@@ -6,7 +6,7 @@
     children: Snippet;
     h2Class?: string;
   }
-  let { children, h2Class = 'text-gray-900 dark:text-white leading-tight text-2xl font-bold' }: Props = $props();
+  let { children, h2Class = 'group relative' }: Props = $props();
 </script>
 
 <Anchor

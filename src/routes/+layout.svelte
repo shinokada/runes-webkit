@@ -37,7 +37,8 @@
   } from '$lib';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
-  import { Runatics } from 'runatics';
+  // import { Runatics } from 'runatics';
+  import Analytics from './utils/Analytics.svelte';
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID;
@@ -74,7 +75,7 @@
 </script>
 
 <RunesMetaTags {...metaTags} />
-<Runatics {analyticsId} />
+<Analytics />
 
 <Nav
   {lis}

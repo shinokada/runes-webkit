@@ -6,4 +6,4 @@
   const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
 </script>
 
-<IconPage icons={keyIcons as Component} title="Three Tabs" />
+<IconPage icons={keyIcons as Component} title="Three Tabs" defaultSize="16" minSize="12" maxSize="40"/>

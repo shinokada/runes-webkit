@@ -52,7 +52,7 @@
     title,
     sizeByTailwind,
     minSize = '16',
-    defaultSize = '24',
+    defaultSize = $bindable('24'),
     maxSize = '48',
     threeTabs = true,
     variation,
@@ -73,7 +73,7 @@
   //   });
   // })
 
-  let size = $state(defaultSize);
+  // let size = $state(defaultSize);
 </script>
 
 <div class="w-full pb-20">
@@ -82,7 +82,7 @@
 
     <div class={div1Class}>
       <div class={twMerge(classDiv2, div2Class)}>
-        <Label class={labelClass}>Icon size: {size}</Label>
+        <Label class={labelClass}>Icon size: {defaultSize}</Label>
         <input
           type="search"
           id="site-search"
@@ -96,7 +96,7 @@
           type="range"
           min={minSize}
           max={maxSize}
-          bind:value={size}
+          bind:value={defaultSize}
           class={twMerge(classRange, rangeClass)}
         />
       </div>
@@ -114,7 +114,7 @@
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
-                        class="shrink-0 h-{size} w-{size}"
+                        class="shrink-0 h-{defaultSize} w-{defaultSize}"
                         {variation}
                         {...restProps}
                       />
@@ -122,7 +122,7 @@
                       <svelte:component
                         this={component}
                         class="shrink-0"
-                        {size}
+                        size={defaultSize}
                         {variation}
                         {...restProps}
                       />
@@ -142,7 +142,7 @@
                       <svelte:component
                         this={component}
                         color={random_hex_color_code()}
-                        class="shrink-0 h-{size} w-{size}"
+                        class="shrink-0 h-{defaultSize} w-{defaultSize}"
                         {variation}
                         {...restProps}
                       />
@@ -151,7 +151,7 @@
                         this={component}
                         color={random_hex_color_code()}
                         class="shrink-0"
-                        {size}
+                        size={defaultSize}
                         {variation}
                         {...restProps}
                       />
@@ -170,7 +170,7 @@
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
-                        class="{random_tailwind_color()} shrink-0 h-{size} w-{size}"
+                        class="{random_tailwind_color()} shrink-0 h-{defaultSize} w-{defaultSize}"
                         {variation}
                         {...restProps}
                       />
@@ -178,7 +178,7 @@
                       <svelte:component
                         this={component}
                         class={random_tailwind_color()}
-                        {size}
+                        size={defaultSize}
                         {variation}
                         {...restProps}
                       />
@@ -200,7 +200,7 @@
                   <svelte:component
                     this={component}
                     class="shrink-0"
-                    {size}
+                    size={defaultSize}
                     {variation}
                     {...restProps}
                   />

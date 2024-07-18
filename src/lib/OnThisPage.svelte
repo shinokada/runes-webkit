@@ -118,5 +118,5 @@
 @prop svgClass
 @prop classSvg = 'ms-2 mt-1 h-4 w-4 text-white dark:text-white'
 @prop dropdownDivClass
-@prop classDropdownDiv= 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700'
+@prop classDropdownDiv = 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700'
 -->

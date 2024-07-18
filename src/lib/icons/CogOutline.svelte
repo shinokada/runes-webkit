@@ -94,9 +94,9 @@
 @prop role
 @prop color = ctx.color || 'currentColor'
 @prop title
-@prop strokeWidth= ctx.strokeWidth || "2"
+@prop strokeWidth = ctx.strokeWidth || '2'
 @prop desc
 @prop class: classname
-@prop ariaLabel =  "cog outline"
+@prop ariaLabel = 'cog outline'
 @prop ...restProps
 -->

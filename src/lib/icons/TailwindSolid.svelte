@@ -82,6 +82,6 @@
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel =  "tailwind solid"
+@prop ariaLabel = 'tailwind solid'
 @prop ...restProps
 -->

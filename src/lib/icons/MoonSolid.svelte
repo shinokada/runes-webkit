@@ -84,6 +84,6 @@
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel =  "moon solid"
+@prop ariaLabel = 'moon solid'
 @prop ...restProps
 -->

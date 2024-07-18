@@ -18,5 +18,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop class = 'group relative'
+@prop class: h1Class = 'group relative'
 -->

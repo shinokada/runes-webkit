@@ -4,9 +4,9 @@
 
   interface Props {
     children: Snippet;
-    h3Class?: string;
+    class?: string;
   }
-  let { children, h3Class = 'group relative' }: Props = $props();
+  let { children, class: h3Class = 'group relative' }: Props = $props();
 </script>
 
 <Anchor tag="h3" wrapperClass={h3Class}>

@@ -4,12 +4,12 @@
 
   interface Props {
     children: Snippet;
-    class?: string;
+    class?: string | undefined | null;
   }
-  let { children, class: h2Class = 'group relative' }: Props = $props();
+  let { children, class: h1Class = 'group relative' }: Props = $props();
 </script>
 
-<Anchor tag="h2" wrapperClass={h2Class}>
+<Anchor tag="h1" wrapperClass={h1Class}>
   {@render children()}
 </Anchor>
 
@@ -18,5 +18,5 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop h2Class = 'group relative'
+@prop class = 'group relative'
 -->

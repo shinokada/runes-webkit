@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.10
+
+### Patch Changes
+
+- fix: export H1 ([`a983993b7e889f9da5ccb3cc2bf741d1b3169091`](https://github.com/shinokada/runes-webkit/commit/a983993b7e889f9da5ccb3cc2bf741d1b3169091))
+
 ## 0.9.9
 
 ### Patch Changes

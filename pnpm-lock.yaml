@@ -87,8 +87,8 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(svelte@5.0.0-next.191)
       svelte-shields:
-        specifier: ^0.4.2
-        version: 0.4.2(svelte@5.0.0-next.191)
+        specifier: ^0.5.1
+        version: 0.5.1(svelte@5.0.0-next.191)
       tailwind-merge:
         specifier: ^2.4.0
         version: 2.4.0
@@ -1939,8 +1939,8 @@ packages:
     peerDependencies:
       svelte: ^5.0.0-next.65
 
-  svelte-shields@0.4.2:
-    resolution: {integrity: sha512-+ooReaze632eCv50Q8ci0xR4LTXTe6l5rB5UiYNkuVp+hz/QlFu09Y8KgJIolmvGkdVoe8C+Xgu4uMvPeSvPAQ==}
+  svelte-shields@0.5.1:
+    resolution: {integrity: sha512-p9t+ZtMiWM0x49iLB4jmmr5mNw5hRCdVeAaGIJoIHddM4eDh+71oJj4H0m4slKMtoszdzf6CrMWNIpn1azO+rg==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       svelte: ^5.0.0
@@ -3955,7 +3955,7 @@ snapshots:
       highlight.js: 11.10.0
       svelte: 5.0.0-next.191
 
-  svelte-shields@0.4.2(svelte@5.0.0-next.191):
+  svelte-shields@0.5.1(svelte@5.0.0-next.191):
     dependencies:
       svelte: 5.0.0-next.191
 

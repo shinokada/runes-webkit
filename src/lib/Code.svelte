@@ -3,7 +3,7 @@
   import { twMerge } from 'tailwind-merge';
   import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends HTMLAttributes<HTMLElement>{
+  interface Props extends HTMLAttributes<HTMLElement> {
     children: Snippet;
     class?: string;
   }

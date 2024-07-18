@@ -165,7 +165,7 @@
               </DropdownItem>
             {/if}
             <DropdownItem>
-              <Darkmode class="p-2 m-0" />
+              <Darkmode class="m-0 p-2" />
             </DropdownItem>
           </Dropdown>
         </div>

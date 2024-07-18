@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.8
+
+### Patch Changes
+
+- fix: add bindable to defaultSize ([`94a4de8082560ec37621b29494cddad78a9437a6`](https://github.com/shinokada/runes-webkit/commit/94a4de8082560ec37621b29494cddad78a9437a6))
+
 ## 0.9.7
 
 ### Patch Changes

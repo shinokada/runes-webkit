@@ -40,8 +40,42 @@ export { default as XSolid } from './icons/XSolid.svelte';
 
 export * from './types';
 
-import { clickToCopy, toDashCaseLower, toUpperSnakeCase, extract, removeHyphensAndCapitalize, filterIconsByKeyword, convertToKebabCase, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, excludeByTitle, insertObjectToArray, cards, info, sidebarList } from './helpers';
+import {
+  clickToCopy,
+  toDashCaseLower,
+  toUpperSnakeCase,
+  extract,
+  removeHyphensAndCapitalize,
+  filterIconsByKeyword,
+  convertToKebabCase,
+  filterStringKeys,
+  excludeItemsByKeywords,
+  random_tailwind_color,
+  random_hex_color_code,
+  filterByTitles,
+  excludeByTitle,
+  insertObjectToArray,
+  cards,
+  info,
+  sidebarList
+} from './helpers';
 
-export { clickToCopy, toDashCaseLower, toUpperSnakeCase, extract, removeHyphensAndCapitalize, filterIconsByKeyword, convertToKebabCase, filterStringKeys, excludeItemsByKeywords, random_tailwind_color, random_hex_color_code, filterByTitles, excludeByTitle, insertObjectToArray, cards, info, sidebarList };
-
-
+export {
+  clickToCopy,
+  toDashCaseLower,
+  toUpperSnakeCase,
+  extract,
+  removeHyphensAndCapitalize,
+  filterIconsByKeyword,
+  convertToKebabCase,
+  filterStringKeys,
+  excludeItemsByKeywords,
+  random_tailwind_color,
+  random_hex_color_code,
+  filterByTitles,
+  excludeByTitle,
+  insertObjectToArray,
+  cards,
+  info,
+  sidebarList
+};

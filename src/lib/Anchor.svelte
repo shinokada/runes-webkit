@@ -10,14 +10,14 @@
     aClass?: string | undefined | null;
     wrapperClass?: string | undefined | null;
   }
-  let { 
-    children, 
-    spanClass = 'absolute -top-[100px]', 
+  let {
+    children,
+    spanClass = 'absolute -top-[100px]',
     classA = 'ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100 dark:text-primary-700',
-    aClass, 
-    wrapperClass = 'group relative', 
-    tag, 
-    ...restProps 
+    aClass,
+    wrapperClass = 'group relative',
+    tag,
+    ...restProps
   }: Props = $props();
 
   let content: string = $state('');
@@ -29,19 +29,10 @@
   }
 </script>
 
-<svelte:element
-  this={tag}
-  {...restProps}
-  class={wrapperClass}
-  use:init
->
+<svelte:element this={tag} {...restProps} class={wrapperClass} use:init>
   {@render children()}
   <span id={slug} class={spanClass}></span>
-  <a
-    class={twMerge(classA, aClass)}
-    href="#{slug}"
-    aria-label="Link to this section: {content}"
-  >
+  <a class={twMerge(classA, aClass)} href="#{slug}" aria-label="Link to this section: {content}">
     #
   </a>
 </svelte:element>

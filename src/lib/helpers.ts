@@ -141,7 +141,7 @@ export const filterStringKeys = (obj: { [key: string]: any }) => {
 export function excludeItemsByKeywords(items: { [key: string]: any }, keywords: string) {
   const filteredItems: { [key: string]: any } = {};
   for (const key in items) {
-    const doesNotContainKeyword = keywords.split(' ').every(keyword => !key.includes(keyword));
+    const doesNotContainKeyword = keywords.split(' ').every((keyword) => !key.includes(keyword));
     if (doesNotContainKeyword) {
       filteredItems[key] = items[key];
     }
@@ -208,7 +208,11 @@ export function excludeByTitle(objects: Types.CardType[], titles: Types.Title[])
  * @param {number} position - the position where the object should be inserted
  * @return {any[]} the updated array with the object inserted at the specified position
  */
-export function insertObjectToArray(array: Types.CardType[], objectToInsert: Types.CardType, position: number): any[] {
+export function insertObjectToArray(
+  array: Types.CardType[],
+  objectToInsert: Types.CardType,
+  position: number
+): any[] {
   // Check for valid position
   if (position < 0 || position > array.length) {
     throw new Error('Invalid position. Please provide a position within the array bounds.');

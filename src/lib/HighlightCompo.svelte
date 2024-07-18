@@ -16,16 +16,16 @@
     btnClass?: string | undefined | null;
     svgClass?: string | undefined | null;
   }
-  let { 
-    code, 
-    codeLang, 
-    counter = 2, 
-    badgeClass = 'absolute -top-10 right-0', 
+  let {
+    code,
+    codeLang,
+    counter = 2,
+    badgeClass = 'absolute -top-10 right-0',
     classDiv = 'my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700',
     divClass,
     classBtn = 'absolute right-0 -mt-11 flex items-center border border-gray-200 bg-gray-100 px-3 py-2 text-xs font-medium text-gray-600 hover:bg-gray-200 hover:text-primary-700 dark:border-gray-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white',
-    btnClass, 
-    svgClass = 'me-2 h-4 w-4' 
+    btnClass,
+    svgClass = 'me-2 h-4 w-4'
   }: Props = $props();
 
   let text = $state('');
@@ -60,12 +60,7 @@
 {/if}
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
-<div
-  role="button"
-  tabindex="0"
-  class={twMerge(classDiv, divClass)}
-  onclick={copySuccess}
->
+<div role="button" tabindex="0" class={twMerge(classDiv, divClass)} onclick={copySuccess}>
   <div class="relative">
     <button
       type="button"

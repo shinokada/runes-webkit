@@ -6,7 +6,7 @@
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
     cards: CardType[];
-    cardClass?: string | undefined ;
+    cardClass?: string | undefined;
     classDiv?: string | undefined | null;
     divClass?: string | undefined | null;
     iconClass?: string | undefined | null;
@@ -29,27 +29,17 @@
 
 {#snippet cardSnippet({ title, description, icon, href, icon_class })}
   <Card {href} class={cardClass}>
-    <svelte:component
-      this={icon}
-      class="{iconClass} {icon_class}"
-    />
-    <h3
-      class={twMerge(classH3, h3Class)}
-    >
+    <svelte:component this={icon} class="{iconClass} {icon_class}" />
+    <h3 class={twMerge(classH3, h3Class)}>
       {title}
     </h3>
-    <p
-      class={pClass}
-    >
+    <p class={pClass}>
       {@html description}
     </p>
   </Card>
 {/snippet}
 
-<div
-  class={twMerge(classDiv, divClass)}
-  {...restProps}
->
+<div class={twMerge(classDiv, divClass)} {...restProps}>
   {#each cards as card}
     {@render cardSnippet(card)}
   {/each}

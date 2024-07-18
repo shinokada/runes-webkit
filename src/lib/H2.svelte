@@ -9,10 +9,7 @@
   let { children, h2Class = 'group relative' }: Props = $props();
 </script>
 
-<Anchor
-  tag="h2"
-  wrapperClass={h2Class}
->
+<Anchor tag="h2" wrapperClass={h2Class}>
   {@render children()}
 </Anchor>
 

@@ -9,7 +9,6 @@ export type Card = {
   icon_class: string;
 };
 
-
 export type CardType = {
   title: string;
   description: string;

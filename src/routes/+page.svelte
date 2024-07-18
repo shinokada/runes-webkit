@@ -10,7 +10,7 @@
     info
   } from '$lib';
   import { A } from 'svelte-5-ui-lib';
-  
+
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${__DESCRIPTION__}`,
@@ -26,15 +26,15 @@
     icon: InfoCircleOutline,
     href: `${__ORIGINAL_SOURCE_URL__}`,
     icon_class: 'text-orange-500'
-  }
+  };
   const license = {
     title: 'License',
     description: 'Released under the MIT License.',
     icon: InfoCircleOutline,
     href: `https://github.com/shinokada/${__NAME__}/blob/main/LICENSE`,
     icon_class: 'text-lime-500'
-  }
- 
+  };
+
   const newInfo = [originalSource, license, ...info];
   const pkg = {
     pkgName: __NAME__,

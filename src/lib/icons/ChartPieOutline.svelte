@@ -13,19 +13,19 @@
   };
 
   interface BaseProps extends SVGAttributes<SVGSVGElement> {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
-strokeWidth?: string;
+    strokeWidth?: string;
     class?: string;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -37,17 +37,17 @@ strokeWidth?: string;
     xl: 'w-8 h-8'
   };
 
-  let { 
-    size = ctx.size || 'md', 
-    role, 
-    color = ctx.color || 'currentColor', 
-    title, 
-strokeWidth= ctx.strokeWidth || "2",
-    desc,  
-    class: classname, 
-    ariaLabel =  "chart pie outline" , 
-    ...restProps 
-    }: Props = $props();
+  let {
+    size = ctx.size || 'md',
+    role,
+    color = ctx.color || 'currentColor',
+    title,
+    strokeWidth = ctx.strokeWidth || '2',
+    desc,
+    class: classname,
+    ariaLabel = 'chart pie outline',
+    ...restProps
+  }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -56,13 +56,9 @@ strokeWidth= ctx.strokeWidth || "2",
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-{color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
+  {color}
+  {...restProps}
+  class={twMerge('shrink-0', sizes[size], classname)}
   {role}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -74,7 +70,20 @@ strokeWidth= ctx.strokeWidth || "2",
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width={strokeWidth} d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width={strokeWidth}
+    d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"
+  />
+  <path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width={strokeWidth}
+    d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"
+  />
 </svg>
 
 <!--

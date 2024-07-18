@@ -5,18 +5,25 @@
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
     children: any;
-    iconName: string ;
+    iconName: string;
     counter?: number;
     badgeClass?: string;
     divClass?: string;
     btnClass?: string;
   }
-  let { children, iconName, counter = 2, badgeClass = 'absolute top-4 w-44 p-1', divClass, btnClass = 'ml-4', ...attributes }: Props = $props();
+  let {
+    children,
+    iconName,
+    counter = 2,
+    badgeClass = 'absolute top-4 w-44 p-1',
+    divClass,
+    btnClass = 'ml-4',
+    ...attributes
+  }: Props = $props();
 
   let text = $state('');
   let open = $state(false);
 
- 
   function copySuccess() {
     text = `Copied the icon name!`;
   }
@@ -35,25 +42,17 @@
     if (--counter > 0) return setTimeout(timeout, 1000);
     open = false;
   }
-
 </script>
 
 {#if open}
-  <div class='relative'>
-  <Badge
-    large
-    class={badgeClass}
-  >
-    <span class="font-medium">{text}</span>
-  </Badge>
+  <div class="relative">
+    <Badge large class={badgeClass}>
+      <span class="font-medium">{text}</span>
+    </Badge>
   </div>
 {/if}
 
-<div 
-  role="button"
-  tabindex="0"
-  onclick={copySuccess}
- class={divClass} {...attributes}>
+<div role="button" tabindex="0" onclick={copySuccess} class={divClass} {...attributes}>
   <button type="button" class={btnClass} use:clickToCopy={iconName} onclick={trigger}>
     {@render children()}
   </button>

@@ -101,13 +101,9 @@
         />
       </div>
       {#if threeTabs}
-        <Tabs
-          style="pill"
-          {contentClass}
-          divider={false}
-        >
+        <Tabs style="pill" {contentClass} divider={false}>
           <TabItem open title="Mono">
-            <div class={twMerge(classTab1, tab1Class)} >
+            <div class={twMerge(classTab1, tab1Class)}>
               {#each filteredEntries as [name, component] (name)}
                 {#if name !== 'Icon'}
                   <div class={tab2Class}>
@@ -134,10 +130,10 @@
             </div>
           </TabItem>
           <TabItem title="Random Hex Colors">
-            <div class={twMerge(classTab1, tab1Class)} >
-              {#each filteredEntries as [name, component] (name) }
+            <div class={twMerge(classTab1, tab1Class)}>
+              {#each filteredEntries as [name, component] (name)}
                 {#if name !== 'Icon'}
-                <div class={tab2Class}>
+                  <div class={tab2Class}>
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
@@ -163,10 +159,10 @@
             </div>
           </TabItem>
           <TabItem title="Random Tailwind CSS Colors">
-            <div class={twMerge(classTab1, tab1Class)} >
+            <div class={twMerge(classTab1, tab1Class)}>
               {#each filteredEntries as [name, component] (name)}
                 {#if name !== 'Icon'}
-                <div class={tab2Class}>
+                  <div class={tab2Class}>
                     {#if sizeByTailwind}
                       <svelte:component
                         this={component}
@@ -192,8 +188,7 @@
         </Tabs>
       {:else}
         <div class="w-full text-left text-gray-500 dark:text-gray-400">
-          <div class={twMerge(classDiv3, div3Class)}
-          >
+          <div class={twMerge(classDiv3, div3Class)}>
             {#each filteredEntries as [name, component] (name)}
               {#if name !== 'Icon'}
                 <div class={div4Class}>
@@ -239,7 +234,7 @@
 @prop title
 @prop sizeByTailwind
 @prop minSize = '16'
-@prop defaultSize = '24'
+@prop defaultSize = $bindable('24')
 @prop maxSize = '48'
 @prop threeTabs = true
 @prop variation

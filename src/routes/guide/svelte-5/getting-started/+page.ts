@@ -1,8 +1,8 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-const title = 'Getting Started - Runes Webkit v2'
-const description = 'How to get started with Runes Webkit v2'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros'
+const title = 'Getting Started - Runes Webkit v2';
+const description = 'How to get started with Runes Webkit v2';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-heros';
 
 export const load = ({ url }) => {
   const pageMetaTags: MetaProps = {

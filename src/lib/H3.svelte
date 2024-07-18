@@ -1,7 +1,7 @@
 <script lang="ts">
   import Anchor from './Anchor.svelte';
   import type { Snippet } from 'svelte';
-  
+
   interface Props {
     children: Snippet;
     h3Class?: string;

@@ -50,7 +50,7 @@
     svgClass,
     classSvg = 'ms-2 mt-1 h-4 w-4 text-white dark:text-white',
     dropdownDivClass,
-    classDropdownDiv= 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700'
+    classDropdownDiv = 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700'
   }: Props = $props();
 
   let headings: LinkType[] = $state([]);
@@ -79,12 +79,10 @@
   }
 </script>
 
-<div class={twMerge(classDiv, divClass )}>
+<div class={twMerge(classDiv, divClass)}>
   <button onclick={dropdown.toggle} class="flex">
     On this page
-    <ChevronDownOutline
-      class={twMerge( classSvg, svgClass)}
-    />
+    <ChevronDownOutline class={twMerge(classSvg, svgClass)} />
   </button>
   <div use:init>
     <Dropdown

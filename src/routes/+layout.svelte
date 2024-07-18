@@ -41,19 +41,13 @@
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID;
-  let metaTags = $state(
-    $page.data.pageMetaTags
-      ? $page.data.pageMetaTags
-      : data.layoutMetaTags
-  );
+  let metaTags = $state($page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags);
   // console.log('data', $page.data.layoutMetaTags)
 
   let currentUrl = $state($page.url.pathname);
   $effect(() => {
     currentUrl = $page.url.pathname;
-    metaTags = $page.data.pageMetaTags
-      ? $page.data.pageMetaTags 
-      : data.layoutMetaTags;
+    metaTags = $page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags;
   });
   const lis = [
     { name: 'Guide', href: '/guide/svelte-4/getting-started' },

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Footer, FooterBrand, FooterLi, FooterUl } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
-  
+
   interface Props {
     brand?: {
       name: string;
@@ -39,21 +39,13 @@
   {/each}
 {/snippet}
 
-<Footer
-  class={twMerge(classFooter, footerClass)}
-  {footerType}
-  {...restProps}
->
-  <div
-    class={twMerge(classDiv, divClass)}
-  >
+<Footer class={twMerge(classFooter, footerClass)} {footerType} {...restProps}>
+  <div class={twMerge(classDiv, divClass)}>
     {#if brand}
       <FooterBrand href={brand?.href} name={brand?.name} />
     {/if}
     {#if lis}
-      <FooterUl
-        class={twMerge(classUl, ulClass)}
-      >
+      <FooterUl class={twMerge(classUl, ulClass)}>
         {@render li(lis)}
       </FooterUl>
     {/if}

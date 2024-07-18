@@ -9,13 +9,13 @@
     menuList?: ListType[];
     sidebarClose?: () => void;
     activeClass?: string;
-    classActive?: string | undefined ;
+    classActive?: string | undefined;
     nonActiveClass?: string;
-    classNonActive?: string | undefined ;
-    divClass?: string | undefined ;
-    asideClass?: string | undefined ;
-    classAside?: string | undefined ;
-    iconClass?: string | undefined ;
+    classNonActive?: string | undefined;
+    divClass?: string | undefined;
+    asideClass?: string | undefined;
+    classAside?: string | undefined;
+    iconClass?: string | undefined;
   }
 
   let {
@@ -46,7 +46,7 @@
 
 <Sidebar
   activeClass={twMerge(classActive, activeClass)}
-  nonActiveClass={twMerge(classNonActive,nonActiveClass)}
+  nonActiveClass={twMerge(classNonActive, nonActiveClass)}
   {divClass}
   asideClass={twMerge(classAside, asideClass)}
   {...restProps}

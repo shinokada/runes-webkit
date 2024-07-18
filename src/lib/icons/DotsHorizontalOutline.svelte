@@ -13,18 +13,18 @@
   };
 
   interface BaseProps extends SVGAttributes<SVGSVGElement> {
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     role?: string;
     color?: string;
     class?: string;
   }
 
   interface CtxType extends BaseProps {}
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
-    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   }
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
@@ -36,16 +36,16 @@
     xl: 'w-8 h-8'
   };
 
-  let { 
-    size = ctx.size || 'md', 
-    role, 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc,  
-    class: classname, 
-    ariaLabel =  "dots horizontal outline" , 
-    ...restProps 
-    }: Props = $props();
+  let {
+    size = ctx.size || 'md',
+    role,
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    class: classname,
+    ariaLabel = 'dots horizontal outline',
+    ...restProps
+  }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
@@ -54,13 +54,9 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-{color}
-{...restProps}
-  class={twMerge(
-    'shrink-0',
-    sizes[size],
-    classname
-  )}
+  {color}
+  {...restProps}
+  class={twMerge('shrink-0', sizes[size], classname)}
   {role}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
@@ -72,7 +68,12 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-     <path stroke="currentColor" stroke-linecap="round" stroke-width="3" d="M6 12h.01m6 0h.01m5.99 0h.01"/>  
+  <path
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-width="3"
+    d="M6 12h.01m6 0h.01m5.99 0h.01"
+  />
 </svg>
 
 <!--

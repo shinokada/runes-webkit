@@ -31,14 +31,9 @@
   }: Props = $props();
 </script>
 
-<main
-  class={twMerge(classMain, mainClass)}
-  id="top"
->
+<main class={twMerge(classMain, mainClass)} id="top">
   <div class={twMerge(classDiv1, div1Class)}>
-    <div
-      class={twMerge(classDiv2, div2Class)}
-    >
+    <div class={twMerge(classDiv2, div2Class)}>
       <div id="mainContent" class={twMerge(classDiv3, div3Class)}>
         {@render children()}
       </div>

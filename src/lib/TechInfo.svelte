@@ -53,7 +53,7 @@
 
 <div class={divClass}>
   <Card size={cardsize}>
-    <ul class={twMerge(classUl, ulClass)} >
+    <ul class={twMerge(classUl, ulClass)}>
       {#if pkgName && pkgVersion && repoUrl}
         <li class={liClass}>
           <a href={repoUrl} class={aClass}
@@ -63,8 +63,7 @@
       {/if}
       {#if runaticsVersion}
         <li class={liClass}>
-          <a href="https://runatics.codewithshin.com/" class={aClass}
-            >Runatics: {runaticsVersion}</a
+          <a href="https://runatics.codewithshin.com/" class={aClass}>Runatics: {runaticsVersion}</a
           >
         </li>
       {/if}

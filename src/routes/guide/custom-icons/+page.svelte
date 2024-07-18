@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Custom icons - Runes Webkit</h1>
+<H1>Custom icons - Runes Webkit</H1>
 
 <p>If you wish to create a custom default icon, you can follow these steps:</p>
 

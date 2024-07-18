@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Setting Global Icon - Runes Webkit</h1>
+<H1>Setting Global Icon - Runes Webkit</H1>
 
 <p>
   You can create global icon preferences in your Svelte application using <Code>setContext</Code>.

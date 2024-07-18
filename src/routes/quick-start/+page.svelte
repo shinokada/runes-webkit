@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
   import { List, Li, A, Tabs, TabItem, Checkbox } from 'svelte-5-ui-lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Quick Start</h1>
+<H1>Quick Start</H1>
 
 <H2>Installation</H2>
 

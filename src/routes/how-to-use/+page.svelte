@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
   // import MainLayout from '../+layout.svelte?raw'
   import { List, Li, A, Tabs, TabItem } from 'svelte-5-ui-lib';
   const modules = import.meta.glob('./md/*.md', {
@@ -9,7 +9,7 @@
   });
 </script>
 
-<h1>Documentation</h1>
+<H1>Documentation</H1>
 
 <p>This library contails following components for Svelte Runes project.</p>
 

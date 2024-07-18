@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
   import { License, StaticBadge, NpmVersion, NpmDownload } from 'svelte-shields';
   import type {
     StaticBadgePropsType,
@@ -49,7 +49,7 @@
   });
 </script>
 
-<h1>Getting Started - Runes Webkit v2</h1>
+<H1>Getting Started - Runes Webkit v2</H1>
 
 <div class="my-8 flex gap-2">
   <StaticBadge {...sponsor} />

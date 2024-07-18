@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
   import { ClipboardListOutline } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Props - Runes Webkit v2</h1>
+<H1>Props - Runes Webkit v2</H1>
 
 <H2>Props</H2>
 

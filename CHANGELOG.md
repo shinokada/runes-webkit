@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.11
+
+### Patch Changes
+
+- fix: for svelte-5-ui-lib update ([`2433edb662c8dda15cd23323630d44ca71efa6c2`](https://github.com/shinokada/runes-webkit/commit/2433edb662c8dda15cd23323630d44ca71efa6c2))
+
 ## 0.9.10
 
 ### Patch Changes

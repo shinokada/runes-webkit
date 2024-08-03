@@ -227,7 +227,14 @@ export function insertObjectToArray(
   return newArray;
 }
 
-export const cards = [
+interface CardTpye {
+  title: string;
+  description: string;
+  icon: Component;
+  icon_class: string;
+}
+
+export const cards: CardTpye[] = [
   {
     title: 'Svelte 4/5/Runes',
     description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
@@ -274,7 +281,15 @@ export const cards = [
   }
 ];
 
-export const info = [
+interface InfoType {
+  title: string;
+  description: string;
+  icon: Component;
+  href: string;
+  icon_class: string;
+}
+
+export const info: InfoType[] = [
   {
     title: 'Svelte Icon Family',
     description: 'Explore 29 Svelte SVG Icon Sets.',

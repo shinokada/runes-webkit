@@ -1,7 +1,10 @@
 <script lang="ts">
   import { Footer, FooterBrand, FooterLi, FooterUl } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
-
+  interface ListItem {
+    name: string;
+    href: string;
+  }
   interface Props {
     brand?: {
       name: string;
@@ -33,7 +36,7 @@
   }: Props = $props();
 </script>
 
-{#snippet li(lis)}
+{#snippet li(lis: NonNullable<Props['lis']>)}
   {#each lis as { name, href }}
     <FooterLi {href}>{name}</FooterLi>
   {/each}

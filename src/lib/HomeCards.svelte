@@ -27,14 +27,14 @@
   }: Props = $props();
 </script>
 
-{#snippet cardSnippet({ title, description, icon, href, icon_class })}
-  <Card {href} class={cardClass}>
-    <svelte:component this={icon} class="{iconClass} {icon_class}" />
+{#snippet cardSnippet(card: CardType)}
+  <Card href={card.href} class={cardClass}>
+    <svelte:component this={card.icon} class={twMerge(iconClass, card.icon_class)} />
     <h3 class={twMerge(classH3, h3Class)}>
-      {title}
+      {card.title}
     </h3>
     <p class={pClass}>
-      {@html description}
+      {@html card.description}
     </p>
   </Card>
 {/snippet}

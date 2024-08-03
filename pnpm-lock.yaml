@@ -72,8 +72,8 @@ importers:
         specifier: 5.0.0-next.208
         version: 5.0.0-next.208
       svelte-5-ui-lib:
-        specifier: ^0.7.2
-        version: 0.7.2(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(tailwindcss@3.4.7)
+        specifier: ^0.8.0
+        version: 0.8.0(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(tailwindcss@3.4.7)
       svelte-check:
         specifier: ^3.8.5
         version: 3.8.5(postcss-load-config@4.0.2(postcss@8.4.40))(postcss@8.4.40)(svelte@5.0.0-next.208)
@@ -733,6 +733,10 @@ packages:
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -1826,8 +1830,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.7.2:
-    resolution: {integrity: sha512-0fVeGxqmssflgQ8PmjFTv+fYx6TmgS4WRHUUKgMOyx1II/lZVZ0NauhA7riOiq9LCj8lvxhdimCojkcFsBQr+A==}
+  svelte-5-ui-lib@0.8.0:
+    resolution: {integrity: sha512-dTiF3hxCpkNq0nby0r4XNpkpZTTuub//TwtAFrEVP7eTWpmw0m/+th8tOc4bOVcpOhYrHdRkPL8gEQ4kad6hww==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
@@ -1988,6 +1992,12 @@ packages:
 
   tailwind-merge@2.4.0:
     resolution: {integrity: sha512-49AwoOQNKdqKPd9CViyH5wJoSKsCDjUlzL8DxuGp3P1FsGY36NJDAa18jLZcaHAUUuTj+JB8IAo8zWgBNvBF7A==}
+
+  tailwind-variants@0.2.1:
+    resolution: {integrity: sha512-2xmhAf4UIc3PijOUcJPA1LP4AbxhpcHuHM2C26xM0k81r0maAO6uoUSHl3APmvHZcY5cZCY/bYuJdfFa4eGoaw==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
 
   tailwindcss@3.4.7:
     resolution: {integrity: sha512-rxWZbe87YJb4OcSopb7up2Ba4U82BoiSGUdoDr3Ydrg9ckxFS/YWsvhN323GMcddgU65QRy7JndC7ahhInhvlQ==}
@@ -2886,6 +2896,8 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+
+  clsx@2.1.1: {}
 
   color-convert@1.9.3:
     dependencies:
@@ -3882,13 +3894,15 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.7.2(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(tailwindcss@3.4.7):
+  svelte-5-ui-lib@0.8.0(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(tailwindcss@3.4.7):
     dependencies:
       '@floating-ui/dom': 1.6.8
       '@sveltejs/kit': 2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5))(svelte@5.0.0-next.208)(vite@5.3.5)
       apexcharts: 3.51.0
+      clsx: 2.1.1
       svelte: 5.0.0-next.208
       tailwind-merge: 2.4.0
+      tailwind-variants: 0.2.1(tailwindcss@3.4.7)
       tailwindcss: 3.4.7
 
   svelte-check@3.8.5(postcss-load-config@4.0.2(postcss@8.4.40))(postcss@8.4.40)(svelte@5.0.0-next.208):
@@ -4014,6 +4028,11 @@ snapshots:
       svg.js: 2.7.1
 
   tailwind-merge@2.4.0: {}
+
+  tailwind-variants@0.2.1(tailwindcss@3.4.7):
+    dependencies:
+      tailwind-merge: 2.4.0
+      tailwindcss: 3.4.7
 
   tailwindcss@3.4.7:
     dependencies:

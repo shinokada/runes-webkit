@@ -62,18 +62,10 @@
   let searchTerm = $state('');
 
   let filteredEntries = $derived(
-    Object.entries(icons).filter(([name, component]) => {
+    Object.entries(icons).filter(([name, Component]) => {
       return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
     })
   );
-  // let filteredEntries = $state(Object.entries(icons))
-  // $effect(() => {
-  //   filteredEntries = Object.entries(icons).filter(([name, component]) => {
-  //     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
-  //   });
-  // })
-
-  // let size = $state(defaultSize);
 </script>
 
 <div class="w-full pb-20">
@@ -104,24 +96,22 @@
         <Tabs style="pill" {contentClass} divider={false}>
           <TabItem open title="Mono">
             <div class={twMerge(classTab1, tab1Class)}>
-              {#each filteredEntries as [name, component] (name)}
+              {#each filteredEntries as [name, Component] (name)}
                 {#if name !== 'Icon'}
                   <div class={tab2Class}>
                     {#if sizeByTailwind}
-                      <svelte:component
-                        this={component}
+                      <Component
                         class="shrink-0 h-{defaultSize} w-{defaultSize}"
                         {variation}
                         {...restProps}
-                      />
+                      ></Component>
                     {:else}
-                      <svelte:component
-                        this={component}
+                      <Component
                         class="shrink-0"
                         size={defaultSize}
                         {variation}
                         {...restProps}
-                      />
+                      ></Component>
                     {/if}
                     <Copy iconName={name}>{name}</Copy>
                   </div>
@@ -131,26 +121,24 @@
           </TabItem>
           <TabItem title="Random Hex Colors">
             <div class={twMerge(classTab1, tab1Class)}>
-              {#each filteredEntries as [name, component] (name)}
+              {#each filteredEntries as [name, Component] (name)}
                 {#if name !== 'Icon'}
                   <div class={tab2Class}>
                     {#if sizeByTailwind}
-                      <svelte:component
-                        this={component}
+                      <Component
                         color={random_hex_color_code()}
                         class="shrink-0 h-{defaultSize} w-{defaultSize}"
                         {variation}
                         {...restProps}
-                      />
+                      ></Component>
                     {:else}
-                      <svelte:component
-                        this={component}
+                      <Component
                         color={random_hex_color_code()}
                         class="shrink-0"
                         size={defaultSize}
                         {variation}
                         {...restProps}
-                      />
+                      ></Component>
                     {/if}
                     <Copy iconName={name}>{name}</Copy>
                   </div>
@@ -160,24 +148,22 @@
           </TabItem>
           <TabItem title="Random Tailwind CSS Colors">
             <div class={twMerge(classTab1, tab1Class)}>
-              {#each filteredEntries as [name, component] (name)}
+              {#each filteredEntries as [name, Component] (name)}
                 {#if name !== 'Icon'}
                   <div class={tab2Class}>
                     {#if sizeByTailwind}
-                      <svelte:component
-                        this={component}
+                      <Component
                         class="{random_tailwind_color()} shrink-0 h-{defaultSize} w-{defaultSize}"
                         {variation}
                         {...restProps}
-                      />
+                      ></Component>
                     {:else}
-                      <svelte:component
-                        this={component}
+                      <Component
                         class={random_tailwind_color()}
                         size={defaultSize}
                         {variation}
                         {...restProps}
-                      />
+                      ></Component>
                     {/if}
                     <Copy iconName={name}>{name}</Copy>
                   </div>
@@ -189,16 +175,15 @@
       {:else}
         <div class="w-full text-left text-gray-500 dark:text-gray-400">
           <div class={twMerge(classDiv3, div3Class)}>
-            {#each filteredEntries as [name, component] (name)}
+            {#each filteredEntries as [name, Component] (name)}
               {#if name !== 'Icon'}
                 <div class={div4Class}>
-                  <svelte:component
-                    this={component}
+                  <Component
                     class="shrink-0"
                     size={defaultSize}
                     {variation}
                     {...restProps}
-                  />
+                  ></Component>
                   <Copy iconName={name}>{name}</Copy>
                 </div>
               {/if}

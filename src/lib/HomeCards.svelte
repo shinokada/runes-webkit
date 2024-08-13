@@ -29,7 +29,7 @@
 
 {#snippet cardSnippet(card: CardType)}
   <Card href={card.href} class={cardClass}>
-    <svelte:component this={card.icon} class={twMerge(iconClass, card.icon_class)} />
+    <card.icon class={twMerge(iconClass, card.icon_class)} />
     <h3 class={twMerge(classH3, h3Class)}>
       {card.title}
     </h3>

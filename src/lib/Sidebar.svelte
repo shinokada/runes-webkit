@@ -61,12 +61,12 @@
           btnClass="p-1"
         >
           {#snippet iconSlot()}
-            <svelte:component this={icon} class={iconClass} />
+            <icon class={iconClass}></icon>
           {/snippet}
           {#each children as { name, icon, href }}
             <SidebarItem label={name} onclick={sidebarClose} {href} aClass="ml-4">
               {#snippet iconSlot()}
-                <svelte:component this={icon} class={iconClass} />
+                <icon class={iconClass}></icon>
               {/snippet}
             </SidebarItem>
           {/each}
@@ -74,7 +74,7 @@
       {:else}
         <SidebarItem label={name} onclick={sidebarClose} {href}>
           {#snippet iconSlot()}
-            <svelte:component this={icon} class={twMerge('h-5 w-5', iconClass)} />
+            <icon class={twMerge('h-5 w-5', iconClass)}></icon>
           {/snippet}
         </SidebarItem>
       {/if}

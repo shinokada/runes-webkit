@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.13
+
+### Patch Changes
+
+- fix: remove svelte:component ([`b61fbad196c12b5351621d21325ab118ff218fec`](https://github.com/shinokada/runes-webkit/commit/b61fbad196c12b5351621d21325ab118ff218fec))
+
 ## 0.9.12
 
 ### Patch Changes

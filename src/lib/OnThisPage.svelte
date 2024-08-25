@@ -89,7 +89,7 @@
       {dropdownStatus}
       {closeDropdown}
       params={transitionParams}
-      divClass={twMerge(classDropdownDiv, dropdownDivClass)}
+      class={twMerge(classDropdownDiv, dropdownDivClass)}
       {ulClass}
     >
       <DropdownUl>

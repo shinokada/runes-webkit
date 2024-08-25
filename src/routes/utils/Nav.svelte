@@ -154,7 +154,7 @@
             {dropdownStatus}
             {closeDropdown}
             params={dropdownTransitionParams}
-            divClass="absolute -left-[47px] top-8 w-12 pl-1.5"
+            class="absolute -left-[50px] top-2 w-12 p-1.5"
           >
             <DropdownUl>
               {#if twitterUrl}
@@ -184,11 +184,10 @@
 </header>
 
 <Drawer
-  width="w-64"
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   params={transitionParams}
-  class="dark_bg_theme"
+  class="w-64 dark_bg_theme bg-gray-50"
 >
   <div class="flex items-center pb-4">
     <h5

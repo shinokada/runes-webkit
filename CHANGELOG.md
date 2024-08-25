@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.16
+
+### Patch Changes
+
+- fix: icon: Component to Icon ([`b7567b78aec6b75cbdc85a77ce76e12ba95573cf`](https://github.com/shinokada/runes-webkit/commit/b7567b78aec6b75cbdc85a77ce76e12ba95573cf))
+
 ## 0.9.15
 
 ### Patch Changes

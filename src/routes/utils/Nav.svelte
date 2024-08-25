@@ -186,7 +186,7 @@
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   params={transitionParams}
-  class="w-64 dark_bg_theme bg-gray-50"
+  class="dark_bg_theme w-64 bg-gray-50"
 >
   <div class="flex items-center pb-4">
     <h5

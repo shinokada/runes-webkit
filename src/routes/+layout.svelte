@@ -2,13 +2,7 @@
   import '../app.pcss';
   import { page } from '$app/stores';
   import { newSidebarList } from './utils/helper';
-  import {
-    Footer,
-    OnThisPage,
-    extract,
-    Sidebar,
-    removeHyphensAndCapitalize,
-  } from '$lib';
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from '$lib';
   import { RunesMetaTags } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';

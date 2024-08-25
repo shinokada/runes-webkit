@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.15
+
+### Patch Changes
+
+- fix: OnThisPage class name ([`1375613f3ab90aa98ad7ea46e13eb18e6f863044`](https://github.com/shinokada/runes-webkit/commit/1375613f3ab90aa98ad7ea46e13eb18e6f863044))
+
 ## 0.9.14
 
 ### Patch Changes

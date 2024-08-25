@@ -1,7 +1,6 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
   import type { Component } from 'svelte';
-  import type { ListType } from '$lib';
   import {
     Navbar,
     NavLi,
@@ -34,7 +33,7 @@
   type LiType = {
     name: string;
     href: string;
-    icon?: Component;
+    Icon?: Component;
   };
   interface Props {
     lis?: LiType[];
@@ -98,9 +97,9 @@
 </script>
 
 {#snippet navLi(lis: NonNullable<Props['lis']>)}
-  {#each lis as { name, href, icon }}
-    {#if icon}
-      <icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></icon>
+  {#each lis as { name, href, Icon }}
+    {#if Icon}
+      <Icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></Icon>
     {/if}
     <NavLi {href}>{name}</NavLi>
   {/each}

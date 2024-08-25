@@ -32,6 +32,6 @@ type ChildrenType = {
 export type ListType = {
   name: string;
   href?: string;
-  icon?: Component;
+  Icon?: Component;
   children?: ChildrenType[];
 };

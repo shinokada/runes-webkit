@@ -52,7 +52,7 @@
   {...restProps}
 >
   <SidebarGroup>
-    {#each sidebarList as { name, icon, children, href }}
+    {#each sidebarList as { name, Icon, children, href }}
       {#if children}
         <SidebarDropdownWrapper
           label={name}
@@ -61,12 +61,12 @@
           btnClass="p-1"
         >
           {#snippet iconSlot()}
-            <icon class={iconClass}></icon>
+            <Icon class={iconClass}></Icon>
           {/snippet}
-          {#each children as { name, icon, href }}
+          {#each children as { name, Icon, href }}
             <SidebarItem label={name} onclick={sidebarClose} {href} aClass="ml-4">
               {#snippet iconSlot()}
-                <icon class={iconClass}></icon>
+                <Icon class={iconClass}></Icon>
               {/snippet}
             </SidebarItem>
           {/each}
@@ -74,7 +74,7 @@
       {:else}
         <SidebarItem label={name} onclick={sidebarClose} {href}>
           {#snippet iconSlot()}
-            <icon class={twMerge('h-5 w-5', iconClass)}></icon>
+            <Icon class={twMerge('h-5 w-5', iconClass)}></Icon>
           {/snippet}
         </SidebarItem>
       {/if}

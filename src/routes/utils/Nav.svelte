@@ -1,6 +1,7 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
   import type { Component } from 'svelte';
+  import type { ListType } from '$lib';
   import {
     Navbar,
     NavLi,
@@ -9,7 +10,7 @@
     uiHelpers,
     Darkmode,
     Dropdown,
-    DropdownItem,
+    DropdownUl, DropdownLi,
     Drawer
   } from 'svelte-5-ui-lib';
   import { page } from '$app/stores';
@@ -23,7 +24,7 @@
   } from '$lib';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
-  import { newSidebarList } from '../+layout.svelte';
+  import {newSidebarList} from './helper';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));
@@ -151,22 +152,24 @@
           <Dropdown
             {dropdownStatus}
             {closeDropdown}
-            transitionParams={dropdownTransitionParams}
+            params={dropdownTransitionParams}
             divClass="absolute -left-[47px] top-8 w-12 pl-1.5"
           >
-            {#if twitterUrl}
-              <DropdownItem href={twitterUrl} target="_blank" aClass="p-2 m-0"
-                ><XSolid /></DropdownItem
-              >
-            {/if}
-            {#if githubUrl}
-              <DropdownItem href={githubUrl} target="_blank" aClass="p-2 m-0">
-                <GithubSolid />
-              </DropdownItem>
-            {/if}
-            <DropdownItem>
-              <Darkmode class="m-0 p-2" />
-            </DropdownItem>
+            <DropdownUl>
+              {#if twitterUrl}
+                <DropdownLi href={twitterUrl} target="_blank" aClass="p-2 m-0"
+                  ><XSolid /></DropdownLi
+                >
+              {/if}
+              {#if githubUrl}
+                <DropdownLi href={githubUrl} target="_blank" aClass="p-2 m-0">
+                  <GithubSolid />
+                </DropdownLi>
+              {/if}
+              <DropdownLi>
+                <Darkmode class="m-0 p-2" />
+              </DropdownLi>
+            </DropdownUl>
           </Dropdown>
         </div>
       </div>
@@ -183,7 +186,7 @@
   width="w-64"
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
-  {transitionParams}
+  params={transitionParams}
   class="dark_bg_theme"
 >
   <div class="flex items-center pb-4">

@@ -6,7 +6,7 @@
     active?: boolean;
   }
 
-  import { Dropdown, DropdownItem, DropdownDivider, uiHelpers } from 'svelte-5-ui-lib';
+  import { Dropdown, DropdownUl, DropdownLi, DropdownDivider, uiHelpers } from 'svelte-5-ui-lib';
   import { ChevronDownOutline } from '$lib';
   import { sineIn } from 'svelte/easing';
   import { twMerge } from 'tailwind-merge';
@@ -88,19 +88,19 @@
     <Dropdown
       {dropdownStatus}
       {closeDropdown}
-      {transitionParams}
+      params={transitionParams}
       divClass={twMerge(classDropdownDiv, dropdownDivClass)}
       {ulClass}
     >
-      {#snippet children()}
-        <DropdownItem href="#top">Return to top</DropdownItem>
+      <DropdownUl>
+        <DropdownLi href="#top">Return to top</DropdownLi>
         <DropdownDivider />
         {#each headings as { rel, href, name }}
-          <DropdownItem {liClass}>
+          <DropdownLi {liClass}>
             <a {href} class={indent(rel)}>{name}</a>
-          </DropdownItem>
+          </DropdownLi>
         {/each}
-      {/snippet}
+      </DropdownUl>
     </Dropdown>
   </div>
 </div>

@@ -1,8 +1,6 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { Component } from 'svelte';
-  import type { ListType } from '$lib';
   import { newSidebarList } from './utils/helper';
   import {
     Footer,
@@ -10,33 +8,10 @@
     extract,
     Sidebar,
     removeHyphensAndCapitalize,
-    sidebarList,
-    ExpandOutline,
-    GridPlusOutline,
-    CogOutline
   } from '$lib';
   import { RunesMetaTags } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
-
-  // const extra: ListType[] = [
-  //   {
-  //     name: '3 Tabs',
-  //     icon: ExpandOutline as Component,
-  //     href: '/three-tabs'
-  //   },
-  //   {
-  //     name: '3 Tabs Tailwind ',
-  //     icon: CogOutline as Component,
-  //     href: '/three-tabs-sizebytailwind'
-  //   },
-  //   {
-  //     name: 'No Tabs',
-  //     icon: GridPlusOutline as Component,
-  //     href: '/no-tabs'
-  //   }
-  // ];
-  // export const newSidebarList: ListType[] = [...sidebarList, ...extra];
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID;

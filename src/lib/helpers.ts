@@ -230,7 +230,7 @@ export function insertObjectToArray(
 interface CardTpye {
   title: string;
   description: string;
-  icon: Component;
+  Icon: Component;
   icon_class: string;
 }
 
@@ -238,45 +238,45 @@ export const cards: CardTpye[] = [
   {
     title: 'Svelte 4/5/Runes',
     description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
-    icon: BadgeCheckOutline,
+    Icon: BadgeCheckOutline,
     icon_class: 'text-pink-500'
   },
   {
     title: 'Accessible SVGs',
     description:
       'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
-    icon: Accessibility,
+    Icon: Accessibility,
     icon_class: 'text-green-400'
   },
   {
     title: 'Faster Compiling',
     description: 'Import icons directly to optimize compilation speed and improve performance.',
-    icon: TruckFastSolid,
+    Icon: TruckFastSolid,
     icon_class: 'text-yellow-500'
   },
   {
     title: 'IDE Support',
     description:
       'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
-    icon: Visualstudiocode,
+    Icon: Visualstudiocode,
     icon_class: 'text-amber-500'
   },
   {
     title: 'Global Icon',
     description: 'Use <code>Icon</code> to careat default global icons.',
-    icon: GlobeOutline,
+    Icon: GlobeOutline,
     icon_class: 'text-purple-500'
   },
   {
     title: 'CSS Frameworks support',
     description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
-    icon: TailwindSolid,
+    Icon: TailwindSolid,
     icon_class: 'text-orange-500'
   },
   {
     title: 'Dark mode',
     description: 'Use <code>class</code> props to add your dark mode color.',
-    icon: MoonSolid,
+    Icon: MoonSolid,
     icon_class: 'text-emerald-200'
   }
 ];
@@ -284,7 +284,7 @@ export const cards: CardTpye[] = [
 interface InfoType {
   title: string;
   description: string;
-  icon: Component;
+  Icon: Component;
   href: string;
   icon_class: string;
 }
@@ -293,7 +293,7 @@ export const info: InfoType[] = [
   {
     title: 'Svelte Icon Family',
     description: 'Explore 29 Svelte SVG Icon Sets.',
-    icon: InfoCircleOutline,
+    Icon: InfoCircleOutline,
     href: 'https://svelte-svg-icons.codewithshin.com/',
     icon_class: 'text-amber-500'
   }
@@ -302,44 +302,44 @@ export const info: InfoType[] = [
 export const sidebarList: Types.ListType[] = [
   {
     name: 'Svelte 4 & 5',
-    icon: StarOutline as Component,
+    Icon: StarOutline as Component,
     children: [
       {
         name: 'Getting Started',
-        icon: CogOutline as Component,
+        Icon: CogOutline as Component,
         href: '/guide/svelte-4/getting-started'
       },
       {
         name: 'Props',
-        icon: BadgeCheckOutline as Component,
+        Icon: BadgeCheckOutline as Component,
         href: '/guide/svelte-4/props'
       }
     ]
   },
   {
     name: 'Svelte 5: Runes',
-    icon: BellActiveAltOutline as Component,
+    Icon: BellActiveAltOutline as Component,
     children: [
       {
         name: 'Getting Started',
-        icon: CogOutline as Component,
+        Icon: CogOutline as Component,
         href: '/guide/svelte-5/getting-started'
       },
       {
         name: 'Props',
-        icon: BadgeCheckOutline as Component,
+        Icon: BadgeCheckOutline as Component,
         href: '/guide/svelte-5/props'
       }
     ]
   },
   {
     name: 'Global Icons',
-    icon: GlobeOutline as Component,
+    Icon: GlobeOutline as Component,
     href: '/guide/global-icons'
   },
   {
     name: 'Custom Icons',
-    icon: ChartPieOutline as Component,
+    Icon: ChartPieOutline as Component,
     href: '/guide/custom-icons'
   }
 ];

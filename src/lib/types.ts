@@ -5,14 +5,14 @@ export type Title = string;
 export type Card = {
   title: string;
   description: string;
-  icon: Component;
+  Icon: Component;
   icon_class: string;
 };
 
 export type CardType = {
   title: string;
   description: string;
-  icon: Component;
+  Icon: Component;
   href?: string;
   icon_class?: string;
 };
@@ -27,7 +27,7 @@ export interface LinkType {
 type ChildrenType = {
   name: string;
   href?: string;
-  icon?: Component;
+  Icon?: Component;
 };
 export type ListType = {
   name: string;

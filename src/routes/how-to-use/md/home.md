@@ -5,7 +5,7 @@
   const brand = {
     title: 'Brands, Regular, and Solid Icons',
     description: '2000+ SVG Icons.',
-    icon: BellActiveAltOutline,
+    Icon: BellActiveAltOutline,
     icon_class: 'text-green-500'
   }
   let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))

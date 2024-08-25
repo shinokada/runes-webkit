@@ -37,7 +37,7 @@
   //   }
   // ];
   // export const newSidebarList: ListType[] = [...sidebarList, ...extra];
-  
+
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID;
   let metaTags = $state($page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags);

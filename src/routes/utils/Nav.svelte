@@ -10,7 +10,8 @@
     uiHelpers,
     Darkmode,
     Dropdown,
-    DropdownUl, DropdownLi,
+    DropdownUl,
+    DropdownLi,
     Drawer
   } from 'svelte-5-ui-lib';
   import { page } from '$app/stores';
@@ -24,7 +25,7 @@
   } from '$lib';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
-  import {newSidebarList} from './helper';
+  import { newSidebarList } from './helper';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));

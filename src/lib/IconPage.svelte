@@ -106,11 +106,7 @@
                         {...restProps}
                       ></Component>
                     {:else}
-                      <Component
-                        class="shrink-0"
-                        size={defaultSize}
-                        {variation}
-                        {...restProps}
+                      <Component class="shrink-0" size={defaultSize} {variation} {...restProps}
                       ></Component>
                     {/if}
                     <Copy iconName={name}>{name}</Copy>
@@ -178,11 +174,7 @@
             {#each filteredEntries as [name, Component] (name)}
               {#if name !== 'Icon'}
                 <div class={div4Class}>
-                  <Component
-                    class="shrink-0"
-                    size={defaultSize}
-                    {variation}
-                    {...restProps}
+                  <Component class="shrink-0" size={defaultSize} {variation} {...restProps}
                   ></Component>
                   <Copy iconName={name}>{name}</Copy>
                 </div>

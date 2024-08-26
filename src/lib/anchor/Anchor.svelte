@@ -1,24 +1,17 @@
 <script lang="ts">
-  import type { Snippet } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import { type AnchorProps as Props, anchor } from '.';
 
-  interface Props {
-    children: Snippet;
-    tag?: string | undefined | null;
-    spanClass?: string | undefined | null;
-    classA?: string | undefined | null;
-    aClass?: string | undefined | null;
-    wrapperClass?: string | undefined | null;
-  }
   let {
     children,
-    spanClass = 'absolute -top-[100px]',
-    classA = 'ml-2 text-primary-700 opacity-0 transition-opacity group-hover:opacity-100 dark:text-primary-700',
+    spanClass,
     aClass,
-    wrapperClass = 'group relative',
+    class: className,
     tag,
     ...restProps
   }: Props = $props();
+
+  const { base, span, anchor: anchorCls } = $derived(anchor());
 
   let content: string = $state('');
   let slug: string = $state('');
@@ -29,10 +22,10 @@
   }
 </script>
 
-<svelte:element this={tag} {...restProps} class={wrapperClass} use:init>
+<svelte:element this={tag} {...restProps} class={base({ className })} use:init>
   {@render children()}
-  <span id={slug} class={spanClass}></span>
-  <a class={twMerge(classA, aClass)} href="#{slug}" aria-label="Link to this section: {content}">
+  <span id={slug} class={span({ class: spanClass })}></span>
+  <a class={anchorCls({ class: aClass })} href="#{slug}" aria-label="Link to this section: {content}">
     #
   </a>
 </svelte:element>

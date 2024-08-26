@@ -1,18 +1,15 @@
-export { default as Anchor } from './Anchor.svelte';
+export * from './anchor';
 export { default as Copy } from './Copy.svelte';
-export { default as Code } from './Code.svelte';
-export { default as CodeWrapper } from './CodeWrapper.svelte';
+export * from './code';
 export { default as DocPage } from './DocPage.svelte';
 export { default as Footer } from './Footer.svelte';
-export { default as H1 } from './H1.svelte';
-export { default as H2 } from './H2.svelte';
-export { default as H3 } from './H3.svelte';
+export * from './heading';
 export { default as HighlightCompo } from './HighlightCompo.svelte';
 export { default as HomeCards } from './HomeCards.svelte';
 export { default as IconPage } from './IconPage.svelte';
 export { default as OnThisPage } from './OnThisPage.svelte';
 export { default as Sidebar } from './Sidebar.svelte';
-export { default as SupportBanner } from './SupportBanner.svelte';
+export * from './support-banner';
 export { default as TechInfo } from './TechInfo.svelte';
 export { default as Toc } from './Toc.svelte';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Anchor from './Anchor.svelte';
+  import {Anchor} from '$lib';
   import type { Snippet } from 'svelte';
 
   interface Props {

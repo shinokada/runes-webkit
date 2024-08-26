@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.18
+
+### Patch Changes
+
+- feat: add variants to anchor and support-banner ([`38201cd72e0fd7a973ec99fe8104ed8e373b56bb`](https://github.com/shinokada/runes-webkit/commit/38201cd72e0fd7a973ec99fe8104ed8e373b56bb))
+
 ## 0.9.17
 
 ### Patch Changes

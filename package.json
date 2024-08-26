@@ -1,6 +1,6 @@
 {
   "name": "runes-webkit",
-  "version": "0.9.17",
+  "version": "0.9.18",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://runes-webkit.codewithshin.com/",
@@ -100,6 +100,159 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
-    }
+    },
+    "./Copy.svelte": {
+      "types": "./dist/Copy.svelte.d.ts",
+      "svelte": "./dist/Copy.svelte"
+    },
+    "./DocPage.svelte": {
+      "types": "./dist/DocPage.svelte.d.ts",
+      "svelte": "./dist/DocPage.svelte"
+    },
+    "./Footer.svelte": {
+      "types": "./dist/Footer.svelte.d.ts",
+      "svelte": "./dist/Footer.svelte"
+    },
+    "./HighlightCompo.svelte": {
+      "types": "./dist/HighlightCompo.svelte.d.ts",
+      "svelte": "./dist/HighlightCompo.svelte"
+    },
+    "./HomeCards.svelte": {
+      "types": "./dist/HomeCards.svelte.d.ts",
+      "svelte": "./dist/HomeCards.svelte"
+    },
+    "./IconPage.svelte": {
+      "types": "./dist/IconPage.svelte.d.ts",
+      "svelte": "./dist/IconPage.svelte"
+    },
+    "./OnThisPage.svelte": {
+      "types": "./dist/OnThisPage.svelte.d.ts",
+      "svelte": "./dist/OnThisPage.svelte"
+    },
+    "./Sidebar.svelte": {
+      "types": "./dist/Sidebar.svelte.d.ts",
+      "svelte": "./dist/Sidebar.svelte"
+    },
+    "./TechInfo.svelte": {
+      "types": "./dist/TechInfo.svelte.d.ts",
+      "svelte": "./dist/TechInfo.svelte"
+    },
+    "./Toc.svelte": {
+      "types": "./dist/Toc.svelte.d.ts",
+      "svelte": "./dist/Toc.svelte"
+    },
+    "./Anchor.svelte": {
+      "types": "./dist/anchor/Anchor.svelte.d.ts",
+      "svelte": "./dist/anchor/Anchor.svelte"
+    },
+    "./Code.svelte": {
+      "types": "./dist/code/Code.svelte.d.ts",
+      "svelte": "./dist/code/Code.svelte"
+    },
+    "./CodeWrapper.svelte": {
+      "types": "./dist/code/CodeWrapper.svelte.d.ts",
+      "svelte": "./dist/code/CodeWrapper.svelte"
+    },
+    "./H1.svelte": {
+      "types": "./dist/heading/H1.svelte.d.ts",
+      "svelte": "./dist/heading/H1.svelte"
+    },
+    "./H2.svelte": {
+      "types": "./dist/heading/H2.svelte.d.ts",
+      "svelte": "./dist/heading/H2.svelte"
+    },
+    "./H3.svelte": {
+      "types": "./dist/heading/H3.svelte.d.ts",
+      "svelte": "./dist/heading/H3.svelte"
+    },
+    "./A7Solid.svelte": {
+      "types": "./dist/icons/A7Solid.svelte.d.ts",
+      "svelte": "./dist/icons/A7Solid.svelte"
+    },
+    "./Accessibility.svelte": {
+      "types": "./dist/icons/Accessibility.svelte.d.ts",
+      "svelte": "./dist/icons/Accessibility.svelte"
+    },
+    "./BadgeCheckOutline.svelte": {
+      "types": "./dist/icons/BadgeCheckOutline.svelte.d.ts",
+      "svelte": "./dist/icons/BadgeCheckOutline.svelte"
+    },
+    "./BellActiveAltOutline.svelte": {
+      "types": "./dist/icons/BellActiveAltOutline.svelte.d.ts",
+      "svelte": "./dist/icons/BellActiveAltOutline.svelte"
+    },
+    "./ChartPieOutline.svelte": {
+      "types": "./dist/icons/ChartPieOutline.svelte.d.ts",
+      "svelte": "./dist/icons/ChartPieOutline.svelte"
+    },
+    "./ChevronDownOutline.svelte": {
+      "types": "./dist/icons/ChevronDownOutline.svelte.d.ts",
+      "svelte": "./dist/icons/ChevronDownOutline.svelte"
+    },
+    "./ClipboardListOutline.svelte": {
+      "types": "./dist/icons/ClipboardListOutline.svelte.d.ts",
+      "svelte": "./dist/icons/ClipboardListOutline.svelte"
+    },
+    "./CogOutline.svelte": {
+      "types": "./dist/icons/CogOutline.svelte.d.ts",
+      "svelte": "./dist/icons/CogOutline.svelte"
+    },
+    "./DotsHorizontalOutline.svelte": {
+      "types": "./dist/icons/DotsHorizontalOutline.svelte.d.ts",
+      "svelte": "./dist/icons/DotsHorizontalOutline.svelte"
+    },
+    "./ExpandOutline.svelte": {
+      "types": "./dist/icons/ExpandOutline.svelte.d.ts",
+      "svelte": "./dist/icons/ExpandOutline.svelte"
+    },
+    "./GithubSolid.svelte": {
+      "types": "./dist/icons/GithubSolid.svelte.d.ts",
+      "svelte": "./dist/icons/GithubSolid.svelte"
+    },
+    "./GlobeOutline.svelte": {
+      "types": "./dist/icons/GlobeOutline.svelte.d.ts",
+      "svelte": "./dist/icons/GlobeOutline.svelte"
+    },
+    "./GridPlusOutline.svelte": {
+      "types": "./dist/icons/GridPlusOutline.svelte.d.ts",
+      "svelte": "./dist/icons/GridPlusOutline.svelte"
+    },
+    "./InfoCircleOutline.svelte": {
+      "types": "./dist/icons/InfoCircleOutline.svelte.d.ts",
+      "svelte": "./dist/icons/InfoCircleOutline.svelte"
+    },
+    "./MediumBrands.svelte": {
+      "types": "./dist/icons/MediumBrands.svelte.d.ts",
+      "svelte": "./dist/icons/MediumBrands.svelte"
+    },
+    "./MoonSolid.svelte": {
+      "types": "./dist/icons/MoonSolid.svelte.d.ts",
+      "svelte": "./dist/icons/MoonSolid.svelte"
+    },
+    "./StarOutline.svelte": {
+      "types": "./dist/icons/StarOutline.svelte.d.ts",
+      "svelte": "./dist/icons/StarOutline.svelte"
+    },
+    "./TailwindSolid.svelte": {
+      "types": "./dist/icons/TailwindSolid.svelte.d.ts",
+      "svelte": "./dist/icons/TailwindSolid.svelte"
+    },
+    "./TruckFastSolid.svelte": {
+      "types": "./dist/icons/TruckFastSolid.svelte.d.ts",
+      "svelte": "./dist/icons/TruckFastSolid.svelte"
+    },
+    "./Visualstudiocode.svelte": {
+      "types": "./dist/icons/Visualstudiocode.svelte.d.ts",
+      "svelte": "./dist/icons/Visualstudiocode.svelte"
+    },
+    "./XSolid.svelte": {
+      "types": "./dist/icons/XSolid.svelte.d.ts",
+      "svelte": "./dist/icons/XSolid.svelte"
+    },
+    "./SupportBanner.svelte": {
+      "types": "./dist/support-banner/SupportBanner.svelte.d.ts",
+      "svelte": "./dist/support-banner/SupportBanner.svelte"
+    },
+    "./package.json": "./package.json"
   }
 }

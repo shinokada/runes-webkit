@@ -15,5 +15,6 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @prop children
-@prop class: className = 'text-primary-700 dark:text-primary-400'
+@prop class: className
+@prop ...restProps
 -->

@@ -6,10 +6,10 @@
     children: Snippet;
     class?: string;
   }
-  let { children, class: h2Class = 'group relative' }: Props = $props();
+  let { children, class: className = 'group relative' }: Props = $props();
 </script>
 
-<Anchor tag="h2" wrapperClass={h2Class}>
+<Anchor tag="h2" class={className}>
   {@render children()}
 </Anchor>
 

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.19
+
+### Patch Changes
+
+- fix: Sidebar update after svelte-5-ui-lib update ([`a1fc90f1997e0e60ea307d498341f7054904b149`](https://github.com/shinokada/runes-webkit/commit/a1fc90f1997e0e60ea307d498341f7054904b149))
+
 ## 0.9.18
 
 ### Patch Changes

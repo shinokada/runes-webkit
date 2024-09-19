@@ -16,7 +16,7 @@
 
 <H2>Update the followings:</H2>
 
-<List tag="ul" ctxclass="my-1 text-lg">
+<List tag="ul" ctxClass="my-1 text-lg">
   <Checkbox><Li><Code>.changeset/config.json</Code></Li></Checkbox>
   <Checkbox
     ><Li>Run <Code>npx changeset pre enter next</Code> to enter prerelease mode</Li></Checkbox

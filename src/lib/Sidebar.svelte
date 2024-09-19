@@ -48,7 +48,7 @@
   activeClass={twMerge(classActive, activeClass)}
   nonActiveClass={twMerge(classNonActive, nonActiveClass)}
   {divClass}
-  asideClass={twMerge(classAside, asideClass)}
+  class={twMerge(classAside, asideClass)}
   {...restProps}
 >
   <SidebarGroup>

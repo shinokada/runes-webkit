@@ -56,7 +56,7 @@
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));
   }
-  let urlsToIncludeSwitcher = ['/guide']
+  let urlsToIncludeSwitcher = ['/guide', '/guide2', '/how-to-use', '/quick-start'];
   let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
   // dropdown
   let dropdown = uiHelpers();

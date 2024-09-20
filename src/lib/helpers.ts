@@ -13,6 +13,23 @@ import StarOutline from './icons/StarOutline.svelte';
 import CogOutline from './icons/CogOutline.svelte';
 import ChartPieOutline from './icons/ChartPieOutline.svelte';
 
+export function replaceLibImport(componentString: string): string {
+  return componentString.replace(/from '\$lib'/g, "from 'runes-webkit'");
+}
+
+
+export function copyToClipboard(text: string): Promise<void> {
+  return navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      console.log('Text copied to clipboard');
+    })
+    .catch((err) => {
+      console.error('Failed to copy: ', err);
+      throw err; // Re-throw the error so the caller can handle it if needed
+    });
+}
+
 export function clickToCopy(node: HTMLElement, target: string) {
   async function copyText() {
     let text = target;

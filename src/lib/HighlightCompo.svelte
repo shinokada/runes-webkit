@@ -1,111 +1,74 @@
 <script lang="ts">
   import { HighlightSvelte, Highlight } from 'svelte-rune-highlight';
-  import { Badge } from 'svelte-5-ui-lib';
-  import { twMerge } from 'tailwind-merge';
-  import { clickToCopy } from '$lib';
   import markdown from 'svelte-rune-highlight/languages/markdown';
+  import { Button, Badge } from 'svelte-5-ui-lib';
+  import { copyToClipboard, replaceLibImport } from './helpers';
+  import { highlightcompo } from './theme';
 
   interface Props {
+    // componentStatus: boolean;
     code: string;
-    codeLang?: string | undefined | null;
-    counter?: number;
-    badgeClass?: string | undefined | null;
-    classDiv?: string | undefined | null;
-    divClass?: string | undefined | null;
-    classBtn?: string | undefined | null;
-    btnClass?: string | undefined | null;
-    svgClass?: string | undefined | null;
-  }
-  let {
-    code,
-    codeLang,
-    counter = 2,
-    badgeClass = 'absolute -top-10 right-0',
-    classDiv = 'my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700',
-    divClass,
-    classBtn = 'absolute right-0 -mt-11 flex items-center border border-gray-200 bg-gray-100 px-3 py-2 text-xs font-medium text-gray-600 hover:bg-gray-200 hover:text-primary-700 dark:border-gray-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white',
-    btnClass,
-    svgClass = 'me-2 h-4 w-4'
-  }: Props = $props();
-
-  let text = $state('');
-  let open = $state(false);
-
-  function copySuccess() {
-    text = 'Copied!';
+    badgeClass?: string;
+    contentClass?: string;
+    buttonClass?: string;
+    codeLang?: string;
+    class?: string;
+    expanded?: boolean;
+    replaceLib?: boolean;
   }
 
-  function copyError(event: CustomEvent) {
-    text = `Error! ${event.detail}`;
+  let { code, codeLang, badgeClass, buttonClass, contentClass = 'overflow-hidden', replaceLib = true, class: className }: Props = $props();
+
+  if (replaceLib) {
+    code = replaceLibImport(code);
   }
 
-  function trigger() {
-    open = true;
-    counter = 2;
-    timeout();
-  }
+  let showExpandButton: boolean = $state(false);
+  let expand: boolean = $state(false);
+  const checkOverflow = (el: HTMLElement) => {
+    const isOverflowingY = el.clientHeight < el.scrollHeight;
+    showExpandButton = isOverflowingY;
+  };
 
-  function timeout() {
-    if (--counter > 0) return setTimeout(timeout, 1000);
-    open = false;
+  const { base, badge, button } = $derived(highlightcompo());
+  let copiedStatus = $state(false);
+
+  const handleExpandClick = () => {
+    expand = !expand;
+  };
+
+  function handleCopyClick() {
+    copyToClipboard(code)
+      .then(() => {
+        copiedStatus = true;
+        setTimeout(() => {
+          copiedStatus = false;
+        }, 1000);
+      })
+      .catch((err) => {
+        console.error('Error in copying:', err);
+        // Handle the error as needed
+      });
   }
 </script>
 
-{#if open}
+<div class={base({ className })}>
   <div class="relative">
-    <Badge large class={badgeClass}>
-      <span class="font-medium">{text}</span>
-    </Badge>
+    <div class="{contentClass} {showExpandButton ? 'pb-8' : ''}" class:max-h-72={!expand} tabindex="-1" use:checkOverflow>
+      {#if copiedStatus}
+        <Badge class={badge({ class: badgeClass })} color="green">Copied to clipboard</Badge>
+      {/if}
+      {#if codeLang === 'md'}
+        <Highlight language={markdown} {code} />
+      {:else if code}
+        <HighlightSvelte {code} />
+      {:else}
+        no code is provided
+      {/if}
+    </div>
+    <Button class={button({ class: buttonClass })} onclick={handleCopyClick}>Copy</Button>
+    {#if showExpandButton}
+      <button onclick={handleExpandClick} type="button" class="absolute bottom-0 start-0 w-full border-t border-gray-200 bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{expand ? 'Collapse code' : 'Expand code'}</button>
+    {/if}
   </div>
-{/if}
-
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<div role="button" tabindex="0" class={twMerge(classDiv, divClass)} onclick={copySuccess}>
-  <div class="relative">
-    <button
-      type="button"
-      use:clickToCopy={code}
-      onclick={trigger}
-      class={twMerge(classBtn, btnClass)}
-    >
-      <svg
-        class={svgClass}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-        >
-        </path>
-      </svg>
-      Copy
-    </button>
-  </div>
-  {#if codeLang === 'md'}
-    <Highlight language={markdown} {code} />
-  {:else if code}
-    <HighlightSvelte {code} />
-  {:else}
-    no code is provided
-  {/if}
 </div>
-
-<!--
-@component
-[Go to docs](https://runes-webkit.codewithshin.com/)
-## Props
-@prop code
-@prop codeLang
-@prop counter = 2
-@prop badgeClass = 'absolute -top-10 right-0'
-@prop classDiv = 'my-12 border border-gray-500 bg-gray-300 dark:border-gray-600 dark:bg-gray-700'
-@prop divClass
-@prop classBtn = 'absolute right-0 -mt-11 flex items-center border border-gray-200 bg-gray-100 px-3 py-2 text-xs font-medium text-gray-600 hover:bg-gray-200 hover:text-primary-700 dark:border-gray-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white'
-@prop btnClass
-@prop svgClass = 'me-2 h-4 w-4'
--->

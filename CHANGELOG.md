@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.20
+
+### Patch Changes
+
+- fix: Sidebar and layout, remove utils/Nav ([`18516651ea7b8d1442d9d8dec3627a21ac1d1b23`](https://github.com/shinokada/runes-webkit/commit/18516651ea7b8d1442d9d8dec3627a21ac1d1b23))
+
 ## 0.9.19
 
 ### Patch Changes

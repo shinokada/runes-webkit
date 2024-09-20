@@ -18,7 +18,6 @@
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID;
   let metaTags = $state($page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags);
-  // console.log('data', $page.data.layoutMetaTags)
   // sidebar
   const sidebarUi = uiHelpers();
   let isOpen = $state(false);
@@ -76,7 +75,6 @@
     metaTags = $page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags;
     isOpen = sidebarUi.isOpen;
   });
-  console.log('newSidebarList', newSidebarList)
 </script>
 
 {#snippet navLi(lis:LiType[])}

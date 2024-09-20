@@ -93,6 +93,8 @@
 ## Props
 @prop sidebarList
 @prop menuList
+@prop isOpen = false
+@prop breakpoint = 'lg'
 @prop sidebarClose
 @prop activeClass
 @prop classActive = 'flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600'

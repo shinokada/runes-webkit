@@ -1,13 +1,15 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper } from 'svelte-5-ui-lib';
+  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper, type BreakpointType } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
   import type { ListType } from './types';
 
   interface Props {
     sidebarList: ListType[];
     menuList?: ListType[];
+    isOpen?: boolean;
     sidebarClose?: () => void;
+    breakpoint?: BreakpointType;
     activeClass?: string;
     classActive?: string | undefined;
     nonActiveClass?: string;
@@ -21,6 +23,8 @@
   let {
     sidebarList,
     menuList,
+    isOpen = false,
+    breakpoint = 'lg',
     sidebarClose,
     activeClass,
     classActive = 'flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600',
@@ -45,6 +49,7 @@
 </script>
 
 <Sidebar
+  {isOpen} {breakpoint}
   activeClass={twMerge(classActive, activeClass)}
   nonActiveClass={twMerge(classNonActive, nonActiveClass)}
   {divClass}

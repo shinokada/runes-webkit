@@ -6,7 +6,7 @@
   import { newSidebarList } from './utils/helper';
   import { Footer, OnThisPage, extract, removeHyphensAndCapitalize, DotsHorizontalOutline, GithubSolid, random_tailwind_color, XSolid, } from '$lib';
   import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown,  DropdownUl, DropdownLi, Sidebar, SidebarGroup, SidebarDropdownWrapper, SidebarItem, CloseButton, SidebarBrand } from 'svelte-5-ui-lib';
-  import { RunesMetaTags } from 'runes-meta-tags';
+  import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';
   
@@ -17,7 +17,12 @@
   };
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID;
-  let metaTags = $state($page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags);
+  // metaTags
+  let metaTags = $state(
+    $page.data.pageMetaTags
+      ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
+      : data.layoutMetaTags
+  );
   // sidebar
   const sidebarUi = uiHelpers();
   let isOpen = $state(false);
@@ -72,7 +77,7 @@
     navStatus = nav.isOpen;
     dropdownStatus = dropdown.isOpen;
     currentUrl = $page.url.pathname;
-    metaTags = $page.data.pageMetaTags ? $page.data.pageMetaTags : data.layoutMetaTags;
+    metaTags = $page.data.pageMetaTags ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags ) : data.layoutMetaTags
     isOpen = sidebarUi.isOpen;
   });
 </script>

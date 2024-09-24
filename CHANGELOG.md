@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.22
+
+### Patch Changes
+
+- fix: dependencies update ([`5ae9211825edef515d9520df3631418889165615`](https://github.com/shinokada/runes-webkit/commit/5ae9211825edef515d9520df3631418889165615))
+
 ## 0.9.21
 
 ### Patch Changes

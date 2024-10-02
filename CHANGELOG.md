@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.23
+
+### Patch Changes
+
+- fix: update after eslint.config.js and lib-helpers update ([`64c88edf0299d6632e7f99398aa04a98c5b0a004`](https://github.com/shinokada/runes-webkit/commit/64c88edf0299d6632e7f99398aa04a98c5b0a004))
+
 ## 0.9.22
 
 ### Patch Changes

@@ -125,24 +125,24 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop children
-@prop pkgName
-@prop pkgVersion
-@prop runeswebkitVersion
-@prop runaticsVersion
-@prop runesMetaTagsVersion
-@prop svelteVersion
-@prop svelteKitVersion
-@prop svelte5uilib
-@prop svelteRuneHighlight
-@prop viteVersion
-@prop repoUrl
-@prop title = 'Technical information about this website'
-@prop h2Class = 'my-8 flex justify-center'
-@prop divClass = 'mx-auto grid max-w-5xl grid-cols-1'
-@prop ulClass
-@prop classUl = 'm-4 list-disc p-4 text-left text-lg dark:text-gray-400'
-@prop liClass = 'hover:text-red-700 hover:underline'
-@prop aClass = 'me-4 hover:underline md:me-6'
-@prop cardsize = 'xl'
+@props: children: Snippet;
+@props:pkgName: string;
+@props:pkgVersion: string;
+@props:runeswebkitVersion: string;
+@props:runaticsVersion: string;
+@props:runesMetaTagsVersion: string;
+@props:svelteVersion: string;
+@props:svelteKitVersion: string;
+@props:svelte5uilib: string;
+@props:svelteRuneHighlight: string;
+@props:viteVersion: string;
+@props:repoUrl: string;
+@props:title: string = 'Technical information about this website';
+@props:h2Class: string | undefined = 'my-8 flex justify-center';
+@props:divClass: string | undefined = 'mx-auto grid max-w-5xl grid-cols-1';
+@props:ulClass: string | undefined;
+@props:classUl: string | undefined = 'm-4 list-disc p-4 text-left text-lg dark:text-gray-400';
+@props:liClass: string | undefined = 'hover:text-red-700 hover:underline';
+@props:aClass: string | undefined = 'me-4 hover:underline md:me-6';
+@props:cardsize: 'xl' | 'xs' | 'sm' | 'md' | 'lg' | undefined = 'xl';
 -->

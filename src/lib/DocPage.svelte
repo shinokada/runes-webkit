@@ -46,15 +46,15 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop children
-@prop classMain = 'w-full min-w-0 flex-auto lg:static lg:max-h-full lg:overflow-visible'
-@prop mainClass
-@prop classDiv1 = 'flex w-full'
-@prop div1Class
-@prop classDiv2 = 'mx-auto flex min-w-0 max-w-4xl flex-col divide-y divide-gray-200 px-4 lg:px-4 lg:pb-16 xl:pb-24 dark:divide-gray-800'
-@prop div2Class
-@prop classDiv3 = 'pb-20 pr-8 2xl:pr-0'
-@prop div3Class
-@prop headingSelector = '#mainContent > :where(h2
-@prop h3)'
+@props: children: Snippet;
+@props:classMain: string | undefined | null = 'w-full min-w-0 flex-auto lg:static lg:max-h-full lg:overflow-visible';
+@props:mainClass: string | undefined | null;
+@props:classDiv1: string | undefined | null = 'flex w-full';
+@props:div1Class: string | undefined | null;
+@props:classDiv2: string | undefined | null = 'mx-auto flex min-w-0 max-w-4xl flex-col divide-y divide-gray-200 px-4 lg:px-4 lg:pb-16 xl:pb-24 dark:divide-gray-800';
+@props:div2Class: string | undefined | null;
+@props:classDiv3: string | undefined | null = 'pb-20 pr-8 2xl:pr-0';
+@props:div3Class: string | undefined | null;
+@props:headingSelector: string = '#mainContent > :where(h2;
+@props:h3)': any;
 -->

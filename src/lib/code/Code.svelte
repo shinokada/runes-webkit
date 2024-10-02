@@ -14,7 +14,6 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop children
-@prop class: className
-@prop ...restProps
+@props: children: any;
+@props:class: any;
 -->

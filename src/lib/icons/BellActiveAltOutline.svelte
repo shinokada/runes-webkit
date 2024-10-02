@@ -83,13 +83,12 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop size = ctx.size || 'md'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop role = ctx.role || 'img'
-@prop strokeWidth = ctx.strokeWidth || '2'
-@prop desc
-@prop class: classname
-@prop ariaLabel = 'bell active alt outline'
-@prop ...restProps
+@props: size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@props:color: any = ctx.color || 'currentColor';
+@props:title: TitleType;
+@props:role: any = ctx.role || 'img';
+@props:strokeWidth: any = ctx.strokeWidth || '2';
+@props:desc: DescType;
+@props:class: any;
+@props:ariaLabel: string = 'bell active alt outline';
 -->

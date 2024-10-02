@@ -83,13 +83,12 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop size = ctx.size || 'md'
-@prop role
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop strokeWidth = ctx.strokeWidth || '2'
-@prop desc
-@prop class: classname
-@prop ariaLabel = 'grid plus outline'
-@prop ...restProps
+@props: size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@props:role: any;
+@props:color: any = ctx.color || 'currentColor';
+@props:title: TitleType;
+@props:strokeWidth: any = ctx.strokeWidth || '2';
+@props:desc: DescType;
+@props:class: any;
+@props:ariaLabel: string = 'grid plus outline';
 -->

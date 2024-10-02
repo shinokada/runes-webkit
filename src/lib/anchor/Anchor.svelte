@@ -31,10 +31,9 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop children
-@prop spanClass
-@prop aClass
-@prop class: className
-@prop tag
-@prop ...restProps
+@props: children: any;
+@props:spanClass: any;
+@props:aClass: any;
+@props:class: any;
+@props:tag: any;
 -->

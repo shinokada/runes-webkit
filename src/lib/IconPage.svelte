@@ -191,29 +191,28 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop icons
-@prop wrapperClass = 'mx-auto max-w-7xl px-8'
-@prop div1Class = 'relative overflow-x-auto'
-@prop div2Class
-@prop classDiv2 = 'w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3'
-@prop div3Class
-@prop classDiv3 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white'
-@prop div4Class = 'flex flex-wrap items-center'
-@prop labelClass = 'text-lg py-4'
-@prop searchClass
-@prop classSearch = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500'
-@prop tab1Class
-@prop classTab1 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white'
-@prop tab2Class = 'flex items-center text-lg'
-@prop rangeClass
-@prop classRange = 'mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700'
-@prop contentClass = 'rounded-lg dark_bg_theme mt-4'
-@prop title
-@prop sizeByTailwind
-@prop minSize = '16'
-@prop defaultSize = $bindable('24')
-@prop maxSize = '48'
-@prop threeTabs = true
-@prop variation
-@prop ...restProps
+@props: icons: Component;
+@props:wrapperClass: string | undefined = 'mx-auto max-w-7xl px-8';
+@props:div1Class: string | undefined = 'relative overflow-x-auto';
+@props:div2Class: string | undefined;
+@props:classDiv2: string | undefined = 'w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3';
+@props:div3Class: string | undefined;
+@props:classDiv3: string | undefined = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white';
+@props:div4Class: string | undefined = 'flex flex-wrap items-center';
+@props:labelClass: string | undefined = 'text-lg py-4';
+@props:searchClass: string | undefined;
+@props:classSearch: string | undefined = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500';
+@props:tab1Class: string | undefined;
+@props:classTab1: string | undefined = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white';
+@props:tab2Class: string | undefined = 'flex items-center text-lg';
+@props:rangeClass: string | undefined;
+@props:classRange: string | undefined = 'mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700';
+@props:contentClass: string = 'rounded-lg dark_bg_theme mt-4';
+@props:title: string;
+@props:sizeByTailwind: boolean // for flowbite-svelte-icons only;
+@props:minSize: string = '16';
+@props:defaultSize: string = $bindable('24');
+@props:maxSize: string = '48';
+@props:threeTabs: boolean = true;
+@props:variation: string;
 -->

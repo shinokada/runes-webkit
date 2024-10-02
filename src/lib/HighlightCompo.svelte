@@ -95,11 +95,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop code
-@prop codeLang
-@prop badgeClass
-@prop buttonClass
-@prop contentClass = 'overflow-hidden'
-@prop replaceLib = true
-@prop class: className
+@props: code: string;
+@props:codeLang: string;
+@props:badgeClass: string;
+@props:buttonClass: string;
+@props:contentClass: string = 'overflow-hidden';
+@props:replaceLib: boolean = true;
+@props:class: string;
 -->

@@ -62,11 +62,10 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop children
-@prop iconName
-@prop counter = 2
-@prop badgeClass = 'absolute top-4 w-44 p-1'
-@prop divClass
-@prop btnClass = 'ml-4'
-@prop ...attributes
+@props: children: any;
+@props:iconName: string;
+@props:counter: number = 2;
+@props:badgeClass: string = 'absolute top-4 w-44 p-1';
+@props:divClass: string;
+@props:btnClass: string = 'ml-4';
 -->

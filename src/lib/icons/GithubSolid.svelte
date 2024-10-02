@@ -78,12 +78,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop size = ctx.size || 'md'
-@prop role
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop class: classname
-@prop ariaLabel = 'github solid'
-@prop ...restProps
+@props: size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@props:role: any;
+@props:color: any = ctx.color || 'currentColor';
+@props:title: TitleType;
+@props:desc: DescType;
+@props:class: any;
+@props:ariaLabel: string = 'github solid';
 -->

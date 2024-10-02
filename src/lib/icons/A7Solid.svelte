@@ -66,12 +66,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop class: classname
-@prop ariaLabel = '7 solid'
-@prop ...restProps
+@props: size: any = ctx.size || '24';
+@props:role: any = ctx.role || 'img';
+@props:color: any = ctx.color || 'currentColor';
+@props:title: TitleType;
+@props:desc: DescType;
+@props:class: any;
+@props:ariaLabel: string = '7 solid';
 -->

@@ -16,7 +16,6 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'Amazon_s3',
     fill = ctx.fill || '#fff',
     class: classname,
     ...restProps

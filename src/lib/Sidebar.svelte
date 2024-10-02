@@ -1,6 +1,12 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Sidebar, SidebarGroup, SidebarItem, SidebarDropdownWrapper, type BreakpointType } from 'svelte-5-ui-lib';
+  import {
+    Sidebar,
+    SidebarGroup,
+    SidebarItem,
+    SidebarDropdownWrapper,
+    type BreakpointType
+  } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
   import type { ListType } from './types';
 
@@ -49,7 +55,8 @@
 </script>
 
 <Sidebar
-  {isOpen} {breakpoint}
+  {isOpen}
+  {breakpoint}
   activeClass={twMerge(classActive, activeClass)}
   nonActiveClass={twMerge(classNonActive, nonActiveClass)}
   {divClass}

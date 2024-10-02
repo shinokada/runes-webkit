@@ -12,5 +12,4 @@ interface CodeWrapperProps extends HTMLAttributes<HTMLDivElement> {
   children: Snippet;
 }
 
-
-export { Code, CodeWrapper, codeWrapper, code, type CodeProps, type CodeWrapperProps }
+export { Code, CodeWrapper, codeWrapper, code, type CodeProps, type CodeWrapperProps };

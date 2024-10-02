@@ -52,7 +52,10 @@
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
   <SupportBanner class="mt-4">
-    To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank" aria-label="Buy Me a Coffee at ko-fi.com"
+    To Keep It Going, Please Show Your Love.<a
+      href="https://ko-fi.com/Z8Z2CHALG"
+      target="_blank"
+      aria-label="Buy Me a Coffee at ko-fi.com"
       ><img
         height="40"
         style="border:0px;height:40px;"

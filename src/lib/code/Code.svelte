@@ -3,7 +3,7 @@
 
   let { children, class: className, ...restProps }: Props = $props();
 
-  const base = $derived(code({ className }))
+  const base = $derived(code({ className }));
 </script>
 
 <code class={base} {...restProps}>

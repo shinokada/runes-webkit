@@ -114,7 +114,7 @@
 
 <H2>Installation</H2>
 
-<HighlightCompo codeLang="md" code={modules['./md/installation.md'] as string}/>
+<HighlightCompo codeLang="md" code={modules['./md/installation.md'] as string} />
 
 <H2>Setting</H2>
 
@@ -122,17 +122,28 @@
   <TabItem open title="svelte.config.js">
     <p>Enable <Code>compilerOptions</Code></p>
     :
-    <HighlightCompo code={modules['./md/svelte-config-js.md'] as string}  contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      code={modules['./md/svelte-config-js.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="package.json">
     <p>
       Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and
       update <Code>keywords</Code>, <Code>contributors</Code> that is the original author, and all URLs:
     </p>
-    <HighlightCompo codeLang="md" code={modules['./md/package-json.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="md"
+      code={modules['./md/package-json.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="vite.config.ts">
-    <HighlightCompo codeLang="md" code={modules['./md/vite-config.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="md"
+      code={modules['./md/vite-config.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="tailwind.config.cjs">
     <p>Update <Code>tailwindcss.config.cjs</Code></p>
@@ -142,7 +153,11 @@
       >.
     </p>
 
-    <HighlightCompo codeLang="ts" code={modules['./md/tailwind-config.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/tailwind-config.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
 </Tabs>
 
@@ -156,14 +171,18 @@
 <Tabs>
   <TabItem open title="+layout.svelte">
     <p>Add the following to the <Code>+layout.svelte</Code>:</p>
-    <HighlightCompo codeLang="ts" code={modules['./md/main-layout.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/main-layout.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="Dynamic Code Block Style">
     <p>Add the following to the <Code>utils/DynamicCodeBlockStyle.svelte</Code>:</p>
     <HighlightCompo
       codeLang="ts"
       code={modules['./md/utils-dynamic-code-block-style.md'] as string}
-      contentClass='overflow-y-scroll'
+      contentClass="overflow-y-scroll"
     />
   </TabItem>
 </Tabs>
@@ -225,15 +244,31 @@
 
 <Tabs>
   <TabItem open title="+layout.server.ts">
-    <HighlightCompo codeLang="ts" code={modules['./md/layout-server.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/layout-server.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="tests/home.test.ts">
-    <HighlightCompo codeLang="ts" code={modules['./md/home-test.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/home-test.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="+page.ts">
-    <HighlightCompo codeLang="ts" code={modules['./md/page-ts.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/page-ts.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
   <TabItem title="tests/page.test.ts">
-    <HighlightCompo codeLang="ts" code={modules['./md/page-test.md'] as string} contentClass='overflow-y-scroll'/>
+    <HighlightCompo
+      codeLang="ts"
+      code={modules['./md/page-test.md'] as string}
+      contentClass="overflow-y-scroll"
+    />
   </TabItem>
 </Tabs>

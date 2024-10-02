@@ -1,14 +1,9 @@
 <script lang="ts">
   import { type CodeWrapperProps as Props, codeWrapper } from '.';
 
-  let {
-    children,
-    class: className,
-    ...restProps
-  }: Props = $props();
+  let { children, class: className, ...restProps }: Props = $props();
 
-  const base = $derived(codeWrapper({ className }))
-
+  const base = $derived(codeWrapper({ className }));
 </script>
 
 <div class={base} {...restProps}>

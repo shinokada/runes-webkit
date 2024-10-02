@@ -17,7 +17,6 @@ export function replaceLibImport(componentString: string): string {
   return componentString.replace(/from '\$lib'/g, "from 'runes-webkit'");
 }
 
-
 export function copyToClipboard(text: string): Promise<void> {
   return navigator.clipboard
     .writeText(text)

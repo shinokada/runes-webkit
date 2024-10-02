@@ -8,4 +8,4 @@ interface SupportBannerProps extends HTMLAttributes<HTMLDivElement> {
   pClass?: string | undefined;
 }
 
-export { SupportBanner, supportBanner, type SupportBannerProps }
+export { SupportBanner, supportBanner, type SupportBannerProps };

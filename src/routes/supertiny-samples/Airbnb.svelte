@@ -14,7 +14,6 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'Airbnb',
     class: classname,
     ...restProps
   }: Props = $props();

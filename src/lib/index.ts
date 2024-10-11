@@ -56,7 +56,9 @@ import {
   insertObjectToArray,
   cards,
   info,
-  sidebarList
+  sidebarList,
+  getExampleFileName,
+  isSvelteOverflow
 } from './helpers';
 
 export {
@@ -76,5 +78,7 @@ export {
   insertObjectToArray,
   cards,
   info,
-  sidebarList
+  sidebarList,
+  getExampleFileName,
+  isSvelteOverflow
 };

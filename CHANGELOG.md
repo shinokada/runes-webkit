@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.26
+
+### Patch Changes
+
+- fix: export isSvelteOverflow and getExampleFileName ([`abdc204aa7a5b9bced541ee6f888152ea0b36e7f`](https://github.com/shinokada/runes-webkit/commit/abdc204aa7a5b9bced541ee6f888152ea0b36e7f))
+
 ## 0.9.25
 
 ### Patch Changes

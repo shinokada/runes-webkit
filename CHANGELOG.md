@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.27
+
+### Patch Changes
+
+- fix: update CodeWrapper ([`c4b4e9b1babdcb3a02b26bc7c686e2b9e41c27f2`](https://github.com/shinokada/runes-webkit/commit/c4b4e9b1babdcb3a02b26bc7c686e2b9e41c27f2))
+
 ## 0.9.26
 
 ### Patch Changes

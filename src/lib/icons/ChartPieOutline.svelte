@@ -89,12 +89,12 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@props: size: any = ctx.size || 'md';
 @props:role: any;
 @props:color: any = ctx.color || 'currentColor';
-@props:title: TitleType;
+@props:title: any;
 @props:strokeWidth: any = ctx.strokeWidth || '2';
-@props:desc: DescType;
-@props:class: any;
-@props:ariaLabel: string = 'chart pie outline';
+@props:desc: any;
+@props:class: string;
+@props:ariaLabel: any = 'chart pie outline';
 -->

@@ -191,28 +191,28 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: icons: Component;
-@props:wrapperClass: string | undefined = 'mx-auto max-w-7xl px-8';
-@props:div1Class: string | undefined = 'relative overflow-x-auto';
-@props:div2Class: string | undefined;
-@props:classDiv2: string | undefined = 'w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3';
-@props:div3Class: string | undefined;
-@props:classDiv3: string | undefined = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white';
-@props:div4Class: string | undefined = 'flex flex-wrap items-center';
-@props:labelClass: string | undefined = 'text-lg py-4';
-@props:searchClass: string | undefined;
-@props:classSearch: string | undefined = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500';
-@props:tab1Class: string | undefined;
-@props:classTab1: string | undefined = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white';
-@props:tab2Class: string | undefined = 'flex items-center text-lg';
-@props:rangeClass: string | undefined;
-@props:classRange: string | undefined = 'mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700';
-@props:contentClass: string = 'rounded-lg dark_bg_theme mt-4';
-@props:title: string;
-@props:sizeByTailwind: boolean // for flowbite-svelte-icons only;
-@props:minSize: string = '16';
-@props:defaultSize: string = $bindable('24');
-@props:maxSize: string = '48';
-@props:threeTabs: boolean = true;
-@props:variation: string;
+@props: icons: any;
+@props:wrapperClass: any = 'mx-auto max-w-7xl px-8';
+@props:div1Class: any = 'relative overflow-x-auto';
+@props:div2Class: any;
+@props:classDiv2: any = 'w-full p-4 sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3';
+@props:div3Class: any;
+@props:classDiv3: any = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white';
+@props:div4Class: any = 'flex flex-wrap items-center';
+@props:labelClass: any = 'text-lg py-4';
+@props:searchClass: any;
+@props:classSearch: any = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500';
+@props:tab1Class: any;
+@props:classTab1: any = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white';
+@props:tab2Class: any = 'flex items-center text-lg';
+@props:rangeClass: any;
+@props:classRange: any = 'mt-8 h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700';
+@props:contentClass: any = 'rounded-lg dark_bg_theme mt-4';
+@props:title: any;
+@props:sizeByTailwind: any;
+@props:minSize: any = '16';
+@props:defaultSize: any = $bindable('24');
+@props:maxSize: any = '48';
+@props:threeTabs: any = true;
+@props:variation: any;
 -->

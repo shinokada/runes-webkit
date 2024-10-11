@@ -68,8 +68,8 @@
 @props: size: any = ctx.size || '24';
 @props:role: any = ctx.role || 'img';
 @props:color: any = ctx.color || 'currentColor';
-@props:title: TitleType;
-@props:desc: DescType;
-@props:class: any;
-@props:ariaLabel: string = 'medium brands';
+@props:title: any;
+@props:desc: any;
+@props:class: string;
+@props:ariaLabel: any = 'medium brands';
 -->

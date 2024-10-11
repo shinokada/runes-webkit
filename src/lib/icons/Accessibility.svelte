@@ -50,8 +50,8 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
-@props:role: string;
+@props: size: any = ctx.size || 'md';
+@props:role: any;
 @props:class: string;
-@props:ariaLabel: string = 'accessibility icon';
+@props:ariaLabel: any = 'accessibility icon';
 -->

@@ -98,17 +98,17 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: sidebarList: ListType[];
-@props:menuList: ListType[];
-@props:isOpen: boolean = false;
-@props:breakpoint: BreakpointType = 'lg';
-@props:sidebarClose: () => void;
-@props:activeClass: string;
-@props:classActive: string | undefined = 'flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600';
-@props:nonActiveClass: string;
-@props:classNonActive: string | undefined = 'flex items-center p-1 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700';
-@props:divClass: string | undefined = 'dark_bg_theme mx-2 bg-transparent';
-@props:asideClass: string | undefined;
-@props:classAside: string | undefined = 'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block';
-@props:iconClass: string | undefined;
+@props: sidebarList: any;
+@props:menuList: any;
+@props:isOpen: any = false;
+@props:breakpoint: any = 'lg';
+@props:sidebarClose: any;
+@props:activeClass: any;
+@props:classActive: any = 'flex items-center p-1 text-base font-normal text-white bg-primary-500 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-primary-600 dark:hover:bg-primary-600';
+@props:nonActiveClass: any;
+@props:classNonActive: any = 'flex items-center p-1 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700';
+@props:divClass: any = 'dark_bg_theme mx-2 bg-transparent';
+@props:asideClass: any;
+@props:classAside: any = 'fixed inset-0 z-30 flex-none h-full lg:static lg:h-auto lg:overflow-y-visible bg-white dark_bg_theme lg:pt-0 lg:block';
+@props:iconClass: any;
 -->

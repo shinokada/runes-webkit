@@ -109,14 +109,14 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: headingSelector: string;
-@props:extract: (x;
-@props:divClass: string;
-@props:classDiv: string | undefined | null = 'fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white';
-@props:ulClass: string;
-@props:liClass: string = 'my-2 hover:text-primary-400';
-@props:svgClass: string;
-@props:classSvg: string | undefined | null = 'ms-2 mt-1 h-4 w-4 text-white dark:text-white';
-@props:dropdownDivClass: string;
-@props:classDropdownDiv: string | undefined | null = 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700';
+@props: headingSelector: any;
+@props:extract: any;
+@props:divClass: any;
+@props:classDiv: any = 'fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white';
+@props:ulClass: any;
+@props:liClass: any = 'my-2 hover:text-primary-400';
+@props:svgClass: any;
+@props:classSvg: any = 'ms-2 mt-1 h-4 w-4 text-white dark:text-white';
+@props:dropdownDivClass: any;
+@props:classDropdownDiv: any = 'w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700';
 -->

@@ -64,9 +64,9 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: any;
-@props:iconName: string;
-@props:counter: number = 2;
-@props:badgeClass: string = 'absolute top-4 w-44 p-1';
-@props:divClass: string;
-@props:btnClass: string = 'ml-4';
+@props:iconName: any;
+@props:counter: any = 2;
+@props:badgeClass: any = 'absolute top-4 w-44 p-1';
+@props:divClass: any;
+@props:btnClass: any = 'ml-4';
 -->

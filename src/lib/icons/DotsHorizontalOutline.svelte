@@ -79,11 +79,11 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = ctx.size || 'md';
+@props: size: any = ctx.size || 'md';
 @props:role: any;
 @props:color: any = ctx.color || 'currentColor';
-@props:title: TitleType;
-@props:desc: DescType;
-@props:class: any;
-@props:ariaLabel: string = 'dots horizontal outline';
+@props:title: any;
+@props:desc: any;
+@props:class: string;
+@props:ariaLabel: any = 'dots horizontal outline';
 -->

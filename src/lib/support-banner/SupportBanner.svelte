@@ -17,7 +17,7 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: children: any;
-@props:class: any;
-@props:pClass: any;
+@props: children: Snippet;
+@props:class: string;
+@props:pClass: string | undefined;
 -->

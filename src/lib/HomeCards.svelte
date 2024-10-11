@@ -49,12 +49,12 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: cards: CardType[] = [];
-@props:cardClass: string | undefined = 'max-w-2xl';
-@props:classDiv: string | undefined | null = 'mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3';
-@props:divClass: string | undefined | null;
-@props:iconClass: string | undefined | null = 'mb-3 h-8 w-8';
-@props:classH3: string | undefined | null = 'mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white';
-@props:h3Class: string | undefined | null;
-@props:pClass: string | undefined | null = 'font-normal leading-tight text-gray-700 dark:text-gray-400';
+@props: cards: any = [];
+@props:cardClass: any = 'max-w-2xl';
+@props:classDiv: any = 'mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3';
+@props:divClass: any;
+@props:iconClass: any = 'mb-3 h-8 w-8';
+@props:classH3: any = 'mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white';
+@props:h3Class: any;
+@props:pClass: any = 'font-normal leading-tight text-gray-700 dark:text-gray-400';
 -->

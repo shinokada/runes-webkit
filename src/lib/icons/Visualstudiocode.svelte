@@ -53,9 +53,9 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: size: string = ctx.size || '24';
-@props:role: string = ctx.role || 'img';
-@props:color: string = ctx.color || 'currentColor';
-@props:ariaLabel: string = 'Visual Studio Code';
+@props: size: any = ctx.size || '24';
+@props:role: any = ctx.role || 'img';
+@props:color: any = ctx.color || 'currentColor';
+@props:ariaLabel: any = 'Visual Studio Code';
 @props:class: string;
 -->

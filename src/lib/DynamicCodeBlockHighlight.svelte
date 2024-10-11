@@ -88,3 +88,18 @@
     {/if}
   </div>
 </div>
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@props: code: any;
+@props:handleExpandClick: any;
+@props:showExpandButton: any;
+@props:expand: any;
+@props:codeLang: any;
+@props:badgeClass: any;
+@props:buttonClass: any;
+@props:replaceLib: any;
+@props:class: string;
+-->

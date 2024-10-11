@@ -1,6 +1,6 @@
 {
   "name": "runes-webkit",
-  "version": "0.9.24",
+  "version": "0.9.25",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://runes-webkit.codewithshin.com/",
@@ -115,6 +115,10 @@
     "./DocPage.svelte": {
       "types": "./dist/DocPage.svelte.d.ts",
       "svelte": "./dist/DocPage.svelte"
+    },
+    "./DynamicCodeBlockHighlight.svelte": {
+      "types": "./dist/DynamicCodeBlockHighlight.svelte.d.ts",
+      "svelte": "./dist/DynamicCodeBlockHighlight.svelte"
     },
     "./Footer.svelte": {
       "types": "./dist/Footer.svelte.d.ts",

@@ -17,6 +17,6 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: children: Snippet;
-@props:class: string | undefined | null = 'group relative';
+@props: children: any;
+@props:class: string = 'group relative';
 -->

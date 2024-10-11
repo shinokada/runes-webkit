@@ -31,9 +31,9 @@
 @component
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
-@props: children: any;
-@props:spanClass: any;
-@props:aClass: any;
-@props:class: any;
-@props:tag: any;
+@props: children: Snippet;
+@props:spanClass: string | undefined | null;
+@props:aClass: string | undefined | null;
+@props:class: string;
+@props:tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 -->

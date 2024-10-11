@@ -16,7 +16,7 @@
     codeLang?: string;
     class?: string;
     expanded?: boolean;
-    replaceLib?: boolean;
+    replaceLib?: string;
   }
 
   let {
@@ -32,12 +32,12 @@
   }: Props = $props();
 
   if (replaceLib) {
-    code = replaceLibImport(code, 'runes-webkit');
+    code = replaceLibImport(code, replaceLib);
   }
 
   $effect(() => {
     if (replaceLib) {
-      code = replaceLibImport(code, 'runes-webkit');
+      code = replaceLibImport(code, replaceLib);
     }
   });
 

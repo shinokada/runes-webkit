@@ -14,7 +14,7 @@
     codeLang?: string;
     class?: string;
     expanded?: boolean;
-    replaceLib?: boolean;
+    replaceLib?: string;
   }
 
   let {
@@ -23,12 +23,12 @@
     badgeClass,
     buttonClass,
     contentClass = 'overflow-hidden',
-    replaceLib = true,
+    replaceLib = 'runes-webkit',
     class: className
   }: Props = $props();
 
   if (replaceLib) {
-    code = replaceLibImport(code, 'runes-webkit');
+    code = replaceLibImport(code, replaceLib);
   }
 
   let showExpandButton: boolean = $state(false);

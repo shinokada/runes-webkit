@@ -1,10 +1,9 @@
 <script lang="ts">
-  import type { Component } from 'svelte';
   import { IconPage, filterIconsByKeyword } from '$lib';
   import * as icons from '../awesome-samples';
   const keywordsToInclude = 'Solid';
   const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
-  console.log('icons: ', icons);
+  // console.log('icons: ', icons);
 </script>
 
 <IconPage icons={keyIcons} title="Three Tabs" defaultSize="16" minSize="12" maxSize="40" />

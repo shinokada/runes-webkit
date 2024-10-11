@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.29
+
+### Patch Changes
+
+- fix: new replaceLib: string to DynamicCodeBlockHighlight and HighlightCompo' ([`0eab5799c11819d62feab0e31ab6f93601db8a0d`](https://github.com/shinokada/runes-webkit/commit/0eab5799c11819d62feab0e31ab6f93601db8a0d))
+
 ## 0.9.28
 
 ### Patch Changes

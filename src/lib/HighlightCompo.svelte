@@ -100,6 +100,6 @@
 @props:badgeClass: any;
 @props:buttonClass: any;
 @props:contentClass: any = 'overflow-hidden';
-@props:replaceLib: any = true;
+@props:replaceLib: any = 'runes-webkit';
 @props:class: string;
 -->

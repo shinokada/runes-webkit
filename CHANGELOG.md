@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.28
+
+### Patch Changes
+
+- fix: add libraryName to helper replaceLibImport function ([`d21d7f95d585342cb77915a11916d837dd8d03b7`](https://github.com/shinokada/runes-webkit/commit/d21d7f95d585342cb77915a11916d837dd8d03b7))
+
 ## 0.9.27
 
 ### Patch Changes

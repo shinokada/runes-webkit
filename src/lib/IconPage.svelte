@@ -6,7 +6,7 @@
   import { Copy } from '$lib';
 
   interface Props {
-    icons: Component;
+    icons: Record<string, Component>;
     title: string;
     defaultSize?: string;
     sizeByTailwind?: boolean; // for flowbite-svelte-icons only
@@ -96,7 +96,7 @@
         <Tabs style="pill" {contentClass} divider={false}>
           <TabItem open title="Mono">
             <div class={twMerge(classTab1, tab1Class)}>
-              {#each filteredEntries as [name, Component] (name)}
+              {#each Object.entries(icons) as [name, Component] (name)}
                 {#if name !== 'Icon'}
                   <div class={tab2Class}>
                     {#if sizeByTailwind}

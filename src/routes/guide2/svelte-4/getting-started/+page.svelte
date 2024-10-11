@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
+  import { HighlightCompo, CodeWrapper, H2 } from '$lib';
   import { AddressBookOutline } from '../../../flowbite-samples';
 
   const modules = import.meta.glob('./md/*.md', {

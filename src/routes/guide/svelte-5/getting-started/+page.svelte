@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H1, H2, H3 } from '$lib';
+  import { HighlightCompo, Code, H1, H2 } from '$lib';
   import { License, StaticBadge, NpmVersion, NpmDownload } from 'svelte-shields';
   import type {
     StaticBadgePropsType,

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper } from '$lib';
+  import { HighlightCompo } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',

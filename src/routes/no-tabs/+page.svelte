@@ -1,7 +1,6 @@
 <script lang="ts">
-  import type { Component } from 'svelte';
   import { IconPage, filterStringKeys } from '$lib';
-  import * as icons from '../supertiny-samples';
+  import * as icons from '../awesome-samples';
 
   const keyIcons = filterStringKeys(icons);
 </script>
@@ -11,7 +10,7 @@
   defaultSize="40"
   maxSize="60"
   classDiv3="grid lg:grid-cols-3 grid-cols-2 gap-4"
-  icons={keyIcons as Component}
+  icons={keyIcons}
   threeTabs={false}
   title="No Tabs"
 />

@@ -1,10 +1,7 @@
 <script lang="ts">
   import { Footer, FooterBrand, FooterLi, FooterUl } from 'svelte-5-ui-lib';
   import { twMerge } from 'tailwind-merge';
-  interface ListItem {
-    name: string;
-    href: string;
-  }
+
   interface Props {
     brand?: {
       name: string;

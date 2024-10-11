@@ -55,7 +55,7 @@
 
   let headings: LinkType[] = $state([]);
 
-  function init(_: any) {
+  function init(_: HTMLElement) {
     const observer: MutationObserver = new MutationObserver(toc);
     observer.observe(document.body, { childList: true, subtree: true });
 

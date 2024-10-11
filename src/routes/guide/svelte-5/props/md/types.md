@@ -16,7 +16,6 @@ type TitleType = {
     onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
-  interface CtxType extends BaseProps {}
   
   interface Props extends BaseProps{
     title?: TitleType;

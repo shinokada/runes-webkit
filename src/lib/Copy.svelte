@@ -1,10 +1,11 @@
 <script lang="ts">
   import { Badge } from 'svelte-5-ui-lib';
+  import type { Snippet } from 'svelte';
   import { clickToCopy } from '$lib';
   import type { HTMLAttributes } from 'svelte/elements';
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
-    children: any;
+    children: Snippet;
     iconName: string;
     counter?: number;
     badgeClass?: string;

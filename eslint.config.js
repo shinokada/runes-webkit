@@ -1,12 +1,13 @@
-import eslint from '@eslint/js';
-import prettier from 'eslint-config-prettier';
+import js from '@eslint/js';
+import ts from 'typescript-eslint';
 import svelte from 'eslint-plugin-svelte';
+import prettier from 'eslint-config-prettier';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  js.configs.recommended,
+  ...ts.configs.recommended,
   ...svelte.configs['flat/recommended'],
   prettier,
   ...svelte.configs['flat/prettier'],
@@ -22,11 +23,22 @@ export default tseslint.config(
     files: ['**/*.svelte'],
     languageOptions: {
       parserOptions: {
-        parser: tseslint.parser
+        parser: ts.parser,
+        svelteFeatures: {
+          experimentalGenerics: true
+        }
       }
     }
   },
   {
-    ignores: ['build/', '.svelte-kit/', 'dist/']
+    ignores: ['build/', '.svelte-kit/', 'dist/', 'test-results/', '*.md']
+  },
+  {
+    rules: {
+      // Note: you must disable the base rule as it can report incorrect errors
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'svelte/no-at-html-tags': 'off'
+    }
   }
-);
+];

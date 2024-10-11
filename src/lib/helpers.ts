@@ -31,7 +31,7 @@ export function copyToClipboard(text: string): Promise<void> {
 
 export function clickToCopy(node: HTMLElement, target: string) {
   async function copyText() {
-    let text = target;
+    const text = target;
 
     try {
       await navigator.clipboard.writeText(text);
@@ -106,17 +106,13 @@ export function removeHyphensAndCapitalize(str: string) {
   return capitalized.replace(/-|\s{2,}/g, ' ');
 }
 
-/**
- * Filters icons based on the provided keyword.
- *
- * @param {Object} icons - The object containing icons to filter.
- * @param {string} keyword - The keyword to filter icons by.
- * @return {Object} The filtered icons object.
- */
-export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
-  const filteredIcons: { [key: string]: any } = {};
+export function filterIconsByKeyword(
+  icons: Record<string, Component>,
+  keyword: string
+): Record<string, Component> {
+  const filteredIcons: Record<string, Component> = {};
   for (const key in icons) {
-    if (key.includes(keyword)) {
+    if (key.toLowerCase().includes(keyword.toLowerCase())) {
       filteredIcons[key] = icons[key];
     }
   }
@@ -143,8 +139,17 @@ export function convertToKebabCase(str: string) {
  * @param {object} obj - The object to filter string keys from.
  * @return {object} A new object with only the string keys.
  */
-export const filterStringKeys = (obj: { [key: string]: any }) => {
-  return Object.fromEntries(Object.entries(obj).filter(([key]) => typeof key === 'string'));
+// export const filterStringKeys = (obj: { [key: string]: any }) => {
+//   return Object.fromEntries(Object.entries(obj).filter(([key]) => typeof key === 'string'));
+// };
+export const filterStringKeys = (
+  obj: Record<string | number | symbol, unknown>
+): Record<string, Component> => {
+  return Object.fromEntries(
+    Object.entries(obj).filter(
+      ([key, value]) => typeof key === 'string' && typeof value === 'function'
+    )
+  ) as Record<string, Component>;
 };
 
 /**
@@ -154,8 +159,11 @@ export const filterStringKeys = (obj: { [key: string]: any }) => {
  * @param {string} keywords - The keywords to exclude items by.
  * @return {object} The filtered object after excluding items based on the keywords.
  */
-export function excludeItemsByKeywords(items: { [key: string]: any }, keywords: string) {
-  const filteredItems: { [key: string]: any } = {};
+export function excludeItemsByKeywords(
+  items: Record<string, Component>,
+  keywords: string
+): Record<string, Component> {
+  const filteredItems: Record<string, Component> = {};
   for (const key in items) {
     const doesNotContainKeyword = keywords.split(' ').every((keyword) => !key.includes(keyword));
     if (doesNotContainKeyword) {
@@ -228,7 +236,7 @@ export function insertObjectToArray(
   array: Types.CardType[],
   objectToInsert: Types.CardType,
   position: number
-): any[] {
+): Types.CardType[] {
   // Check for valid position
   if (position < 0 || position > array.length) {
     throw new Error('Invalid position. Please provide a position within the array bounds.');
@@ -359,3 +367,44 @@ export const sidebarList: Types.ListType[] = [
     href: '/guide/custom-icons'
   }
 ];
+
+export function getExampleFileName(
+  selectedExample: string,
+  exampleArr: { name: string }[]
+): string {
+  const foundExample = exampleArr.find((example) => example.name === selectedExample);
+
+  if (!foundExample) {
+    // If the selectedExample is not in the array, default to the first example
+    selectedExample = exampleArr[0].name || '';
+  }
+
+  // Convert the selected example to PascalCase
+  const result = selectedExample
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+
+  return `${result}.svelte`;
+}
+
+export const isGeneratedCodeOverflow = (code: string): boolean => {
+  const lines = code.split('\n');
+  return lines.length > 7;
+};
+
+export const isSvelteOverflow = (
+  sveltefile: string,
+  exampleModules: Record<string, string>
+): boolean => {
+  const filePath = `./examples/${sveltefile}`;
+  const fileContent = exampleModules[filePath];
+
+  if (typeof fileContent !== 'string') {
+    console.warn(`File content for ${filePath} is not found or not a string`);
+    return false;
+  }
+
+  const lines = fileContent.split('\n');
+  return lines.length > 7;
+};

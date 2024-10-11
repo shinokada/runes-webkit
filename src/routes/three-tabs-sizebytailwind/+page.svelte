@@ -8,7 +8,7 @@
 </script>
 
 <IconPage
-  icons={keyIcons as Component}
+  icons={keyIcons}
   sizeByTailwind
   title="Three Tabs: Size by Tailwind"
   defaultSize="6"

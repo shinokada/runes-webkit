@@ -15,18 +15,7 @@
     creator?: string;
   }
 
-  let {
-    children,
-    title,
-    description,
-    keywords,
-    url,
-    image,
-    imageAlt,
-    imageHeight = '630',
-    imageWidth = '1200',
-    creator
-  }: Props = $props();
+  let { children }: Props = $props();
 </script>
 
 <main class="mx-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible lg:pl-64">

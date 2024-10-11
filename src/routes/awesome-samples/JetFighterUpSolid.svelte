@@ -18,8 +18,7 @@
     onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
   interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;

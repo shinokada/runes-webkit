@@ -106,13 +106,10 @@ export function removeHyphensAndCapitalize(str: string) {
   return capitalized.replace(/-|\s{2,}/g, ' ');
 }
 
-export function filterIconsByKeyword(
-  icons: Record<string, Component>,
-  keyword: string
-): Record<string, Component> {
-  const filteredIcons: Record<string, Component> = {};
+export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
+  const filteredIcons: { [key: string]: any } = {};
   for (const key in icons) {
-    if (key.toLowerCase().includes(keyword.toLowerCase())) {
+    if (key.includes(keyword)) {
       filteredIcons[key] = icons[key];
     }
   }

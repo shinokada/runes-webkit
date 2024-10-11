@@ -32,12 +32,12 @@
   }: Props = $props();
 
   if (replaceLib) {
-    code = replaceLibImport(code);
+    code = replaceLibImport(code, 'runes-webkit');
   }
 
   $effect(() => {
     if (replaceLib) {
-      code = replaceLibImport(code);
+      code = replaceLibImport(code, 'runes-webkit');
     }
   });
 

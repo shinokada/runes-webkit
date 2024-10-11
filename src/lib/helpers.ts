@@ -13,8 +13,8 @@ import StarOutline from './icons/StarOutline.svelte';
 import CogOutline from './icons/CogOutline.svelte';
 import ChartPieOutline from './icons/ChartPieOutline.svelte';
 
-export function replaceLibImport(componentString: string): string {
-  return componentString.replace(/from '\$lib'/g, "from 'runes-webkit'");
+export function replaceLibImport(componentString: string, libraryName: string): string {
+  return componentString.replace(/from '\$lib'/g, `from '${libraryName}'`);
 }
 
 export function copyToClipboard(text: string): Promise<void> {

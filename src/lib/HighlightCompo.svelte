@@ -28,7 +28,7 @@
   }: Props = $props();
 
   if (replaceLib) {
-    code = replaceLibImport(code);
+    code = replaceLibImport(code, 'runes-webkit');
   }
 
   let showExpandButton: boolean = $state(false);

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.30
+
+### Patch Changes
+
+- fix: revert filterIconsByKeyword ([`5f022754f12b64c8579e73b800556a0f6c867a17`](https://github.com/shinokada/runes-webkit/commit/5f022754f12b64c8579e73b800556a0f6c867a17))
+
 ## 0.9.29
 
 ### Patch Changes

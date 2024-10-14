@@ -19,7 +19,7 @@
 
   let {
     children,
-    classMain = 'w-full min-w-0 flex-auto lg:static lg:max-h-full lg:overflow-visible',
+    classMain = 'w-full min-w-0 flex-auto',
     mainClass,
     classDiv1 = 'flex w-full',
     div1Class,

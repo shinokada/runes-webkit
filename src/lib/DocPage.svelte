@@ -47,7 +47,7 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: children: any;
-@props:classMain: any = 'w-full min-w-0 flex-auto lg:static lg:max-h-full lg:overflow-visible';
+@props:classMain: any = 'w-full min-w-0 flex-auto';
 @props:mainClass: any;
 @props:classDiv1: any = 'flex w-full';
 @props:div1Class: any;

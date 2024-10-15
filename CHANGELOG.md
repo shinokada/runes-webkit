@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.31
+
+### Patch Changes
+
+- fix: update IconPage for filteredEntries ([`f884fbc934d27476208233cde9b20acaa7a37dc0`](https://github.com/shinokada/runes-webkit/commit/f884fbc934d27476208233cde9b20acaa7a37dc0))
+
 ## 0.9.30
 
 ### Patch Changes

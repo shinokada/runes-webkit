@@ -66,6 +66,7 @@
       return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
     })
   );
+  $inspect('filteredEntries', filteredEntries);
 </script>
 
 <div class="w-full pb-20">
@@ -96,7 +97,7 @@
         <Tabs style="pill" {contentClass} divider={false}>
           <TabItem open title="Mono">
             <div class={twMerge(classTab1, tab1Class)}>
-              {#each Object.entries(icons) as [name, Component] (name)}
+              {#each filteredEntries as [name, Component] (name)}
                 {#if name !== 'Icon'}
                   <div class={tab2Class}>
                     {#if sizeByTailwind}

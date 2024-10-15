@@ -2,7 +2,7 @@
   import { IconPage, filterIconsByKeyword } from '$lib';
   import * as icons from '../awesome-samples';
   const keywordsToInclude = 'Solid';
-  const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
+  let keyIcons = filterIconsByKeyword(icons, keywordsToInclude);
   // console.log('icons: ', icons);
 </script>
 

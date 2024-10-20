@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.32
+
+### Patch Changes
+
+- fix: add no-explicit-any and SupportBanner type update ([`b279958`](https://github.com/shinokada/runes-webkit/commit/b279958100cb775964345311c32776501f59fbe5))
+
 ## 0.9.31
 
 ### Patch Changes

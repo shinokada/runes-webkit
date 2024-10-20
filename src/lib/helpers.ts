@@ -106,6 +106,7 @@ export function removeHyphensAndCapitalize(str: string) {
   return capitalized.replace(/-|\s{2,}/g, ' ');
 }
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
   const filteredIcons: { [key: string]: any } = {};
   for (const key in icons) {

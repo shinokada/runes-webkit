@@ -7,7 +7,7 @@
   const { base, paragraph } = $derived(supportBanner());
 </script>
 
-<Banner id="default-banner" dismissable={false} class={base({ className })} {...restProps}>
+<Banner {...restProps} id="default-banner" dismissable={false} class={base({ className })}>
   <p class={paragraph({ class: pClass })}>
     {@render children()}
   </p>

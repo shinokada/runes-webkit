@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.34
+
+### Patch Changes
+
+- fix: save helpers file ([`1ac6032`](https://github.com/shinokada/runes-webkit/commit/1ac6032b1866eeac4a56cdc872455100b80bc470))
+
 ## 0.9.33
 
 ### Patch Changes

@@ -58,7 +58,8 @@ import {
   info,
   sidebarList,
   getExampleFileName,
-  isSvelteOverflow
+  isSvelteOverflow,
+  replacev1xx
 } from './helpers';
 
 export {
@@ -80,5 +81,6 @@ export {
   info,
   sidebarList,
   getExampleFileName,
-  isSvelteOverflow
+  isSvelteOverflow,
+  replacev1xx
 };

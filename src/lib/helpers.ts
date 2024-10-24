@@ -323,6 +323,22 @@ export const info: InfoType[] = [
 
 export const sidebarList: Types.ListType[] = [
   {
+    name: 'Svelte 5 & later',
+    Icon: BellActiveAltOutline as Component,
+    children: [
+      {
+        name: 'Getting Started',
+        Icon: CogOutline as Component,
+        href: '/guide/svelte-5/getting-started'
+      },
+      {
+        name: 'Props',
+        Icon: BadgeCheckOutline as Component,
+        href: '/guide/svelte-5/props'
+      }
+    ]
+  },
+  {
     name: 'Svelte 4 & 5',
     Icon: StarOutline as Component,
     children: [
@@ -335,22 +351,6 @@ export const sidebarList: Types.ListType[] = [
         name: 'Props',
         Icon: BadgeCheckOutline as Component,
         href: '/guide/svelte-4/props'
-      }
-    ]
-  },
-  {
-    name: 'Svelte 5: Runes',
-    Icon: BellActiveAltOutline as Component,
-    children: [
-      {
-        name: 'Getting Started',
-        Icon: CogOutline as Component,
-        href: '/guide/svelte-5/getting-started'
-      },
-      {
-        name: 'Props',
-        Icon: BadgeCheckOutline as Component,
-        href: '/guide/svelte-5/props'
       }
     ]
   },
@@ -406,3 +406,8 @@ export const isSvelteOverflow = (
   const lines = fileContent.split('\n');
   return lines.length > 7;
 };
+
+
+export function replacev1(string: string, v1version: string): string {
+  return string.replace(/1.x.x/g, v1version);
+}

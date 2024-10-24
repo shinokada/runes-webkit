@@ -407,6 +407,6 @@ export const isSvelteOverflow = (
   return lines.length > 7;
 };
 
-export function replacev1(string: string, v1version: string): string {
+export function replacev1xx(string: string, v1version: string): string {
   return string.replace(/1.x.x/g, v1version);
 }

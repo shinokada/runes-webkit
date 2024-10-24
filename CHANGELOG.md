@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.33
+
+### Patch Changes
+
+- feat: add replacev1xx helper and update sidebarList ([`eded773`](https://github.com/shinokada/runes-webkit/commit/eded7734f4965a1e4b1a4d46867b2ae516e95bd1))
+
 ## 0.9.32
 
 ### Patch Changes

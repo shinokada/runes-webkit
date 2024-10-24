@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.35
+
+### Patch Changes
+
+- fix: update replaceLibImport fn ([`ee3daf7`](https://github.com/shinokada/runes-webkit/commit/ee3daf7d6065207d10318d0f90c18e2a887b03c6))
+
 ## 0.9.34
 
 ### Patch Changes

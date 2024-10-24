@@ -13,7 +13,11 @@ import StarOutline from './icons/StarOutline.svelte';
 import CogOutline from './icons/CogOutline.svelte';
 import ChartPieOutline from './icons/ChartPieOutline.svelte';
 
-export function replaceLibImport(componentString: string, libraryName: string): string {
+export function replaceLibImport(componentString: string | undefined, libraryName: string): string {
+  if (typeof componentString !== 'string') {
+    throw new Error('Invalid componentString: Expected a string');
+  }
+
   return componentString.replace(/from '\$lib'/g, `from '${libraryName}'`);
 }
 

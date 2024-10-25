@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.36
+
+### Patch Changes
+
+- fix: remove $inspect
+
 ## 0.9.35
 
 ### Patch Changes

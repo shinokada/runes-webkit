@@ -66,7 +66,7 @@
       return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
     })
   );
-  $inspect('filteredEntries', filteredEntries);
+  // $inspect('filteredEntries', filteredEntries);
 </script>
 
 <div class="w-full pb-20">

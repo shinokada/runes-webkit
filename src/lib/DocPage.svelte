@@ -25,7 +25,7 @@
     div1Class,
     classDiv2 = 'mx-auto flex min-w-0 max-w-4xl flex-col divide-y divide-gray-200 px-4 lg:px-4 lg:pb-16 xl:pb-24 dark:divide-gray-800',
     div2Class,
-    classDiv3 = 'pb-20 pr-8 2xl:pr-0',
+    classDiv3 = 'pb-20 px-8 2xl:pr-0',
     div3Class,
     headingSelector = '#mainContent > :where(h2, h3)'
   }: Props = $props();

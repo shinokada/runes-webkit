@@ -62,7 +62,7 @@
   let searchTerm = $state('');
 
   let filteredEntries = $derived(
-    Object.entries(icons).filter(([name, Component]) => {
+    Object.entries(icons).filter(([name]) => {
       return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
     })
   );

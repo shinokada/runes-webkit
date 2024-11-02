@@ -36,7 +36,7 @@
   }: Props = $props();
 
   let headings: LinkType[] = $state([]);
-
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   function init(_: HTMLElement) {
     const observer: MutationObserver = new MutationObserver(toc);
     observer.observe(document.body, { childList: true, subtree: true });

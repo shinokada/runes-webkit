@@ -1,5 +1,17 @@
 # svelte-icon-webkit
 
+## 0.9.38
+
+### Patch Changes
+
+- fix: lint
+
+## 0.9.37
+
+### Patch Changes
+
+- style: add mx-8 to classDiv3 in DocPage
+
 ## 0.9.36
 
 ### Patch Changes

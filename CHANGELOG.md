@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.39
+
+### Patch Changes
+
+- fix: update Footer classDiv
+
 ## 0.9.38
 
 ### Patch Changes

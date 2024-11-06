@@ -57,7 +57,7 @@
 [Go to docs](https://runes-webkit.codewithshin.com/)
 ## Props
 @props: brand: any;
-@props:classDiv: any = 'mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between';
+@props:classDiv: any = 'mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between lg:ml-64';
 @props:divClass: any;
 @props:classFooter: any = 'shadow-none rounded-none border-t border-gray-100 dark:border-gray-600 dark_bg_theme';
 @props:footerClass: any;

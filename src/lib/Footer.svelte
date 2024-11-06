@@ -21,7 +21,7 @@
   }
   let {
     brand,
-    classDiv = 'mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between',
+    classDiv = 'mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between lg:ml-64',
     divClass,
     classFooter = 'shadow-none rounded-none border-t border-gray-100 dark:border-gray-600 dark_bg_theme',
     footerClass,

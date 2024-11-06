@@ -12,7 +12,8 @@
     DotsHorizontalOutline,
     GithubSolid,
     random_tailwind_color,
-    XSolid, Bluesky
+    XSolid,
+    Bluesky
   } from '$lib';
   import {
     Navbar,
@@ -180,7 +181,7 @@
             <DropdownUl class="py-0">
               {#if blueskyUrl}
                 <DropdownLi href={blueskyUrl} target="_blank" aClass="p-0.5 m-0">
-                  <Bluesky size="30"/>
+                  <Bluesky size="30" />
                 </DropdownLi>
               {/if}
               {#if twitterUrl}
@@ -193,7 +194,6 @@
                   <GithubSolid />
                 </DropdownLi>
               {/if}
-              
             </DropdownUl>
           </Dropdown>
         </div>

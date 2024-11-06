@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.41
+
+### Patch Changes
+
+- feat: bluesky icon
+
 ## 0.9.40
 
 ### Patch Changes

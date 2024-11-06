@@ -40,3 +40,15 @@
     fill="#1185fe"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@props: size: any = ctx.size || '24';
+@props:role: any = ctx.role || 'img';
+@props:ariaLabel: any = 'bluesky';
+@props:class: string;
+@props:title: any;
+@props:desc: any;
+-->

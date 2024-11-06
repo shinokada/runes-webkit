@@ -81,7 +81,7 @@
     "@sveltejs/kit": "^2.5.5",
     "highlight.js": "^11.10.0",
     "svelte": "^5.0.0-next.95",
-    "svelte-5-ui-lib": "^0.9.15",
+    "svelte-5-ui-lib": "^0.10.0",
     "svelte-rune-highlight": "^0.5.11"
   },
   "svelte": "./dist/index.js",

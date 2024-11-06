@@ -19,6 +19,7 @@ export { default as A7Solid } from './icons/A7Solid.svelte';
 export { default as Accessibility } from './icons/Accessibility.svelte';
 export { default as BadgeCheckOutline } from './icons/BadgeCheckOutline.svelte';
 export { default as BellActiveAltOutline } from './icons/BellActiveAltOutline.svelte';
+export { default as Bluesky } from './icons/Bluesky.svelte';
 export { default as ChartPieOutline } from './icons/ChartPieOutline.svelte';
 export { default as ChevronDownOutline } from './icons/ChevronDownOutline.svelte';
 export { default as ClipboardListOutline } from './icons/ClipboardListOutline.svelte';

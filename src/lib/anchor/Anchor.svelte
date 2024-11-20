@@ -10,15 +10,15 @@
 
   function init(node: HTMLElement) {
     $effect(() => {
-    content = node.innerText?.trim() ?? '';
-    slug = content 
-      ? content
-          .toLowerCase()
-          .replace(/[^\w\s-]/g, '')  // Remove non-word characters except spaces and hyphens
-          .replace(/\s+/g, '-')      // Replace spaces with hyphens
-          .replace(/-+/g, '-')       // Replace multiple hyphens with single hyphen
-          .replace(/^-|-$/g, '')     // Remove leading/trailing hyphens
-    : 'section-' + Math.random().toString(36).substring(2, 7);  // Fallback unique ID
+      content = node.innerText?.trim() ?? '';
+      slug = content
+        ? content
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '') // Remove non-word characters except spaces and hyphens
+            .replace(/\s+/g, '-') // Replace spaces with hyphens
+            .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+            .replace(/^-|-$/g, '') // Remove leading/trailing hyphens
+        : 'section-' + Math.random().toString(36).substring(2, 7); // Fallback unique ID
     });
   }
 

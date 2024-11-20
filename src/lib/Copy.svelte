@@ -44,12 +44,23 @@
   </div>
 {/if}
 
-<button 
-  type="button" 
-  class={btnClass} 
-  use:clickToCopy={iconName} 
+<button
+  type="button"
+  class={btnClass}
+  use:clickToCopy={iconName}
   onclick={copySuccess}
   {...attributes}
 >
   {@render children()}
 </button>
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@props: children: any;
+@props:iconName: any;
+@props:counter: any = 2;
+@props:badgeClass: any = 'absolute top-4 py-1 px-2';
+@props:btnClass: any = 'ml-4';
+-->

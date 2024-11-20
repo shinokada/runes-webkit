@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.42
+
+### Patch Changes
+
+- fix: Copy.svelte remove div with role=button
+
 ## 0.9.41
 
 ### Patch Changes

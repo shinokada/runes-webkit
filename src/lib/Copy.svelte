@@ -4,32 +4,27 @@
   import { clickToCopy } from '$lib';
   import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends HTMLAttributes<HTMLDivElement> {
+  interface Props extends HTMLAttributes<HTMLButtonElement> {
     children: Snippet;
     iconName: string;
     counter?: number;
     badgeClass?: string;
-    divClass?: string;
     btnClass?: string;
   }
   let {
     children,
     iconName,
     counter = 2,
-    badgeClass = 'absolute top-4 w-44 p-1',
-    divClass,
+    badgeClass = 'absolute top-4 py-1 px-2',
     btnClass = 'ml-4',
     ...attributes
   }: Props = $props();
 
-  let text = $state('');
+  let text = $state(iconName);
   let open = $state(false);
 
   function copySuccess() {
-    text = `Copied the icon name!`;
-  }
-
-  function trigger() {
+    text = `Copied ${iconName}!`;
     open = true;
     counter = 2;
     timeout();
@@ -49,20 +44,12 @@
   </div>
 {/if}
 
-<div role="button" tabindex="0" onclick={copySuccess} class={divClass} {...attributes}>
-  <button type="button" class={btnClass} use:clickToCopy={iconName} onclick={trigger}>
-    {@render children()}
-  </button>
-</div>
-
-<!--
-@component
-[Go to docs](https://runes-webkit.codewithshin.com/)
-## Props
-@props: children: any;
-@props:iconName: any;
-@props:counter: any = 2;
-@props:badgeClass: any = 'absolute top-4 w-44 p-1';
-@props:divClass: any;
-@props:btnClass: any = 'ml-4';
--->
+<button 
+  type="button" 
+  class={btnClass} 
+  use:clickToCopy={iconName} 
+  onclick={copySuccess}
+  {...attributes}
+>
+  {@render children()}
+</button>

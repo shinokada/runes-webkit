@@ -9,9 +9,22 @@
   let slug: string = $state('');
 
   function init(node: HTMLElement) {
-    content = node.innerText ?? '';
-    slug = content.replace(/\s/g, '_').replace(/__#+/g, '');
+    $effect(() => {
+    content = node.innerText?.trim() ?? '';
+    slug = content 
+      ? content
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')  // Remove non-word characters except spaces and hyphens
+          .replace(/\s+/g, '-')      // Replace spaces with hyphens
+          .replace(/-+/g, '-')       // Replace multiple hyphens with single hyphen
+          .replace(/^-|-$/g, '')     // Remove leading/trailing hyphens
+    : 'section-' + Math.random().toString(36).substring(2, 7);  // Fallback unique ID
+    });
   }
+
+  $effect(() => {
+    $inspect('slug', slug);
+  });
 </script>
 
 <svelte:element this={tag} {...restProps} class={base({ className })} use:init>

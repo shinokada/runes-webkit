@@ -82,8 +82,8 @@ importers:
         specifier: 5.2.4
         version: 5.2.4
       svelte-5-ui-lib:
-        specifier: ^0.10.9
-        version: 0.10.9(svelte@5.2.4)(tailwindcss@3.4.15)
+        specifier: ^0.10.10
+        version: 0.10.10(svelte@5.2.4)(tailwindcss@3.4.15)
       svelte-check:
         specifier: ^4.0.9
         version: 4.0.9(svelte@5.2.4)(typescript@5.6.3)
@@ -1826,8 +1826,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-5-ui-lib@0.10.9:
-    resolution: {integrity: sha512-rKGT+8qEWAa6OBTou7D8oSJHDLxFy+zFOh1oTSHXtlcOK5NOZcLOLFZiPhfb0pVw9yUkaD2tWoE3PcXLI31ilA==}
+  svelte-5-ui-lib@0.10.10:
+    resolution: {integrity: sha512-QnpWcRxvTggE62efDey3RO5g5lZ3MT3QGeLt5ubcUt0tZDH0W0y0CHWv385kRE7XxvWALF3mHiGCeibEO0cW1Q==}
     engines: {node: '>=20.0.0', npm: '>=10.0.0'}
     peerDependencies:
       svelte: ^5.0.0
@@ -3813,7 +3813,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-5-ui-lib@0.10.9(svelte@5.2.4)(tailwindcss@3.4.15):
+  svelte-5-ui-lib@0.10.10(svelte@5.2.4)(tailwindcss@3.4.15):
     dependencies:
       '@floating-ui/dom': 1.6.12
       apexcharts: 3.54.1

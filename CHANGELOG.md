@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.43
+
+### Patch Changes
+
+- fix: prop name update from style to tabStyle
+
 ## 0.9.42
 
 ### Patch Changes

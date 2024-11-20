@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.44
+
+### Patch Changes
+
+- chore: update svelte-5-ui-lib
+
 ## 0.9.43
 
 ### Patch Changes

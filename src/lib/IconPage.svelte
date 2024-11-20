@@ -94,7 +94,7 @@
         />
       </div>
       {#if threeTabs}
-        <Tabs style="pill" {contentClass} divider={false}>
+        <Tabs tabStyle="pill" {contentClass} divider={false}>
           <TabItem open title="Mono">
             <div class={twMerge(classTab1, tab1Class)}>
               {#each filteredEntries as [name, Component] (name)}

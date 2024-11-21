@@ -1,6 +1,6 @@
 {
   "name": "runes-webkit",
-  "version": "0.9.45",
+  "version": "0.9.46",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://runes-webkit.codewithshin.com/",
@@ -83,13 +83,15 @@
     "highlight.js": "^11.10.0",
     "svelte": "^5.0.0",
     "svelte-5-ui-lib": "^0.11.0",
-    "svelte-rune-highlight": "^0.5.11"
+    "svelte-rune-highlight": "^0.5.11",
+    "tailwind-merge": "^2.5.4",
+    "tailwind-variants": "^0.3.0"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "dependencies": {
-    "tailwind-merge": "^2.5.4"
+    "svelte": "^5.0.0"
   },
   "keywords": [
     "svelte",

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.46
+
+### Patch Changes
+
+- fix: add tailwind-merge and tailwind-variants to peerDependencies
+
 ## 0.9.45
 
 ### Patch Changes

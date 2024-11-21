@@ -1,24 +1,16 @@
 <script lang="ts">
   import { getContext } from 'svelte';
-  import { twMerge } from 'tailwind-merge';
   import type { BaseProps, Props } from './types';
 
   const ctx: BaseProps = getContext('iconCtx') ?? {};
-  const sizes = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-8 h-8'
-  };
 
   let {
-    size = ctx.size || 'md',
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     title,
     desc,
-    class: className,
-    ariaLabel = 'adjustments horizontal solid',
+    ariaLabel = 'align left solid',
     ...restProps
   }: Props = $props();
 
@@ -28,12 +20,14 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill={color}
   {...restProps}
-  class={twMerge('shrink-0', sizes[size], className)}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
+  viewBox="0 0 448 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -42,19 +36,19 @@
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   <path
-    d="M10.83 5a3.001 3.001 0 0 0-5.66 0H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17ZM4 11h9.17a3.001 3.001 0 0 1 5.66 0H20a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H4a1 1 0 1 1 0-2Zm1.17 6H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17a3.001 3.001 0 0 0-5.66 0Z"
+    d="M288 64c0 17.7-14.3 32-32 32L32 96C14.3 96 0 81.7 0 64S14.3 32 32 32l224 0c17.7 0 32 14.3 32 32zm0 256c0 17.7-14.3 32-32 32L32 352c-17.7 0-32-14.3-32-32s14.3-32 32-32l224 0c17.7 0 32 14.3 32 32zM0 192c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 224c-17.7 0-32-14.3-32-32zM448 448c0 17.7-14.3 32-32 32L32 480c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
   />
 </svg>
 
 <!--
 @component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
-@prop size = ctx.size || 'md'
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: className
-@prop ariaLabel = 'adjustments horizontal solid'
+@prop ariaLabel = 'align left solid'
 @prop ...restProps
 -->

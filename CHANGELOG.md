@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.45
+
+### Patch Changes
+
+- fix: peerDependencies update
+
 ## 0.9.44
 
 ### Patch Changes

@@ -19,7 +19,7 @@
     strokeWidth = ctx.strokeWidth || '2',
     desc,
     class: className,
-    ariaLabel = 'adjustments vertical outline',
+    ariaLabel = 'add column before outline',
     ...restProps
   }: OutlineProps = $props();
 
@@ -46,8 +46,9 @@
   <path
     stroke="currentColor"
     stroke-linecap="round"
+    stroke-linejoin="round"
     stroke-width={strokeWidth}
-    d="M6 4v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2m6-16v2m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v10m6-16v10m0 0a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m0 0v2"
+    d="M15 5v14m-8-7h2m0 0h2m-2 0v2m0-2v-2m12 1h-6m6 4h-6M4 19h16c.5523 0 1-.4477 1-1V6c0-.55228-.4477-1-1-1H4c-.55228 0-1 .44772-1 1v12c0 .5523.44772 1 1 1Z"
   />
 </svg>
 
@@ -61,6 +62,6 @@
 @prop strokeWidth = ctx.strokeWidth || '2'
 @prop desc
 @prop class: className
-@prop ariaLabel = 'adjustments vertical outline'
+@prop ariaLabel = 'add column before outline'
 @prop ...restProps
 -->

@@ -1,24 +1,16 @@
 <script lang="ts">
   import { getContext } from 'svelte';
-  import { twMerge } from 'tailwind-merge';
   import type { BaseProps, Props } from './types';
 
   const ctx: BaseProps = getContext('iconCtx') ?? {};
-  const sizes = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-8 h-8'
-  };
 
   let {
-    size = ctx.size || 'md',
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     title,
     desc,
-    class: className,
-    ariaLabel = 'adjustments horizontal solid',
+    ariaLabel = 'adn brands',
     ...restProps
   }: Props = $props();
 
@@ -28,12 +20,14 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  fill={color}
   {...restProps}
-  class={twMerge('shrink-0', sizes[size], className)}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
+  viewBox="0 0 496 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -42,19 +36,19 @@
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   <path
-    d="M10.83 5a3.001 3.001 0 0 0-5.66 0H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17ZM4 11h9.17a3.001 3.001 0 0 1 5.66 0H20a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H4a1 1 0 1 1 0-2Zm1.17 6H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17a3.001 3.001 0 0 0-5.66 0Z"
+    d="M248 167.5l64.9 98.8H183.1l64.9-98.8zM496 256c0 136.9-111.1 248-248 248S0 392.9 0 256 111.1 8 248 8s248 111.1 248 248zm-99.8 82.7L248 115.5 99.8 338.7h30.4l33.6-51.7h168.6l33.6 51.7h30.2z"
   />
 </svg>
 
 <!--
 @component
-[Go to docs](https://flowbite-svelte-icons.codewithshin.com/)
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
-@prop size = ctx.size || 'md'
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: className
-@prop ariaLabel = 'adjustments horizontal solid'
+@prop ariaLabel = 'adn brands'
 @prop ...restProps
 -->

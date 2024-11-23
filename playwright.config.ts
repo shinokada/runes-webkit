@@ -6,8 +6,7 @@ const config: PlaywrightTestConfig = {
     timeout: 240000,
     port: 4173
   },
-  testDir: 'tests',
-  testMatch: /(.+\.)?(test|spec)\.[jt]s/
+  testDir: 'e2e'
 };
 
 export default config;

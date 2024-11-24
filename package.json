@@ -1,6 +1,6 @@
 {
   "name": "runes-webkit",
-  "version": "0.9.46",
+  "version": "0.9.47",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://runes-webkit.codewithshin.com/",
@@ -31,8 +31,9 @@
     "copy:packagejson": "svelte-lib-helpers package",
     "gen:docs5FromType": "svelte-lib-helpers docs5FromType",
     "lib-helpers": "npm run format && npm run gen:docs5FromType && npm run package && npm run gen:exports && npm run copy:packagejson",
+    "ch": "npx changeset",
     "cv": "npx changeset version",
-    "cv:publish": "npx changeset publish"
+    "cp": "npx changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",

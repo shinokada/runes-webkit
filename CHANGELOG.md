@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.47
+
+### Patch Changes
+
+- chore: dependecies update
+
 ## 0.9.46
 
 ### Patch Changes

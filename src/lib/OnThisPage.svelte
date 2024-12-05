@@ -6,7 +6,7 @@
     active?: boolean;
   }
 
-  import { Dropdown, DropdownUl, DropdownLi, DropdownDivider, uiHelpers } from 'svelte-5-ui-lib';
+  import { Dropdown, DropdownUl, DropdownLi, DropdownDivider, uiHelpers } from 'flowbite-svelte';
   import { ChevronDownOutline } from '$lib';
   import { sineIn } from 'svelte/easing';
   import { twMerge } from 'tailwind-merge';

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
   import { twMerge } from 'tailwind-merge';
-  import { Card } from 'svelte-5-ui-lib';
+  import { Card } from 'flowbite-svelte';
 
   interface Props {
     children?: Snippet;
@@ -104,8 +104,8 @@
       {/if}
       {#if svelte5uilib}
         <li class={liClass}>
-          <a href="https://svelte-5-ui-lib.codewithshin.com/" class={aClass}
-            >Svelte 5 UI Lib: {svelte5uilib}</a
+          <a href="https://preview.flowbite-svelte.com/" class={aClass}
+            >Flowbite Svelte: {svelte5uilib}</a
           >
         </li>
       {/if}

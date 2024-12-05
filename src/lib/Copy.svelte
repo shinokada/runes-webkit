@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Badge } from 'svelte-5-ui-lib';
+  import { Badge } from 'flowbite-svelte';
   import type { Snippet } from 'svelte';
   import { clickToCopy } from '$lib';
   import type { HTMLAttributes } from 'svelte/elements';

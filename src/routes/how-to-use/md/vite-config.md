@@ -5,7 +5,7 @@ import sveltePackage from 'svelte/package.json' assert { type: 'json' };
 import svelteKitPackage from '@sveltejs/kit/package.json' assert { type: 'json' };
 import vitePackage from 'vite/package.json' assert { type: 'json' };
 import svelterunehighlightPackage from 'svelte-rune-highlight/package.json' assert { type: 'json' };
-import svelte5uilibPackage from 'svelte-5-ui-lib/package.json' assert { type: 'json' };
+import flowbiteSeltePackage from 'flowbite-svelte/package.json' assert { type: 'json' };
 import runesmetatagsPackage from 'runes-meta-tags/package.json' assert { type: 'json' };
 import runaticsPackage from './node_modules/runatics/package.json' assert { type: 'json' };
 
@@ -23,7 +23,7 @@ export default defineConfig({
 		__SVELTE_VERSION__: `"${sveltePackage.version}"`,
 		__SVELTEKIT_VERSION__: `"${svelteKitPackage.version}"`,
 		__SVELTE_RUNE_HIGHLIGHT_VERSION__: `"${svelterunehighlightPackage.version}"`,
-		__SVELTE_5_UI_LIB_VERSION__: `"${svelte5uilibPackage.version}"`,
+		__FLOWBITE_SVELTE_VERSION__: `"${flowbiteSeltePackage.version}"`,
 		__VITE_VERSION__: `"${vitePackage.version}"`,
 	},
 });

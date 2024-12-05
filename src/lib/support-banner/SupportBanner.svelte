@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Banner } from 'svelte-5-ui-lib';
+  import { Banner } from 'flowbite-svelte';
   import { type SupportBannerProps as Props, supportBanner } from '.';
 
   let { children, class: className, pClass, ...restProps }: Props = $props();

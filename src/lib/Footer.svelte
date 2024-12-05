@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Footer, FooterBrand, FooterLi, FooterUl } from 'svelte-5-ui-lib';
+  import { Footer, FooterBrand, FooterLi, FooterUl } from 'flowbite-svelte';
   import { twMerge } from 'tailwind-merge';
 
   interface Props {

@@ -6,7 +6,7 @@
     SidebarItem,
     SidebarDropdownWrapper,
     type BreakpointType
-  } from 'svelte-5-ui-lib';
+  } from 'flowbite-svelte';
   import { twMerge } from 'tailwind-merge';
   import type { ListType } from './types';
 

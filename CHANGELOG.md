@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.48
+
+### Patch Changes
+
+- fix: change from svelte-5-ui-lib to flowbite-svelte
+
 ## 0.9.47
 
 ### Patch Changes

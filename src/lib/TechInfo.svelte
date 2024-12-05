@@ -21,7 +21,7 @@
     runesMetaTagsVersion?: string;
     svelteVersion?: string;
     svelteKitVersion?: string;
-    svelte5uilib?: string;
+    flowbitesvelte?: string;
     svelteRuneHighlight?: string;
     viteVersion?: string;
   }
@@ -34,7 +34,7 @@
     runesMetaTagsVersion,
     svelteVersion,
     svelteKitVersion,
-    svelte5uilib,
+    flowbitesvelte,
     svelteRuneHighlight,
     viteVersion,
     repoUrl,
@@ -102,10 +102,10 @@
           >
         </li>
       {/if}
-      {#if svelte5uilib}
+      {#if flowbitesvelte}
         <li class={liClass}>
           <a href="https://preview.flowbite-svelte.com/" class={aClass}
-            >Flowbite Svelte: {svelte5uilib}</a
+            >Flowbite Svelte: {flowbitesvelte}</a
           >
         </li>
       {/if}
@@ -133,7 +133,7 @@
 @props:runesMetaTagsVersion: any;
 @props:svelteVersion: any;
 @props:svelteKitVersion: any;
-@props:svelte5uilib: any;
+@props:flowbitesvelte: any;
 @props:svelteRuneHighlight: any;
 @props:viteVersion: any;
 @props:repoUrl: any;

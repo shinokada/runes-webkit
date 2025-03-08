@@ -39,7 +39,7 @@ export { default as TruckFastSolid } from './icons/TruckFastSolid.svelte';
 export { default as Visualstudiocode } from './icons/Visualstudiocode.svelte';
 export { default as XSolid } from './icons/XSolid.svelte';
 
-export * from './types.ts';
+export * from './types';
 
 export {
 	clickToCopy,
@@ -62,4 +62,4 @@ export {
 	getExampleFileName,
 	isSvelteOverflow,
 	replacev1xx
-} from './helpers.ts';
+} from './helpers';

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.49
+
+### Patch Changes
+
+- fix: update tailwindcss to v4 ([`b7aa299`](https://github.com/shinokada/runes-webkit/commit/b7aa299110c7b018db486f568efe6018564a77b6))
+
 ## 0.9.48
 
 ### Patch Changes

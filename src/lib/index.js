@@ -1,7 +1,7 @@
-export * from './anchor/index.ts';
-export * from './code/index.ts';
-export * from './heading/index.ts';
-export * from './support-banner/index.ts';
+export * from './anchor';
+export * from './code';
+export * from './heading';
+export * from './support-banner';
 
 export { default as Copy } from './Copy.svelte';
 export { default as DocPage } from './DocPage.svelte';

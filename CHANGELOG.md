@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.50
+
+### Patch Changes
+
+- fix: remove index.ts from lib/index.js
+
 ## 0.9.49
 
 ### Patch Changes

@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { Banner } from 'flowbite-svelte';
-  import { type SupportBannerProps as Props, supportBanner } from '.';
+	import { Banner } from 'flowbite-svelte';
+	import { type SupportBannerProps as Props, supportBanner } from '.';
 
-  let { children, class: className, pClass, ...restProps }: Props = $props();
+	let { children, class: className, pClass, ...restProps }: Props = $props();
 
-  const { base, paragraph } = $derived(supportBanner());
+	const { base, paragraph } = $derived(supportBanner());
 </script>
 
 <Banner {...restProps} id="default-banner" dismissable={false} class={base({ className })}>
-  <p class={paragraph({ class: pClass })}>
-    {@render children()}
-  </p>
+	<p class={paragraph({ class: pClass })}>
+		{@render children()}
+	</p>
 </Banner>
 
 <!--

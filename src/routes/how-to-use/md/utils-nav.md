@@ -68,12 +68,12 @@
 </script>
 
 {#snippet navLi(lis)}
-  {#each lis as { name, href, Icon }}
-    {#if Icon}
-      <Icon class="w-8 h-8 mb-3 {random_tailwind_color()}"></Icon>
-    {/if}
-  <NavLi {href}>{name}</NavLi>
-  {/each}
+{#each lis as { name, href, Icon }}
+{#if Icon}
+<Icon class="w-8 h-8 mb-3 {random_tailwind_color()}"></Icon>
+{/if}
+<NavLi {href}>{name}</NavLi>
+{/each}
 {/snippet}
 
 <header class={headerCls}>
@@ -138,12 +138,14 @@
 </header>
 
 <Drawer
-  width="w-64"
-  drawerStatus={navDrawerStatus}
-  closeDrawer={closeNavDrawer}
-  {transitionParams}
-  divclass='dark_bg_theme'
+width="w-64"
+drawerStatus={navDrawerStatus}
+closeDrawer={closeNavDrawer}
+{transitionParams}
+divclass='dark_bg_theme'
+
 >
+
   <div class="flex items-center pb-4">
     <h5
       id="drawer-label"

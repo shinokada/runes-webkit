@@ -1,15 +1,14 @@
 import type { Snippet } from 'svelte';
 import type { HTMLAttributes } from 'svelte/elements';
-import Code from './Code.svelte';
-import CodeWrapper from './CodeWrapper.svelte';
-import { codewrapper, code } from './theme';
+export { default as Code } from './Code.svelte';
+export { default as CodeWrapper } from './CodeWrapper.svelte';
+export { codewrapper, code } from './theme';
 
-interface CodeProps extends HTMLAttributes<HTMLElement> {
-  children: Snippet;
+export interface CodeProps extends HTMLAttributes<HTMLElement> {
+	children: Snippet;
+	class?: string;
 }
 
-interface CodeWrapperProps extends HTMLAttributes<HTMLDivElement> {
-  children: Snippet;
+export interface CodeWrapperProps extends HTMLAttributes<HTMLDivElement> {
+	children: Snippet;
 }
-
-export { Code, CodeWrapper, codewrapper, code, type CodeProps, type CodeWrapperProps };

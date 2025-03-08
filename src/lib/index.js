@@ -1,16 +1,17 @@
-export * from './anchor';
+export * from './anchor/index.ts';
+export * from './code/index.ts';
+export * from './heading/index.ts';
+export * from './support-banner/index.ts';
+
 export { default as Copy } from './Copy.svelte';
-export * from './code';
 export { default as DocPage } from './DocPage.svelte';
 export { default as DynamicCodeBlockHighlight } from './DynamicCodeBlockHighlight.svelte';
 export { default as Footer } from './Footer.svelte';
-export * from './heading';
 export { default as HighlightCompo } from './HighlightCompo.svelte';
 export { default as HomeCards } from './HomeCards.svelte';
 export { default as IconPage } from './IconPage.svelte';
 export { default as OnThisPage } from './OnThisPage.svelte';
 export { default as Sidebar } from './Sidebar.svelte';
-export * from './support-banner';
 export { default as TechInfo } from './TechInfo.svelte';
 export { default as Toc } from './Toc.svelte';
 
@@ -38,50 +39,27 @@ export { default as TruckFastSolid } from './icons/TruckFastSolid.svelte';
 export { default as Visualstudiocode } from './icons/Visualstudiocode.svelte';
 export { default as XSolid } from './icons/XSolid.svelte';
 
-export * from './types';
-
-import {
-  clickToCopy,
-  toDashCaseLower,
-  toUpperSnakeCase,
-  extract,
-  removeHyphensAndCapitalize,
-  filterIconsByKeyword,
-  convertToKebabCase,
-  filterStringKeys,
-  excludeItemsByKeywords,
-  random_tailwind_color,
-  random_hex_color_code,
-  filterByTitles,
-  excludeByTitle,
-  insertObjectToArray,
-  cards,
-  info,
-  sidebarList,
-  getExampleFileName,
-  isSvelteOverflow,
-  replacev1xx
-} from './helpers';
+export * from './types.ts';
 
 export {
-  clickToCopy,
-  toDashCaseLower,
-  toUpperSnakeCase,
-  extract,
-  removeHyphensAndCapitalize,
-  filterIconsByKeyword,
-  convertToKebabCase,
-  filterStringKeys,
-  excludeItemsByKeywords,
-  random_tailwind_color,
-  random_hex_color_code,
-  filterByTitles,
-  excludeByTitle,
-  insertObjectToArray,
-  cards,
-  info,
-  sidebarList,
-  getExampleFileName,
-  isSvelteOverflow,
-  replacev1xx
-};
+	clickToCopy,
+	toDashCaseLower,
+	toUpperSnakeCase,
+	extract,
+	removeHyphensAndCapitalize,
+	filterIconsByKeyword,
+	convertToKebabCase,
+	filterStringKeys,
+	excludeItemsByKeywords,
+	random_tailwind_color,
+	random_hex_color_code,
+	filterByTitles,
+	excludeByTitle,
+	insertObjectToArray,
+	cards,
+	info,
+	sidebarList,
+	getExampleFileName,
+	isSvelteOverflow,
+	replacev1xx
+} from './helpers.ts';

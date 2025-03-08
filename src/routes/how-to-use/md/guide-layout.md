@@ -7,7 +7,6 @@
   let { children }: Props = $props()
 </script>
 
-
 <DocPage>
   {@render children()}
 </DocPage>

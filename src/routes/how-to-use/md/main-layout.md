@@ -78,12 +78,12 @@
 </script>
 
 {#snippet navLi(lis:LiType[])}
-  {#each lis as { name, href, Icon }}
-    {#if Icon}
-      <Icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></Icon>
-    {/if}
-    <NavLi {href}>{name}</NavLi>
-  {/each}
+{#each lis as { name, href, Icon }}
+{#if Icon}
+<Icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></Icon>
+{/if}
+<NavLi {href}>{name}</NavLi>
+{/each}
 {/snippet}
 
 <Runatics {analyticsId} />

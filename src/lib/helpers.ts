@@ -14,63 +14,63 @@ import CogOutline from './icons/CogOutline.svelte';
 import ChartPieOutline from './icons/ChartPieOutline.svelte';
 
 export function replaceLibImport(componentString: string | undefined, libraryName: string): string {
-  if (typeof componentString !== 'string') {
-    throw new Error('Invalid componentString: Expected a string');
-  }
+	if (typeof componentString !== 'string') {
+		throw new Error('Invalid componentString: Expected a string');
+	}
 
-  return componentString.replace(/from '\$lib'/g, `from '${libraryName}'`);
+	return componentString.replace(/from '\$lib'/g, `from '${libraryName}'`);
 }
 
 export function copyToClipboard(text: string): Promise<void> {
-  return navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      console.log('Text copied to clipboard');
-    })
-    .catch((err) => {
-      console.error('Failed to copy: ', err);
-      throw err; // Re-throw the error so the caller can handle it if needed
-    });
+	return navigator.clipboard
+		.writeText(text)
+		.then(() => {
+			console.log('Text copied to clipboard');
+		})
+		.catch((err) => {
+			console.error('Failed to copy: ', err);
+			throw err; // Re-throw the error so the caller can handle it if needed
+		});
 }
 
 export function clickToCopy(node: HTMLElement, target: string) {
-  async function copyText() {
-    const text = target;
+	async function copyText() {
+		const text = target;
 
-    try {
-      await navigator.clipboard.writeText(text);
+		try {
+			await navigator.clipboard.writeText(text);
 
-      node.dispatchEvent(
-        new CustomEvent('copysuccess', {
-          bubbles: true
-        })
-      );
-    } catch (error) {
-      node.dispatchEvent(
-        new CustomEvent('copyerror', {
-          bubbles: true,
-          detail: error
-        })
-      );
-    }
-  }
+			node.dispatchEvent(
+				new CustomEvent('copysuccess', {
+					bubbles: true
+				})
+			);
+		} catch (error) {
+			node.dispatchEvent(
+				new CustomEvent('copyerror', {
+					bubbles: true,
+					detail: error
+				})
+			);
+		}
+	}
 
-  node.addEventListener('click', copyText);
+	node.addEventListener('click', copyText);
 
-  return {
-    destroy() {
-      node.removeEventListener('click', copyText);
-    }
-  };
+	return {
+		destroy() {
+			node.removeEventListener('click', copyText);
+		}
+	};
 }
 
 export function toDashCaseLower(text: string): string {
-  return text.replace(/\s+/g, '-').toLowerCase();
+	return text.replace(/\s+/g, '-').toLowerCase();
 }
 
 export function toUpperSnakeCase(text: string): string {
-  // replace spaces and - to _ and convert to uppercase
-  return text.replace(/[\s-]/g, '_').toUpperCase();
+	// replace spaces and - to _ and convert to uppercase
+	return text.replace(/[\s-]/g, '_').toUpperCase();
 }
 /**
  * Extracts information from an HTMLElement to create a LinkType object.
@@ -79,14 +79,14 @@ export function toUpperSnakeCase(text: string): string {
  * @return {LinkType} The extracted information as a LinkType object.
  */
 export function extract(x: HTMLElement): Types.LinkType {
-  if (x.firstElementChild)
-    return {
-      rel: x.tagName,
-      href: '#' + x.firstElementChild?.id,
-      // name: x?.firstChild?.nodeValue ?? ''
-      name: x.textContent?.replace(/#+/g, '') ?? ''
-    };
-  return { name: '' };
+	if (x.firstElementChild)
+		return {
+			rel: x.tagName,
+			href: '#' + x.firstElementChild?.id,
+			// name: x?.firstChild?.nodeValue ?? ''
+			name: x.textContent?.replace(/#+/g, '') ?? ''
+		};
+	return { name: '' };
 }
 
 /**
@@ -96,35 +96,35 @@ export function extract(x: HTMLElement): Types.LinkType {
  * @return {string} the formatted string with hyphens removed and words capitalized
  */
 export function removeHyphensAndCapitalize(str: string) {
-  // Handle empty string or strings without letters
-  if (!str || !/\w/.test(str)) {
-    return str;
-  }
+	// Handle empty string or strings without letters
+	if (!str || !/\w/.test(str)) {
+		return str;
+	}
 
-  // Capitalize the first letter of each word, including after hyphens
-  const capitalized = str.replace(/(^|\s|-)\w/g, (match, prev) =>
-    prev ? ` ${match.toUpperCase()}` : match.toUpperCase()
-  );
+	// Capitalize the first letter of each word, including after hyphens
+	const capitalized = str.replace(/(^|\s|-)\w/g, (match, prev) =>
+		prev ? ` ${match.toUpperCase()}` : match.toUpperCase()
+	);
 
-  // Remove hyphens and ensure single spaces between words
-  return capitalized.replace(/-|\s{2,}/g, ' ');
+	// Remove hyphens and ensure single spaces between words
+	return capitalized.replace(/-|\s{2,}/g, ' ');
 }
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 export function filterIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
-  const filteredIcons: { [key: string]: any } = {};
-  for (const key in icons) {
-    if (key.includes(keyword)) {
-      filteredIcons[key] = icons[key];
-    }
-  }
-  return filteredIcons;
+	const filteredIcons: { [key: string]: any } = {};
+	for (const key in icons) {
+		if (key.includes(keyword)) {
+			filteredIcons[key] = icons[key];
+		}
+	}
+	return filteredIcons;
 }
 
 export function convertToKebabCase(str: string) {
-  // Use replace() method with a regular expression to match all whitespace characters (\s) globally (g flag)
-  // and replace them with '-'
-  return str.replace(/\s/g, '-').toLowerCase();
+	// Use replace() method with a regular expression to match all whitespace characters (\s) globally (g flag)
+	// and replace them with '-'
+	return str.replace(/\s/g, '-').toLowerCase();
 }
 
 /**
@@ -145,13 +145,13 @@ export function convertToKebabCase(str: string) {
 //   return Object.fromEntries(Object.entries(obj).filter(([key]) => typeof key === 'string'));
 // };
 export const filterStringKeys = (
-  obj: Record<string | number | symbol, unknown>
+	obj: Record<string | number | symbol, unknown>
 ): Record<string, Component> => {
-  return Object.fromEntries(
-    Object.entries(obj).filter(
-      ([key, value]) => typeof key === 'string' && typeof value === 'function'
-    )
-  ) as Record<string, Component>;
+	return Object.fromEntries(
+		Object.entries(obj).filter(
+			([key, value]) => typeof key === 'string' && typeof value === 'function'
+		)
+	) as Record<string, Component>;
 };
 
 /**
@@ -162,17 +162,17 @@ export const filterStringKeys = (
  * @return {object} The filtered object after excluding items based on the keywords.
  */
 export function excludeItemsByKeywords(
-  items: Record<string, Component>,
-  keywords: string
+	items: Record<string, Component>,
+	keywords: string
 ): Record<string, Component> {
-  const filteredItems: Record<string, Component> = {};
-  for (const key in items) {
-    const doesNotContainKeyword = keywords.split(' ').every((keyword) => !key.includes(keyword));
-    if (doesNotContainKeyword) {
-      filteredItems[key] = items[key];
-    }
-  }
-  return filteredItems;
+	const filteredItems: Record<string, Component> = {};
+	for (const key in items) {
+		const doesNotContainKeyword = keywords.split(' ').every((keyword) => !key.includes(keyword));
+		if (doesNotContainKeyword) {
+			filteredItems[key] = items[key];
+		}
+	}
+	return filteredItems;
 }
 
 /**
@@ -181,11 +181,11 @@ export function excludeItemsByKeywords(
  * @return {string} The generated tailwind color class string.
  */
 export const random_tailwind_color = () => {
-  const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
-  const shades = ['300', '400', '500'];
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  const randomShade = shades[Math.floor(Math.random() * shades.length)];
-  return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0`;
+	const colors = ['red', 'yellow', 'green', 'blue', 'indigo', 'purple', 'pink'];
+	const shades = ['300', '400', '500'];
+	const randomColor = colors[Math.floor(Math.random() * colors.length)];
+	const randomShade = shades[Math.floor(Math.random() * shades.length)];
+	return `text-${randomColor}-${randomShade} dark:text-${randomColor}-${randomShade} shrink-0`;
 };
 
 /**
@@ -194,10 +194,10 @@ export const random_tailwind_color = () => {
  * @return {string} The randomly generated hex color code.
  */
 export const random_hex_color_code = () => {
-  const r = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
-  const g = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
-  const b = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
-  return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+	const r = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
+	const g = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
+	const b = Math.floor(Math.random() * (230 - 30 + 1)) + 30;
+	return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
 };
 
 /**
@@ -208,9 +208,9 @@ export const random_hex_color_code = () => {
  * @return {CardType[]} The filtered array of objects.
  */
 export function filterByTitles(objects: Types.CardType[], titles: Types.Title[]) {
-  return objects.filter((object) =>
-    titles.some((title) => title.toLowerCase() === object.title.toLowerCase())
-  );
+	return objects.filter((object) =>
+		titles.some((title) => title.toLowerCase() === object.title.toLowerCase())
+	);
 }
 
 /**
@@ -221,9 +221,9 @@ export function filterByTitles(objects: Types.CardType[], titles: Types.Title[])
  * @return {CardType[]} filtered array of Card objects
  */
 export function excludeByTitle(objects: Types.CardType[], titles: Types.Title[]): Types.CardType[] {
-  return objects.filter(
-    (object) => !titles.some((title) => title.toLowerCase() === object.title.toLowerCase())
-  );
+	return objects.filter(
+		(object) => !titles.some((title) => title.toLowerCase() === object.title.toLowerCase())
+	);
 }
 
 /**
@@ -235,182 +235,182 @@ export function excludeByTitle(objects: Types.CardType[], titles: Types.Title[])
  * @return {any[]} the updated array with the object inserted at the specified position
  */
 export function insertObjectToArray(
-  array: Types.CardType[],
-  objectToInsert: Types.CardType,
-  position: number
+	array: Types.CardType[],
+	objectToInsert: Types.CardType,
+	position: number
 ): Types.CardType[] {
-  // Check for valid position
-  if (position < 0 || position > array.length) {
-    throw new Error('Invalid position. Please provide a position within the array bounds.');
-  }
+	// Check for valid position
+	if (position < 0 || position > array.length) {
+		throw new Error('Invalid position. Please provide a position within the array bounds.');
+	}
 
-  // Create a copy of the array to avoid modifying the original
-  const newArray = [...array];
+	// Create a copy of the array to avoid modifying the original
+	const newArray = [...array];
 
-  // Insert the object at the specified position
-  newArray.splice(position, 0, objectToInsert);
+	// Insert the object at the specified position
+	newArray.splice(position, 0, objectToInsert);
 
-  return newArray;
+	return newArray;
 }
 
 interface CardTpye {
-  title: string;
-  description: string;
-  Icon: Component;
-  icon_class: string;
+	title: string;
+	description: string;
+	Icon: Component;
+	icon_class: string;
 }
 
 export const cards: CardTpye[] = [
-  {
-    title: 'Svelte 4/5/Runes',
-    description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
-    Icon: BadgeCheckOutline,
-    icon_class: 'text-pink-500'
-  },
-  {
-    title: 'Accessible SVGs',
-    description:
-      'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
-    Icon: Accessibility,
-    icon_class: 'text-green-400'
-  },
-  {
-    title: 'Faster Compiling',
-    description: 'Import icons directly to optimize compilation speed and improve performance.',
-    Icon: TruckFastSolid,
-    icon_class: 'text-yellow-500'
-  },
-  {
-    title: 'IDE Support',
-    description:
-      'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
-    Icon: Visualstudiocode,
-    icon_class: 'text-amber-500'
-  },
-  {
-    title: 'Global Icon',
-    description: 'Use <code>Icon</code> to careat default global icons.',
-    Icon: GlobeOutline,
-    icon_class: 'text-purple-500'
-  },
-  {
-    title: 'CSS Frameworks support',
-    description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
-    Icon: TailwindSolid,
-    icon_class: 'text-orange-500'
-  },
-  {
-    title: 'Dark mode',
-    description: 'Use <code>class</code> props to add your dark mode color.',
-    Icon: MoonSolid,
-    icon_class: 'text-emerald-200'
-  }
+	{
+		title: 'Svelte 4/5/Runes',
+		description: 'Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.',
+		Icon: BadgeCheckOutline,
+		icon_class: 'text-pink-500'
+	},
+	{
+		title: 'Accessible SVGs',
+		description:
+			'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
+		Icon: Accessibility,
+		icon_class: 'text-green-400'
+	},
+	{
+		title: 'Faster Compiling',
+		description: 'Import icons directly to optimize compilation speed and improve performance.',
+		Icon: TruckFastSolid,
+		icon_class: 'text-yellow-500'
+	},
+	{
+		title: 'IDE Support',
+		description:
+			'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
+		Icon: Visualstudiocode,
+		icon_class: 'text-amber-500'
+	},
+	{
+		title: 'Global Icon',
+		description: 'Use <code>Icon</code> to careat default global icons.',
+		Icon: GlobeOutline,
+		icon_class: 'text-purple-500'
+	},
+	{
+		title: 'CSS Frameworks support',
+		description: 'Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.',
+		Icon: TailwindSolid,
+		icon_class: 'text-orange-500'
+	},
+	{
+		title: 'Dark mode',
+		description: 'Use <code>class</code> props to add your dark mode color.',
+		Icon: MoonSolid,
+		icon_class: 'text-emerald-200'
+	}
 ];
 
 interface InfoType {
-  title: string;
-  description: string;
-  Icon: Component;
-  href: string;
-  icon_class: string;
+	title: string;
+	description: string;
+	Icon: Component;
+	href: string;
+	icon_class: string;
 }
 
 export const info: InfoType[] = [
-  {
-    title: 'Svelte Icon Family',
-    description: 'Explore 29 Svelte SVG Icon Sets.',
-    Icon: InfoCircleOutline,
-    href: 'https://svelte-svg-icons.codewithshin.com/',
-    icon_class: 'text-amber-500'
-  }
+	{
+		title: 'Svelte Icon Family',
+		description: 'Explore 29 Svelte SVG Icon Sets.',
+		Icon: InfoCircleOutline,
+		href: 'https://svelte-svg-icons.codewithshin.com/',
+		icon_class: 'text-amber-500'
+	}
 ];
 
 export const sidebarList: Types.ListType[] = [
-  {
-    name: 'Svelte 5 & later',
-    Icon: BellActiveAltOutline as Component,
-    children: [
-      {
-        name: 'Getting Started',
-        Icon: CogOutline as Component,
-        href: '/guide/svelte-5/getting-started'
-      },
-      {
-        name: 'Props',
-        Icon: BadgeCheckOutline as Component,
-        href: '/guide/svelte-5/props'
-      }
-    ]
-  },
-  {
-    name: 'Svelte 4 & 5',
-    Icon: StarOutline as Component,
-    children: [
-      {
-        name: 'Getting Started',
-        Icon: CogOutline as Component,
-        href: '/guide/svelte-4/getting-started'
-      },
-      {
-        name: 'Props',
-        Icon: BadgeCheckOutline as Component,
-        href: '/guide/svelte-4/props'
-      }
-    ]
-  },
-  {
-    name: 'Global Icons',
-    Icon: GlobeOutline as Component,
-    href: '/guide/global-icons'
-  },
-  {
-    name: 'Custom Icons',
-    Icon: ChartPieOutline as Component,
-    href: '/guide/custom-icons'
-  }
+	{
+		name: 'Svelte 5 & later',
+		Icon: BellActiveAltOutline as Component,
+		children: [
+			{
+				name: 'Getting Started',
+				Icon: CogOutline as Component,
+				href: '/guide/svelte-5/getting-started'
+			},
+			{
+				name: 'Props',
+				Icon: BadgeCheckOutline as Component,
+				href: '/guide/svelte-5/props'
+			}
+		]
+	},
+	{
+		name: 'Svelte 4 & 5',
+		Icon: StarOutline as Component,
+		children: [
+			{
+				name: 'Getting Started',
+				Icon: CogOutline as Component,
+				href: '/guide/svelte-4/getting-started'
+			},
+			{
+				name: 'Props',
+				Icon: BadgeCheckOutline as Component,
+				href: '/guide/svelte-4/props'
+			}
+		]
+	},
+	{
+		name: 'Global Icons',
+		Icon: GlobeOutline as Component,
+		href: '/guide/global-icons'
+	},
+	{
+		name: 'Custom Icons',
+		Icon: ChartPieOutline as Component,
+		href: '/guide/custom-icons'
+	}
 ];
 
 export function getExampleFileName(
-  selectedExample: string,
-  exampleArr: { name: string }[]
+	selectedExample: string,
+	exampleArr: { name: string }[]
 ): string {
-  const foundExample = exampleArr.find((example) => example.name === selectedExample);
+	const foundExample = exampleArr.find((example) => example.name === selectedExample);
 
-  if (!foundExample) {
-    // If the selectedExample is not in the array, default to the first example
-    selectedExample = exampleArr[0].name || '';
-  }
+	if (!foundExample) {
+		// If the selectedExample is not in the array, default to the first example
+		selectedExample = exampleArr[0].name || '';
+	}
 
-  // Convert the selected example to PascalCase
-  const result = selectedExample
-    .split(' ')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
+	// Convert the selected example to PascalCase
+	const result = selectedExample
+		.split(' ')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+		.join('');
 
-  return `${result}.svelte`;
+	return `${result}.svelte`;
 }
 
 export const isGeneratedCodeOverflow = (code: string): boolean => {
-  const lines = code.split('\n');
-  return lines.length > 7;
+	const lines = code.split('\n');
+	return lines.length > 7;
 };
 
 export const isSvelteOverflow = (
-  sveltefile: string,
-  exampleModules: Record<string, string>
+	sveltefile: string,
+	exampleModules: Record<string, string>
 ): boolean => {
-  const filePath = `./examples/${sveltefile}`;
-  const fileContent = exampleModules[filePath];
+	const filePath = `./examples/${sveltefile}`;
+	const fileContent = exampleModules[filePath];
 
-  if (typeof fileContent !== 'string') {
-    console.warn(`File content for ${filePath} is not found or not a string`);
-    return false;
-  }
+	if (typeof fileContent !== 'string') {
+		console.warn(`File content for ${filePath} is not found or not a string`);
+		return false;
+	}
 
-  const lines = fileContent.split('\n');
-  return lines.length > 7;
+	const lines = fileContent.split('\n');
+	return lines.length > 7;
 };
 
 export function replacev1xx(string: string, v1version: string): string {
-  return string.replace(/1.x.x/g, v1version);
+	return string.replace(/1.x.x/g, v1version);
 }

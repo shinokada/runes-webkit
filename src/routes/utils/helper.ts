@@ -1,7 +1,5 @@
 import type { Component } from 'svelte';
-import { type ListType, CogOutline, ExpandOutline, GridPlusOutline } from '$lib';
-// import directly from the specific file
-import { sidebarList } from '$lib/helpers';
+import { type ListType, CogOutline, ExpandOutline, GridPlusOutline, sidebarList } from '$lib';
 
 const extra: ListType[] = [
 	{
@@ -20,4 +18,8 @@ const extra: ListType[] = [
 		href: '/no-tabs'
 	}
 ];
-export const newSidebarList: ListType[] = [...sidebarList, ...extra];
+
+export const newSidebarList: ListType[] = [
+  ...(Array.isArray(sidebarList) ? sidebarList : []), 
+  ...extra
+];

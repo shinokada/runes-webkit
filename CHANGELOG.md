@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.53
+
+### Patch Changes
+
+- fix: add tailwindcss version to TechInfo.svelte
+
 ## 0.9.52
 
 ### Patch Changes

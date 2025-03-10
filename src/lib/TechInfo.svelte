@@ -24,6 +24,7 @@
 		flowbitesvelte?: string;
 		svelteRuneHighlight?: string;
 		viteVersion?: string;
+		tailwindcssVersion?: string;
 	}
 	let {
 		children,
@@ -37,6 +38,7 @@
 		flowbitesvelte,
 		svelteRuneHighlight,
 		viteVersion,
+		tailwindcssVersion,
 		repoUrl,
 		title = 'Technical information about this website',
 		h2Class = 'my-8 flex justify-center',
@@ -112,6 +114,11 @@
 			{#if viteVersion}
 				<li class={liClass}>
 					<a href="https://vitejs.dev/" class={aClass}>Vite: {viteVersion}</a>
+				</li>
+			{/if}
+			{#if tailwindcssVersion}
+				<li class={liClass}>
+					<a href="https://tailwindcss.com/docs" class={aClass}>Tailwindcss: {tailwindcssVersion}</a>
 				</li>
 			{/if}
 			{#if children}

@@ -5,7 +5,7 @@
   import { page } from '$app/stores';
   import { newSidebarList } from './utils/helper';
   import { Footer, OnThisPage, extract, removeHyphensAndCapitalize, DotsHorizontalOutline, GithubSolid, random_tailwind_color, XSolid, } from '$lib';
-  import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown,  DropdownUl, DropdownLi, Sidebar, SidebarGroup, SidebarDropdownWrapper, SidebarItem, CloseButton, SidebarBrand } from 'flowbite-svelte';
+  import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown,  DropdownUl, DropdownLi, Sidebar, SidebarGroup, SidebarDropdownWrapper, SidebarItem, CloseButton, SidebarBrand } from 'svelte-5-ui-lib';
   import { RunesMetaTags } from 'runes-meta-tags';
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card } from 'flowbite-svelte';
+	import { Card } from 'svelte-5-ui-lib';
 	import { twMerge } from 'tailwind-merge';
 	import type { CardType } from '$lib';
 	import type { HTMLAttributes } from 'svelte/elements';

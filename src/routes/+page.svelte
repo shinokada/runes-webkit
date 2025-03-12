@@ -9,7 +9,7 @@
 		cards,
 		info
 	} from '$lib';
-	import { A } from 'flowbite-svelte';
+	import { A } from 'svelte-5-ui-lib';
 
 	const brand = {
 		title: `${removeHyphensAndCapitalize(__NAME__)}`,

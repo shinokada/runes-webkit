@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.56
+
+### Patch Changes
+
+- fix: remove flowbite-svelte
+
 ## 0.9.55
 
 ### Patch Changes

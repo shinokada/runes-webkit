@@ -94,9 +94,7 @@
 			{/if}
 			{#if svelteVersion}
 				<li class={liClass}>
-					<a href="https://https://svelte.dev/" class={aClass}
-						>Svelte: {svelteVersion}</a
-					>
+					<a href="https://https://svelte.dev/" class={aClass}>Svelte: {svelteVersion}</a>
 				</li>
 			{/if}
 			{#if svelteKitVersion}
@@ -127,7 +125,8 @@
 			{/if}
 			{#if tailwindcssVersion}
 				<li class={liClass}>
-					<a href="https://tailwindcss.com/docs" class={aClass}>Tailwindcss: {tailwindcssVersion}</a>
+					<a href="https://tailwindcss.com/docs" class={aClass}>Tailwindcss: {tailwindcssVersion}</a
+					>
 				</li>
 			{/if}
 			{#if children}
@@ -149,9 +148,11 @@
 @props:runesMetaTagsVersion: any;
 @props:svelteVersion: any;
 @props:svelteKitVersion: any;
-@props:flowbitesvelte: any;
-@props:svelteRuneHighlight: any;
+@props:svelte5uilibVersion: any;
+@props:flowbitesvelteVersion: any;
+@props:svelteRuneHighlightVersion: any;
 @props:viteVersion: any;
+@props:tailwindcssVersion: any;
 @props:repoUrl: any;
 @props:title: any = 'Technical information about this website';
 @props:h2Class: any = 'my-8 flex justify-center';

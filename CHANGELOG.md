@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.57
+
+### Patch Changes
+
+- fix: update TechInfo
+
 ## 0.9.56
 
 ### Patch Changes

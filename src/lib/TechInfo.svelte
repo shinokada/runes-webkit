@@ -21,8 +21,9 @@
 		runesMetaTagsVersion?: string;
 		svelteVersion?: string;
 		svelteKitVersion?: string;
-		flowbitesvelte?: string;
-		svelteRuneHighlight?: string;
+		flowbitesvelteVersion?: string;
+		svelte5uilibVersion?: string;
+		svelteRuneHighlightVersion?: string;
 		viteVersion?: string;
 		tailwindcssVersion?: string;
 	}
@@ -35,8 +36,9 @@
 		runesMetaTagsVersion,
 		svelteVersion,
 		svelteKitVersion,
-		flowbitesvelte,
-		svelteRuneHighlight,
+		svelte5uilibVersion,
+		flowbitesvelteVersion,
+		svelteRuneHighlightVersion,
 		viteVersion,
 		tailwindcssVersion,
 		repoUrl,
@@ -76,10 +78,10 @@
 					>
 				</li>
 			{/if}
-			{#if svelteRuneHighlight}
+			{#if svelteRuneHighlightVersion}
 				<li class={liClass}>
 					<a href="https://svelte-rune-highlight.codewithshin.com/" class={aClass}
-						>Svelte Rune Highlight: {svelteRuneHighlight}</a
+						>Svelte Rune Highlight: {svelteRuneHighlightVersion}</a
 					>
 				</li>
 			{/if}
@@ -92,7 +94,7 @@
 			{/if}
 			{#if svelteVersion}
 				<li class={liClass}>
-					<a href="https://svelte-5-preview.vercel.app/docs/introduction" class={aClass}
+					<a href="https://https://svelte.dev/" class={aClass}
 						>Svelte: {svelteVersion}</a
 					>
 				</li>
@@ -104,10 +106,17 @@
 					>
 				</li>
 			{/if}
-			{#if flowbitesvelte}
+			{#if svelte5uilibVersion}
 				<li class={liClass}>
-					<a href="https://preview.svelte-5-ui-lib.com/" class={aClass}
-						>Flowbite Svelte: {flowbitesvelte}</a
+					<a href="https://svelte-5-ui-lib.codewithshin.com/" class={aClass}
+						>Svelte 5 UI Lib: {svelte5uilibVersion}</a
+					>
+				</li>
+			{/if}
+			{#if flowbitesvelteVersion}
+				<li class={liClass}>
+					<a href="https://flowbite-svelte.com/" class={aClass}
+						>Flowbite Svelte: {flowbitesvelteVersion}</a
 					>
 				</li>
 			{/if}

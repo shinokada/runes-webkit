@@ -94,7 +94,7 @@
 			{/if}
 			{#if svelteVersion}
 				<li class={liClass}>
-					<a href="https://https://svelte.dev/" class={aClass}>Svelte: {svelteVersion}</a>
+					<a href="https://svelte.dev/" class={aClass}>Svelte: {svelteVersion}</a>
 				</li>
 			{/if}
 			{#if svelteKitVersion}

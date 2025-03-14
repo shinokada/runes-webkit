@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.58
+
+### Patch Changes
+
+- fix: svelte link path
+
 ## 0.9.57
 
 ### Patch Changes

@@ -25,7 +25,7 @@ export default defineConfig({
 		__SVELTE_VERSION__: JSON.stringify(sveltePackage.version),
 		__SVELTEKIT_VERSION__: JSON.stringify(svelteKitPackage.version),
 		__SVELTE_RUNE_HIGHLIGHT_VERSION__: JSON.stringify(svelterunehighlightPackage.version),
-    __SVELTE_5_UI_LIB_VERSION__: JSON.stringify(Svelte5UiLibPackage.version),
+		__SVELTE_5_UI_LIB_VERSION__: JSON.stringify(Svelte5UiLibPackage.version),
 		__VITE_VERSION__: JSON.stringify(vitePackage.version)
 	},
 	test: {

@@ -119,18 +119,10 @@
 <H2>Setting</H2>
 
 <Tabs>
-	<TabItem open title="svelte.config.js">
-		<p>Enable <Code>compilerOptions</Code></p>
-		:
-		<HighlightCompo
-			code={modules['./md/svelte-config-js.md'] as string}
-			contentClass="overflow-y-scroll"
-		/>
-	</TabItem>
 	<TabItem title="package.json">
 		<p>
-			Update <Code>package.json</Code> by updating <Code>name, version</Code> and add the following and
-			update <Code>keywords</Code>, <Code>contributors</Code> that is the original author, and all URLs:
+			Update <Code>package.json</Code> by adding <Code>name, version</Code>. Add the following and
+			update <Code>keywords</Code>, <Code>contributors</Code>:
 		</p>
 		<HighlightCompo
 			codeLang="md"
@@ -145,17 +137,11 @@
 			contentClass="overflow-y-scroll"
 		/>
 	</TabItem>
-	<TabItem title="tailwind.config.cjs">
-		<p>Update <Code>tailwindcss.config.cjs</Code></p>
-		<p>
-			Check more primary colors at <A
-				href="https://github.com/shinokada/runes-webkit/blob/main/tailwind.config.cjs">here</A
-			>.
-		</p>
-
+	<TabItem title="app.css">
+		<p>Update <Code>src/app.css</Code></p>
 		<HighlightCompo
 			codeLang="ts"
-			code={modules['./md/tailwind-config.md'] as string}
+			code={modules['./md/app-css.md'] as string}
 			contentClass="overflow-y-scroll"
 		/>
 	</TabItem>

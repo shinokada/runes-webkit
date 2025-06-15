@@ -12,47 +12,48 @@ import runesmetatagsPackage from './node_modules/runes-meta-tags/package.json' w
 import runaticsPackage from './node_modules/runatics/package.json' with { type: 'json' };
 
 export default defineConfig({
-	plugins: [sveltekit(), tailwindcss()],
-	define: {
-		__NAME__: JSON.stringify(pkg.name),
-		__DESCRIPTION__: JSON.stringify(pkg.description),
-		__VERSION__: JSON.stringify(pkg.version),
-		__GITHUBURL__: JSON.stringify(pkg.repository.url),
-		__ORIGINAL_SOURCE_NAME__: JSON.stringify(pkg.contributors[0].name),
-		__ORIGINAL_SOURCE_URL__: JSON.stringify(pkg.contributors[0].url),
-		__RUNATICS_VERSION__: JSON.stringify(runaticsPackage.version),
-		__RUNES_METATAGS_VERSION__: JSON.stringify(runesmetatagsPackage.version),
-		__SVELTE_VERSION__: JSON.stringify(sveltePackage.version),
-		__SVELTEKIT_VERSION__: JSON.stringify(svelteKitPackage.version),
-		__SVELTE_RUNE_HIGHLIGHT_VERSION__: JSON.stringify(svelterunehighlightPackage.version),
-		__SVELTE_5_UI_LIB_VERSION__: JSON.stringify(Svelte5UiLibPackage.version),
-		__VITE_VERSION__: JSON.stringify(vitePackage.version)
-	},
-	test: {
-		workspace: [
-			{
-				extends: './vite.config.ts',
-				plugins: [svelteTesting()],
+plugins: [sveltekit(), tailwindcss()],
+define: {
+**NAME**: JSON.stringify(pkg.name),
+**DESCRIPTION**: JSON.stringify(pkg.description),
+**VERSION**: JSON.stringify(pkg.version),
+**GITHUBURL**: JSON.stringify(pkg.repository.url),
+**ORIGINAL_SOURCE_NAME**: JSON.stringify(pkg.contributors[0].name),
+**ORIGINAL_SOURCE_URL**: JSON.stringify(pkg.contributors[0].url),
+**RUNATICS_VERSION**: JSON.stringify(runaticsPackage.version),
+**RUNES_METATAGS_VERSION**: JSON.stringify(runesmetatagsPackage.version),
+**SVELTE_VERSION**: JSON.stringify(sveltePackage.version),
+**SVELTEKIT_VERSION**: JSON.stringify(svelteKitPackage.version),
+**SVELTE_RUNE_HIGHLIGHT_VERSION**: JSON.stringify(svelterunehighlightPackage.version),
+**SVELTE_5_UI_LIB_VERSION**: JSON.stringify(Svelte5UiLibPackage.version),
+**VITE_VERSION**: JSON.stringify(vitePackage.version)
+},
+test: {
+workspace: [
+{
+extends: './vite.config.ts',
+plugins: [svelteTesting()],
 
-				test: {
-					name: 'client',
-					environment: 'jsdom',
-					clearMocks: true,
-					include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
-					exclude: ['src/lib/server/**'],
-					setupFiles: ['./vitest-setup-client.ts']
-				}
-			},
-			{
-				extends: './vite.config.ts',
+    			test: {
+    				name: 'client',
+    				environment: 'jsdom',
+    				clearMocks: true,
+    				include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
+    				exclude: ['src/lib/server/**'],
+    				setupFiles: ['./vitest-setup-client.ts']
+    			}
+    		},
+    		{
+    			extends: './vite.config.ts',
 
-				test: {
-					name: 'server',
-					environment: 'node',
-					include: ['src/**/*.{test,spec}.{js,ts}'],
-					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}']
-				}
-			}
-		]
-	}
+    			test: {
+    				name: 'server',
+    				environment: 'node',
+    				include: ['src/**/*.{test,spec}.{js,ts}'],
+    				exclude: ['src/**/*.svelte.{test,spec}.{js,ts}']
+    			}
+    		}
+    	]
+    }
+
 });

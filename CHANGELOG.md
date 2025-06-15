@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.9.59
+
+### Patch Changes
+
+- fix: IconPage padding bottom
+
 ## 0.9.58
 
 ### Patch Changes

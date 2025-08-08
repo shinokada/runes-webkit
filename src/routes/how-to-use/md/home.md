@@ -1,6 +1,6 @@
 <script lang="ts">
   import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from 'runes-webkit';
-  import { A } from 'svelte-5-ui-lib';
+  import { A } from 'flowbite-svelte';
   const cardsToExclude = ['Seven Props']
   const brand = {
     title: 'Brands, Regular, and Solid Icons',

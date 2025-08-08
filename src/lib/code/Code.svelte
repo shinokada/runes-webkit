@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { type CodeProps as Props, code } from './';
+  import { type CodeProps as Props, code } from "./";
 
-	let { children, class: className, ...restProps }: Props = $props();
+  let { children, class: className, ...restProps }: Props = $props();
 
-	const base = $derived(code({ className }));
+  const base = $derived(code({ className }));
 </script>
 
 <code class={base} {...restProps}>
-	{@render children()}
+  {@render children()}
 </code>
 
 <!--

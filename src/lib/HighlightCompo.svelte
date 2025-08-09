@@ -1,16 +1,14 @@
 <script lang="ts">
   import { HighlightSvelte, Highlight } from "svelte-rune-highlight";
   import markdown from "highlight.js/lib/languages/markdown";
-  import { Button, Badge } from "flowbite-svelte";
-  import { copyToClipboard, replaceLibImport } from "./helpers";
+  import { Clipboard } from "flowbite-svelte";
+  import { replaceLibImport } from "./helpers";
   import { highlightcompo } from "./theme";
 
   interface Props {
     // componentStatus: boolean;
     code: string;
-    badgeClass?: string;
     contentClass?: string;
-    buttonClass?: string;
     codeLang?: string;
     class?: string;
     expanded?: boolean;
@@ -20,13 +18,12 @@
   let {
     code,
     codeLang,
-    badgeClass,
-    buttonClass,
     contentClass = "overflow-hidden",
     replaceLib = "runes-webkit",
     class: className
   }: Props = $props();
 
+  let value = $state(code);
   if (replaceLib) {
     code = replaceLibImport(code, replaceLib);
   }
@@ -38,26 +35,11 @@
     showExpandButton = isOverflowingY;
   };
 
-  const { base, badge, button } = $derived(highlightcompo());
-  let copiedStatus = $state(false);
+  const base = $derived(highlightcompo({class:className}));
 
   const handleExpandClick = () => {
     expand = !expand;
   };
-
-  function handleCopyClick() {
-    copyToClipboard(code)
-      .then(() => {
-        copiedStatus = true;
-        setTimeout(() => {
-          copiedStatus = false;
-        }, 1000);
-      })
-      .catch((err) => {
-        console.error("Error in copying:", err);
-        // Handle the error as needed
-      });
-  }
 
   const mdLang = {
     name: "markdown",
@@ -65,17 +47,22 @@
   };
 </script>
 
-<div class={base({ className })}>
-  <div class="relative">
+<div class={base}>
     <div
       class="{contentClass} {showExpandButton ? 'pb-8' : ''}"
       class:max-h-72={!expand}
       tabindex="-1"
       use:checkOverflow
     >
-      {#if copiedStatus}
-        <Badge class={badge({ class: badgeClass })} color="green">Copied to clipboard</Badge>
-      {/if}
+      <Clipboard size="xs" color="alternative" bind:value class="absolute top-2 right-2 w-20 focus:ring-0 bg-gray-50 dark:bg-gray-800">
+        {#snippet children(success)}
+          {#if success}
+            Copied
+          {:else}
+            Copy
+          {/if}
+        {/snippet}
+      </Clipboard>
       {#if codeLang === "md"}
         <Highlight language={mdLang} {code} />
       {:else if code}
@@ -84,7 +71,7 @@
         no code is provided
       {/if}
     </div>
-    <Button class={button({ class: buttonClass })} onclick={handleCopyClick}>Copy</Button>
+
     {#if showExpandButton}
       <button
         onclick={handleExpandClick}
@@ -93,7 +80,6 @@
         >{expand ? "Collapse code" : "Expand code"}</button
       >
     {/if}
-  </div>
 </div>
 
 <!--

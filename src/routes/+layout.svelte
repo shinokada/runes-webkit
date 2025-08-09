@@ -110,7 +110,7 @@
 <Navbar
   breakpoint="lg"
   fluid
-  class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 lg:px-0 lg:py-0 dark:border-gray-700 dark:bg-stone-950"
+  class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 lg:py-0 dark:border-gray-700 dark:bg-stone-950"
   navContainerClass="lg:justify-between"
 >
   <NavBrand href="/">

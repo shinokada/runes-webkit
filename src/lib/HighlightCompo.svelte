@@ -4,6 +4,7 @@
   import { Clipboard } from "flowbite-svelte";
   import { replaceLibImport } from "./helpers";
   import { highlightcompo } from "./theme";
+  // import clsx from "clsx";
 
   interface Props {
     // componentStatus: boolean;
@@ -35,6 +36,7 @@
     showExpandButton = isOverflowingY;
   };
 
+  // const base = $derived(highlightcompo({ class: clsx(className) }));
   const base = $derived(highlightcompo({ class: className }));
 
   const handleExpandClick = () => {
@@ -58,7 +60,7 @@
       size="xs"
       color="alternative"
       bind:value
-      class="absolute top-2 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800"
+      class="absolute top-8 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800"
     >
       {#snippet children(success)}
         {#if success}
@@ -69,9 +71,9 @@
       {/snippet}
     </Clipboard>
     {#if codeLang === "md"}
-      <Highlight language={mdLang} {code} />
+      <Highlight language={mdLang} {code} class="m-0 p-0" />
     {:else if code}
-      <HighlightSvelte {code} />
+      <HighlightSvelte {code} class="m-0 p-0" />
     {:else}
       no code is provided
     {/if}

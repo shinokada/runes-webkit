@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.10.3
+
+### Patch Changes
+
+- fix: Clipboard position
+
 ## 0.10.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.10.1
+
+### Patch Changes
+
+- fix: add Clipboard to HighlightCompo
+
 ## 0.10.0
 
 ### Minor Changes

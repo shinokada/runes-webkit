@@ -35,7 +35,7 @@
     showExpandButton = isOverflowingY;
   };
 
-  const base = $derived(highlightcompo({class:className}));
+  const base = $derived(highlightcompo({ class: className }));
 
   const handleExpandClick = () => {
     expand = !expand;
@@ -48,38 +48,43 @@
 </script>
 
 <div class={base}>
-    <div
-      class="{contentClass} {showExpandButton ? 'pb-8' : ''}"
-      class:max-h-72={!expand}
-      tabindex="-1"
-      use:checkOverflow
+  <div
+    class="{contentClass} {showExpandButton ? 'pb-8' : ''}"
+    class:max-h-72={!expand}
+    tabindex="-1"
+    use:checkOverflow
+  >
+    <Clipboard
+      size="xs"
+      color="alternative"
+      bind:value
+      class="absolute top-2 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800"
     >
-      <Clipboard size="xs" color="alternative" bind:value class="absolute top-2 right-2 w-20 focus:ring-0 bg-gray-50 dark:bg-gray-800">
-        {#snippet children(success)}
-          {#if success}
-            Copied
-          {:else}
-            Copy
-          {/if}
-        {/snippet}
-      </Clipboard>
-      {#if codeLang === "md"}
-        <Highlight language={mdLang} {code} />
-      {:else if code}
-        <HighlightSvelte {code} />
-      {:else}
-        no code is provided
-      {/if}
-    </div>
-
-    {#if showExpandButton}
-      <button
-        onclick={handleExpandClick}
-        type="button"
-        class="hover:text-primary-700 absolute start-0 bottom-0 w-full border-t border-gray-200 bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-        >{expand ? "Collapse code" : "Expand code"}</button
-      >
+      {#snippet children(success)}
+        {#if success}
+          Copied
+        {:else}
+          Copy
+        {/if}
+      {/snippet}
+    </Clipboard>
+    {#if codeLang === "md"}
+      <Highlight language={mdLang} {code} />
+    {:else if code}
+      <HighlightSvelte {code} />
+    {:else}
+      no code is provided
     {/if}
+  </div>
+
+  {#if showExpandButton}
+    <button
+      onclick={handleExpandClick}
+      type="button"
+      class="hover:text-primary-700 absolute start-0 bottom-0 w-full border-t border-gray-200 bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+      >{expand ? "Collapse code" : "Expand code"}</button
+    >
+  {/if}
 </div>
 
 <!--
@@ -88,8 +93,6 @@
 ## Props
 @props: code: any;
 @props:codeLang: any;
-@props:badgeClass: any;
-@props:buttonClass: any;
 @props:contentClass: any = "overflow-hidden";
 @props:replaceLib: any = "runes-webkit";
 @props:class: string;

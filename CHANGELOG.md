@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.10.2
+
+### Patch Changes
+
+- fix: package.json
+
 ## 0.10.1
 
 ### Patch Changes

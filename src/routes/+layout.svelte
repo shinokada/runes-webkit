@@ -7,7 +7,6 @@
     Footer,
     OnThisPage,
     extract,
-    removeHyphensAndCapitalize,
     DotsHorizontalOutline,
     GithubSolid,
     random_tailwind_color,

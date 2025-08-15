@@ -4,6 +4,7 @@ export * from "./heading";
 export * from "./support-banner";
 
 export { default as Copy } from "./Copy.svelte";
+export { default as CodeWrapper } from "./CodeWrapper.svelte";
 export { default as DocPage } from "./DocPage.svelte";
 export { default as DynamicCodeBlockHighlight } from "./DynamicCodeBlockHighlight.svelte";
 export { default as Footer } from "./Footer.svelte";

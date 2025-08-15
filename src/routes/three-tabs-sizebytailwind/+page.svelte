@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { IconPage, filterIconsByKeyword } from "$lib/index.js";
+  import { IconPage, filterIconsByKeyword } from "$lib";
   import * as icons from "../flowbite-samples/index.js";
 
   const keywordsToInclude = "Outline";

@@ -105,6 +105,9 @@ importers:
       svelte-lib-helpers:
         specifier: ^0.4.30
         version: 0.4.30
+      svelte-radix:
+        specifier: ^2.0.1
+        version: 2.0.1(svelte@5.38.0)
       svelte-shields:
         specifier: ^0.5.1
         version: 0.5.1(svelte@5.38.0)
@@ -2108,6 +2111,12 @@ packages:
   svelte-lib-helpers@0.4.30:
     resolution: {integrity: sha512-lIJlXO03nGvysisjCEbut7/Uc5EtECxilgxb/0LrByYnplM5yqrtGuyezbljCldozrOF+iLUFOXwIi6WPiD+oA==}
     hasBin: true
+
+  svelte-radix@2.0.1:
+    resolution: {integrity: sha512-YrX44Dj+Rp6YZuPSjdmyd6P8QTkb2NXwySUCZYzjwkP6Cl3dZaTBPPeaSOutP3v3ycQ2XwyNOpyn4p0QcN+uYQ==}
+    engines: {node: '>=18.0.0', npm: '>=7.0.0'}
+    peerDependencies:
+      svelte: ^5.0.0
 
   svelte-rune-highlight@0.7.0:
     resolution: {integrity: sha512-6VqqddF8uZGX05uDk0cQYucNl7FL6b2+5Sv9WHRPZyXGZnwoew4nEfa3mEfa2SrB3gM52zXbaCl7nN0XFfx7VA==}
@@ -4319,6 +4328,10 @@ snapshots:
     dependencies:
       jsonc-parser: 3.3.1
       yargs: 17.7.2
+
+  svelte-radix@2.0.1(svelte@5.38.0):
+    dependencies:
+      svelte: 5.38.0
 
   svelte-rune-highlight@0.7.0(svelte@5.38.0):
     dependencies:

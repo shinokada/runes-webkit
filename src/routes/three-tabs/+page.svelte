@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { IconPage, filterIconsByKeyword } from "$lib/index.js";
+  import { IconPage, filterIconsByKeyword } from "$lib";
   import * as icons from "../awesome-samples/index.js";
   const keywordsToInclude = "Solid";
   let keyIcons = filterIconsByKeyword(icons, keywordsToInclude);

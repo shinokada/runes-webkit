@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { IconPage, filterStringKeys } from "$lib/index.js";
+  import { IconPage, filterStringKeys } from "$lib";
   import * as icons from "../awesome-samples/index.js";
 
   const keyIcons = filterStringKeys(icons);

@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { HighlightCompo, Code, H1, H2 } from "$lib";
+  import { HighlightCompo, Code, H1, H2, CodeWrapper } from "$lib";
 
-  const modules = import.meta.glob("./md/*.md", {
+  import * as ExampleComponents from "./examples/";
+  const exampleModules = import.meta.glob("./examples/*.svelte", {
     query: "?raw",
     import: "default",
     eager: true
@@ -23,7 +24,14 @@
   icon preferences as follows:
 </p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/setting-preferences.md"] as string} />
+<CodeWrapper innerClass="flex justify-center">
+  {#snippet codeblock()}
+    <HighlightCompo
+      codeLang="ts"
+      code={exampleModules["./examples/SettingPreferences.svelte"] as string}
+    />
+  {/snippet}
+</CodeWrapper>
 
 <p>
   All properties are optional, allowing you to fine-tune the appearance and accessibility of your
@@ -34,7 +42,12 @@
 
 <p>If you set <Code>size</Code>, icons can be customized with different color. For example:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/prop-size.md"] as string} />
+<CodeWrapper innerClass="flex justify-center gap-2">
+  <ExampleComponents.PropSize />
+  {#snippet codeblock()}
+    <HighlightCompo codeLang="ts" code={exampleModules["./examples/PropSize.svelte"] as string} />
+  {/snippet}
+</CodeWrapper>
 
 <H2>Setting more than one props</H2>
 

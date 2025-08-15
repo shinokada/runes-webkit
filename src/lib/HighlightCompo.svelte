@@ -1,19 +1,19 @@
 <script lang="ts">
   import { HighlightSvelte, Highlight } from "svelte-rune-highlight";
+  import { twMerge } from "tailwind-merge";
   import markdown from "highlight.js/lib/languages/markdown";
   import { Clipboard } from "flowbite-svelte";
   import { replaceLibImport } from "./helpers";
-  import { highlightcompo } from "./theme";
-  // import clsx from "clsx";
+  import { highlightCompo } from "./theme";
 
   interface Props {
-    // componentStatus: boolean;
     code: string;
     contentClass?: string;
     codeLang?: string;
     class?: string;
     expanded?: boolean;
     replaceLib?: string;
+    clipboardClass?: string;
   }
 
   let {
@@ -21,6 +21,7 @@
     codeLang,
     contentClass = "overflow-hidden",
     replaceLib = "runes-webkit",
+    clipboardClass,
     class: className
   }: Props = $props();
 
@@ -37,7 +38,7 @@
   };
 
   // const base = $derived(highlightcompo({ class: clsx(className) }));
-  const base = $derived(highlightcompo({ class: className }));
+  const base = $derived(highlightCompo({ class: className }));
 
   const handleExpandClick = () => {
     expand = !expand;
@@ -60,7 +61,10 @@
       size="xs"
       color="alternative"
       bind:value
-      class="absolute top-8 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800"
+      class={twMerge(
+        "absolute top-8 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800",
+        clipboardClass
+      )}
     >
       {#snippet children(success)}
         {#if success}
@@ -97,5 +101,6 @@
 @props:codeLang: any;
 @props:contentClass: any = "overflow-hidden";
 @props:replaceLib: any = "runes-webkit";
+@props:clipboardClass: any;
 @props:class: string;
 -->

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.10.5
+
+### Patch Changes
+
+- fix: remove DynamicCodeBlockHighlight
+
 ## 0.10.4
 
 ### Patch Changes

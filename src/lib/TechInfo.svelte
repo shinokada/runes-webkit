@@ -2,7 +2,7 @@
   import type { Snippet } from "svelte";
   import type { ClassValue } from "svelte/elements";
   import { cn } from "$lib";
-  import { Card } from "flowbite-svelte";
+  import { Card, List, Li } from "flowbite-svelte";
 
   interface Props {
     children?: Snippet;
@@ -15,6 +15,7 @@
     ulClass?: ClassValue;
     liClass?: ClassValue;
     aClass?: ClassValue;
+    class?: ClassValue;
     cardsize?: "xl" | "xs" | "sm" | "md" | "lg" | undefined;
     runeswebkitVersion?: string;
     runaticsVersion?: string;
@@ -46,96 +47,98 @@
     ulClass,
     liClass,
     aClass,
-    cardsize = "xl"
+    cardsize = "xl",
+    class: className,
+    ...restProps
   }: Props = $props();
 </script>
 
 <h2 class={cn("my-8 flex justify-center", h2Class)}>{title}</h2>
 
 <div class={cn("mx-auto grid max-w-5xl grid-cols-1", divClass)}>
-  <Card size={cardsize} class="p-4">
-    <ul class={cn("m-4 list-disc p-4 text-left text-lg dark:text-gray-400", ulClass)}>
+  <Card size={cardsize} class={cn("p-6", className)} {...restProps}>
+    <List tag="ul" class={cn("text-lg dark:text-gray-400", ulClass)}>
       {#if pkgName && pkgVersion && repoUrl}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a href={repoUrl} class={cn("me-4 hover:underline md:me-6", aClass)}
             >{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if runaticsVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a
             href="https://runatics.codewithshin.com/"
             class={cn("me-4 hover:underline md:me-6", aClass)}>Runatics: {runaticsVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if runesMetaTagsVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a
             href="https://runes-meta-tags.codewithshin.com/"
             class={cn("me-4 hover:underline md:me-6", aClass)}
             >Runes Meta Tags: {runesMetaTagsVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if svelteRuneHighlightVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a
             href="https://svelte-rune-highlight.codewithshin.com/"
             class={cn("me-4 hover:underline md:me-6", aClass)}
             >Svelte Rune Highlight: {svelteRuneHighlightVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if runeswebkitVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a
             href="https://runes-webkit.codewithshin.com/"
             class={cn("me-4 hover:underline md:me-6", aClass)}>Runes Webkit: {runeswebkitVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if svelteVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a href="https://svelte.dev/" class={cn("me-4 hover:underline md:me-6", aClass)}
             >Svelte: {svelteVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if svelteKitVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a
             href="https://kit.svelte.dev/docs/introduction"
             class={cn("me-4 hover:underline md:me-6", aClass)}>SvelteKit: {svelteKitVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if flowbitesvelteVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a href="https://flowbite-svelte.com/" class={cn("me-4 hover:underline md:me-6", aClass)}
             >Flowbite Svelte: {flowbitesvelteVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if viteVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a href="https://vitejs.dev/" class={cn("me-4 hover:underline md:me-6", aClass)}
             >Vite: {viteVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if tailwindcssVersion}
-        <li class={cn("hover:text-red-700 hover:underline", liClass)}>
+        <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
           <a href="https://tailwindcss.com/docs" class={cn("me-4 hover:underline md:me-6", aClass)}
             >Tailwindcss: {tailwindcssVersion}</a
           >
-        </li>
+        </Li>
       {/if}
       {#if children}
         {@render children()}
       {/if}
-    </ul>
+    </List>
   </Card>
 </div>
 
@@ -163,4 +166,5 @@
 @props:liClass: any;
 @props:aClass: any;
 @props:cardsize: any = "xl";
+@props:class: string;
 -->

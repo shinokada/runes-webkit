@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.11.1
+
+### Patch Changes
+
+- fix: TechInfo component update
+
 ## 0.11.0
 
 ### Minor Changes

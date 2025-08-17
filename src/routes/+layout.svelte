@@ -76,8 +76,6 @@
   const twitterUrl = "https://twitter.com/shinokada";
   const blueskyUrl = "https://bsky.app/profile/codewithshin.com";
 
-  let headerCls =
-    "mx-auto w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-stone-900";
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => {
       // For home page '/', do exact matching

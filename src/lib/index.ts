@@ -62,5 +62,6 @@ export {
   sidebarList,
   getExampleFileName,
   isSvelteOverflow,
-  replacev1xx
+  replacev1xx,
+  cn
 } from "./helpers";

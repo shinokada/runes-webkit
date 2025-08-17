@@ -13,6 +13,13 @@ import StarOutline from "./icons/StarOutline.svelte";
 import CogOutline from "./icons/CogOutline.svelte";
 import ChartPieOutline from "./icons/ChartPieOutline.svelte";
 
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 export function replaceLibImport(componentString: string | undefined, libraryName: string): string {
   if (typeof componentString !== "string") {
     throw new Error("Invalid componentString: Expected a string");

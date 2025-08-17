@@ -16,7 +16,11 @@
 
 <p>Create a Svelte component named <Code>src/lib/MyIcon.svelte</Code>:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/create-a-custom-component.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/create-a-custom-component.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <p>
   This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to
@@ -28,7 +32,11 @@
 
 <p>To use your custom default icon in a Svelte page, do the following:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/implementation.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/implementation.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <p>
   Here, we import the <Code>MyIcon</Code> component and the <Code>Accessibility</Code> icon. By passing

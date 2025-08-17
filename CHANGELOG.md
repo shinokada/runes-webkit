@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.11.0
+
+### Minor Changes
+
+- fix: class updates
+
 ## 0.10.5
 
 ### Patch Changes

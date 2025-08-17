@@ -1,6 +1,18 @@
 <script lang="ts">
   import { Footer, FooterBrand, FooterLink, FooterLinkGroup } from "flowbite-svelte";
-  import { twMerge } from "tailwind-merge";
+  import type { ClassValue } from "svelte/elements";
+  import { cn } from "$lib";
+
+  type BrandClasses = {
+    aClass?: ClassValue;
+    spanClass?: ClassValue;
+    imgClass?: ClassValue;
+  };
+
+  type FooterLinkClasses = {
+    class?: ClassValue;
+    link?: ClassValue;
+  };
 
   interface Props {
     brand?: {
@@ -12,9 +24,12 @@
       href: string;
     }[];
     footerType?: "logo" | "sitemap" | "default" | "socialmedia" | undefined;
-    footerClass?: string | undefined | null;
-    divClass?: string | undefined | null;
-    ulClass?: string | undefined | null;
+    footerClass?: ClassValue;
+    divClass?: ClassValue;
+    ulClass?: ClassValue;
+    brandClasses?: BrandClasses;
+    footerLinkGroupClass?: ClassValue;
+    footerLinkClasses?: FooterLinkClasses;
   }
   let {
     brand,
@@ -23,12 +38,15 @@
     ulClass,
     lis,
     footerType = "logo",
+    brandClasses,
+    footerLinkGroupClass,
+    footerLinkClasses,
     ...restProps
   }: Props = $props();
 </script>
 
 <Footer
-  class={twMerge(
+  class={cn(
     "rounded-none border-t border-gray-100 shadow-none dark:border-gray-600 dark:bg-stone-900",
     footerClass
   )}
@@ -36,20 +54,20 @@
   {...restProps}
 >
   <div
-    class={twMerge(
-      "mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between lg:ml-64",
-      divClass
-    )}
+    class={cn("mx-auto max-w-4xl sm:flex sm:items-center sm:justify-between lg:ml-64", divClass)}
   >
     {#if brand}
-      <FooterBrand href={brand?.href} name={brand?.name} />
+      <FooterBrand href={brand?.href} name={brand?.name} {...brandClasses} />
     {/if}
     {#if lis}
       <FooterLinkGroup
-        class="mb-6 flex flex-wrap items-center text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
+        class={cn(
+          "mb-6 flex flex-wrap items-center text-sm text-gray-500 sm:mb-0 dark:text-gray-400",
+          footerLinkGroupClass
+        )}
       >
         {#each lis as { name, href }}
-          <FooterLink {href}>{name}</FooterLink>
+          <FooterLink {href} {...footerLinkClasses}>{name}</FooterLink>
         {/each}
       </FooterLinkGroup>
     {/if}
@@ -66,4 +84,7 @@
 @props:ulClass: any;
 @props:lis: any;
 @props:footerType: any = "logo";
+@props:brandClasses: any;
+@props:footerLinkGroupClass: any;
+@props:footerLinkClasses: any;
 -->

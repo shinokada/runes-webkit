@@ -33,7 +33,11 @@
 
 <p>Use the color props to change colors with HEX color code or HTML color names:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/css-hex-color.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/css-hex-color.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>CSS framework</H2>
 
@@ -44,11 +48,19 @@
 
 <H3>Tailwind CSS</H3>
 
-<HighlightCompo codeLang="ts" code={modules["./md/tailwind-css.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/tailwind-css.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H3>Bootstrap</H3>
 
-<HighlightCompo codeLang="ts" code={modules["./md/bootstrap.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/bootstrap.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Dark mode</H2>
 
@@ -58,7 +70,11 @@
   > prop.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/dark-mode.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/dark-mode.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>A11y</H2>
 
@@ -92,14 +108,22 @@
   icons focusable.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/withevents.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/withevents.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <p>
   It is possible to add <Code>tabindex="0"</Code>, but it is not recommended for A11y. If you want
   to use it add <Code>withEvents</Code> props.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/withevents-2.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/withevents-2.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Events</H2>
 
@@ -115,4 +139,8 @@
 
 <p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/passing-down-other-attributes.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/passing-down-other-attributes.md"] as string}
+  clipboardClass="top-2"
+/>

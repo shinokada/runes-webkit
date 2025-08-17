@@ -1,5 +1,9 @@
 <script lang="ts">
-  import type { Attachment } from "svelte/attachments";
+  import type { ClassValue } from "svelte/elements";
+  import { cn } from "$lib";
+  import { Dropdown, DropdownItem, DropdownDivider } from "flowbite-svelte";
+  import { ChevronDownOutline } from "$lib";
+  import { onMount } from "svelte";
 
   interface LinkType {
     name: string;
@@ -8,35 +12,26 @@
     active?: boolean;
   }
 
-  import { Dropdown, DropdownItem, DropdownDivider } from "flowbite-svelte";
-  import { ChevronDownOutline } from "$lib";
-  import { twMerge } from "tailwind-merge";
-  import { onMount } from "svelte";
-
   interface Props {
     headingSelector: string;
     extract: (x: HTMLElement) => LinkType;
-    divClass?: string;
-    classDiv?: string | undefined | null;
-    ulClass?: string;
-    svgClass?: string;
-    classSvg?: string | undefined | null;
-    liClass?: string;
-    dropdownDivClass?: string;
-    classDropdownDiv?: string | undefined | null;
+    divClass?: ClassValue;
+    ulClass?: ClassValue;
+    svgClass?: ClassValue;
+    liClass?: ClassValue;
+    dropdownDivClass?: ClassValue;
+    btnClass?: ClassValue;
   }
 
-  let {
-    headingSelector,
-    extract,
-    divClass,
-    classDiv = "fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white",
-    liClass = "my-2 hover:text-primary-400",
-    svgClass,
-    classSvg = "ms-2 mt-1 h-4 w-4 text-white dark:text-white",
-    dropdownDivClass,
-    classDropdownDiv = "w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700"
-  }: Props = $props();
+  let { headingSelector, extract, divClass, liClass, svgClass, btnClass, dropdownDivClass }: Props =
+    $props();
+
+  const classDiv = "fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white";
+  const classDropdownDiv =
+    "w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700";
+  const classSvg = "ms-2 mt-1 h-4 w-4 text-white dark:text-white";
+  const classLi = "my-2 hover:text-primary-400";
+  const classBtn = "flex bg-white p-2 dark:bg-stone-900";
 
   let headings: LinkType[] = $state([]);
   let observer: MutationObserver | null = null;
@@ -115,17 +110,17 @@
   }
 </script>
 
-<div class={twMerge(classDiv, divClass)}>
-  <button class="flex bg-white p-2 dark:bg-stone-900">
+<div class={cn(classDiv, divClass)}>
+  <button class={cn(classBtn, btnClass)}>
     On this page
-    <ChevronDownOutline class={twMerge(classSvg, svgClass)} />
+    <ChevronDownOutline class={cn(classSvg, svgClass)} />
   </button>
 
-  <Dropdown simple {@attach init} class={twMerge(classDropdownDiv, dropdownDivClass)}>
+  <Dropdown simple {@attach init} class={cn(classDropdownDiv, dropdownDivClass)}>
     <DropdownItem href="#top">Return to top</DropdownItem>
     <DropdownDivider />
     {#each headings as { rel, href, name }}
-      <DropdownItem {liClass}>
+      <DropdownItem liClass={cn(classLi, liClass)}>
         <a {href} class={indent(rel)}>{name}</a>
       </DropdownItem>
     {/each}
@@ -139,10 +134,8 @@
 @props: headingSelector: any;
 @props:extract: any;
 @props:divClass: any;
-@props:classDiv: any = "fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white";
-@props:liClass: any = "my-2 hover:text-primary-400";
+@props:liClass: any;
 @props:svgClass: any;
-@props:classSvg: any = "ms-2 mt-1 h-4 w-4 text-white dark:text-white";
+@props:btnClass: any;
 @props:dropdownDivClass: any;
-@props:classDropdownDiv: any = "w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700";
 -->

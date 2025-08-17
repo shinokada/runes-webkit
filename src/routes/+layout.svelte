@@ -97,28 +97,28 @@
     isOpen = sidebarUi.isOpen;
   });
 
-  let activeClass = "p-2 text-sm lg:text-base";
-  let nonActiveClass = "p-2 text-sm lg:text-base";
+  let activeClass = "p-2 text-sm xl:text-base";
+  let nonActiveClass = "p-2 text-sm xl:text-base";
 </script>
 
 <Runatics {analyticsId} />
 <RunesMetaTags {...metaTags} />
 
 <Navbar
-  breakpoint="lg"
+  breakpoint="xl"
   fluid
-  class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 lg:py-0 dark:border-gray-700 dark:bg-stone-950"
-  navContainerClass="lg:justify-between"
+  class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 xl:py-0 dark:border-gray-700 dark:bg-stone-950"
+  navContainerClass="xl:justify-between"
 >
   <NavBrand href="/">
     <span
-      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap lg:ml-8 xl:text-2xl"
+      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap xl:ml-8 xl:text-2xl"
       >Runes Webkit</span
     >
   </NavBrand>
-  <div class="flex md:order-2">
+  <div class="flex xl:order-2">
     {#if include}
-      <div class="hidden lg:block">
+      <div class="hidden xl:block">
         <DynamicCodeBlockStyle />
       </div>
     {/if}
@@ -140,10 +140,10 @@
     </Dropdown>
     <DarkMode class="m-0 p-2" />
   </div>
-  <NavHamburger class="order-2 lg:order-1" />
+  <NavHamburger class="order-2 xl:order-1" />
   <NavUl
     {activeUrl}
-    class="order-2 lg:order-1"
+    class="order-2 xl:order-1"
     classes={{ active: activeClass, nonActive: nonActiveClass }}
   >
     {#each lis as { name, href, Icon }}
@@ -155,31 +155,31 @@
   </NavUl>
 </Navbar>
 
-<div class="mt-20 lg:flex">
+<div class="mt-20 xl:flex">
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
       class="fixed top-5 left-0
      z-100 mb-2"
-      breakpoint="lg"
+      breakpoint="xl"
     />
     <Sidebar
       {activeUrl}
       {isOpen}
       {closeSidebar}
-      breakpoint="lg"
+      breakpoint="xl"
       classes={{
         div: "dark:bg-stone-900 bg-gray-50",
         nonactive: "p-1 hover:bg-gray-200",
         active:
           "flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       }}
-      class="h-screen border-r border-gray-50 lg:top-[74px] dark:border-gray-700 dark:bg-stone-900"
+      class="h-screen border-r border-gray-50 xl:top-[74px] dark:border-gray-700 dark:bg-stone-900"
     >
       <CloseButton
         onclick={closeSidebar}
         color="gray"
-        class="absolute top-3 right-1 p-2 lg:hidden"
+        class="absolute top-3 right-1 p-2 xl:hidden"
       />
       <SidebarGroup>
         <SidebarBrand>

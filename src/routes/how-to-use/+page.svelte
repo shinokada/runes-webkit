@@ -114,7 +114,11 @@
 
 <H2>Installation</H2>
 
-<HighlightCompo codeLang="md" code={modules["./md/installation.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="md"
+  code={modules["./md/installation.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Setting</H2>
 
@@ -197,7 +201,11 @@
 
 <p>Add the following to the <Code>guide/+layout.svelte</Code>:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/guide-layout.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/guide-layout.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Home Page</H2>
 
@@ -210,13 +218,25 @@
 
 <Tabs>
   <TabItem open title="no-tabs">
-    <HighlightCompo codeLang="ts" code={modules["./md/no-tabs.md"] as string} clipboardClass="top-2" />
+    <HighlightCompo
+      codeLang="ts"
+      code={modules["./md/no-tabs.md"] as string}
+      clipboardClass="top-2"
+    />
   </TabItem>
   <TabItem title="three-tabs">
-    <HighlightCompo codeLang="ts" code={modules["./md/three-tabs.md"] as string} clipboardClass="top-2" />
+    <HighlightCompo
+      codeLang="ts"
+      code={modules["./md/three-tabs.md"] as string}
+      clipboardClass="top-2"
+    />
   </TabItem>
   <TabItem title="three-tabs-sizeby-tailwind">
-    <HighlightCompo codeLang="ts" code={modules["./md/three-tabs-sizeby-tailwind.md"] as string} clipboardClass="top-2" />
+    <HighlightCompo
+      codeLang="ts"
+      code={modules["./md/three-tabs-sizeby-tailwind.md"] as string}
+      clipboardClass="top-2"
+    />
   </TabItem>
 </Tabs>
 

@@ -1,6 +1,8 @@
 <script lang="ts">
   import { Badge } from "flowbite-svelte";
   import type { Snippet } from "svelte";
+  import type { ClassValue } from "svelte/elements";
+  import { cn } from "$lib";
   import { clickToCopy } from "$lib";
   import type { HTMLAttributes } from "svelte/elements";
 
@@ -8,17 +10,10 @@
     children: Snippet;
     iconName: string;
     counter?: number;
-    badgeClass?: string;
-    btnClass?: string;
+    badgeClass?: ClassValue;
+    btnClass?: ClassValue;
   }
-  let {
-    children,
-    iconName,
-    counter = 2,
-    badgeClass = "absolute top-4 py-1 px-2",
-    btnClass = "ml-4",
-    ...attributes
-  }: Props = $props();
+  let { children, iconName, counter = 2, badgeClass, btnClass, ...attributes }: Props = $props();
 
   let text = $state(iconName);
   let open = $state(false);
@@ -38,7 +33,7 @@
 
 {#if open}
   <div class="relative">
-    <Badge large class={badgeClass}>
+    <Badge large class={cn("absolute top-4 px-2 py-1", badgeClass)}>
       <span class="font-medium">{text}</span>
     </Badge>
   </div>
@@ -46,7 +41,7 @@
 
 <button
   type="button"
-  class={btnClass}
+  class={cn("ml-4", btnClass)}
   use:clickToCopy={iconName}
   onclick={copySuccess}
   {...attributes}
@@ -61,6 +56,6 @@
 @props: children: any;
 @props:iconName: any;
 @props:counter: any = 2;
-@props:badgeClass: any = "absolute top-4 py-1 px-2";
-@props:btnClass: any = "ml-4";
+@props:badgeClass: any;
+@props:btnClass: any;
 -->

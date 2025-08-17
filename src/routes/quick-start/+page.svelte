@@ -12,7 +12,11 @@
 
 <H2>Installation</H2>
 
-<HighlightCompo codeLang="ts" code={modules["./md/installation.md"] as string} clipboardClass="top-2" />
+<HighlightCompo
+  codeLang="ts"
+  code={modules["./md/installation.md"] as string}
+  clipboardClass="top-2"
+/>
 
 <H2>Update the followings:</H2>
 

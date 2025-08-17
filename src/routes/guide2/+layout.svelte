@@ -18,10 +18,10 @@
   let { children }: Props = $props();
 </script>
 
-<main class="mx-auto w-full min-w-0 lg:pl-64">
+<main class="mx-auto w-full min-w-0 xl:pl-64">
   <div class="flex w-full">
     <div
-      class="pb:12 flex max-w-3xl min-w-0 flex-col divide-y divide-gray-200 px-4 lg:px-8 lg:pb-16 xl:pb-24 2xl:ml-40 dark:divide-gray-800"
+      class="pb:12 flex max-w-3xl min-w-0 flex-col divide-y divide-gray-200 px-4 xl:px-8 xl:pb-16 xl:pb-24 2xl:ml-40 dark:divide-gray-800"
     >
       <div id="mainContent" class="pb-20">
         {@render children()}

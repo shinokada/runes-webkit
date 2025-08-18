@@ -106,12 +106,12 @@
 <Navbar
   breakpoint="xl"
   fluid
-  class="dark_bg_theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 xl:py-0 dark:border-gray-700"
+  class="dark-bg-theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 xl:py-0 dark:border-gray-700"
   navContainerClass="xl:justify-between"
 >
   <NavBrand href="/">
     <span
-      class="text-primary-900 dark:text-primary-500 self-center text-2xl font-semibold whitespace-nowrap xl:ml-8 xl:text-3xl"
+      class="text-primary-900 dark:text-primary-500 ml-4 self-center text-2xl font-semibold whitespace-nowrap xl:ml-8 xl:text-3xl"
       >Runes Webkit</span
     >
   </NavBrand>
@@ -159,8 +159,8 @@
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
-      class="fixed top-5 left-0
-     z-100 mb-2"
+      class="fixed top-3 left-0 z-100
+     p-2"
       breakpoint="xl"
     />
     <Sidebar
@@ -169,16 +169,17 @@
       {closeSidebar}
       breakpoint="xl"
       classes={{
-        div: "dark:bg-stone-900 bg-gray-50",
+        div: "dark-bg-theme bg-white",
         nonactive: "p-1 hover:bg-gray-200",
         active:
           "flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       }}
-      class="h-screen border-r border-gray-50 xl:top-[74px] dark:border-gray-700 dark:bg-stone-900"
+      class="dark-bg-theme mt-16 h-screen border-r border-gray-100 bg-white xl:top-[74px] xl:mt-0 dark:border-gray-700"
     >
       <SidebarGroup>
         <SidebarBrand>
-          <span class="ml-8 self-center text-lg font-semibold whitespace-nowrap dark:text-white"
+          <span
+            class="sr-only ml-8 self-center text-lg font-semibold whitespace-nowrap dark:text-white"
             >Runes Webkit</span
           >
         </SidebarBrand>

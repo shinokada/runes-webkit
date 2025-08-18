@@ -28,10 +28,10 @@
 
   const classDiv = "fixed right-6 top-20 z-20 flex p-2 xl:hidden dark:text-white";
   const classDropdownDiv =
-    "w-60 absolute right-[8px] top-[30px] dark_bg_theme border border-gray-700";
+    "w-60 absolute right-[8px] top-[30px] dark-bg-theme border border-gray-700";
   const classSvg = "ms-2 mt-1 h-4 w-4 text-white dark:text-white";
   const classLi = "my-2 hover:text-primary-400";
-  const classBtn = "flex bg-white p-2 dark:bg-stone-900";
+  const classBtn = "flex bg-white p-2 dark-bg-theme";
 
   let headings: LinkType[] = $state([]);
   let observer: MutationObserver | null = null;

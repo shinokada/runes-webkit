@@ -29,7 +29,7 @@
 </script>
 
 {#snippet cardSnippet(card: CardType)}
-  <Card href={card.href} class={cn("dark_bg_theme max-w-2xl p-4", cardClass)}>
+  <Card href={card.href} class={cn("dark-bg-theme max-w-2xl p-4", cardClass)}>
     <card.Icon class={cn("mb-3 h-8 w-8", iconClass, card.icon_class)} />
     <h3 class={cn(classH3, h3Class)}>
       {card.title}

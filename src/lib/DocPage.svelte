@@ -26,7 +26,7 @@
     headingSelector = "#mainContent > :where(h2, h3)"
   }: Props = $props();
 
-  const classMain = "w-full min-w-0 flex-auto dark_bg_theme";
+  const classMain = "w-full min-w-0 flex-auto dark-bg-theme";
   const classDiv1 = "flex w-full";
   const classDiv2 =
     "mx-auto flex min-w-0 max-w-4xl flex-col divide-y divide-gray-200 px-4 lg:px-4 lg:pb-16 xl:pb-24 dark:divide-gray-800";

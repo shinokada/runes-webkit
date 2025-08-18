@@ -35,7 +35,7 @@
   }: Props = $props();
 
   const classDiv1 = "hidden w-64 flex-none xl:block xl:text-sm";
-  const classDiv2 = "dark_bg_theme fixed right-2 flex-none";
+  const classDiv2 = "dark-bg-theme fixed right-2 flex-none";
   const classDiv3 = "flex h-[calc(100vh-168px)] flex-col justify-between overflow-y-auto";
   const classDiv4 = "mb-8 p-4";
   const classA =

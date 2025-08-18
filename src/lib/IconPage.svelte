@@ -97,7 +97,7 @@
       {#if threeTabs}
         <Tabs
           tabStyle="pill"
-          classes={{ content: cn("rounded-lg dark_bg_theme mt-4", contentClass) }}
+          classes={{ content: cn("rounded-lg dark-bg-theme mt-4", contentClass) }}
           divider={false}
         >
           <TabItem open title="Mono">

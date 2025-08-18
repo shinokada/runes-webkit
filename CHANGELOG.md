@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.11.3
+
+### Patch Changes
+
+- fix: use dark-bg-theme to OnThisPage
+
 ## 0.11.2
 
 ### Patch Changes

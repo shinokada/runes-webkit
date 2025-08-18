@@ -29,7 +29,7 @@
       >svelte-5-runes</Code
     > branch</Li
   >
-  <Li><Checkbox inline /><Code>.dark_bg_theme</Code> in <Code>app.pcss</Code></Li>
+  <Li><Checkbox inline /><Code>.dark-bg-theme</Code> in <Code>app.pcss</Code></Li>
   <Li><Checkbox inline /><Code>primary</Code> in <Code>tailwind.config.cjs</Code></Li>
   <Li><Checkbox inline /><Code>CHANGELOG</Code></Li>
   <Li><Checkbox inline />tests in the tests directory</Li>

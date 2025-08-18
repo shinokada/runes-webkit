@@ -81,7 +81,7 @@ tab-size: 4;
 
 @layer components {
 /_ overwrite runeswebkit.css using !important _/
-.dark_bg_theme {
+.dark-bg-theme {
 @apply dark:bg-stone-900;
 }
 }

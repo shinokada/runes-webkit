@@ -47,7 +47,7 @@
 
 <Footer
   class={cn(
-    "rounded-none border-t border-gray-100 shadow-none dark:border-gray-600 dark:bg-stone-900",
+    "dark_bg_theme rounded-none border-t border-gray-100 shadow-none dark:border-gray-600 dark:bg-stone-900",
     footerClass
   )}
   {footerType}

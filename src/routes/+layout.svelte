@@ -28,7 +28,6 @@
     SidebarGroup,
     SidebarDropdownWrapper,
     SidebarItem,
-    CloseButton,
     SidebarBrand
   } from "flowbite-svelte";
   import { RunesMetaTags, deepMerge } from "runes-meta-tags";
@@ -107,22 +106,23 @@
 <Navbar
   breakpoint="xl"
   fluid
-  class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 xl:py-0 dark:border-gray-700 dark:bg-stone-950"
+  class="dark_bg_theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 xl:py-0 dark:border-gray-700"
   navContainerClass="xl:justify-between"
 >
   <NavBrand href="/">
     <span
-      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap xl:ml-8 xl:text-2xl"
+      class="text-primary-900 dark:text-primary-500 self-center text-2xl font-semibold whitespace-nowrap xl:ml-8 xl:text-3xl"
       >Runes Webkit</span
     >
   </NavBrand>
-  <div class="flex xl:order-2">
+  <div class="flex justify-end xl:order-2">
+    <NavHamburger class="order-3" />
     {#if include}
       <div class="hidden xl:block">
         <DynamicCodeBlockStyle />
       </div>
     {/if}
-    <DotsHorizontalOutline class="mt-1.5 mr-4 ml-6 dark:text-white" size="lg" />
+    <DotsHorizontalOutline class="mt-2 mr-4 ml-6 dark:text-white" size="lg" />
     <Dropdown simple class="p-1">
       {#if blueskyUrl}
         <DropdownItem href={blueskyUrl} target="_blank" class="m-0 p-0.5">
@@ -140,7 +140,7 @@
     </Dropdown>
     <DarkMode class="m-0 p-2" />
   </div>
-  <NavHamburger class="order-2 xl:order-1" />
+
   <NavUl
     {activeUrl}
     class="order-2 xl:order-1"
@@ -176,14 +176,9 @@
       }}
       class="h-screen border-r border-gray-50 xl:top-[74px] dark:border-gray-700 dark:bg-stone-900"
     >
-      <CloseButton
-        onclick={closeSidebar}
-        color="gray"
-        class="absolute top-3 right-1 p-2 xl:hidden"
-      />
       <SidebarGroup>
         <SidebarBrand>
-          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
+          <span class="ml-8 self-center text-lg font-semibold whitespace-nowrap dark:text-white"
             >Runes Webkit</span
           >
         </SidebarBrand>

@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.11.2
+
+### Patch Changes
+
+- fix: add dark-bg-theme and dark-bg-theme2
+
 ## 0.11.1
 
 ### Patch Changes

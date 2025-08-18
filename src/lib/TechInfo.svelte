@@ -56,7 +56,7 @@
 <h2 class={cn("my-8 flex justify-center", h2Class)}>{title}</h2>
 
 <div class={cn("mx-auto grid max-w-5xl grid-cols-1", divClass)}>
-  <Card size={cardsize} class={cn("p-6", className)} {...restProps}>
+  <Card size={cardsize} class={cn("dark_bg_theme p-6", className)} {...restProps}>
     <List tag="ul" class={cn("text-lg dark:text-gray-400", ulClass)}>
       {#if pkgName && pkgVersion && repoUrl}
         <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>

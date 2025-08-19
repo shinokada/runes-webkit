@@ -114,11 +114,7 @@
 
 <H2>Installation</H2>
 
-<HighlightCompo
-  codeLang="md"
-  code={modules["./md/installation.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="md" code={modules["./md/installation.md"] as string} />
 
 <H2>Setting</H2>
 
@@ -201,42 +197,26 @@
 
 <p>Add the following to the <Code>guide/+layout.svelte</Code>:</p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/guide-layout.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/guide-layout.md"] as string} />
 
 <H2>Home Page</H2>
 
 <p>Home page has <Code>SupportBanner, HomeCards, TechInfo</Code> components.</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/home.md"] as string} clipboardClass="top-2" />
+<HighlightCompo codeLang="ts" code={modules["./md/home.md"] as string} />
 
 <H2>Icon Page</H2>
 <p>Icon page uses IconPage component with threeTabs and titel props.</p>
 
 <Tabs>
   <TabItem open title="no-tabs">
-    <HighlightCompo
-      codeLang="ts"
-      code={modules["./md/no-tabs.md"] as string}
-      clipboardClass="top-2"
-    />
+    <HighlightCompo codeLang="ts" code={modules["./md/no-tabs.md"] as string} />
   </TabItem>
   <TabItem title="three-tabs">
-    <HighlightCompo
-      codeLang="ts"
-      code={modules["./md/three-tabs.md"] as string}
-      clipboardClass="top-2"
-    />
+    <HighlightCompo codeLang="ts" code={modules["./md/three-tabs.md"] as string} />
   </TabItem>
   <TabItem title="three-tabs-sizeby-tailwind">
-    <HighlightCompo
-      codeLang="ts"
-      code={modules["./md/three-tabs-sizeby-tailwind.md"] as string}
-      clipboardClass="top-2"
-    />
+    <HighlightCompo codeLang="ts" code={modules["./md/three-tabs-sizeby-tailwind.md"] as string} />
   </TabItem>
 </Tabs>
 

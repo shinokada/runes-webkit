@@ -62,7 +62,7 @@
       color="alternative"
       bind:value
       class={twMerge(
-        "absolute top-8 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800",
+        "absolute top-2 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800",
         clipboardClass
       )}
     >

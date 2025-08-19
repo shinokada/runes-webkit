@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.11.4
+
+### Patch Changes
+
+- fix: add top-2 to clipboardClass
+
 ## 0.11.3
 
 ### Patch Changes

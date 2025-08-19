@@ -44,31 +44,19 @@
 
 <h2>Requirements</h2>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/requirement.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/requirement.md"] as string} />
 
 <h2>Installation</h2>
 
 <p>Install Svelte and TailwindCSS:</p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/installation.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/installation.md"] as string} />
 
 <h2>Basic Usage</h2>
 
 <p>In a svelte file:</p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/basic-usage.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/basic-usage.md"] as string} />
 
 <h2>Faster compiling</h2>
 
@@ -78,35 +66,19 @@
   compilation.
 </p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/faster-compiling.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/faster-compiling.md"] as string} />
 
 <h2>Passing down other attributes</h2>
 
 <p>Since all icons have "...$$restProps", you can pass other attibutes as well.</p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/passing-down-other-attributes.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/passing-down-other-attributes.md"] as string} />
 
 <h2>Using onMount</h2>
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/using-onmount.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/using-onmount.md"] as string} />
 
 <h2>Import all</h2>
 
 <p>Use `import * as Icon from 'svelte-awesome-icons`.</p>
 
-<HighlightCompo
-  codeLang="ts"
-  code={modules["./md/import-all.md"] as string}
-  clipboardClass="top-2"
-/>
+<HighlightCompo codeLang="ts" code={modules["./md/import-all.md"] as string} />

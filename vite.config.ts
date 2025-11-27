@@ -1,7 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 import { svelteTesting } from "@testing-library/svelte/vite";
 import { sveltekit } from "@sveltejs/kit/vite";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import devtoolsJson from "vite-plugin-devtools-json";
 import pkg from "./package.json" with { type: "json" };
 import sveltePackage from "./node_modules/svelte/package.json" with { type: "json" };
@@ -28,9 +28,9 @@ export default defineConfig({
     __VITE_VERSION__: JSON.stringify(vitePackage.version)
   },
   test: {
-    workspace: [
+    projects: [
       {
-        extends: "./vite.config.ts",
+        extends: true,
         plugins: [svelteTesting()],
 
         test: {
@@ -43,7 +43,7 @@ export default defineConfig({
         }
       },
       {
-        extends: "./vite.config.ts",
+        extends: true,
 
         test: {
           name: "server",

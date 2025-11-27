@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { HighlightCompo, Code, H1, H2 } from "$lib";
+  import { Code, H1, H2 } from "$lib";
+  import { HighlightCompo } from "svelte-rune-highlight";
   import { License, StaticBadge, NpmVersion, NpmDownload } from "svelte-shields";
   import type {
     StaticBadgePropsType,
@@ -60,22 +61,22 @@
 
 <H2>Requirements</H2>
 
-<HighlightCompo codeLang="ts" code={modules["./md/requirement.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/requirement.md"] as string} />
 
 <H2>Installation</H2>
 <p>Install Svelte:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/installation.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/installation.md"] as string} />
 
 <p>Install <Code>svelte-awesome-icons v2</Code>:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/installation-2.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/installation-2.md"] as string} />
 
 <H2>Basic Usage</H2>
 
 <p>In a svelte file:</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/basic-usage.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/basic-usage.md"] as string} />
 
 <H2>IDE support</H2>
 
@@ -92,16 +93,16 @@
   compilation.
 </p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/faster-compiling.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/faster-compiling.md"] as string} />
 
 <H2>Passing down other attributes</H2>
 
 <p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/passing-down-other-attributes.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/passing-down-other-attributes.md"] as string} />
 
 <H2>Import all</H2>
 
 <p>Use `import * as Icon from 'svelte-radix`.</p>
 
-<HighlightCompo codeLang="ts" code={modules["./md/import-all.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/import-all.md"] as string} />

@@ -9,11 +9,8 @@
     children: Snippet;
     headingSelector?: string;
     mainClass?: ClassValue;
-    classDiv1?: string | undefined | null;
     div1Class?: string | undefined | null;
-    classDiv2?: string | undefined | null;
     div2Class?: string | undefined | null;
-    classDiv3?: string | undefined | null;
     div3Class?: string | undefined | null;
   }
 

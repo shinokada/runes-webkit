@@ -22,9 +22,9 @@
     });
   }
 
-  $effect(() => {
-    $inspect("slug", slug);
-  });
+  // $effect(() => {
+  //   $inspect("slug", slug);
+  // });
 </script>
 
 <svelte:element this={tag} {...restProps} class={base({ className })} use:init>

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { HighlightCompo, Code, H1, H2 } from "$lib";
+  import { Code, H1, H2 } from "$lib";
+  import { HighlightCompo } from "svelte-rune-highlight";
   import { List, Li, Checkbox } from "flowbite-svelte";
   const modules = import.meta.glob("./md/*.md", {
     query: "?raw",
@@ -12,7 +13,7 @@
 
 <H2>Installation</H2>
 
-<HighlightCompo codeLang="ts" code={modules["./md/installation.md"] as string} />
+<HighlightCompo lang="ts" code={modules["./md/installation.md"] as string} />
 
 <H2>Update the followings:</H2>
 

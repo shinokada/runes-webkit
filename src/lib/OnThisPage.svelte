@@ -16,9 +16,8 @@
     headingSelector: string;
     extract: (x: HTMLElement) => LinkType;
     divClass?: ClassValue;
-    ulClass?: ClassValue;
-    svgClass?: ClassValue;
     liClass?: ClassValue;
+    svgClass?: ClassValue;
     dropdownDivClass?: ClassValue;
     btnClass?: ClassValue;
   }
@@ -43,6 +42,7 @@
     headings = elements.map(extract).filter((x) => x.name);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function init(_: HTMLElement) {
     // Initial scan for existing headings
     updateToc();
@@ -119,8 +119,9 @@
   <Dropdown simple {@attach init} class={cn(classDropdownDiv, dropdownDivClass)}>
     <DropdownItem href="#top">Return to top</DropdownItem>
     <DropdownDivider />
-    {#each headings as { rel, href, name }}
+    {#each headings as { rel, href, name } (href)}
       <DropdownItem liClass={cn(classLi, liClass)}>
+        <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
         <a {href} class={indent(rel)}>{name}</a>
       </DropdownItem>
     {/each}

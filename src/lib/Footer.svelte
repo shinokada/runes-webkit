@@ -26,7 +26,6 @@
     footerType?: "logo" | "sitemap" | "default" | "socialmedia" | undefined;
     footerClass?: ClassValue;
     divClass?: ClassValue;
-    ulClass?: ClassValue;
     brandClasses?: BrandClasses;
     footerLinkGroupClass?: ClassValue;
     footerLinkClasses?: FooterLinkClasses;
@@ -35,7 +34,6 @@
     brand,
     divClass,
     footerClass,
-    ulClass,
     lis,
     footerType = "logo",
     brandClasses,
@@ -66,7 +64,7 @@
           footerLinkGroupClass
         )}
       >
-        {#each lis as { name, href }}
+        {#each lis as { name, href } (href)}
           <FooterLink {href} {...footerLinkClasses}>{name}</FooterLink>
         {/each}
       </FooterLinkGroup>
@@ -81,7 +79,6 @@
 @props: brand: any;
 @props:divClass: any;
 @props:footerClass: any;
-@props:ulClass: any;
 @props:lis: any;
 @props:footerType: any = "logo";
 @props:brandClasses: any;

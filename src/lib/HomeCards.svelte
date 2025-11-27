@@ -35,13 +35,14 @@
       {card.title}
     </h3>
     <p class={cn(classP, pClass)}>
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
       {@html card.description}
     </p>
   </Card>
 {/snippet}
 
 <div class={cn(classDiv, divClass)} {...restProps}>
-  {#each cards as card}
+  {#each cards as card (card.title)}
     {@render cardSnippet(card)}
   {/each}
 </div>

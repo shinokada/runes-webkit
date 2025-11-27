@@ -79,7 +79,6 @@
 @props: brand: any;
 @props:divClass: any;
 @props:footerClass: any;
-@props:ulClass: any;
 @props:lis: any;
 @props:footerType: any = "logo";
 @props:brandClasses: any;

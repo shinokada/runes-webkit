@@ -34,6 +34,8 @@
   import { Runatics } from "runatics";
   import DynamicCodeBlockStyle from "./utils/DynamicCodeBlockStyle.svelte";
 
+  // --- REVISED ---
+  // Use activeUrl (derived from page store) consistently
   let activeUrl = $derived(page.url.pathname);
 
   type LiType = {
@@ -54,16 +56,17 @@
   let isOpen = $state(false);
   const closeSidebar = sidebarUi.close;
 
-  let currentUrl = $state(page.url.pathname);
+  // --- REMOVED: let currentUrl = $state(page.url.pathname); ---
 
   // Check if the current URL matches any child href in a dropdown item
   const isDropdownOpen = (children: Array<{ href?: string }> | undefined) => {
     if (!children) return false;
+    // Uses the consistent activeUrl
     return children.some((child) => child.href && activeUrl.startsWith(child.href));
   };
 
   const lis: LiType[] = [
-    { name: "Guide", href: "/guide/svelte-4/getting-started" },
+    { name: "Guide", href: "/guide/svelte-5/getting-started" },
     { name: "3-Tabs", href: "/three-tabs" },
     { name: "3-Tabs-tailwind", href: "/three-tabs-sizebytailwind" },
     { name: "No-tabs", href: "/no-tabs" },
@@ -80,6 +83,7 @@
   const twitterUrl = "https://twitter.com/shinokada";
   const blueskyUrl = "https://bsky.app/profile/codewithshin.com";
 
+  // --- REVISED: Takes url as an argument, no longer relies on 'currentUrl' state ---
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => {
       // For home page '/', do exact matching
@@ -91,10 +95,11 @@
     });
   }
   let urlsToIncludeSwitcher = ["/guide", "/guide2", "/how-to-use", "/quick-start"];
-  let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
+  // --- REVISED: Uses activeUrl directly ---
+  let include = $derived(isIncluded(activeUrl, urlsToIncludeSwitcher));
 
   $effect(() => {
-    currentUrl = page.url.pathname;
+    // --- REMOVED: currentUrl = page.url.pathname; ---
     metaTags = page.data.pageMetaTags
       ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
       : data.layoutMetaTags;
@@ -161,7 +166,7 @@
 </Navbar>
 
 <div class="mt-20 xl:flex">
-  {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
+  {#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
       class="fixed top-3 left-0 z-100
@@ -218,7 +223,7 @@
       </SidebarGroup>
     </Sidebar>
   {/if}
-  {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
+  {#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
     </div>

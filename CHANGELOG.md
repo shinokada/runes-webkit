@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.12.0
+
+### Minor Changes
+
+- fix: replace HighlightCompo, fix lint
+
 ## 0.11.4
 
 ### Patch Changes

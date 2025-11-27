@@ -11,7 +11,6 @@
     contentClass?: string;
     codeLang?: string;
     class?: string;
-    expanded?: boolean;
     replaceLib?: string;
     clipboardClass?: string;
   }

@@ -57,7 +57,7 @@
   {...restProps}
 >
   <SidebarGroup>
-    {#each sidebarList as { name, Icon, children, href }}
+    {#each sidebarList as { name, Icon, children, href } (name)}
       {#if children}
         <SidebarDropdownWrapper
           label={name}
@@ -68,7 +68,7 @@
           {#snippet icon()}
             <Icon class={cn(iconClass)}></Icon>
           {/snippet}
-          {#each children as { name, Icon, href }}
+          {#each children as { name, Icon, href } (href)}
             <SidebarItem label={name} onclick={sidebarClose} {href} aClass="ml-4">
               {#snippet icon()}
                 <Icon class={cn(iconClass)}></Icon>

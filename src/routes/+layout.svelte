@@ -55,7 +55,12 @@
   const closeSidebar = sidebarUi.close;
 
   let currentUrl = $state(page.url.pathname);
-  const hasPath = (key: string) => currentUrl.includes(key);
+
+  // Check if the current URL matches any child href in a dropdown item
+  const isDropdownOpen = (children: Array<{ href?: string }> | undefined) => {
+    if (!children) return false;
+    return children.some((child) => child.href && activeUrl.startsWith(child.href));
+  };
 
   const lis: LiType[] = [
     { name: "Guide", href: "/guide/svelte-4/getting-started" },
@@ -146,7 +151,7 @@
     class="order-2 xl:order-1"
     classes={{ active: activeClass, nonActive: nonActiveClass }}
   >
-    {#each lis as { name, href, Icon }}
+    {#each lis as { name, href, Icon } (href)}
       {#if Icon}
         <Icon class="mb-3 h-6 w-6 {random_tailwind_color()}"></Icon>
       {/if}
@@ -183,18 +188,18 @@
             >Runes Webkit</span
           >
         </SidebarBrand>
-        {#each newSidebarList as { name, Icon, children, href }}
+        {#each newSidebarList as { name, Icon, children, href } (name)}
           {#if children}
             <SidebarDropdownWrapper
               label={name}
-              isOpen={hasPath("components")}
+              isOpen={isDropdownOpen(children)}
               svgClass="me-4"
               btnClass="p-1"
             >
               {#snippet icon()}
                 <Icon />
               {/snippet}
-              {#each children as { name, Icon, href }}
+              {#each children as { name, Icon, href } (href)}
                 <SidebarItem label={name} onclick={closeSidebar} {href} aClass="ml-4">
                   {#snippet icon()}
                     <Icon />

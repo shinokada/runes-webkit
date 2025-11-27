@@ -4,15 +4,6 @@
 
   interface Props {
     children: Snippet;
-    title?: string;
-    description?: string;
-    keywords?: string;
-    url?: string;
-    image?: string;
-    imageAlt?: string;
-    imageWidth?: string;
-    imageHeight?: string;
-    creator?: string;
   }
 
   let { children }: Props = $props();

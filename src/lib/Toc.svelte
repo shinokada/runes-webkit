@@ -19,7 +19,6 @@
     div3Class?: ClassValue;
     div4Class?: ClassValue;
     h4Class?: ClassValue;
-    classH4?: ClassValue;
   }
 
   let {
@@ -78,8 +77,9 @@
           <h4 class={cn(classH4, h4Class)}>On this page</h4>
           <nav>
             <ul class={cn(classUl, ulClass)}>
-              {#each headings as { rel, href, name }}
+              {#each headings as { rel, href, name } (href)}
                 <li>
+                  <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
                   <a {href} class={cn(indent(rel), classA, aClass)}>{name}</a>
                 </li>
               {/each}

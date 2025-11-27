@@ -60,6 +60,7 @@
     <List tag="ul" class={cn("text-lg dark:text-gray-400", ulClass)}>
       {#if pkgName && pkgVersion && repoUrl}
         <Li class={cn("hover:text-primary-700 hover:underline", liClass)}>
+          <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
           <a href={repoUrl} class={cn("me-4 hover:underline md:me-6", aClass)}
             >{pkgName[0].toUpperCase() + pkgName.slice(1)} : {pkgVersion}</a
           >

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, H2 } from "$lib";
+  import { CodeWrapper, H2 } from "$lib";
+  import { HighlightCompo } from "svelte-rune-highlight";
   import { AddressBookOutline } from "../../../flowbite-samples";
 
   const modules = import.meta.glob("./md/*.md", {
@@ -47,25 +48,25 @@
 
   <H2>Requirements</H2>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/requirement.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/requirement.md"] as string} />
 
   <H2>Installation</H2>
 
   <p>Install Svelte and TailwindCSS:</p>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/installation.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/installation.md"] as string} />
 
   <H2>Basic Usage</H2>
 
   <p>In a svelte file:</p>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/basic-usage.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/basic-usage.md"] as string} />
 
   <H2>A11y friendly</H2>
 
   <p>Use `title`, `desc`, and `ariaLabel` props to make your icons accessible.</p>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/a11y-friendly.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/a11y-friendly.md"] as string} />
 
   <p>Check out this icon in the console:</p>
 
@@ -86,24 +87,24 @@
     during compilation.
   </p>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/faster-compiling.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/faster-compiling.md"] as string} />
 
   <H2>Passing down other attributes</H2>
 
   <p>Since all icons have "...$$restProps", you can pass other attibutes as well.</p>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/passing-down-other-attributes.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/passing-down-other-attributes.md"] as string} />
 
   <H2>Using svelte:component</H2>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/using-svelte-component.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/using-svelte-component.md"] as string} />
 
   <H2>Using onMount</H2>
-  <HighlightCompo codeLang="ts" code={modules["./md/using-onmount.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/using-onmount.md"] as string} />
 
   <H2>Import all</H2>
 
   <p>Use `import * as Icon from 'svelte-awesome-icons`.</p>
 
-  <HighlightCompo codeLang="ts" code={modules["./md/import-all.md"] as string} />
+  <HighlightCompo lang="ts" code={modules["./md/import-all.md"] as string} />
 </div>

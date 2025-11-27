@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { HighlightCompo, Code, H1, H2, CodeWrapper } from "$lib";
-
+  import { Code, H1, H2, CodeWrapper } from "$lib";
+  import { HighlightCompo } from "svelte-rune-highlight";
   import * as ExampleComponents from "./examples/";
   const exampleModules = import.meta.glob("./examples/*.svelte", {
     query: "?raw",
@@ -27,7 +27,7 @@
 <CodeWrapper innerClass="flex justify-center">
   {#snippet codeblock()}
     <HighlightCompo
-      codeLang="ts"
+      lang="ts"
       code={exampleModules["./examples/SettingPreferences.svelte"] as string}
     />
   {/snippet}
@@ -45,7 +45,7 @@
 <CodeWrapper innerClass="flex justify-center gap-2">
   <ExampleComponents.PropSize />
   {#snippet codeblock()}
-    <HighlightCompo codeLang="ts" code={exampleModules["./examples/PropSize.svelte"] as string} />
+    <HighlightCompo lang="ts" code={exampleModules["./examples/PropSize.svelte"] as string} />
   {/snippet}
 </CodeWrapper>
 

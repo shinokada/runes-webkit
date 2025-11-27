@@ -132,10 +132,6 @@
       "types": "./dist/Footer.svelte.d.ts",
       "svelte": "./dist/Footer.svelte"
     },
-    "./HighlightCompo.svelte": {
-      "types": "./dist/HighlightCompo.svelte.d.ts",
-      "svelte": "./dist/HighlightCompo.svelte"
-    },
     "./HomeCards.svelte": {
       "types": "./dist/HomeCards.svelte.d.ts",
       "svelte": "./dist/HomeCards.svelte"

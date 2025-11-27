@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Code, H1, H2 } from "$lib";
-   import { HighlightCompo } from "svelte-rune-highlight";
+  import { HighlightCompo } from "svelte-rune-highlight";
   import { License, StaticBadge, NpmVersion, NpmDownload } from "svelte-shields";
   import type {
     StaticBadgePropsType,

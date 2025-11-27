@@ -30,7 +30,7 @@ export default defineConfig({
   test: {
     projects: [
       {
-        extends: "./vite.config.ts",
+        extends: true,
         plugins: [svelteTesting()],
 
         test: {
@@ -43,7 +43,7 @@ export default defineConfig({
         }
       },
       {
-        extends: "./vite.config.ts",
+        extends: true,
 
         test: {
           name: "server",

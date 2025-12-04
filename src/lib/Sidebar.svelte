@@ -40,12 +40,11 @@
   let currentUrl = page.url.pathname;
   $effect(() => {
     currentUrl = page.url.pathname;
+    if (menuList) {
+      sidebarList.push(...menuList);
+    }
   });
   const hasPath = (key: string) => currentUrl.includes(key);
-
-  if (menuList) {
-    sidebarList.push(...menuList);
-  }
 </script>
 
 <Sidebar

@@ -77,7 +77,7 @@
           <h4 class={cn(classH4, h4Class)}>On this page</h4>
           <nav>
             <ul class={cn(classUl, ulClass)}>
-              {#each headings as { rel, href, name } (href)}
+              {#each headings as { rel, href, name }, i (i)}
                 <li>
                   <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
                   <a {href} class={cn(indent(rel), classA, aClass)}>{name}</a>

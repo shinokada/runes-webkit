@@ -1,6 +1,6 @@
 <script lang="ts">
   import { getContext } from "svelte";
-  import { twMerge } from "tailwind-merge";
+  import { cn } from "./helpers";
   import type { OutlineBaseProps, OutlineProps } from "./types";
 
   const ctx: OutlineBaseProps = getContext("iconCtx") ?? {};
@@ -16,15 +16,16 @@
     size = ctx.size || "md",
     color = ctx.color || "currentColor",
     title,
-    strokeWidth = ctx.strokeWidth || "2",
+    strokeWidth = ctx.strokeWidth || 2,
     desc,
     class: className,
-    ariaLabel = "add column after outline",
+    ariaLabel,
     ...restProps
   }: OutlineProps = $props();
 
-  let ariaDescribedby = `${title?.id || ""} ${desc?.id || ""}`;
+  const ariaDescribedby = $derived(`${title?.id || ""} ${desc?.id || ""}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
+  const isLabeled = $derived(!!ariaLabel || hasDescription);
 </script>
 
 <svg
@@ -32,10 +33,11 @@
   fill="none"
   {color}
   {...restProps}
-  class={twMerge("shrink-0", sizes[size], className)}
+  class={cn("shrink-0", sizes[size], className)}
+  viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
+  aria-hidden={!isLabeled}
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -59,9 +61,9 @@
 @prop size = ctx.size || 'md'
 @prop color = ctx.color || 'currentColor'
 @prop title
-@prop strokeWidth = ctx.strokeWidth || '2'
+@prop strokeWidth = ctx.strokeWidth || 2
 @prop desc
 @prop class: className
-@prop ariaLabel = 'add column after outline'
+@prop ariaLabel
 @prop ...restProps
 -->

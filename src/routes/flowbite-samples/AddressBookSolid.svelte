@@ -1,6 +1,6 @@
 <script lang="ts">
   import { getContext } from "svelte";
-  import { twMerge } from "tailwind-merge";
+  import { cn } from "./helpers";
   import type { BaseProps, Props } from "./types";
 
   const ctx: BaseProps = getContext("iconCtx") ?? {};
@@ -18,22 +18,24 @@
     title,
     desc,
     class: className,
-    ariaLabel = "address book solid",
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ""} ${desc?.id || ""}`;
+  const ariaDescribedby = $derived(`${title?.id || ""} ${desc?.id || ""}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
+  const isLabeled = $derived(!!ariaLabel || hasDescription);
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill={color}
   {...restProps}
-  class={twMerge("shrink-0", sizes[size], className)}
+  class={cn("shrink-0", sizes[size], className)}
+  viewBox="0 0 24 24"
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 24 24"
+  aria-hidden={!isLabeled}
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -57,6 +59,6 @@
 @prop title
 @prop desc
 @prop class: className
-@prop ariaLabel = 'address book solid'
+@prop ariaLabel
 @prop ...restProps
 -->

@@ -15,7 +15,7 @@
   }
   let { children, iconName, counter = 2, badgeClass, btnClass, ...attributes }: Props = $props();
 
-  let text = $state(iconName);
+  let text = $derived(iconName);
   let open = $state(false);
 
   function copySuccess() {

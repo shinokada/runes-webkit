@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.12.1
+
+### Patch Changes
+
+- fix: replace reactive code patterns with $derived
+
 ## 0.12.0
 
 ### Minor Changes

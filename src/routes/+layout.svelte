@@ -169,8 +169,7 @@
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
-      class="fixed top-3 left-0 z-100
-     p-2"
+      class="fixed top-0.5 left-0 z-100 p-2"
       breakpoint="xl"
     />
     <Sidebar

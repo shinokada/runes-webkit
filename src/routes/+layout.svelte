@@ -53,7 +53,7 @@
   );
   // sidebar
   const sidebarUi = uiHelpers();
-  let isOpen = $state(false);
+  let isOpen = $derived(sidebarUi.isOpen);
   const closeSidebar = sidebarUi.close;
 
   // --- REMOVED: let currentUrl = $state(page.url.pathname); ---
@@ -97,15 +97,6 @@
   let urlsToIncludeSwitcher = ["/guide", "/guide2", "/how-to-use", "/quick-start"];
   // --- REVISED: Uses activeUrl directly ---
   let include = $derived(isIncluded(activeUrl, urlsToIncludeSwitcher));
-
-  $effect(() => {
-    // --- REMOVED: currentUrl = page.url.pathname; ---
-    metaTags = page.data.pageMetaTags
-      ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
-      : data.layoutMetaTags;
-    isOpen = sidebarUi.isOpen;
-  });
-
   let activeClass = "p-2 text-sm xl:text-base";
   let nonActiveClass = "p-2 text-sm xl:text-base";
 </script>
